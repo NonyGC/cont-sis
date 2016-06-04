@@ -1,0 +1,700 @@
+<?xml version="1.0" standalone="yes"?>
+<BDFormato8_1>
+  <xs:schema id="BDFormato8_1" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="BDFormato8_1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Formato8_1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nro_comp" type="xs:int" minOccurs="0" />
+                <xs:element name="fec_emi" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="fec_vcto" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="tip_doc" type="xs:string" minOccurs="0" />
+                <xs:element name="ser_doc" type="xs:string" minOccurs="0" />
+                <xs:element name="ani_emi_dua" type="xs:string" minOccurs="0" />
+                <xs:element name="nro_doc" type="xs:string" minOccurs="0" />
+                <xs:element name="tip_doc_ide" type="xs:string" minOccurs="0" />
+                <xs:element name="ruc" type="xs:string" minOccurs="0" />
+                <xs:element name="razon_social" type="xs:string" minOccurs="0" />
+                <xs:element name="adq_grav_oper_grav_exp_base" type="xs:decimal" minOccurs="0" />
+                <xs:element name="igv_adq_grav_oper_grav_exp_base" type="xs:decimal" minOccurs="0" />
+                <xs:element name="adq_grav_oper_grav_grav_base" type="xs:decimal" minOccurs="0" />
+                <xs:element name="igv_adq_grav_oper_grav_grav_base" type="xs:decimal" minOccurs="0" />
+                <xs:element name="adq_grav_oper_grav_base_imp" type="xs:decimal" minOccurs="0" />
+                <xs:element name="igv_adq_grav_oper_grav_base_imp" type="xs:decimal" minOccurs="0" />
+                <xs:element name="val_adq_no_grav_base_imp" type="xs:decimal" minOccurs="0" />
+                <xs:element name="isc" type="xs:decimal" minOccurs="0" />
+                <xs:element name="otr_tri_car" type="xs:decimal" minOccurs="0" />
+                <xs:element name="imp_total" type="xs:decimal" minOccurs="0" />
+                <xs:element name="nro_comp_suj_no_domi" type="xs:string" minOccurs="0" />
+                <xs:element name="num_const_detra" type="xs:int" minOccurs="0" />
+                <xs:element name="fec_detract" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="tip_cam" type="xs:decimal" minOccurs="0" />
+                <xs:element name="ref_fec" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ref_tip_doc" type="xs:string" minOccurs="0" />
+                <xs:element name="ref_ser_doc" type="xs:string" minOccurs="0" />
+                <xs:element name="ref_nro_doc" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Empresa">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="RazonSocial" type="xs:string" minOccurs="0" />
+                <xs:element name="Alias" type="xs:string" minOccurs="0" />
+                <xs:element name="Image" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-03T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>50.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>20.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>85.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-04T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>100.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>40.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>155.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-05T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>150.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>60.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>225.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-06T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>200.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>80.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>295.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-07T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>250.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>100.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>365.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-08T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>300.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>120.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>435.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-09T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>350.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>140.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>505.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-10T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>400.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>160.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>575.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-11T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>450.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>180.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>645.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-12T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMPRESA EMPRESA ABCD</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>500.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>200.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>715.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-13T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>550.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>220.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>785.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-14T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>600.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>240.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>855.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-15T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>650.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>260.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>925.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-16T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>700.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>280.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>995.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-17T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>750.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>300.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1065.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-18T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>800.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>320.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1135.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-19T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>850.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>340.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1205.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-20T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>900.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>360.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1275.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-21T09:15:34-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>950.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>380.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1345.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-22T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>10</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>10</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1000.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>400.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1415.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-23T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1050.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>420.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1485.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-24T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1100.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>440.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1555.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-25T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1150.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>460.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1625.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-26T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1200.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>480.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1695.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-27T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1250.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>500.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1765.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-28T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1300.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>520.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1835.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-29T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1350.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>540.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1905.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Formato8_1>
+    <nro_comp>99999999</nro_comp>
+    <fec_emi>2016-04-30T09:15:35-05:00</fec_emi>
+    <fec_vcto>2016-04-12T11:26:38-05:00</fec_vcto>
+    <tip_doc>12</tip_doc>
+    <ser_doc>0001</ser_doc>
+    <ani_emi_dua>2016</ani_emi_dua>
+    <nro_doc>01213131</nro_doc>
+    <tip_doc_ide>12</tip_doc_ide>
+    <ruc>12345678911</ruc>
+    <razon_social>EMP ABC SAC</razon_social>
+    <adq_grav_oper_grav_exp_base>100.00</adq_grav_oper_grav_exp_base>
+    <igv_adq_grav_oper_grav_exp_base>0.00</igv_adq_grav_oper_grav_exp_base>
+    <adq_grav_oper_grav_grav_base>0.00</adq_grav_oper_grav_grav_base>
+    <igv_adq_grav_oper_grav_grav_base>0.00</igv_adq_grav_oper_grav_grav_base>
+    <adq_grav_oper_grav_base_imp>1400.00</adq_grav_oper_grav_base_imp>
+    <igv_adq_grav_oper_grav_base_imp>560.00</igv_adq_grav_oper_grav_base_imp>
+    <val_adq_no_grav_base_imp>15.00</val_adq_no_grav_base_imp>
+    <isc>0.00</isc>
+    <otr_tri_car>0.00</otr_tri_car>
+    <imp_total>1975.00</imp_total>
+    <tip_cam>0.000</tip_cam>
+  </Formato8_1>
+  <Empresa />
+</BDFormato8_1>

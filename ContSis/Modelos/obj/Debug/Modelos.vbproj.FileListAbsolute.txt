@@ -1,0 +1,10 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.vbprojResolveAssemblyReference.cache

@@ -1,0 +1,191 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Modelos.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Modelos.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Modelos.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Modelos.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Modelos.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Modelos\obj\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Modelos.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Modelos.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\github\ContSis\Viso\Modelos\bin\Debug\Modelos.dll
+D:\github\ContSis\Viso\Modelos\bin\Debug\Modelos.pdb
+D:\github\ContSis\Viso\Modelos\bin\Debug\Modelos.xml
+D:\github\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.dll
+D:\github\ContSis\Viso\Modelos\bin\Debug\MySql.Data.dll
+D:\github\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\github\ContSis\Viso\Modelos\bin\Debug\Capa_Entidad.xml
+D:\github\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\github\ContSis\Viso\Modelos\obj\Debug\Modelos.Resources.resources
+D:\github\ContSis\Viso\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\github\ContSis\Viso\Modelos\obj\Debug\Modelos.dll
+D:\github\ContSis\Viso\Modelos\obj\Debug\Modelos.xml
+D:\github\ContSis\Viso\Modelos\obj\Debug\Modelos.pdb
+D:\ContSis\Modelos\bin\Debug\Modelos.dll
+D:\ContSis\Modelos\bin\Debug\Modelos.pdb
+D:\ContSis\Modelos\bin\Debug\Modelos.xml
+D:\ContSis\Modelos\bin\Debug\Capa_Entidad.dll
+D:\ContSis\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\ContSis\Modelos\bin\Debug\Capa_Entidad.xml
+D:\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\ContSis\Modelos\obj\Debug\Modelos.Resources.resources
+D:\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\ContSis\Modelos\obj\Debug\Modelos.dll
+D:\ContSis\Modelos\obj\Debug\Modelos.xml
+D:\ContSis\Modelos\obj\Debug\Modelos.pdb
+D:\ContSis\Modelos\bin\Debug\MySql.Data.dll

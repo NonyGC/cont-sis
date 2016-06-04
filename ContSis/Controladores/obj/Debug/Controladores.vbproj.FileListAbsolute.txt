@@ -1,0 +1,8 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.pdb

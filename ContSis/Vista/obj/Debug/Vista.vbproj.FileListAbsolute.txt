@@ -1,0 +1,10 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.pdb

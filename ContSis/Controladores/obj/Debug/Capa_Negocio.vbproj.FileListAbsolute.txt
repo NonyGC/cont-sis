@@ -1,0 +1,235 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso\Controladores\obj\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Controladores.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\bin\Debug\Modelos.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Controladores.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Controladores.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Modelos.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Modelos.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Controladores.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Controladores.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\github\ContSis\Viso\Controladores\bin\Debug\Controladores.dll
+D:\github\ContSis\Viso\Controladores\bin\Debug\Controladores.pdb
+D:\github\ContSis\Viso\Controladores\bin\Debug\Controladores.xml
+D:\github\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.dll
+D:\github\ContSis\Viso\Controladores\bin\Debug\Modelos.dll
+D:\github\ContSis\Viso\Controladores\bin\Debug\MySql.Data.dll
+D:\github\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\github\ContSis\Viso\Controladores\bin\Debug\Capa_Entidad.xml
+D:\github\ContSis\Viso\Controladores\bin\Debug\Modelos.pdb
+D:\github\ContSis\Viso\Controladores\bin\Debug\Modelos.xml
+D:\github\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\github\ContSis\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+D:\github\ContSis\Viso\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\github\ContSis\Viso\Controladores\obj\Debug\Controladores.dll
+D:\github\ContSis\Viso\Controladores\obj\Debug\Controladores.xml
+D:\github\ContSis\Viso\Controladores\obj\Debug\Controladores.pdb
+D:\ContSis\Controladores\bin\Debug\Controladores.dll
+D:\ContSis\Controladores\bin\Debug\Controladores.pdb
+D:\ContSis\Controladores\bin\Debug\Controladores.xml
+D:\ContSis\Controladores\bin\Debug\Capa_Entidad.dll
+D:\ContSis\Controladores\bin\Debug\Modelos.dll
+D:\ContSis\Controladores\bin\Debug\Capa_Entidad.pdb
+D:\ContSis\Controladores\bin\Debug\Capa_Entidad.xml
+D:\ContSis\Controladores\bin\Debug\Modelos.pdb
+D:\ContSis\Controladores\bin\Debug\Modelos.xml
+D:\ContSis\Controladores\obj\Debug\Capa_Negocio.vbprojResolveAssemblyReference.cache
+D:\ContSis\Controladores\obj\Debug\Controladores.Resources.resources
+D:\ContSis\Controladores\obj\Debug\Capa_Negocio.vbproj.GenerateResource.Cache
+D:\ContSis\Controladores\obj\Debug\Controladores.dll
+D:\ContSis\Controladores\obj\Debug\Controladores.xml
+D:\ContSis\Controladores\obj\Debug\Controladores.pdb

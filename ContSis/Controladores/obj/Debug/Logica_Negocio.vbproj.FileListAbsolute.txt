@@ -1,0 +1,13 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\MySql.Data.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Logica_Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Logica_Negocio.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Controladores\obj\Debug\Controladores.pdb

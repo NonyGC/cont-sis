@@ -1,0 +1,1019 @@
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\MiguelAngel\Desktop\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Downloads\Compressed\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\Contabilidad\Viso_adv\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Interop.VBIDE.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.test.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Design.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.14.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE80.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\stdole.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Utilities.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Imaging.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Threading.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ImageCatalog.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.Wpf.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Package.LanguageService.14.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Language.Intellisense.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj80.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Framework.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Editor.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.MSXML.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Logic.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj2.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.14.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Design.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Utilities.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Imaging.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Threading.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ImageCatalog.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.Wpf.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Package.LanguageService.14.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Language.Intellisense.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Services.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Core.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Framework.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Editor.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Logic.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.xml
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.14.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE80.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\stdole.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Utilities.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Imaging.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Threading.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ImageCatalog.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.Wpf.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Package.LanguageService.14.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Language.Intellisense.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj80.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Framework.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Editor.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.MSXML.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Logic.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj2.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.14.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Design.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Utilities.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Imaging.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Threading.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ImageCatalog.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.Wpf.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.UI.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Package.LanguageService.14.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Language.Intellisense.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Services.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Core.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Data.Framework.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Editor.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.Text.Logic.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Interop.VBIDE.dll
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Desktop\123\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Common.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Design.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Interaction.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Extensibility.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+H:\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso\Nueva carpeta\Viso_Ofi\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Interaction.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.Windows.Design.Extensibility.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_RegUsuario.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Viso.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.Shared.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\FlashControlV71.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\EnvDTE80.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\stdole.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\ShockwaveFlashObjects.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj80.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.MSXML.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\VSLangProj2.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\n_02_language\n_02_language_escritorio\n_02_language_visual_basic\Proyecto\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmChecking.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmMainv2.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmMain.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Logeo.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmUsuarios.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form1.resources
+D:\GitParentMore\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe.config
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.exe
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.exe
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Vista.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.Shared.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\FlashControlV71.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\MySql.Data.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\stdole.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\ShockwaveFlashObjects.dll
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Controladores.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.pdb
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\bin\Debug\Modelos.xml
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form1.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmChecking.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmMainv2.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmMain.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Comprobantes.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmUsuarios.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\crvVisual\Viso_Ofiv4-b\Viso_Ofi\Viso\Vista\obj\Debug\Vista.frmLogeo.resources
+D:\Contabilidad\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\ContSis\Viso\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\ContSis\Viso\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmComprobantes.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Form1.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmChecking.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmMainv2.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmMain.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmLogeo.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frmUsuarios.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Vista.exe
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Vista.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Vista.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Controladores.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Shared.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\MetroFramework.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Modelos.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\FlashControlV71.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\MySql.Data.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\stdole.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\ShockwaveFlashObjects.dll
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Controladores.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Controladores.xml
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Modelos.pdb
+D:\Contabilidad\crvCont\ContSis\Viso\Vista\bin\Debug\Modelos.xml
+D:\Contabilidad\git\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\git\ContSis\Viso\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\git\ContSis\Viso\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\git\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+D:\Contabilidad\github\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\github\ContSis\Viso\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\github\ContSis\Viso\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\github\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Vista.exe
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Vista.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Vista.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Controladores.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\MetroFramework.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Modelos.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\FlashControlV71.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\MySql.Data.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\stdole.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Controladores.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Controladores.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Modelos.pdb
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\bin\Debug\Modelos.xml
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmComprobantes.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Form1.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmChecking.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmMainv2.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmMain.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Ejercicio.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.FrmActEmpresas.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Man_Empresas2.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmLogeo.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frmUsuarios.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_TipoCambio.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\MiguelAngel\Source\Repos\canjeSoft\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\github\ContSis\Viso\Vista\bin\Debug\Vista.exe.config
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.exe
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.xml
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.pdb
+D:\github\ContSis\Viso\Vista\bin\Debug\Vista.exe
+D:\github\ContSis\Viso\Vista\bin\Debug\Vista.pdb
+D:\github\ContSis\Viso\Vista\bin\Debug\Vista.xml
+D:\github\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\Controladores.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Shared.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\MetroFramework.Design.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\MetroFramework.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\Modelos.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\FlashControlV71.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\MySql.Data.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\stdole.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\ShockwaveFlashObjects.dll
+D:\github\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.pdb
+D:\github\ContSis\Viso\Vista\bin\Debug\Capa_Entidad.xml
+D:\github\ContSis\Viso\Vista\bin\Debug\Controladores.pdb
+D:\github\ContSis\Viso\Vista\bin\Debug\Controladores.xml
+D:\github\ContSis\Viso\Vista\bin\Debug\Modelos.pdb
+D:\github\ContSis\Viso\Vista\bin\Debug\Modelos.xml
+D:\github\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmComprobantes.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Frm_PlanCuentas.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmChecking.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmMainv2.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmMain.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmReportes.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Auxiliar.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmLogeo.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Periodos.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frm_Man_Empresa.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Frm_Roles.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.Resources.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmTipoCambio.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmSelectEmpresa.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmManEmpresa.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmUsuario.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmEjercicio.resources
+D:\github\ContSis\Viso\Vista\obj\Debug\Vista.frmPeriodo.resources
+D:\ContSis\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+D:\ContSis\Vista\obj\Debug\Vista.frmComprobantes.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmPeriodos.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmPlanCuentas.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmCheck.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmMain.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmConfiguracionReporte.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmReportePantalla.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmReportes.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmEjercicio.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmPeriodo.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmSelectEmpresa.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmAuxiliar.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmLogeo.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmUsuario.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmTipoCambio.resources
+D:\ContSis\Vista\obj\Debug\Vista.FrmDataGridView.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmManEmpresa.resources
+D:\ContSis\Vista\obj\Debug\Vista.Form_RolesHijo.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmRol.resources
+D:\ContSis\Vista\obj\Debug\Vista.Resources.resources
+D:\ContSis\Vista\obj\Debug\Vista.frmUsuariosConectados.resources
+D:\ContSis\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+D:\ContSis\Vista\bin\Debug\Vista.exe.config
+D:\ContSis\Vista\bin\Debug\Vista.exe
+D:\ContSis\Vista\bin\Debug\Vista.pdb
+D:\ContSis\Vista\bin\Debug\Vista.xml
+D:\ContSis\Vista\bin\Debug\Capa_Entidad.dll
+D:\ContSis\Vista\bin\Debug\Controladores.dll
+D:\ContSis\Vista\bin\Debug\MetroFramework.Design.dll
+D:\ContSis\Vista\bin\Debug\MetroFramework.dll
+D:\ContSis\Vista\bin\Debug\MetroFramework.Fonts.dll
+D:\ContSis\Vista\bin\Debug\Modelos.dll
+D:\ContSis\Vista\bin\Debug\Capa_Entidad.pdb
+D:\ContSis\Vista\bin\Debug\Capa_Entidad.xml
+D:\ContSis\Vista\bin\Debug\Controladores.pdb
+D:\ContSis\Vista\bin\Debug\Controladores.xml
+D:\ContSis\Vista\bin\Debug\Modelos.pdb
+D:\ContSis\Vista\bin\Debug\Modelos.xml
+D:\ContSis\Vista\obj\Debug\Vista.exe
+D:\ContSis\Vista\obj\Debug\Vista.xml
+D:\ContSis\Vista\obj\Debug\Vista.pdb
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.Shared.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\ContSis\Vista\bin\Debug\FlashControlV71.dll
+D:\ContSis\Vista\bin\Debug\MySql.Data.dll
+D:\ContSis\Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\ContSis\Vista\bin\Debug\stdole.dll
+D:\ContSis\Vista\bin\Debug\ShockwaveFlashObjects.dll
+D:\sis-con\ContSis\Vista\bin\Debug\Vista.exe.config
+D:\sis-con\ContSis\Vista\obj\Debug\Vista.exe
+D:\sis-con\ContSis\Vista\obj\Debug\Vista.xml
+D:\sis-con\ContSis\Vista\obj\Debug\Vista.pdb
