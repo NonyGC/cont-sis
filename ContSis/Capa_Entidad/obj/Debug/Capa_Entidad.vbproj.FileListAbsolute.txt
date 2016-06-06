@@ -110,3 +110,11 @@ D:\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
 D:\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 D:\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 D:\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

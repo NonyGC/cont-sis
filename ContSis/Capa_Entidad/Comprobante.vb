@@ -10,14 +10,30 @@
     Private _fechae As String
     Private _fechav As String
     Private _ruc As String
+    Private _estado As String
+    Private _man As String
 
     Private _nrodetalle As String
     Private _cuenta As String
     Private _glosa As String
     Private _debe As Double
     Private _haber As Double
-
-    
+    Public Property estado As Integer
+        Get
+            Return _estado
+        End Get
+        Set(value As Integer)
+            _estado = value
+        End Set
+    End Property
+    Public Property man As String
+        Get
+            Return _man
+        End Get
+        Set(ByVal value As String)
+            _man = value
+        End Set
+    End Property
     Public Property nrocompro As String
         Get
             Return _nrocompro
@@ -153,3 +169,4 @@
     End Property
 
 End Class
+

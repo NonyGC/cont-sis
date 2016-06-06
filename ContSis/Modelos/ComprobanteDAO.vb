@@ -6,7 +6,7 @@ Public Class ComprobanteDAO
     Dim da As New MySqlDataAdapter
     Dim conn As New MySqlConnection
     Public Function Comprobante_mostrar_cuenta() As DataTable
-        Return Consultar_Tabla_MySQL("select CONCAT(codigo,'  ',nombre) as Codigo from pc16000 where LENGTH(codigo)=5")
+        Return Consultar_Tabla_MySQL("select CONCAT(codigo,'  ',nombre) as Cuenta from pc16000 where codigo regexp '^33|^60|^62^63|^65' and length(codigo)=3")
     End Function
     Public Function Comprobante_mostrar_cuenta_n() As DataTable
         Return Consultar_Tabla_MySQL("select alias from pc16000 where LENGTH(codigo)=5")
@@ -68,6 +68,38 @@ Public Class ComprobanteDAO
             .Parameters.AddWithValue("fee_d", entCom.fechae)
             .Parameters.AddWithValue("fev_d", entCom.fechav)
             .Parameters.AddWithValue("r_a", entCom.ruc)
+            .Parameters.AddWithValue("est", entCom.estado)
+
+        End With
+        Try
+            rowsaffected = consultaSQL.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            conexionValue.Close()
+        End Try
+        Return rowsaffected
+    End Function
+    Public Function comprobante_cabecera_actualizar(ByVal entCom As Comprobante)
+        conexionValue = Me.conexion
+        Dim rowsaffected As Integer
+        Dim sql As String = "sp_comprobante_actualizar_c"
+        Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
+
+        With consultaSQL
+            .Connection = conexionValue
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("n_d", entCom.nrodiario)
+            .Parameters.AddWithValue("p", entCom.periodo)
+            .Parameters.AddWithValue("n_r", entCom.nrocompro)
+            .Parameters.AddWithValue("c_m", entCom.moneda)
+            .Parameters.AddWithValue("t_adq", entCom.tipo_adq)
+            .Parameters.AddWithValue("t_d", entCom.tipo_doc)
+            .Parameters.AddWithValue("s_d", entCom.serie)
+            .Parameters.AddWithValue("n_doc", entCom.nrodocu)
+            .Parameters.AddWithValue("fee_d", entCom.fechae)
+            .Parameters.AddWithValue("fev_d", entCom.fechav)
+            .Parameters.AddWithValue("r_a", entCom.ruc)
+            .Parameters.AddWithValue("est", entCom.estado)
 
         End With
         Try
@@ -82,6 +114,30 @@ Public Class ComprobanteDAO
         conexionValue = Me.conexion
         Dim rowsaffected As Integer
         Dim sql As String = "sp_comprobante_registrar_cdetalle"
+        Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
+
+        With consultaSQL
+            .Connection = conexionValue
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("nrd", entCom.nrodetalle)
+            .Parameters.AddWithValue("nrr", entCom.nrocompro)
+            .Parameters.AddWithValue("cue", entCom.cuenta)
+            .Parameters.AddWithValue("glo", entCom.glosa)
+            .Parameters.AddWithValue("deb", entCom.debe)
+            .Parameters.AddWithValue("hab", entCom.haber)
+        End With
+        Try
+            rowsaffected = consultaSQL.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            conexionValue.Close()
+        End Try
+        Return rowsaffected
+    End Function
+    Public Function comprobante_detalle_actualizar(ByVal entCom As Comprobante)
+        conexionValue = Me.conexion
+        Dim rowsaffected As Integer
+        Dim sql As String = "sp_comprobante_actualizar_cdetalle"
         Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
 
         With consultaSQL
@@ -118,7 +174,8 @@ Public Class ComprobanteDAO
         Return Consultar_Tabla_MySQL("SELECT * FROM d16000 WHERE num_reg='" + entCom.nrocompro + "'")
     End Function
     Public Function Comprobante_detalle_llenar(ByVal entCom As Comprobante) As DataTable
-        Return Consultar_Tabla_MySQL("SELECT * FROM d16000d WHERE nro_reg='" + entCom.nrocompro + "'")
+        Return Consultar_Tabla_MySQL("SELECT nro_det,cuenta,p.nombre,glosa,debe,haber FROM d16000d d INNER JOIN pc16000 p on d.cuenta=p.codigo WHERE nro_reg='" + entCom.nrocompro + "'")
     End Function
 
 End Class
+

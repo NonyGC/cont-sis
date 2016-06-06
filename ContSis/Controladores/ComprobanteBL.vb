@@ -40,6 +40,17 @@ Public Class ComprobanteBL
         verificar = Datos.comprobante_detalle_register(entCom)
         Return verificar
     End Function
+
+    Public Function comprobante_cabecera_actualizar(ByVal entCom As Comprobante) As Integer
+        Dim verificar As Integer
+        verificar = Datos.comprobante_cabecera_actualizar(entCom)
+        Return verificar
+    End Function
+    Public Function comprobante_detalle_actualizar(ByVal entCom As Comprobante)
+        Dim verificar As Integer
+        verificar = Datos.comprobante_detalle_actualizar(entCom)
+        Return verificar
+    End Function
     Public Function comprobante_detalle_autogenerado(ByVal entCom As Comprobante) As String
         Return Datos.comprobante_detalle_autogenerado(entCom)
     End Function

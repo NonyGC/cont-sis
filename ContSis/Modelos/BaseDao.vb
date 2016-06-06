@@ -3,10 +3,10 @@
 Public Class BaseDao
     'Variables
     Private server As String = "localhost"
-    Private user As String = "user"
-    Private password As String = "S0p0rt3user"
-    Private port As String = "3307"
-    Private database As String = "bdsist"
+    Private user As String = "root"
+    Private password As String = "giraldo"
+    Private port As String = "3306"
+    Private database As String = "bdviso1"
     Private conexionValue As MySqlConnection
     'Contructor
     'Propiedades 
@@ -22,7 +22,7 @@ Public Class BaseDao
             "user id=" & Me.user & ";" &
             "password=" & Me.password & ";" &
             "port=" & Me.port & ";" &
-            "database=" & Me.database & ";"
+            "database=" & Me.database & ";Convert Zero Datetime=True"
 
         conexionValue.Open()
         conexion = conexionValue
