@@ -1061,3 +1061,7 @@ C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Vista\obj\Debug\Vista.Resources.reso
 C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Vista\obj\Debug\Vista.frmUsuariosConectados.resources
 C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
 C:\Users\ADMIN\VISO\GITHUB\cont-sis\ContSis\Vista\obj\Debug\Vista.FrmComprobanteN.resources
+D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\bin\Debug\Vista.exe.config
+D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.exe
+D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.xml
+D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.pdb
