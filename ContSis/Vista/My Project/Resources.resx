@@ -185,4 +185,10 @@
     <value>prueba</value>
     <comment>conex</comment>
   </data>
+  <data name="mainmessage_image1_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainmessage_image1_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plan_contable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plan_contable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

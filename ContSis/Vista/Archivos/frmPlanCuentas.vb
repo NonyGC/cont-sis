@@ -4,7 +4,10 @@ Imports System.IO
 Imports System.Data
 Imports System.Data.OleDb
 Imports Microsoft.Office.Interop
-Public Class frmPlanCuentas
+
+Public Class FrmPlanCuentas
+    Dim totaldebe As Decimal
+    Dim totalhaber As Decimal
     Dim validar As New CuentaBL
     Dim Entvalidar As New Cuenta
     Dim EntCont As New Cuenta
@@ -12,17 +15,11 @@ Public Class frmPlanCuentas
     Dim autorizado As Integer
     Dim DTimport As New DataTable
     Dim DTExport As New DataTable
+    Dim Amarretables As New DataTable
     Dim largocbo As String
     Dim valuecuenta As String
     Dim tabla As String = "16000"
-    Private Sub CLearTextboxes()
-        Dim a As Decimal = 9999999999.99
-
-        For Each C As Control In GroupBox4.Controls
-            C.Text = a.ToString("C")
-        Next
-
-    End Sub
+    Dim listdet As String() = {"Inicio", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "Cierre", "Total"}
     Sub verificarTBs()
         If txtcuenta.Text.Trim().Length > 0 Then
             EntCont.codigo = txtcuenta.Text
@@ -46,11 +43,50 @@ Public Class frmPlanCuentas
             'MsgBox(EntCont.aliass.Length)
         End If
     End Sub
+#Region "ListView_Control"
+    Sub listview_sin_nada()
+        ListView1.Clear()
+        ListView1.View = View.Details
+        ListView1.Columns.Add("Meses")
+        ListView1.Columns.Add("Debe")
+        ListView1.Columns.Add("Haber")
+        ListView1.Columns(0).Width = 115
+        ListView1.Columns(1).Width = 190
+        ListView1.Columns(2).Width = 190
+        ListView1.Columns(1).TextAlign = HorizontalAlignment.Right
+        ListView1.Columns(2).TextAlign = HorizontalAlignment.Right
+        ListView1.GridLines = True
+        For i = 0 To listdet.Length - 1
+            ListView1.Items.Add(listdet(i))
+        Next
+    End Sub
+    Sub listview_ceros()
+        For i = 0 To listdet.Length - 1
+            ListView1.Items(i).SubItems.Add(CDec("0,00"))
+            ListView1.Items(i).SubItems.Add(CDec("0,00"))
+        Next
+    End Sub
+#End Region
+    Sub Amarres_registro()
+        EntCont.codigo = txtcuenta.Text
+        EntCont.c_debe = cbodebe.Text
+        EntCont.c_haber = cbohaber.Text
+        Amarretables = validar.Cuenta_Amarre_ShowLB(tabla, EntCont)
+        If Amarretables.Rows.Count > 0 Then
+            validar.Cuenta_Amarre_RegisterLB(tabla, 1, EntCont)
+        Else
+            validar.Cuenta_Amarre_RegisterLB(tabla, 0, EntCont)
+        End If
+    End Sub
     Sub limpiar()
         txtcuenta.Text = Nothing
         txtnombre.Text = Nothing
         txtalias.Text = Nothing
-        CLearTextboxes()
+        cbodebe.Enabled = False
+        cbohaber.Enabled = False
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        listview_sin_nada()
+        listview_ceros()
     End Sub
     Sub registrar()
         If validar.Cuenta_RegisterLB(tabla, EntCont) > 0 Then
@@ -64,6 +100,7 @@ Public Class frmPlanCuentas
             limpiar()
         End If
     End Sub
+#Region "AutoComplete"
     Sub autocompletado(ByVal largo As String)
         Dim i As Integer
         Try
@@ -102,21 +139,33 @@ Public Class frmPlanCuentas
             MsgBox(ex.Message)
         End Try
     End Sub
+    Sub llenando_autos()
+        If CInt(txtcuenta.Text.Substring(0, 2)) >= 61 And CInt(txtcuenta.Text.Substring(0, 2)) <= 69 Then
+            cbodebe.Enabled = True
+            cbohaber.Enabled = True
+            autocompletado_debe(9)
+            autocompletado_haber(79)
+        ElseIf CInt(txtcuenta.Text.Substring(0, 2)) = 60
+            cbodebe.Enabled = True
+            cbohaber.Enabled = True
+            autocompletado_debe(2)
+            autocompletado_haber(61)
+        End If
+    End Sub
+
+#End Region
+
 
     Sub cbo_cambio(ByVal inx As Integer)
         Me.Text = "Plan contable de " + CStr(inx + 2) + " digitos"
         largocbo = inx + 2
         autocompletado(largocbo)
-        GroupBox2.Visible = False
         txtcuenta.MaxLength = inx + 2
         limpiar()
     End Sub
     Private Sub txtcuenta_KeyDown(sender As Object, e As KeyEventArgs) Handles txtcuenta.KeyDown
 
         If e.KeyCode = Keys.Enter Then
-            If txtcuenta.Text.Trim().Length > 5 Then
-                GroupBox2.Visible = True
-            End If
             If txtcuenta.Text.Trim().Length > 0 Then
                 With EntCont
                     .codigo = txtcuenta.Text.Split("  ").First()
@@ -124,61 +173,46 @@ Public Class frmPlanCuentas
                 Try
                     datos = validar.Cuenta_DatosLB(tabla, EntCont)
                     If datos.Rows.Count > 0 Then
+                        listview_sin_nada()
                         For Each row As DataRow In datos.Rows
+                            Dim xdebe As Integer() = {3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29}
+                            Dim xhaber As Integer() = {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+                            For i = 0 To 13
+                                ListView1.Items(i).SubItems.Add(CDec(row(xdebe(i))).ToString)
+                                ListView1.Items(i).SubItems.Add(CDec(row(xhaber(i))).ToString)
+                            Next
+                            totaldebe = row(3) + row(5) + row(7) + row(9) + row(11) + row(13) _
+                                + row(15) + row(17) + row(19) + row(21) + row(23) + row(25) _
+                                + row(27) + row(29)
+                            totalhaber = row(4) + row(6) + row(8) + row(10) + row(12) + row(14) _
+                                + row(16) + row(18) + row(20) + row(22) + row(24) + row(26) _
+                                + row(28) + row(30)
+                            ListView1.Items(14).SubItems.Add(totaldebe.ToString)
+                            ListView1.Items(14).SubItems.Add(totalhaber.ToString)
+
+
                             txtcuenta.Text = row(2).ToString
                             txtnombre.Text = row(0).ToString
                             txtalias.Text = row(1).ToString
-                            lbldebeini.Text = CDec(row(3)).ToString("C")
-                            lblhaberini.Text = CDec(row(4)).ToString("C")
-                            lbldebeene.Text = CDec(row(5)).ToString("C")
-                            lblhaberene.Text = CDec(row(6)).ToString("C")
-                            lbldebefeb.Text = CDec(row(7)).ToString("C")
-                            lblhaberfeb.Text = CDec(row(8)).ToString("C")
-                            lbldebemar.Text = CDec(row(9)).ToString("C")
-                            lblhabermar.Text = CDec(row(10)).ToString("C")
-                            lbldebeabr.Text = CDec(row(11)).ToString("C")
-                            lblhaberabr.Text = CDec(row(12)).ToString("C")
-                            lbldebemay.Text = CDec(row(13)).ToString("C")
-                            lblhabermay.Text = CDec(row(14)).ToString("C")
-                            lbldebejun.Text = CDec(row(15)).ToString("C")
-                            lblhaberjun.Text = CDec(row(16)).ToString("C")
-                            lbldebejul.Text = CDec(row(17)).ToString("C")
-                            lblhaberjul.Text = CDec(row(18)).ToString("C")
-                            lbldebeago.Text = CDec(row(19)).ToString("C")
-                            lblhaberago.Text = CDec(row(20)).ToString("C")
-                            lbldebesep.Text = CDec(row(21)).ToString("C")
-                            lblhabersep.Text = CDec(row(22)).ToString("C")
-                            lbldebeoct.Text = CDec(row(23)).ToString("C")
-                            lblhaberoct.Text = CDec(row(24)).ToString("C")
-                            lbldebenov.Text = CDec(row(25)).ToString("C")
-                            lblhabernov.Text = CDec(row(26)).ToString("C")
-                            lbldebedic.Text = CDec(row(27)).ToString("C")
-                            lblhaberdic.Text = CDec(row(28)).ToString("C")
-                            lbldebecier.Text = CDec(row(29)).ToString("C")
-                            lblhabercier.Text = CDec(row(30)).ToString("C")
-                            lbldebetotal.Text = row(3) + row(5) + row(7) + row(9) + row(11) + row(13) _
-                                + row(15) + row(17) + row(19) + row(21) + row(23) + row(25) _
-                                + row(27) + row(29)
-
-                            lblhabertotal.Text = row(4) + row(6) + row(8) + row(10) + row(12) + row(14) _
-                                + row(16) + row(18) + row(20) + row(22) + row(24) + row(26) _
-                                + row(28) + row(30)
                         Next
-                        If CInt(txtcuenta.Text.Substring(0, 2)) >= 61 And CInt(txtcuenta.Text.Substring(0, 2)) <= 69 Then
-                            GroupBox2.Visible = True
-                            autocompletado_debe(9)
-                            autocompletado_haber(79)
-                        ElseIf CInt(txtcuenta.Text.Substring(0, 2)) = 60
-                            GroupBox2.Visible = True
-                            autocompletado_debe(2)
-                            autocompletado_haber(61)
-                        Else
-                            GroupBox2.Visible = False
+                        If txtcuenta.TextLength > 5 Then
+                            Amarretables = validar.Cuenta_Amarre_ShowLB(tabla, EntCont)
+                            If Amarretables.Rows.Count > 0 Then
+                                llenando_autos()
+                                For Each row As DataRow In Amarretables.Rows
+                                    cbodebe.Text = row(1)
+                                    cbohaber.Text = row(2)
+                                Next
+
+                            Else
+                                llenando_autos()
+                            End If
                         End If
 
                     Else
                         MsgBox("Sin Datos")
                         limpiar()
+                        listview_ceros()
                     End If
                 Catch ex As Exception
                     MsgBox(ex.Message)
@@ -209,15 +243,9 @@ Public Class frmPlanCuentas
                 End If
             End If
             If CInt(txtcuenta.Text.Substring(0, 2)) >= 61 And CInt(txtcuenta.Text.Substring(0, 2)) <= 69 Then
-                EntCont.codigo = txtcuenta.Text
-                EntCont.c_debe = cbodebe.Text
-                EntCont.c_haber = cbohaber.Text
-                validar.Cuenta_Amarre_RegisterLB(tabla, EntCont)
+                Amarres_registro()
             ElseIf CInt(txtcuenta.Text.Substring(0, 2)) = 60
-                EntCont.codigo = txtcuenta.Text
-                EntCont.c_debe = cbodebe.Text
-                EntCont.c_haber = cbohaber.Text
-                validar.Cuenta_Amarre_RegisterLB(tabla, EntCont)
+                Amarres_registro()
             End If
         Catch ex As Exception
 
@@ -237,8 +265,8 @@ Public Class frmPlanCuentas
         Try
             With EntCont
                 .codigo = txtcuenta.Text
-                .debe = CDec(lbldebetotal.Text)
-                .haber = CDec(lblhabertotal.Text)
+                .debe = CDec(totaldebe)
+                .haber = CDec(totalhaber)
             End With
             If EntCont.debe + EntCont.haber > 0 Then
                 MsgBox("No se puede borrar")
@@ -260,177 +288,10 @@ Public Class frmPlanCuentas
 
     End Sub
     Private Sub Frm_PlanCuentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnCnfImp.Visible = False
-        GroupBox2.Visible = False
-        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        limpiar()
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCnfImp.Click
-        ProgressBar1.Value = 0
-        Dim cont As Integer
-        Try
-            For i = 0 To DTimport.Rows.Count - 1
-                EntCont.codigo = DTimport.Rows(i)(0).ToString
-                EntCont.nombre = DTimport.Rows(i)(1).ToString.ToUpper()
-                If DTimport.Rows(i)(2).ToString.Length > 0 Then
-                    EntCont.aliass = DTimport.Rows(i)(2).ToString
-                Else
-                    Dim blanco As String = Space(25)
-                    EntCont.aliass = (EntCont.nombre & Space(25)).Substring(0, 25)
-                End If
-                validar.Cuenta_RegisterLB(tabla, EntCont)
-                cont = cont + 1
-                ProgressBar1.Increment(1)
-            Next
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-
-    End Sub
-
-
-    Private Sub btnCnfExport_Click(sender As Object, e As EventArgs) Handles btnexport.Click
-        'Change "C:\Users\Jimmy\Documents\Merchandise.accdb" to your database location
-        Dim ODsave As New SaveFileDialog
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Jimmy\Desktop\test.accdb"
-        'Change "C:\Users\Jimmy\Desktop\test.xlsx" to your excel file location
-        Dim excelLocation As String
-        Dim source1 As New BindingSource
-        Dim APP As New Excel.Application
-        Dim worksheet As Excel.Worksheet
-        Dim workbook As Excel.Workbook
-        Dim misValue As Object = System.Reflection.Missing.Value
-        Try
-            DTExport = validar.Cuenta_Export(tabla)
-            btnCnfImp.Visible = False
-
-            ODsave.FileName = "Plan_contable"
-            ODsave.Filter = ("Excel files |*.xls")
-            ODsave.Title = "Guardar Plan Contable"
-            ODsave.DefaultExt = "xls"
-            ODsave.AddExtension = True
-            ''Export Header Names Start
-            If ODsave.ShowDialog = DialogResult.OK Then
-                excelLocation = ODsave.FileName
-                workbook = APP.Workbooks.Add(misValue)
-                worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
-
-                Dim columnsCount As Integer = DTExport.Columns.Count
-                For Each column In DTExport.Columns
-                    worksheet.Cells(1, column.Ordinal + 1).Value = column.columnname
-                Next
-                For i As Integer = 0 To DTExport.Rows.Count - 1
-                    Dim columnIndex As Integer = 0
-                    Do Until columnIndex = columnsCount
-                        'worksheet.Cells(i + 2, columnIndex + 1).Value = DTExport.Item(columnIndex, i).value.ToString
-                        worksheet.Cells(i + 2, columnIndex + 1).Value = DTExport.Rows(i).Item(columnIndex).ToString
-                        columnIndex += 1
-                    Loop
-                Next
-                workbook.SaveAs(excelLocation, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue,
-                Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue)
-                workbook.Close()
-                APP.Quit()
-                releaseObject(worksheet)
-                releaseObject(workbook)
-                releaseObject(APP)
-                MessageBox.Show("Exportación Completada")
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-
-
-    End Sub
-    Private Sub releaseObject(ByVal obj As Object)
-        Try
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
-            obj = Nothing
-        Catch ex As Exception
-            obj = Nothing
-            MessageBox.Show("Exception Occured while releasing object " + ex.ToString())
-        Finally
-            GC.Collect()
-        End Try
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnimport.Click
-
-        Dim Excel03ConString As String =
-            "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR=YES'"
-        Dim Excel07ConString As String =
-            "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=YES'"
-        Dim filePath As String
-        Dim extension As String
-        'Dim header As String = If(rbHeaderYes.Checked, "YES", "NO")
-        Dim conStr As String
-        Dim sheetName As String
-        Try
-            With OpenFileDialog1
-                .Filter = ("Excel files |*.xls;*.xlsx")
-                .FilterIndex = 4
-            End With
-            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                filePath = OpenFileDialog1.FileName
-                extension = Path.GetExtension(filePath)
-                conStr = String.Empty
-                Select Case extension
-                    Case ".xls"
-                        'Excel 97-03
-                        conStr = String.Format(Excel03ConString, filePath)
-                        Exit Select
-                    Case ".xlsx"
-                        'Excel 07
-                        conStr = String.Format(Excel07ConString, filePath)
-                        Exit Select
-                End Select
-
-                'Using con As New OleDbConnection(conStr)
-                '    Using cmd As New OleDbCommand()
-                '        cmd.Connection = con
-                '        con.Open()
-
-                '        Dim dtExcelSchema As DataTable = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, Nothing)
-
-                '        sheetName = dtExcelSchema.Rows(0)("TABLE_NAME").ToString()
-                '        con.Close()
-                '    End Using
-                'End Using
-                'Read Data from the First Sheet.
-
-                Using con As New OleDbConnection(conStr)
-                    Using cmd As New OleDbCommand()
-                        Using oda As New OleDbDataAdapter()
-                            Dim dt As New DataTable()
-                            sheetName = InputBox("Seleccione pagina a importar") + "$"
-                            cmd.CommandText = (Convert.ToString("SELECT * From [") & sheetName) + "]"
-                            cmd.Connection = con
-                            con.Open()
-                            oda.SelectCommand = cmd
-                            oda.Fill(dt)
-                            con.Close()
-                            'DataGridView1.DataSource = Nothing
-                            'DataGridView1.DataSource = dt
-                            DTimport = dt
-                        End Using
-                    End Using
-                End Using
-                btnCnfImp.Visible = True
-
-            End If
-            Dim pbcont As Integer
-            For i = 0 To DTimport.Rows.Count - 1
-                pbcont = pbcont + 1
-            Next
-            ProgressBar1.Maximum = pbcont
-        Catch ex As Exception
-            MsgBox(ex.ToString())
-        End Try
-    End Sub
-
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        'Autocompleta segun el nivel deseado
         If ComboBox1.SelectedIndex = 0 Then
             cbo_cambio(0)
         ElseIf ComboBox1.SelectedIndex = 1 Then
@@ -441,8 +302,8 @@ Public Class frmPlanCuentas
             cbo_cambio(3)
         ElseIf ComboBox1.SelectedIndex = 4 Then
             Me.Text = "Plan contable de (6 - 12) digitos"
-            largocbo = "6"
-            GroupBox2.Visible = True
+            largocbo = 6
+            autocompletado(largocbo)
             txtcuenta.MaxLength = 12
             limpiar()
         End If
@@ -480,4 +341,20 @@ Public Class frmPlanCuentas
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Frm_PlanCuentas_Adicional.Show()
+    End Sub
+
+    Private Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles ListView1.ColumnWidthChanging
+        e.Cancel = True
+    End Sub
+
+    Private Sub ListView1_ColumnWidthChanged(sender As Object, e As ColumnWidthChangedEventArgs) Handles ListView1.ColumnWidthChanged
+        Static FireMe As Boolean = True
+        If FireMe = True Then
+            FireMe = False
+            ListView1.Columns(e.ColumnIndex).Width = 172
+            FireMe = True
+        End If
+    End Sub
 End Class

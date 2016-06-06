@@ -131,6 +131,21 @@
     <Compile Include="Archivos\frmPlanCuentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Archivos\FrmPlancuentasAdicional.Designer.vb">
+      <DependentUpon>FrmPlancuentasAdicional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\FrmPlancuentasAdicional.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\FrmPlanCuentasErrores.Designer.vb">
+      <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\FrmPlanCuentasErrores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\WaterMark.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Sesion\frmPeriodo.Designer.vb">
       <DependentUpon>frmPeriodo.vb</DependentUpon>
     </Compile>
@@ -287,6 +302,12 @@
     <EmbeddedResource Include="Archivos\frmPlanCuentas.resx">
       <DependentUpon>frmPlanCuentas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\FrmPlancuentasAdicional.resx">
+      <DependentUpon>FrmPlancuentasAdicional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\FrmPlanCuentasErrores.resx">
+      <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="File\Rpt\Formato141.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Formato141.vb</LastGenOutput>
@@ -433,7 +454,9 @@
     <Content Include="Resources\imprimir.png" />
     <Content Include="Resources\log_logout_door_1563.png" />
     <Content Include="Resources\lupa.png" />
+    <None Include="Resources\mainmessage_image1_transparent.png" />
     <Content Include="Resources\nuevo.png" />
+    <None Include="Resources\plan_contable.jpg" />
     <Content Include="Resources\salir.png" />
     <Content Include="Resources\users_icon.ico" />
     <None Include="Resources\configuration_13194.png" />
