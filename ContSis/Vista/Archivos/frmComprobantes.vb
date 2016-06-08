@@ -93,19 +93,19 @@ Public Class frmComprobantes
 
             End If
         ElseIf gvComprobante.CurrentCell.ColumnIndex = 2 Then
-            If autoText IsNot Nothing Then
-                Try
-                    datacol = compBL.comprobante_Cuenta_n()
-                    For i As Integer = 0 To datacol.Rows.Count - 1
-                        col.Add(datacol.Rows(i)("nombre").ToString)
-                    Next
-                    autoText.AutoCompleteSource = AutoCompleteSource.CustomSource
-                    autoText.AutoCompleteCustomSource = col
-                    autoText.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            End If
+            'If autoText IsNot Nothing Then
+            '    Try
+            '        datacol = compBL.comprobante_Cuenta_n()
+            '        For i As Integer = 0 To datacol.Rows.Count - 1
+            '            col.Add(datacol.Rows(i)("nombre").ToString)
+            '        Next
+            '        autoText.AutoCompleteSource = AutoCompleteSource.CustomSource
+            '        autoText.AutoCompleteCustomSource = col
+            '        autoText.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            '    Catch ex As Exception
+            '        MsgBox(ex.Message)
+            '    End Try
+            'End If
         Else
             autoText.AutoCompleteCustomSource = Nothing
         End If

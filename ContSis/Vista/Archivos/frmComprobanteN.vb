@@ -44,6 +44,64 @@ Public Class FrmComprobanteN
         txtCuentaIsc.AutoCompleteCustomSource = colcuenta
         txtCuentaTotal.AutoCompleteCustomSource = colcuenta
     End Sub
+    Sub DetalleComprobante()
+        Dim table As DataTable = New DataTable()
+        Dim row As DataRow
+        table.Columns.Add("Numero", Type.GetType("System.String"))
+        table.Columns.Add("Cuenta", Type.GetType("System.String"))
+        table.Columns.Add("Glosa", Type.GetType("System.String"))
+        table.Columns.Add("Debe", Type.GetType("System.Decimal"))
+        table.Columns.Add("Haber", Type.GetType("System.Decimal"))
+        If txtTotal.Text <> "" Then
+            row = table.NewRow()
+            row("Numero") = "010"
+            row("Cuenta") = txtCuentaTotal.Text
+            row("Glosa") = txtGlosa.Text
+            row("Haber") = Convert.ToDecimal(txtTotal.Text)
+            row("Debe") = "0.00"
+            table.Rows.Add(row)
+        End If
+        If txtMonto.Text <> "" Then
+            row = table.NewRow()
+            row("Numero") = "020"
+            row("Cuenta") = txtCuentaMonto.Text
+            row("Glosa") = txtGlosa.Text
+            row("Debe") = Convert.ToDecimal(txtMonto.Text)
+            row("Haber") = "0.00"
+            table.Rows.Add(row)
+        End If
+        If txtIgv.Text <> "" Then
+            row = table.NewRow()
+            row("Numero") = "030"
+            row("Cuenta") = txtCuentaIgv.Text
+            row("Glosa") = txtGlosa.Text
+            row("Debe") = txtIgv.Text
+            row("Haber") = "0.00"
+            table.Rows.Add(row)
+        End If
+        If txtIsc.Text <> "" Then
+            row = table.NewRow()
+            row("Numero") = "040"
+            row("Cuenta") = txtCuentaIsc.Text
+            row("Glosa") = txtGlosa.Text
+            row("Debe") = txtIsc.Text
+            row("Haber") = "0.00"
+            table.Rows.Add(row)
+        End If
+        Dim n As Integer = 0
+        For Each r As DataRow In table.Rows
+            With entCom
+                .nrodetalle = r("Numero")
+                .cuenta = r("Cuenta")
+                .glosa = r("Glosa")
+                .debe = Convert.ToDecimal(r("Debe"))
+                .haber = Convert.ToDecimal(r("Haber"))
+            End With
+            compBL.comprobante_detalle_register(entCom)
+        Next
+
+    End Sub
+
     Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRuc.KeyPress
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
@@ -311,14 +369,7 @@ Public Class FrmComprobanteN
                 End With
                 compBL.comprobante_cabecera_register(entCom)
 
-                With entCom
-                    .nrodetalle = compBL.comprobante_detalle_autogenerado(entCom)
-                    .cuenta = txtCuentaTotal.Text
-                    .glosa = txtGlosa.Text
-                    .debe = txtTotal.Text
-                    .haber = "0"
-                End With
-                compBL.comprobante_detalle_register(entCom)
+                DetalleComprobante()
 
 
                 MessageBox.Show("SE REGISTRO CORRECTAMENTE" + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
@@ -332,6 +383,7 @@ Public Class FrmComprobanteN
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+
 
     End Sub
 
@@ -377,5 +429,9 @@ Public Class FrmComprobanteN
         Else
             Me.ErrorIcon.SetError(sender, "Ingrese La Glosa")
         End If
+    End Sub
+
+    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
+
     End Sub
 End Class
