@@ -107,12 +107,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archivos\FrmComprobanteN.Designer.vb">
-      <DependentUpon>FrmComprobanteN.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Archivos\FrmComprobanteN.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Archivos\frmComprobantes.Designer.vb">
       <DependentUpon>frmComprobantes.vb</DependentUpon>
     </Compile>
@@ -123,24 +117,6 @@
       <DependentUpon>frmPeriodos.vb</DependentUpon>
     </Compile>
     <Compile Include="Archivos\frmPeriodos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Archivos\frmPlanCuentas.Designer.vb">
-      <DependentUpon>frmPlanCuentas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Archivos\frmPlanCuentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Archivos\FrmPlancuentasAdicional.Designer.vb">
-      <DependentUpon>FrmPlancuentasAdicional.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Archivos\FrmPlancuentasAdicional.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Archivos\FrmPlanCuentasErrores.Designer.vb">
-      <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Archivos\FrmPlanCuentasErrores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Archivos\WaterMark.vb">
@@ -290,23 +266,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Archivos\FrmComprobanteN.resx">
-      <DependentUpon>FrmComprobanteN.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Archivos\frmComprobantes.resx">
       <DependentUpon>frmComprobantes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Archivos\frmPeriodos.resx">
       <DependentUpon>frmPeriodos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Archivos\frmPlanCuentas.resx">
-      <DependentUpon>frmPlanCuentas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Archivos\FrmPlancuentasAdicional.resx">
-      <DependentUpon>FrmPlancuentasAdicional.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Archivos\FrmPlanCuentasErrores.resx">
-      <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="File\Rpt\Formato141.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -215,3 +215,16 @@ D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Dat
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Modelos\obj\Debug\Modelos.dll
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Modelos\obj\Debug\Modelos.xml
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Modelos\obj\Debug\Modelos.pdb
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Modelos.dll
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Modelos.pdb
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Modelos.xml
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.dll
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.xml
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.pdb

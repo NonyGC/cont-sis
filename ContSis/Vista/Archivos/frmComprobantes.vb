@@ -46,6 +46,11 @@ Public Class frmComprobantes
             For I As Integer = 0 To 5
                 gvComprobante.Rows.Add()
             Next
+            For I As Integer = 1 To gvComprobante.Rows.Count - 1
+                gvComprobante.Rows(I).ReadOnly = True
+                gvComprobante.Rows(I).DefaultCellStyle.BackColor = Color.WhiteSmoke
+            Next
+
         End If
     End Sub
 
@@ -123,12 +128,10 @@ Public Class frmComprobantes
                     Next
                 End If
                 entCom.cuenta = ""
-                gvComprobante.CurrentRow.Cells(3).Value = entCom.glosa
-                ''
-                Dim debe As Decimal = gvComprobante.CurrentRow.Cells(4).Value
-                Dim haber As Decimal = gvComprobante.CurrentRow.Cells(5).Value
-                gvComprobante.CurrentRow.Cells(4).Value = debe.ToString("N")
-                gvComprobante.CurrentRow.Cells(5).Value = haber.ToString("N")
+                If gvComprobante.CurrentRow.Index = 0 Then
+                    gvComprobante.CurrentRow.Cells(4).Value = "0.00"
+                    gvComprobante.CurrentRow.Cells(5).Value = "0.00"
+                End If
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -138,7 +141,6 @@ Public Class frmComprobantes
         If gvComprobante.CurrentCell.ColumnIndex = 3 Then
             entCom.glosa = gvComprobante.CurrentRow.Cells(3).Value
         End If
-
 
         Try
             If gvComprobante.CurrentCell.ColumnIndex = 4 Or gvComprobante.CurrentCell.ColumnIndex = 5 Then
@@ -151,11 +153,11 @@ Public Class frmComprobantes
                 gvComprobante.CurrentRow.Cells(4).Value = Convert.ToDecimal((debe).ToString("N"))
                 gvComprobante.CurrentRow.Cells(5).Value = Convert.ToDecimal((haber).ToString("N"))
 
-
                 If gvComprobante.CurrentCell.ColumnIndex = 4 Then
                     debe = 0
                     haber = 0
                     gvComprobante.CurrentRow.Cells(5).Value = "0.00"
+
                     For Each row As DataGridViewRow In gvComprobante.Rows
                         n += 1
                         If row.Cells(1).Value Is Nothing Then Exit For
@@ -163,13 +165,22 @@ Public Class frmComprobantes
                         debe += row.Cells(4).Value
                         haber += row.Cells(5).Value
                     Next
-
-                    gvComprobante.Item(5, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal((debe - haber).ToString("N"))
-
+                    If debe - haber < 0 Then
+                        gvComprobante.Item(4, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal(((debe - haber) * -1).ToString("N"))
+                        gvComprobante.Item(5, gvComprobante.CurrentRow.Index + 1).Value = "0.00"
+                        gvComprobante.Item(3, gvComprobante.CurrentRow.Index + 1).Value = entCom.glosa
+                        ActivarFila(gvComprobante.CurrentRow.Index + 1)
+                    ElseIf debe <> haber Then
+                        gvComprobante.Item(5, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal((debe - haber).ToString("N"))
+                        gvComprobante.Item(4, gvComprobante.CurrentRow.Index + 1).Value = "0.00"
+                        gvComprobante.Item(3, gvComprobante.CurrentRow.Index + 1).Value = entCom.glosa
+                        ActivarFila(gvComprobante.CurrentRow.Index + 1)
+                    End If
                 ElseIf gvComprobante.CurrentCell.ColumnIndex = 5 Then
                     debe = 0
                     haber = 0
                     gvComprobante.CurrentRow.Cells(4).Value = "0.00"
+
                     For Each row As DataGridViewRow In gvComprobante.Rows
                         n += 1
                         If row.Cells(1).Value Is Nothing Then Exit For
@@ -177,14 +188,28 @@ Public Class frmComprobantes
                         debe += row.Cells(4).Value
                         haber += row.Cells(5).Value
                     Next
-                    gvComprobante.Item(4, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal((haber - debe).ToString("N"))
+                    If haber - debe < 0 Then
+                        gvComprobante.Item(5, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal(((haber - debe) * -1).ToString("N"))
+                        gvComprobante.Item(4, gvComprobante.CurrentRow.Index + 1).Value = "0.00"
+                        gvComprobante.Item(3, gvComprobante.CurrentRow.Index + 1).Value = entCom.glosa
+                        ActivarFila(gvComprobante.CurrentRow.Index + 1)
+                    ElseIf debe <> haber Then
+                        gvComprobante.Item(4, gvComprobante.CurrentRow.Index + 1).Value = Convert.ToDecimal((haber - debe).ToString("N"))
+                        gvComprobante.Item(5, gvComprobante.CurrentRow.Index + 1).Value = "0.00"
+                        gvComprobante.Item(3, gvComprobante.CurrentRow.Index + 1).Value = entCom.glosa
+                        ActivarFila(gvComprobante.CurrentRow.Index + 1)
+                    End If
+
                 End If
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+    Sub ActivarFila(I As Integer)
+        gvComprobante.Rows(I).ReadOnly = False
+        gvComprobante.Rows(I).DefaultCellStyle.BackColor = Color.White
+    End Sub
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
             If Me.ValidateChildren And txtnumdiario.Text <> String.Empty And txtnumcompro.Text <> String.Empty And txtDserie.Text <> String.Empty And txtDnumero.Text <> String.Empty And txtRuc.Text <> String.Empty And MfechaDE.ValidateText IsNot Nothing Then
@@ -317,6 +342,7 @@ Public Class frmComprobantes
                         End If
                         entCom.ruc = txtRuc.Text
                         lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
+                        entCom.glosa = ""
                     Else
                         MessageBox.Show("Solo Numeros Menores")
                         txtnumcompro.Text = numerocompro
