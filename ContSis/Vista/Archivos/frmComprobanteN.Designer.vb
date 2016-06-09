@@ -57,7 +57,6 @@ Partial Class FrmComprobanteN
         Me.txtCuentaIsc = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCuentaMonto = New System.Windows.Forms.TextBox()
-        Me.MfechaDE = New System.Windows.Forms.MaskedTextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.cbotipodoc = New System.Windows.Forms.ComboBox()
         Me.txtDserie = New System.Windows.Forms.TextBox()
@@ -65,7 +64,7 @@ Partial Class FrmComprobanteN
         Me.Label24 = New System.Windows.Forms.Label()
         Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MfechaDE = New System.Windows.Forms.MaskedTextBox()
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -364,15 +363,6 @@ Partial Class FrmComprobanteN
         Me.txtCuentaMonto.Size = New System.Drawing.Size(86, 20)
         Me.txtCuentaMonto.TabIndex = 156
         '
-        'MfechaDE
-        '
-        Me.MfechaDE.Location = New System.Drawing.Point(495, 84)
-        Me.MfechaDE.Mask = "00/00/0000"
-        Me.MfechaDE.Name = "MfechaDE"
-        Me.MfechaDE.Size = New System.Drawing.Size(86, 20)
-        Me.MfechaDE.TabIndex = 149
-        Me.MfechaDE.ValidatingType = GetType(Date)
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
@@ -430,20 +420,20 @@ Partial Class FrmComprobanteN
         Me.Label25.TabIndex = 164
         Me.Label25.Text = "Tipo Documento"
         '
-        'ComboBox1
+        'MfechaDE
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(365, 46)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 185
+        Me.MfechaDE.Location = New System.Drawing.Point(495, 84)
+        Me.MfechaDE.Mask = "00/00/0000"
+        Me.MfechaDE.Name = "MfechaDE"
+        Me.MfechaDE.Size = New System.Drawing.Size(86, 20)
+        Me.MfechaDE.TabIndex = 149
+        Me.MfechaDE.ValidatingType = GetType(Date)
         '
         'FrmComprobanteN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(607, 388)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.txtnumcompro)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.cbomoneda)
@@ -524,7 +514,6 @@ Partial Class FrmComprobanteN
     Friend WithEvents txtCuentaIsc As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtCuentaMonto As System.Windows.Forms.TextBox
-    Friend WithEvents MfechaDE As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents cbotipodoc As System.Windows.Forms.ComboBox
     Friend WithEvents txtDserie As System.Windows.Forms.TextBox
@@ -532,5 +521,5 @@ Partial Class FrmComprobanteN
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ErrorIcon As System.Windows.Forms.ErrorProvider
     Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents MfechaDE As System.Windows.Forms.MaskedTextBox
 End Class

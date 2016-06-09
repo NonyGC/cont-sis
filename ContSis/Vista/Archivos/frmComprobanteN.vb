@@ -248,16 +248,22 @@ Public Class FrmComprobanteN
     End Sub
 
     Private Sub MfechaDE_TypeValidationCompleted(sender As Object, e As TypeValidationEventArgs) Handles MfechaDE.TypeValidationCompleted
+        Dim UserDate As DateTime = CDate(e.ReturnValue)
+        Dim mes As String = datetimeFormat.GetMonthName(UserDate.Month)
+        Dim año As String = UserDate.Year
         If (Not e.IsValidInput) Then
             Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Correctamente")
         Else
-            Dim UserDate As DateTime = CDate(e.ReturnValue)
-            If (UserDate > DateTime.Now) Then
-                Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Menor que hoy")
+
+            If UserDate < DateTime.Now And mes = CboPeriodo.SelectedValue And año = Date.Today.Year Then
+                Me.ErrorIcon.SetError(sender, "")
+            Else
+                Me.ErrorIcon.SetError(sender, "Ingrese la Fecha de Este Periodo y menor que hoy")
                 e.Cancel = True
             End If
-            Me.ErrorIcon.SetError(sender, "")
+
         End If
+
     End Sub
 
     Private Sub MfechaDV_TypeValidationCompleted(sender As Object, e As TypeValidationEventArgs) Handles MfechaDV.TypeValidationCompleted
@@ -433,5 +439,9 @@ Public Class FrmComprobanteN
             entCom.ruc = txtRuc.Text
             lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
         End If
+    End Sub
+
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+
     End Sub
 End Class
