@@ -1124,11 +1124,9 @@ D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.frmRol.reso
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.Resources.resources
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Vista.frmUsuariosConectados.resources
 D:\Contabilidad\06-06-16\viso\cont-sis\ContSis\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
-C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Vista.exe.config
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.exe
-C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.xml
-C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.pdb
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.FrmComprobanteN.resources
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.frmComprobantes.resources
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.frmPeriodos.resources
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.frmCheck.resources
@@ -1150,6 +1148,8 @@ C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.frmRol.resou
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.Resources.resources
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.frmUsuariosConectados.resources
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.pdb
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Vista.exe.config
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Vista.exe
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Vista.pdb
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Vista.xml
@@ -1166,4 +1166,4 @@ C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Controladores.pdb
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Controladores.xml
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Modelos.pdb
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\bin\Debug\Modelos.xml
-C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.FrmComprobanteN.resources
+C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Vista\obj\Debug\Vista.xml

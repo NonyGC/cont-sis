@@ -21,7 +21,6 @@ Public Class FrmComprobanteN
         cbomoneda.DataSource = compBL.comprobante_mostrar_moneda()
         cbomoneda.DisplayMember = "Descripcion"
         cbomoneda.ValueMember = "Codigo"
-
         dat = compBL.comprobante_mostrar_auxiliar()
         For i As Integer = 0 To dat.Rows.Count - 1
             colruc.Add(dat.Rows(i)("ruc").ToString)
@@ -31,7 +30,7 @@ Public Class FrmComprobanteN
         cboAdq.SelectedIndex = 0
         CboPeriodo.DataSource = datetimeFormat.MonthNames()
         CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
-        CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
+
         numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
         txtnumcompro.Text = numerocompro
 
@@ -112,12 +111,6 @@ Public Class FrmComprobanteN
         End If
     End Sub
 
-    Private Sub txtRuc_Leave(sender As Object, e As EventArgs) Handles txtRuc.Leave
-        If txtRuc.Text <> "" Then
-            entCom.ruc = txtRuc.Text
-            lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
-        End If
-    End Sub
 
     Private Sub txtnumcompro_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnumcompro.KeyPress
         If Char.IsNumber(e.KeyChar) Then
@@ -433,5 +426,12 @@ Public Class FrmComprobanteN
 
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
 
+    End Sub
+
+    Private Sub txtRuc_TextChanged(sender As Object, e As EventArgs) Handles txtRuc.TextChanged
+        If txtRuc.Text <> "" Then
+            entCom.ruc = txtRuc.Text
+            lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
+        End If
     End Sub
 End Class

@@ -31,14 +31,12 @@ Public Class frmComprobantes
 
         cboAdq.SelectedIndex = 0
         CboPeriodo.DataSource = datetimeFormat.MonthNames()
-        CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
     End Sub
 
     Sub cargarComprobante()
         numerodiario = Mid(compBL.comprobante_diario_autogenerado(), 3, 5)
         numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
-        txtnumdiario.Text = numerodiario
-        entCom.nrodiario = txtnumdiario.Text
+        entCom.nrodiario = numerodiario
         txtnumcompro.Text = numerocompro
     End Sub
     Sub llenarCeldasDGV()
@@ -212,7 +210,7 @@ Public Class frmComprobantes
     End Sub
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
-            If Me.ValidateChildren And txtnumdiario.Text <> String.Empty And txtnumcompro.Text <> String.Empty And txtDserie.Text <> String.Empty And txtDnumero.Text <> String.Empty And txtRuc.Text <> String.Empty And MfechaDE.ValidateText IsNot Nothing Then
+            If Me.ValidateChildren And txtnumcompro.Text <> String.Empty And txtDserie.Text <> String.Empty And txtDnumero.Text <> String.Empty And txtRuc.Text <> String.Empty And MfechaDE.ValidateText IsNot Nothing Then
 
                 Dim fechaDE As Date
                 Dim fechaDV As Date
@@ -262,8 +260,7 @@ Public Class frmComprobantes
                                  "Nº Comprobante  [" + entCom.nrocompro + "]")
 
                 ElseIf btnguardar.Text = "Actualizar" Then
-                    With entCom
-                        .nrodiario = "05" + txtnumdiario.Text
+                    With entCom  
                         .nrocompro = "08" + txtnumcompro.Text
                     End With
                     compBL.comprobante_cabecera_actualizar(entCom)
@@ -326,7 +323,7 @@ Public Class frmComprobantes
                         Next
 
                         datacol = compBL.Comprobante_cebecera_llenar(entCom)
-                        txtnumdiario.Text = Mid(datacol.Rows(0)("num_dia"), 3, 5)
+                        entCom.nrodiario = datacol.Rows(0)("num_dia")
                         txtDnumero.Text = datacol.Rows(0)("num_doc")
                         txtDserie.Text = datacol.Rows(0)("ser_doc")
                         txtRuc.Text = datacol.Rows(0)("ruc_aux")
@@ -422,8 +419,7 @@ Public Class frmComprobantes
     End Sub
 
     Private Sub txtRuc_Leave(sender As Object, e As EventArgs) Handles txtRuc.Leave
-        entCom.ruc = txtRuc.Text
-        lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
+        
     End Sub
 
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
@@ -490,5 +486,11 @@ Public Class frmComprobantes
             MessageBox.Show("Numero no Valido")
             txtnumcompro.Text = numerocompro
         End If
+    End Sub
+
+
+    Private Sub txtRuc_TextChanged(sender As Object, e As EventArgs) Handles txtRuc.TextChanged
+        entCom.ruc = txtRuc.Text
+        lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
     End Sub
 End Class
