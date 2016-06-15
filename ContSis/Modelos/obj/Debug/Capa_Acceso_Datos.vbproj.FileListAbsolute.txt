@@ -241,3 +241,16 @@ C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Dato
 C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.dll
 C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.xml
 C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.pdb
+D:\sis-con\ContSis\Modelos\bin\Debug\Modelos.dll
+D:\sis-con\ContSis\Modelos\bin\Debug\Modelos.pdb
+D:\sis-con\ContSis\Modelos\bin\Debug\Modelos.xml
+D:\sis-con\ContSis\Modelos\bin\Debug\Capa_Entidad.dll
+D:\sis-con\ContSis\Modelos\bin\Debug\MySql.Data.dll
+D:\sis-con\ContSis\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\sis-con\ContSis\Modelos\bin\Debug\Capa_Entidad.xml
+D:\sis-con\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.Resources.resources
+D:\sis-con\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.dll
+D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.xml
+D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.pdb

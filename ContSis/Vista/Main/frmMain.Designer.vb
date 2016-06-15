@@ -93,7 +93,7 @@ Partial Class frmMain
         Me.tooActionForm.AutoSize = False
         Me.tooActionForm.BackColor = System.Drawing.SystemColors.Control
         Me.tooActionForm.Name = "tooActionForm"
-        Me.tooActionForm.Size = New System.Drawing.Size(388, 17)
+        Me.tooActionForm.Size = New System.Drawing.Size(253, 17)
         Me.tooActionForm.Spring = True
         Me.tooActionForm.Text = "Acción Form"
         '

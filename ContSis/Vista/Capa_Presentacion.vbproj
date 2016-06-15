@@ -130,6 +130,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Base.vb" />
+    <Compile Include="Samples\frmUsuarioBack.Designer.vb">
+      <DependentUpon>frmUsuarioBack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmUsuarioBack.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Sesion\frmPeriodo.Designer.vb">
       <DependentUpon>frmPeriodo.vb</DependentUpon>
     </Compile>
@@ -215,6 +221,12 @@
     <Compile Include="Sesion\frmLogeo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sistemas\frmConfiguración.Designer.vb">
+      <DependentUpon>frmConfiguración.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistemas\frmConfiguración.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Sistemas\frmUsuario.Designer.vb">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </Compile>
@@ -227,28 +239,10 @@
     <Compile Include="Archivos\frmTipoCambio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Samples\FrmDataGridView.Designer.vb">
-      <DependentUpon>FrmDataGridView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Samples\FrmDataGridView.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Mantenimiento\frmManEmpresa.Designer.vb">
       <DependentUpon>frmManEmpresa.vb</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\frmManEmpresa.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Samples\Form_RolesHijo.Designer.vb">
-      <DependentUpon>Form_RolesHijo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Samples\Form_RolesHijo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sistemas\frmRol.Designer.vb">
-      <DependentUpon>frmRol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Sistemas\frmRol.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -265,6 +259,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sistemas\frmUsuarioAdmin.Designer.vb">
+      <DependentUpon>frmUsuarioAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistemas\frmUsuarioAdmin.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sistemas\frmUsuariosConectados.Designer.vb">
       <DependentUpon>frmUsuariosConectados.vb</DependentUpon>
@@ -314,6 +314,9 @@
     <EmbeddedResource Include="Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmUsuarioBack.resx">
+      <DependentUpon>frmUsuarioBack.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sesion\frmEjercicio.resx">
       <DependentUpon>frmEjercicio.vb</DependentUpon>
     </EmbeddedResource>
@@ -329,29 +332,26 @@
     <EmbeddedResource Include="Sesion\frmLogeo.resx">
       <DependentUpon>frmLogeo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\frmConfiguración.resx">
+      <DependentUpon>frmConfiguración.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Archivos\frmTipoCambio.resx">
       <DependentUpon>frmTipoCambio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Samples\FrmDataGridView.resx">
-      <DependentUpon>FrmDataGridView.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmManEmpresa.resx">
       <DependentUpon>frmManEmpresa.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Samples\Form_RolesHijo.resx">
-      <DependentUpon>Form_RolesHijo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sistemas\frmRol.resx">
-      <DependentUpon>frmRol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\frmUsuarioAdmin.resx">
+      <DependentUpon>frmUsuarioAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\frmUsuariosConectados.resx">
       <DependentUpon>frmUsuariosConectados.vb</DependentUpon>

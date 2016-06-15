@@ -30,6 +30,7 @@ Partial Class frmUsuariosConectados
         Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColTmpTrans = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -96,12 +97,22 @@ Partial Class frmUsuariosConectados
         Me.ColTmpTrans.Name = "ColTmpTrans"
         Me.ColTmpTrans.ReadOnly = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(662, 63)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Actualizar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmUsuariosConectados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(749, 372)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.Name = "frmUsuariosConectados"
@@ -118,4 +129,5 @@ Partial Class frmUsuariosConectados
     Friend WithEvents ColEstado As DataGridViewTextBoxColumn
     Friend WithEvents ColHora As DataGridViewTextBoxColumn
     Friend WithEvents ColTmpTrans As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

@@ -9,7 +9,6 @@ Public Class frmSelectEmpresa
     Dim dataTabla As New DataTable
     Dim f As frmMain = My.Application.OpenForms.Item("frmMain")
     Dim c As Integer = 0
-    Private _rol As Rol = frmMain.UsuarioMain.Rol
 #End Region
 #Region "Contructores"
     Public Sub New()
@@ -25,22 +24,27 @@ Public Class frmSelectEmpresa
 
 
     Private Sub dgvempresa_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpresa.CellDoubleClick
-        ActivarMenu()
+        Try
+            ActivarMenu()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub dgvempresa_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvEmpresa.DataBindingComplete
-        Select Case _rol.TipoUsuario
-            Case listUsuario.Normal
-                For Each row As DataGridViewRow In dgvEmpresa.Rows
-                    If TypeOf row.Cells("ColEstado").Value Is DBNull Then
-                        row.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlDark
-                    End If
-                Next
-            Case listUsuario.Admin
+        'Select Case _rol.TipoUsuario
+        '    Case listUsuario.Normal
+        '        For Each row As DataGridViewRow In dgvEmpresa.Rows
+        '            If TypeOf row.Cells("ColEstado").Value Is DBNull Then
+        '                row.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlDark
+        '            End If
+        '        Next
+        '    Case listUsuario.Admin
 
-            Case listUsuario.Master
+        '    Case listUsuario.Master
 
-        End Select
+        'End Select
 
 
     End Sub
@@ -58,30 +62,30 @@ Public Class frmSelectEmpresa
         frmMain.EmpresaMain = New Empresa(dgvEmpresa.Item("ColRuC", dgvEmpresa.CurrentRow.Index).Value().ToString,
                                                     dgvEmpresa.Item("ColRznScl", dgvEmpresa.CurrentRow.Index).Value().ToString,
                                                     dgvEmpresa.Item("ColAlias", dgvEmpresa.CurrentRow.Index).Value().ToString)
-        Select Case _rol.TipoUsuario
-            Case listUsuario.Normal
-                'Variables
-                Dim priv As New CabPrivilegio
-                priv.Id = dgvEmpresa.Item("ColPrivilegio", dgvEmpresa.CurrentRow.Index).Value().ToString
-                priv.Status = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value().ToString
-                Dim dt As DataTable = bl.getDetPrivilegios(priv.Id)
-                Me.Hide()
+        'Select Case _rol.TipoUsuario
+        '    Case listUsuario.Normal
+        '        'Variables
+        '        Dim priv As New CabPrivilegio
+        '        priv.Id = dgvEmpresa.Item("ColPrivilegio", dgvEmpresa.CurrentRow.Index).Value().ToString
+        '        priv.Status = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value().ToString
+        '        'Dim dt As DataTable = bl.getDetPrivilegios(priv.Id)
+        '        Me.Hide()
 
-                ''Logica 
-                For Each rw As DataRow In dt.Rows
-                    Dim iMnu As ToolStripMenuItem = mnu.Items.Item(rw("menu").ToString.Replace(" ", Nothing))
-                    iMnu.Enabled = True
-                    If rw("form").ToString.Contains("*") And rw("submenu") = 0 Then
-                        PermisoAll(iMnu)
-                    Else
-                        PermisoSelect(iMnu, FormsArray(rw("form").ToString, CInt(rw("cantidad"))))
-                    End If
-                Next
-            Case listUsuario.Admin, listUsuario.Master
+        '        ''Logica 
+        '        'For Each rw As DataRow In dt.Rows
+        '        '    Dim iMnu As ToolStripMenuItem = mnu.Items.Item(rw("menu").ToString.Replace(" ", Nothing))
+        '        '    iMnu.Enabled = True
+        '        '    If rw("form").ToString.Contains("*") And rw("submenu") = 0 Then
+        '        '        PermisoAll(iMnu)
+        '        '    Else
+        '        '        PermisoSelect(iMnu, FormsArray(rw("form").ToString, CInt(rw("cantidad"))))
+        '        '    End If
+        '        'Next
+        ''    Case listUsuario.Admin, listUsuario.Master
 
 
 
-        End Select
+        'End Select
 
 
         Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
@@ -229,7 +233,7 @@ Public Class frmSelectEmpresa
 
     Private Sub FrmActEmpresas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With dgvEmpresa
-            .DataSource = bl.getEmpresas(frmMain.UsuarioMain.Rol.Id)
+            '.DataSource = bl.getEmpresas(frmMain.UsuarioMain.Rol.Id)
         End With
     End Sub
 

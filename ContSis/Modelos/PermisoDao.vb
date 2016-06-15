@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
-Public Class Cab_PrivilegioDao
+Public Class PermisoDao
     Inherits BaseDao
     'Variables
     Private tabla As DataTable
@@ -63,9 +63,9 @@ Public Class Cab_PrivilegioDao
         Ejecucion(rowsaffected, sql, rol, men)
         Return rowsaffected
     End Function
-    Private Sub Ejecucion(ByRef rowsaffected As Integer, _
-                               ByVal sql As String, _
-                               ByVal cabPrivilegio As CabPrivilegio, _
+    Private Sub Ejecucion(ByRef rowsaffected As Integer,
+                               ByVal sql As String,
+                               ByVal cabPrivilegio As CabPrivilegio,
                                ByRef men As String)
         'Variables 
         Dim consultaSQL As MySqlCommand
@@ -74,9 +74,9 @@ Public Class Cab_PrivilegioDao
         consultaSQL = New MySqlCommand(sql, conexionValue)
         With consultaSQL
             .CommandType = CommandType.Text
-            .Parameters.AddWithValue("@id", CabPrivilegio.Id)
-            .Parameters.AddWithValue("@rol", CabPrivilegio.Rol)
-            .Parameters.AddWithValue("@empresa", CabPrivilegio.Empresa)
+            .Parameters.AddWithValue("@id", cabPrivilegio.Id)
+            .Parameters.AddWithValue("@rol", cabPrivilegio.Rol)
+            .Parameters.AddWithValue("@empresa", cabPrivilegio.Empresa)
         End With
         Try
             rowsaffected = consultaSQL.ExecuteNonQuery()
@@ -87,9 +87,9 @@ Public Class Cab_PrivilegioDao
             conexionValue.Close()
         End Try
     End Sub
-    Private Sub Ejecucion(ByRef rowsaffected As Integer, _
-                           ByVal sql As String, _
-                           ByVal rol As String, _
+    Private Sub Ejecucion(ByRef rowsaffected As Integer,
+                           ByVal sql As String,
+                           ByVal rol As String,
                            ByRef men As String)
         'Variables 
         Dim consultaSQL As MySqlCommand
@@ -109,5 +109,24 @@ Public Class Cab_PrivilegioDao
             conexionValue.Close()
         End Try
     End Sub
+    Public Function NewId() As Integer
+        Try
+            Dim cmd = CommandProcedure("sp_new_per")
+            Return CInt(cmd.ExecuteScalar)
+        Catch ex As Exception
+            CloseDB()
+            Return 0
+        End Try
+
+    End Function
+    Public Function CrearSchema() As DataTable
+        Dim dt As New DataTable("Permiso")
+        dt.Columns.Add("emp")
+        dt.Columns.Add("usu")
+        dt.Columns.Add("compt")
+        dt.Columns.Add("mod")
+        dt.PrimaryKey = New DataColumn() {dt.Columns("emp")}
+        Return dt
+    End Function
 
 End Class

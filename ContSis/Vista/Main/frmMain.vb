@@ -9,7 +9,7 @@ Public Class frmMain
 #Region "Variables"
     Private Shared _EmpresaMain As Empresa
     Private Shared DataRepore As New ReporteEN
-    Private Shared _UsuarioMain As UsuarioMain
+    Private Shared _UsuarioMain As Usuario
     Public Shared _EjercicioMain As String
     Public Shared _PeriodoMain As String
     Private _focoSize As Boolean = False
@@ -31,16 +31,12 @@ Public Class frmMain
             _EmpresaMain = value
         End Set
     End Property
-    Public Shared Property UsuarioMain() As UsuarioMain
+    Public Shared Property UsuarioMain() As Usuario
         Get
-            If IsNothing(_UsuarioMain) Then
-                Return New UsuarioMain
-            End If
             Return _UsuarioMain
         End Get
-        Set(value As UsuarioMain)
+        Set(value As Usuario)
             _UsuarioMain = value
-            _isMaster = _UsuarioMain.Rol.IsMaster
         End Set
     End Property
     Public Shared Property Action As listAccion
@@ -49,9 +45,6 @@ Public Class frmMain
         End Get
         Set(value As listAccion)
             _action = value
-
-
-
         End Set
     End Property
     Public Property State As listForm
@@ -115,7 +108,7 @@ Public Class frmMain
         Next
         If Not _isMaster Then
             Dim bl As New MainBL
-            bl.UpdateUsuario(New Usuario(_UsuarioMain.Usuario.Codigo, "", "", 0, 0))
+            'bl.UpdateUsuario(Usuario)
             notMain.Dispose()
         End If
     End Sub
@@ -124,17 +117,12 @@ Public Class frmMain
         Try
 
             CloseForm("frmLogeo")
-
-            Me.MaximumSize = Me.Size
-            Me.MinimumSize = Me.Size
-
             Me._focoSize = True
-
+            Me.MinimumSize = Size
             With notMain
                 .BalloonTipText = "Inicio de Main"
                 .ShowBalloonTip(200000)
             End With
-
             'Para la secuencia de form.
             Secuencia()
 
@@ -325,10 +313,8 @@ Public Class frmMain
 
         ActionAdminAndNormal()
 
+
         ActionAll()
-
-
-
     End Sub
     Private Sub ActionNormal()
 
@@ -338,22 +324,28 @@ Public Class frmMain
         OptionOrFormVisible("Sistema", "frmRol", False)
         OptionOrFormVisible("Sistema", "frmUsuario", False)
         OptionOrFormVisible("Sistema", "frmUsuariosConectados", False)
+        OptionOrFormVisible("Sistema", "frmUsuarioAdmin", False)
+
         ActionAdminAndNormal()
         ActionAll()
     End Sub
     Private Sub ActionMaster()
 
-        ActionAdminAndMaster()
+        MenuEnabled("Sistema", True)
+        OptionOrFormEnabled("Sistema", "frmConfiguración", True)
         ActionAll()
 
     End Sub
     Private Sub ActionAll()
         MenuEnabled("Sesión", True)
-        OptionOrFormEnabled("Sesión", "frmLogeo", False)
+        OptionOrFormEnabled("Sesión", "opc_2", True)
+        'OptionOrFormEnabled("Sesión", "frmLogeo", False)
     End Sub
     Private Sub ActionAdminAndNormal()
         OptionOrFormVisible("Mantenimiento", "frmManEmpresa", False)
         OptionOrFormEnabled("Sesión", "frmSelectEmpresa", False)
+        OptionOrFormVisible("Sistema", "frmConfiguración", False)
+
     End Sub
     Private Sub ActionAdminAndMaster()
         For Each tool As ToolStripMenuItem In MnuMain.Items
@@ -414,9 +406,9 @@ Public Class frmMain
         ActionSecAll()
     End Sub
     Private Sub ActionSecAll()
-        SSUsuario(UsuarioMain.Usuario.Usuario)
-        SSForm()
-        SSActionForm()
+        'SSUsuario(UsuarioMain.Usuario.Usuario)
+        'SSForm()
+        'SSActionForm()
     End Sub
     Private Sub ActionSecAdminAndNormal()
 

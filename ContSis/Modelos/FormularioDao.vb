@@ -4,7 +4,17 @@ Public Class FormularioDAO
     Inherits BaseDao
 
     Private conexionValue As MySqlConnection
+    Public Function getModuloDetAll() As DataTable
 
+        Try
+            Dim cmd As MySqlCommand = Me.CommandProcedure("sp_get_modulo_dets")
+            Dim dt As DataTable = Me.GetDataTable(cmd)
+            Return dt
+        Catch ex As Exception
+            Return Nothing
+        End Try
+
+    End Function
     Public Function Formularios_All() As DataTable
         conexionValue = Me.conexion
         Dim sql As String = "select * from formularios;"

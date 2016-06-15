@@ -3,81 +3,112 @@ Imports Capa_Entidad
 Public Class LoginBL
     Inherits BaseBL
 #Region "Variables"
-    'Variables
-    Private Datos As New LoginDao
-    Private usuarioLogin As Usuario
-    Private rolDao As New RolDao
-    Private tmpSesionLogin As Integer
-    Private tmpUsuIdLogin As Integer
-    Private tmpRolIdLogin As Integer
-    Private rolLogin As New Rol
-    Private _control As Boolean = False
+    Private _respuesta As String
+    Private _usuario As String
+    Private _password As String
 
-    Enum StatusSesion
-        Fail = 0
-        InSession = 1
-        Ok = 2
-    End Enum
 
+#End Region
+#Region "Propiedades"
+    Public ReadOnly Property Respuesta As String
+        Get
+            Return _respuesta
+        End Get
+    End Property
 #End Region
 #Region "Contructor"
     'Contructor
     Public Sub New()
-
     End Sub
-    Public Sub New(usuario As Usuario)
-        Me.usuarioLogin = usuario
-        _control = Me.usuarioLogin.IsMaster()
-    End Sub
-#End Region
-#Region "Propiedades"
-    Public ReadOnly Property Control As Boolean
-        Get
-            Return _control
-        End Get
-    End Property
-
 #End Region
 #Region "Metodos"
-    'Metodos
-#Region "New"
-    Public Function ResponseLogeo() As String
-        Dim rpt As String = ""
-        If _control Then
-            rpt = "Ok"
-            rolLogin.Id = 0
-            rolLogin.Descripcion = "master"
-            rolLogin.Tipo = "master"
-        Else
-            Dim resp As String() = Datos.ResponseLogeo(usuarioLogin.ArrayUsuario)
-
-            If resp.Count = 1 Then
-                rpt = resp(0)
-            Else
-                tmpUsuIdLogin = resp(0)
-                tmpSesionLogin = resp(1)
-                tmpRolIdLogin = resp(2)
-                rolLogin.Id = resp(2)
-                rolLogin.Descripcion = resp(3)
-                rolLogin.Tipo = resp(4)
-                rpt = "Ok"
-            End If
-        End If
-
-        Return rpt
-    End Function
-    Public Function GetUsuario() As Usuario
-        If _control Then
-            Return New Usuario(0, "master", "*******", "0", "1")
-        Else
-            Dim arrayUsuario As String()
-            arrayUsuario = usuarioLogin.ArrayUsuario
-            Return New Usuario(tmpUsuIdLogin, arrayUsuario(0), arrayUsuario(1), tmpSesionLogin, tmpRolIdLogin)
-        End If
+    Public Function ResponseLogeo(usuario As String, password As String) As Usuario
+        _usuario = usuario
+        _password = password
+        Select Case usuario
+            Case "admin"
+                Return ResponseAdmin()
+            Case "master"
+                Return ResponseMaster()
+            Case Else
+                Return ResponseUsuario()
+        End Select
 
     End Function
-    Public Function GetRol() As Rol
-        Return rolLogin
+
+#Region "Response"
+#Region "Master"
+    Private Function ResponseMaster() As UsuarioMaster
+        Dim usuDao As New UsuarioDao
+        Dim usuario As New UsuarioMaster
+        usuario.Usuario = _usuario
+        usuario.Password = _password
+
+        usuario = usuDao.ResponseUsuarioMaster(usuario)
+
+        If usuDao.Respuesta.Equals("ok") Then
+            _respuesta = "ok"
+        Else
+            _respuesta = "El usuario o password son incorrectos"
+            usuario = Nothing
+        End If
+        Return usuario
+    End Function
+#End Region
+    Private Function ResponseAdmin() As UsuarioAdmin
+        Dim sisDao As New SistemaDao
+        If sisDao.ActivoAdmin Then
+            Dim usuDao As New UsuarioDao
+            Dim usuario As New UsuarioAdmin
+            usuario.Usuario = _usuario
+            usuario.Password = _password
+
+            usuario = usuDao.ResponseUsuarioAdmin(usuario)
+            Select Case usuDao.Respuesta
+                Case "fail"
+                    _respuesta = "El usuario o password son incorrectos."
+                    usuario = Nothing
+                Case "no_activo"
+                    _respuesta = "El usuario no cuenta con permiso."
+                    usuario = Nothing
+                Case "in_sesion"
+                    _respuesta = "El usuario se encuentra en Sesion."
+                    usuario = Nothing
+                Case "ok"
+                    _respuesta = "ok"
+            End Select
+
+            Return usuario
+        Else
+            _respuesta = "El usuario no cuenta con permiso."
+            Return Nothing
+        End If
+
+    End Function
+    Private Function ResponseUsuario() As UsuarioNormal
+        Dim resp As String = ""
+        Dim usuDao As New UsuarioDao
+        Dim usuario As New UsuarioNormal
+
+        usuario.Usuario = _usuario
+        usuario.Password = _password
+
+        usuario = usuDao.ResponseUsuario(usuario)
+
+        Select Case usuDao.Respuesta
+            Case "fail"
+                _respuesta = "El usuario o password son incorrectos."
+                usuario = Nothing
+            Case "no_activo"
+                _respuesta = "El usuario no cuenta con permiso."
+                usuario = Nothing
+            Case "in_sesion"
+                _respuesta = "El usuario se encuentra en Sesion."
+                usuario = Nothing
+            Case "ok"
+                _respuesta = "ok"
+        End Select
+        Return usuario
     End Function
 
 #End Region

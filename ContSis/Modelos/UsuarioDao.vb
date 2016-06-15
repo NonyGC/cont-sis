@@ -4,6 +4,12 @@ Public Class UsuarioDao
     Inherits BaseDao
 
     Private conexionValue As MySqlConnection
+    Private _respuesta As String
+    Public ReadOnly Property Respuesta As String
+        Get
+            Return _respuesta
+        End Get
+    End Property
 
     Public Function Usuarios_Showall() As DataTable
         conexionValue = Me.conexion
@@ -32,7 +38,6 @@ Public Class UsuarioDao
             .CommandType = CommandType.Text
             .Parameters.AddWithValue("@usu", entusu.Usuario)
             .Parameters.AddWithValue("@pass", entusu.Password)
-            .Parameters.AddWithValue("@rol", entusu.Rol)
         End With
         Try
             rowsaffected = consultaSQL.ExecuteNonQuery()
@@ -54,9 +59,6 @@ Public Class UsuarioDao
             .CommandType = CommandType.Text
             .Parameters.AddWithValue("@usu", entusu.Usuario)
             .Parameters.AddWithValue("@pass", entusu.Password)
-            .Parameters.AddWithValue("@rol", entusu.Rol)
-            .Parameters.AddWithValue("@id", entusu.Codigo)
-
         End With
         Try
             rowsaffected = consultaSQL.ExecuteNonQuery()
@@ -91,6 +93,93 @@ Public Class UsuarioDao
         Finally
             Me.conexion.Close()
         End Try
-
     End Sub
+    Public Function NewUsuario() As Integer
+        Try
+            Dim cmd As MySqlCommand = CommandProcedure("sp_new_usu")
+            Return CInt(cmd.ExecuteScalar)
+
+        Catch ex As Exception
+            Return 0
+            Debug.WriteLine("Error: NewUsuario " & ex.ToString)
+        End Try
+    End Function
+    Public Function ResponseUsuario(usu As UsuarioNormal) As UsuarioNormal
+        Try
+            Dim c As Integer = 0
+            Dim dr As MySqlDataReader
+            Dim usuario As Usuario
+
+            Dim cmd As MySqlCommand = CommandProcedure("sp_response_usuario")
+            cmd = Parameters(cmd, usu.ArrayUsuario)
+            dr = cmd.ExecuteReader
+            usuario = New UsuarioNormal
+            If dr.Read Then
+                If dr.FieldCount = 1 Then
+                    _respuesta = dr.GetString(0)
+                Else
+
+                    usuario.Id = dr.GetInt32("id")
+                    usuario.Usuario = usu.Usuario
+                    usuario.Password = usu.Password
+                    usuario.Sesion = dr.GetInt32("sesion")
+                    usuario.State = dr.GetInt32("state")
+                    _respuesta = "ok"
+                End If
+            End If
+            Return usuario
+        Catch ex As Exception
+            _respuesta = "fail"
+            Return Nothing
+        Finally
+            Me.conexion.Close()
+        End Try
+    End Function
+    Public Function ResponseUsuarioAdmin(admin As UsuarioAdmin) As UsuarioAdmin
+        Try
+            Dim dr As MySqlDataReader
+            Dim usu As Usuario
+            usu = New UsuarioAdmin
+            Dim cmd As MySqlCommand = CommandProcedure("sp_response_admin")
+            cmd = Parameters(cmd, admin.ArrayUsuario)
+            dr = cmd.ExecuteReader
+            If dr.Read Then
+                If dr.FieldCount = 1 Then
+                    _respuesta = dr.GetString(0)
+                Else
+                    usu.Id = dr.GetInt32("id")
+                    usu.Usuario = admin.Usuario
+                    usu.Password = admin.Password
+                    usu.Sesion = dr.GetInt32("sesion")
+                    usu.State = dr.GetInt32("state")
+                    _respuesta = "ok"
+                End If
+            End If
+            Return usu
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            CloseDB()
+        End Try
+
+    End Function
+    Public Function ResponseUsuarioMaster(master As UsuarioMaster) As UsuarioMaster
+        If master.Password = "vertigo" Then
+            _respuesta = "ok"
+            Dim usu As New UsuarioMaster
+
+            usu.Id = 0
+            usu.Usuario = master.Usuario
+            usu.Sesion = 1
+            usu.State = 1
+
+            Return usu
+        Else
+            _respuesta = "fail"
+            Return Nothing
+
+        End If
+
+    End Function
+
 End Class

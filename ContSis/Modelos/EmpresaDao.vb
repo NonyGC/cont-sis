@@ -20,6 +20,16 @@ Public Class EmpresaDao
             Empresa_all = Nothing
         End Try
     End Function
+    Public Function Empresas() As DataTable
+        Try
+            Dim cmd As MySqlCommand = Me.CommandProcedure("sp_get_empresas")
+            Dim dt As DataTable = Me.GetDataTable(cmd)
+            Return dt
+        Catch ex As Exception
+            Return Nothing
+            Me.CloseDB()
+        End Try
+    End Function
     Public Function GetEmpresasxRol(id As String) As DataTable
         Dim cmd As New MySqlCommand("sp_get_empresas_status_rol", Me.conexion)
         cmd.CommandType = CommandType.StoredProcedure

@@ -90,7 +90,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ReporteBL.vb" />
-    <Compile Include="RolBL.vb" />
     <Compile Include="TipoCambioBL.vb" />
     <Compile Include="UsuarioBL.vb" />
     <Compile Include="MainBL.vb" />

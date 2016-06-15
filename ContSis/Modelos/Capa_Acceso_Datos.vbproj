@@ -69,12 +69,10 @@
     <Compile Include="BaseDao.vb" />
     <Compile Include="ComprobanteDAO.vb" />
     <Compile Include="ContenedorDao.vb" />
-    <Compile Include="Det_PrivilegioDao.vb" />
     <Compile Include="EjercicioDao.vb" />
     <Compile Include="EmpresaDao.vb" />
     <Compile Include="FormatoDao.vb" />
     <Compile Include="FormularioDao.vb" />
-    <Compile Include="LoginDao.vb" />
     <Compile Include="MonedaDao.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -91,9 +89,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Cab_PrivilegioDao.vb" />
     <Compile Include="CuentaDao.vb" />
-    <Compile Include="RolDao.vb" />
+    <Compile Include="PermisoDao.vb" />
+    <Compile Include="SistemaDao.vb" />
     <Compile Include="TipoCambioDao.vb" />
     <Compile Include="UsuarioDao.vb" />
   </ItemGroup>

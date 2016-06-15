@@ -23,39 +23,31 @@ Public Class frmLogeo
 #End Region
 #Region "Metodos"
     Private Sub accionLogeo()
-        'Variables
-        Dim objLoginBL As LoginBL
-        Dim men As String = ""
-        Dim status As String
+
         Try
-            objLoginBL = New LoginBL(New Usuario(txtusu.Text, txtpass.Text))
-            'Respuesta del servidor 
-            status = objLoginBL.ResponseLogeo()
-            Select Case status
-                Case "Fail"
-                    MsgBox("Usuario o Contraseña incorrecta", MsgBoxStyle.OkOnly, "Logeo")
-                Case "InSession"
-                    MsgBox("El usuario esta en Sesión", MsgBoxStyle.OkOnly, "Logeo")
-                Case "Ok"
+            Dim objLoginBL = New LoginBL
+            frmMain.UsuarioMain = objLoginBL.ResponseLogeo(txtusu.Text, txtpass.Text)
 
-                    frmMain.UsuarioMain = New UsuarioMain(objLoginBL.GetUsuario, objLoginBL.GetRol)
+            If objLoginBL.Respuesta = "ok" Then
+                Dim frm As frmMain
+                Select Case _estado
+                    Case listForm.Dependiente
+                        Me.Hide()
+                        CargarActionUsuario()
+                        frm = Application.OpenForms.Item("frmMain")
+                        frm.State = listForm.Independiente
 
-                    Dim frm As frmMain
-                    Select Case _estado
-                        Case listForm.Dependiente
-                            Me.Hide()
-                            CargarActionUsuario()
-                            frm = Application.OpenForms.Item("frmMain")
-                            frm.State = listForm.Independiente
+                    Case listForm.Independiente
+                        CargarActionUsuario()
+                        frm = New frmMain
+                        frm.lblUsuario.Text = frmMain.UsuarioMain.Impresion
+                        Me.Hide()
+                        frm.Show()
 
-                        Case listForm.Independiente
-                            CargarActionUsuario()
-                            frm = New frmMain
-                            frm.lblUsuario.Text = frmMain.UsuarioMain.Impresion
-                            Me.Hide()
-                            frm.Show()
-                    End Select
-            End Select
+                End Select
+            Else
+                MsgBox(objLoginBL.Respuesta, MsgBoxStyle.OkOnly, "Logeo")
+            End If
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -72,12 +64,12 @@ Public Class frmLogeo
         End If
     End Sub
     Private Sub CargarActionUsuario()
-        Select Case frmMain.UsuarioMain.Rol.TipoUsuario
-            Case listUsuario.Normal
+        Select Case frmMain.UsuarioMain.Tipo
+            Case "usuario"
                 frmMain.Action = listUsuario.Normal
-            Case listUsuario.Admin
+            Case "normal"
                 frmMain.Action = listUsuario.Admin
-            Case listUsuario.Master
+            Case "master"
                 frmMain.Action = listUsuario.Master
         End Select
     End Sub

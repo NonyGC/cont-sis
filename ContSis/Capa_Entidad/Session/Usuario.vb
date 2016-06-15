@@ -1,104 +1,147 @@
-﻿Public Class Usuario
+﻿Public MustInherit Class Usuario
+    Implements ITipoUsuario
 #Region "Variables"
     'Declaración de Variables
-    Private _Codigo As Integer
-    Private _Usuario As String
-    Private _Password As String
-    Private _Rol As Integer
-    Private _Sesion As Integer
+    Protected _id As Integer
+    Protected _usuario As String
+    Protected _password As String
+    Protected _sesion As Integer
+    Protected _state As Integer
+    Protected _fSesion As Date
+    Protected _fCierre As Date
 #End Region
 #Region "Constructores"
     'Contructor
     Public Sub New(usuario As String, password As String)
-        Me._Usuario = usuario
-        Me._Password = password
+        Me._usuario = usuario
+        Me._password = password
     End Sub
     Public Sub New()
 
     End Sub
-    Public Sub New(codigo As Integer, usuario As String, password As String, rol As Integer, sesion As Integer)
-        Me._Codigo = codigo
-        Me._Usuario = usuario
-        Me._Password = password
-        Me._Rol = rol
-        Me._Sesion = sesion
-    End Sub
 #End Region
-    'Metodos Get - Set
-    Public Property Codigo As Integer
+#Region "Metodos Get - Set"
+    Public Property Id As Integer
         Get
-            Return _Codigo
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _Codigo = value
+            _id = value
         End Set
     End Property
 
     Public Property Usuario As String
         Get
-            Return _Usuario
+            Return _usuario
         End Get
         Set(ByVal value As String)
-            _Usuario = value
+            _usuario = value
         End Set
     End Property
     Public Property Password As String
         Get
-            Return _Password
+            Return _password
         End Get
         Set(ByVal value As String)
-            _Password = value
+            _password = value
         End Set
     End Property
-    Public Property Rol As Integer
+    Public Property State As Integer
         Get
-            Return _Rol
+            Return _state
         End Get
-        Set(ByVal value As Integer)
-            _Rol = value
+        Set(value As Integer)
+            _state = value
         End Set
     End Property
-    Public Function ResponseVeri() As String()
-        Dim resDatos(1) As String
+    Public Property Sesion As Integer
+        Get
+            Return _sesion
+        End Get
+        Set(value As Integer)
+            _sesion = value
+        End Set
+    End Property
 
-        If _Usuario.Trim().Length = 0 Then
-            resDatos(0) = "fail"
-        Else
-            resDatos(0) = "ok"
-        End If
+    Public MustOverride ReadOnly Property Tipo As String
 
-        If _Password.Trim().Length = 0 Then
-            resDatos(1) = "fail"
-        Else
-            resDatos(1) = "ok"
-        End If
-        Return resDatos
-    End Function
 
-    Public Sub Clear()
-        _Codigo = 0
-        _Usuario = ""
-        _Password = ""
-        _Rol = 0
-    End Sub
+#End Region
+    Public MustOverride Function Impresion() As String
+
     Public Function ArrayUsuario() As String()
-        Dim array() As String = {_Usuario, _Password}
+        Dim array() As String = {_usuario, _password}
         Return array
     End Function
     Public Function ArrayUsuario(tipo As Integer) As String()
         Dim array(4) As String
         If tipo = 5 Then
-            array(0) = _Codigo : array(1) = _Usuario : array(2) = _Password : array(3) = _Rol : array(4) = _Sesion
+            array(0) = _id : array(1) = _usuario : array(2) = _password : array(4) = _sesion
         Else
             Throw New Exception("Sin datos")
         End If
-        Return Array
+        Return array
     End Function
-    Public Function IsMaster() As Boolean
-        If (_Usuario = "master") And (_Password = "vertigo") Then
-            Return True
-        Else
-            Return False
-        End If
+
+End Class
+
+Public Interface ITipoUsuario
+
+
+End Interface
+Public Class UsuarioNormal
+    Inherits Usuario
+    Public Sub New(usuario As String, password As String)
+        MyBase.New(usuario, password)
+    End Sub
+    Public Sub New()
+
+    End Sub
+
+    Public Overrides ReadOnly Property Tipo As String
+        Get
+            Return "normal"
+        End Get
+    End Property
+
+    Public Overrides Function Impresion() As String
+        Return Me._usuario & vbLf & Tipo
     End Function
 End Class
+
+Public Class UsuarioAdmin
+    Inherits Usuario
+    Public Sub New(usuario As String, password As String)
+        MyBase.New(usuario, password)
+    End Sub
+    Public Sub New()
+
+    End Sub
+    Public Overrides ReadOnly Property Tipo As String
+        Get
+            Return "admin"
+        End Get
+    End Property
+    Public Overrides Function Impresion() As String
+        Return Usuario & vbLf & Tipo
+    End Function
+End Class
+
+Public Class UsuarioMaster
+    Inherits Usuario
+    Public Sub New(usuario As String, password As String)
+        MyBase.New(usuario, password)
+    End Sub
+    Public Sub New()
+
+    End Sub
+    Public Overrides ReadOnly Property Tipo As String
+        Get
+            Return "master"
+        End Get
+    End Property
+    Public Overrides Function Impresion() As String
+        Return Usuario & vbLf & Tipo
+    End Function
+End Class
+
