@@ -73,7 +73,7 @@ Partial Class FrmComprobanteN
         Me.dtpFechae.Checked = False
         Me.dtpFechae.CustomFormat = "  "
         Me.dtpFechae.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFechae.Location = New System.Drawing.Point(508, 80)
+        Me.dtpFechae.Location = New System.Drawing.Point(525, 80)
         Me.dtpFechae.Name = "dtpFechae"
         Me.dtpFechae.ShowCheckBox = True
         Me.dtpFechae.Size = New System.Drawing.Size(100, 20)
@@ -90,7 +90,7 @@ Partial Class FrmComprobanteN
         Me.dtpFechav.Checked = False
         Me.dtpFechav.CustomFormat = "  "
         Me.dtpFechav.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFechav.Location = New System.Drawing.Point(508, 110)
+        Me.dtpFechav.Location = New System.Drawing.Point(525, 110)
         Me.dtpFechav.Name = "dtpFechav"
         Me.dtpFechav.ShowCheckBox = True
         Me.dtpFechav.Size = New System.Drawing.Size(100, 20)
@@ -99,7 +99,7 @@ Partial Class FrmComprobanteN
         'txtnumcompro
         '
         Me.txtnumcompro.Enabled = False
-        Me.txtnumcompro.Location = New System.Drawing.Point(93, 61)
+        Me.txtnumcompro.Location = New System.Drawing.Point(110, 61)
         Me.txtnumcompro.MaxLength = 4
         Me.txtnumcompro.Name = "txtnumcompro"
         Me.txtnumcompro.Size = New System.Drawing.Size(64, 20)
@@ -108,7 +108,7 @@ Partial Class FrmComprobanteN
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(-1, 65)
+        Me.Label20.Location = New System.Drawing.Point(16, 65)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(88, 13)
         Me.Label20.TabIndex = 223
@@ -117,7 +117,7 @@ Partial Class FrmComprobanteN
         'cbomoneda
         '
         Me.cbomoneda.FormattingEnabled = True
-        Me.cbomoneda.Location = New System.Drawing.Point(93, 248)
+        Me.cbomoneda.Location = New System.Drawing.Point(110, 248)
         Me.cbomoneda.Name = "cbomoneda"
         Me.cbomoneda.Size = New System.Drawing.Size(85, 21)
         Me.cbomoneda.TabIndex = 194
@@ -125,7 +125,7 @@ Partial Class FrmComprobanteN
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(18, 251)
+        Me.Label8.Location = New System.Drawing.Point(35, 251)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(46, 13)
         Me.Label8.TabIndex = 222
@@ -134,7 +134,7 @@ Partial Class FrmComprobanteN
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label7.Location = New System.Drawing.Point(371, 255)
+        Me.Label7.Location = New System.Drawing.Point(388, 255)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 13)
         Me.Label7.TabIndex = 221
@@ -145,7 +145,7 @@ Partial Class FrmComprobanteN
         '
         Me.CboPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboPeriodo.FormattingEnabled = True
-        Me.CboPeriodo.Location = New System.Drawing.Point(508, 14)
+        Me.CboPeriodo.Location = New System.Drawing.Point(525, 14)
         Me.CboPeriodo.Name = "CboPeriodo"
         Me.CboPeriodo.Size = New System.Drawing.Size(100, 23)
         Me.CboPeriodo.TabIndex = 185
@@ -153,7 +153,7 @@ Partial Class FrmComprobanteN
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(434, 17)
+        Me.Label10.Location = New System.Drawing.Point(451, 17)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 13)
         Me.Label10.TabIndex = 220
@@ -161,7 +161,7 @@ Partial Class FrmComprobanteN
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(522, 355)
+        Me.txtTotal.Location = New System.Drawing.Point(539, 355)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(85, 20)
         Me.txtTotal.TabIndex = 203
@@ -169,7 +169,7 @@ Partial Class FrmComprobanteN
         '
         'txtIsc
         '
-        Me.txtIsc.Location = New System.Drawing.Point(522, 327)
+        Me.txtIsc.Location = New System.Drawing.Point(539, 327)
         Me.txtIsc.Name = "txtIsc"
         Me.txtIsc.Size = New System.Drawing.Size(85, 20)
         Me.txtIsc.TabIndex = 201
@@ -177,7 +177,7 @@ Partial Class FrmComprobanteN
         '
         'txtIgv
         '
-        Me.txtIgv.Location = New System.Drawing.Point(522, 301)
+        Me.txtIgv.Location = New System.Drawing.Point(539, 301)
         Me.txtIgv.Name = "txtIgv"
         Me.txtIgv.Size = New System.Drawing.Size(85, 20)
         Me.txtIgv.TabIndex = 199
@@ -185,7 +185,7 @@ Partial Class FrmComprobanteN
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(522, 275)
+        Me.txtMonto.Location = New System.Drawing.Point(539, 275)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(85, 20)
         Me.txtMonto.TabIndex = 197
@@ -194,7 +194,7 @@ Partial Class FrmComprobanteN
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(18, 279)
+        Me.Label2.Location = New System.Drawing.Point(35, 279)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 16)
         Me.Label2.TabIndex = 219
@@ -202,7 +202,7 @@ Partial Class FrmComprobanteN
         '
         'txtGlosa
         '
-        Me.txtGlosa.Location = New System.Drawing.Point(93, 275)
+        Me.txtGlosa.Location = New System.Drawing.Point(110, 275)
         Me.txtGlosa.Multiline = True
         Me.txtGlosa.Name = "txtGlosa"
         Me.txtGlosa.Size = New System.Drawing.Size(226, 20)
@@ -210,7 +210,7 @@ Partial Class FrmComprobanteN
         '
         'btncerrar
         '
-        Me.btncerrar.Location = New System.Drawing.Point(244, 14)
+        Me.btncerrar.Location = New System.Drawing.Point(261, 14)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Size = New System.Drawing.Size(75, 23)
         Me.btncerrar.TabIndex = 207
@@ -219,7 +219,7 @@ Partial Class FrmComprobanteN
         '
         'btnlimpiar
         '
-        Me.btnlimpiar.Location = New System.Drawing.Point(82, 14)
+        Me.btnlimpiar.Location = New System.Drawing.Point(99, 14)
         Me.btnlimpiar.Name = "btnlimpiar"
         Me.btnlimpiar.Size = New System.Drawing.Size(75, 23)
         Me.btnlimpiar.TabIndex = 205
@@ -228,7 +228,7 @@ Partial Class FrmComprobanteN
         '
         'btncancelar
         '
-        Me.btncancelar.Location = New System.Drawing.Point(163, 14)
+        Me.btncancelar.Location = New System.Drawing.Point(180, 14)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(75, 23)
         Me.btncancelar.TabIndex = 206
@@ -237,7 +237,7 @@ Partial Class FrmComprobanteN
         '
         'btnguardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(1, 14)
+        Me.btnguardar.Location = New System.Drawing.Point(18, 14)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(75, 23)
         Me.btnguardar.TabIndex = 204
@@ -247,7 +247,7 @@ Partial Class FrmComprobanteN
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(434, 116)
+        Me.Label22.Location = New System.Drawing.Point(451, 116)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(68, 13)
         Me.Label22.TabIndex = 218
@@ -257,7 +257,7 @@ Partial Class FrmComprobanteN
         '
         Me.lblRazonSocial.BackColor = System.Drawing.Color.White
         Me.lblRazonSocial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRazonSocial.Location = New System.Drawing.Point(93, 202)
+        Me.lblRazonSocial.Location = New System.Drawing.Point(110, 202)
         Me.lblRazonSocial.MaximumSize = New System.Drawing.Size(349, 15)
         Me.lblRazonSocial.Name = "lblRazonSocial"
         Me.lblRazonSocial.Size = New System.Drawing.Size(226, 15)
@@ -266,7 +266,7 @@ Partial Class FrmComprobanteN
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(199, 176)
+        Me.Button3.Location = New System.Drawing.Point(216, 176)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(35, 23)
         Me.Button3.TabIndex = 193
@@ -276,7 +276,7 @@ Partial Class FrmComprobanteN
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(-1, 181)
+        Me.Label28.Location = New System.Drawing.Point(16, 181)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(27, 13)
         Me.Label28.TabIndex = 216
@@ -286,7 +286,7 @@ Partial Class FrmComprobanteN
         '
         Me.txtRuc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtRuc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtRuc.Location = New System.Drawing.Point(93, 177)
+        Me.txtRuc.Location = New System.Drawing.Point(110, 177)
         Me.txtRuc.MaxLength = 11
         Me.txtRuc.Name = "txtRuc"
         Me.txtRuc.Size = New System.Drawing.Size(85, 20)
@@ -298,14 +298,14 @@ Partial Class FrmComprobanteN
         Me.cboAdq.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboAdq.FormattingEnabled = True
         Me.cboAdq.Items.AddRange(New Object() {"GRAVADAS Y/O DE EXPORTACIÓN", "GRAVADAS Y/O DE EXPORTACIÓN Y A OPERACIONES NO GRAVADAS", "OPERACIONES NO GRAVADAS", "VALOR DE LAS ADQUISIONES NO GRAVADAS"})
-        Me.cboAdq.Location = New System.Drawing.Point(93, 148)
+        Me.cboAdq.Location = New System.Drawing.Point(110, 148)
         Me.cboAdq.Name = "cboAdq"
         Me.cboAdq.Size = New System.Drawing.Size(226, 20)
         Me.cboAdq.TabIndex = 191
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(-1, 144)
+        Me.Label6.Location = New System.Drawing.Point(16, 144)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(85, 29)
         Me.Label6.TabIndex = 215
@@ -315,7 +315,7 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaTotal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaTotal.Location = New System.Drawing.Point(371, 355)
+        Me.txtCuentaTotal.Location = New System.Drawing.Point(388, 355)
         Me.txtCuentaTotal.Name = "txtCuentaTotal"
         Me.txtCuentaTotal.Size = New System.Drawing.Size(86, 20)
         Me.txtCuentaTotal.TabIndex = 202
@@ -324,7 +324,7 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaIgv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaIgv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaIgv.Location = New System.Drawing.Point(371, 301)
+        Me.txtCuentaIgv.Location = New System.Drawing.Point(388, 301)
         Me.txtCuentaIgv.Name = "txtCuentaIgv"
         Me.txtCuentaIgv.Size = New System.Drawing.Size(86, 20)
         Me.txtCuentaIgv.TabIndex = 198
@@ -332,7 +332,7 @@ Partial Class FrmComprobanteN
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(483, 359)
+        Me.Label5.Location = New System.Drawing.Point(500, 359)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 13)
         Me.Label5.TabIndex = 214
@@ -341,7 +341,7 @@ Partial Class FrmComprobanteN
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(483, 305)
+        Me.Label4.Location = New System.Drawing.Point(500, 305)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 213
@@ -350,7 +350,7 @@ Partial Class FrmComprobanteN
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(483, 331)
+        Me.Label3.Location = New System.Drawing.Point(500, 331)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 212
@@ -360,7 +360,7 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaIsc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaIsc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaIsc.Location = New System.Drawing.Point(371, 327)
+        Me.txtCuentaIsc.Location = New System.Drawing.Point(388, 327)
         Me.txtCuentaIsc.Name = "txtCuentaIsc"
         Me.txtCuentaIsc.Size = New System.Drawing.Size(86, 20)
         Me.txtCuentaIsc.TabIndex = 200
@@ -368,7 +368,7 @@ Partial Class FrmComprobanteN
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(483, 279)
+        Me.Label1.Location = New System.Drawing.Point(500, 279)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 211
@@ -378,7 +378,7 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaMonto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaMonto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaMonto.Location = New System.Drawing.Point(371, 275)
+        Me.txtCuentaMonto.Location = New System.Drawing.Point(388, 275)
         Me.txtCuentaMonto.Name = "txtCuentaMonto"
         Me.txtCuentaMonto.Size = New System.Drawing.Size(86, 20)
         Me.txtCuentaMonto.TabIndex = 196
@@ -386,7 +386,7 @@ Partial Class FrmComprobanteN
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(434, 87)
+        Me.Label23.Location = New System.Drawing.Point(451, 87)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(65, 13)
         Me.Label23.TabIndex = 210
@@ -394,16 +394,16 @@ Partial Class FrmComprobanteN
         '
         'cbotipodoc
         '
-        Me.cbotipodoc.DropDownWidth = 250
+        Me.cbotipodoc.DropDownWidth = 300
         Me.cbotipodoc.FormattingEnabled = True
-        Me.cbotipodoc.Location = New System.Drawing.Point(93, 86)
+        Me.cbotipodoc.Location = New System.Drawing.Point(110, 86)
         Me.cbotipodoc.Name = "cbotipodoc"
         Me.cbotipodoc.Size = New System.Drawing.Size(226, 21)
         Me.cbotipodoc.TabIndex = 186
         '
         'txtDserie
         '
-        Me.txtDserie.Location = New System.Drawing.Point(93, 117)
+        Me.txtDserie.Location = New System.Drawing.Point(110, 117)
         Me.txtDserie.MaxLength = 3
         Me.txtDserie.Name = "txtDserie"
         Me.txtDserie.Size = New System.Drawing.Size(35, 20)
@@ -411,7 +411,7 @@ Partial Class FrmComprobanteN
         '
         'txtDnumero
         '
-        Me.txtDnumero.Location = New System.Drawing.Point(144, 117)
+        Me.txtDnumero.Location = New System.Drawing.Point(161, 117)
         Me.txtDnumero.MaxLength = 7
         Me.txtDnumero.Name = "txtDnumero"
         Me.txtDnumero.Size = New System.Drawing.Size(100, 20)
@@ -420,7 +420,7 @@ Partial Class FrmComprobanteN
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(-1, 121)
+        Me.Label24.Location = New System.Drawing.Point(16, 121)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(77, 13)
         Me.Label24.TabIndex = 209
@@ -429,7 +429,7 @@ Partial Class FrmComprobanteN
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(-1, 90)
+        Me.Label25.Location = New System.Drawing.Point(16, 90)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(86, 13)
         Me.Label25.TabIndex = 208
@@ -439,7 +439,7 @@ Partial Class FrmComprobanteN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(607, 388)
+        Me.ClientSize = New System.Drawing.Size(634, 383)
         Me.Controls.Add(Me.dtpFechae)
         Me.Controls.Add(Me.dtpFechav)
         Me.Controls.Add(Me.txtnumcompro)

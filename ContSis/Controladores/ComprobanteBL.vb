@@ -9,9 +9,9 @@ Public Class ComprobanteBL
     Public Function comprobante_Cuenta_n() As DataTable
         Return Datos.Comprobante_mostrar_cuenta_n()
     End Function
-    Public Function comprobante_cuenta_filtrar_nombre(ByVal entCom As Comprobante) As DataTable
-        Return Datos.Comprobante_filtrar_cuenta_n(entCom)
-    End Function
+    'Public Function comprobante_cuenta_filtrar_nombre(ByVal entCom As Comprobante) As DataTable
+    '    Return Datos.Comprobante_filtrar_cuenta_n(entCom)
+    'End Function
     Public Function comprobante_mostrar_moneda() As DataTable
         Return Datos.Comprobante_mostrar_moneda()
     End Function

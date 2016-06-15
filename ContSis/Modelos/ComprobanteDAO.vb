@@ -6,14 +6,14 @@ Public Class ComprobanteDAO
     Dim da As New MySqlDataAdapter
     Dim conn As New MySqlConnection
     Public Function Comprobante_mostrar_cuenta() As DataTable
-        Return Consultar_Tabla_MySQL("select CONCAT(codigo,'  ',nombre) as Cuenta from pc16000 where codigo regexp '^33|^60|^62^63|^65|^4'")
+        Return Consultar_Tabla_MySQL("select CONCAT(codigo,'  ',nombre) as Cuenta from pc16000 where codigo regexp '^33|^60|^62^63|^65|^4'  and length(codigo)>=6")
     End Function
     Public Function Comprobante_mostrar_cuenta_n() As DataTable
-        Return Consultar_Tabla_MySQL("select alias from pc16000 where LENGTH(codigo)=5")
+        Return Consultar_Tabla_MySQL("select CONCAT(alias,' ',codigo) as alias from pc16000 where codigo regexp '^33|^60|^62^63|^65|^4'  and length(codigo)>=6")
     End Function
-    Public Function Comprobante_filtrar_cuenta_n(ByVal entCom As Comprobante) As DataTable
-        Return Consultar_Tabla_MySQL("select codigo,nombre from pc16000 WHERE codigo='" + entCom.cuenta + "'")
-    End Function
+    'Public Function Comprobante_filtrar_cuenta_n(ByVal entCom As Comprobante) As DataTable
+    '    Return Consultar_Tabla_MySQL("select codigo,nombre from pc16000 WHERE codigo='" + entCom.cuenta + "'")
+    'End Function
     Public Function Comprobante_mostrar_moneda() As DataTable
         Return Consultar_Tabla_MySQL("SELECT codigo,descripcion FROM moneda")
     End Function
