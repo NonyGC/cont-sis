@@ -26,10 +26,9 @@ Public Class CuentaBL
         verificar = Datos.Cuenta_Register(tabla, entcont)
         Return verificar
     End Function
-    Public Function Cuenta_Amarre_RegisterLB(ByVal tabla As String, ByVal entcont As Cuenta) As Integer
-
+    Public Function Cuenta_Amarre_RegisterLB(ByVal tabla As String, ByVal cond As Integer, ByVal entcont As Cuenta) As Integer
         Dim verificar As Integer
-        verificar = Datos.Cuenta_Amarre_Register(tabla, entcont)
+        verificar = Datos.Cuenta_Amarre_Register(tabla, cond, entcont)
         Return verificar
     End Function
     Public Function Cuenta_ActualizarLB(ByVal tabla As String, ByVal entcont As Cuenta) As Integer
@@ -47,5 +46,8 @@ Public Class CuentaBL
         Dim tablas As DataSet
         tablas = Datos.TComprobante_Showall()
         Tcomprobante_DatosLB = tablas
+    End Function
+    Public Function Cuenta_Amarre_ShowLB(ByVal tabla As String, ByVal entcont As Cuenta) As DataTable
+        Return Datos.Cuenta_Amarre_Show(tabla, entcont)
     End Function
 End Class

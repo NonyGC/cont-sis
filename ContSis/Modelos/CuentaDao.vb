@@ -26,9 +26,14 @@ Public Class CuentaDAO
     Public Function Cuenta_Register(ByVal tabla As String, ByVal entcont As Cuenta)
         Return Mantenimiento_SQL("sp_Cuenta_Register", tabla, entcont.codigo, entcont.nombre, entcont.aliass)
     End Function
-    Public Function Cuenta_Amarre_Register(ByVal tabla As String, ByVal entcont As Cuenta)
-        Return Mantenimiento_SQL("sp_C_Amarre_Register", tabla, entcont.codigo, entcont.c_debe, entcont.c_haber)
+#Region "Amarres_Contables"
+    Public Function Cuenta_Amarre_Show(ByVal tabla As String, ByVal entcont As Cuenta) As DataTable
+        Return Consultas_SQL("sp_C_Amarre_Show", tabla, entcont.codigo)
     End Function
+    Public Function Cuenta_Amarre_Register(ByVal tabla As String, ByVal cond As Integer, ByVal entcont As Cuenta) As Integer
+        Return Mantenimiento_SQL("sp_C_Amarre_Register", tabla, entcont.codigo, entcont.c_debe, entcont.c_haber, cond)
+    End Function
+#End Region
     Public Function Cuenta_Actualizar(ByVal tabla As String, ByVal entcont As Cuenta) As Integer
         Return Mantenimiento_SQL("sp_Cuenta_Actualizar", tabla, entcont.nombre, entcont.aliass, entcont.codigo)
     End Function

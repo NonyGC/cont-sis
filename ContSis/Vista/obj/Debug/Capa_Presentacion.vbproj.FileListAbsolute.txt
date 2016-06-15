@@ -1269,3 +1269,7 @@ D:\sis-con\ContSis\Vista\bin\Debug\Modelos.pdb
 D:\sis-con\ContSis\Vista\bin\Debug\Modelos.xml
 D:\sis-con\ContSis\Vista\obj\Debug\Vista.exe
 D:\sis-con\ContSis\Vista\obj\Debug\Vista.pdb
+C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\bin\Debug\Vista.exe.config
+C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.exe
+C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.xml
+C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.pdb

@@ -126,6 +126,24 @@
     <Compile Include="Archivos\frmPeriodos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas.Designer.vb">
+      <DependentUpon>Frm_PlanCuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas_Adicional.Designer.vb">
+      <DependentUpon>Frm_PlanCuentas_Adicional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas_Adicional.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas_Errores.Designer.vb">
+      <DependentUpon>Frm_PlanCuentas_Errores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Frm_PlanCuentas_Errores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Archivos\WaterMark.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -282,6 +300,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Archivos\frmPeriodos.resx">
       <DependentUpon>frmPeriodos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\Frm_PlanCuentas.resx">
+      <DependentUpon>Frm_PlanCuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\Frm_PlanCuentas_Adicional.resx">
+      <DependentUpon>Frm_PlanCuentas_Adicional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\Frm_PlanCuentas_Errores.resx">
+      <DependentUpon>Frm_PlanCuentas_Errores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="File\Rpt\Formato141.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
