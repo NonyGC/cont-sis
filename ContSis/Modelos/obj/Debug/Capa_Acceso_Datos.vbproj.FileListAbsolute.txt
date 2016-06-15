@@ -228,3 +228,16 @@ C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Dato
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.dll
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.xml
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Modelos\obj\Debug\Modelos.pdb
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Modelos.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Modelos.pdb
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Modelos.xml
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.pdb
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\bin\Debug\Capa_Entidad.xml
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.Resources.resources
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.xml
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Modelos\obj\Debug\Modelos.pdb

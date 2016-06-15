@@ -1,5 +1,6 @@
 ﻿Imports Controladores
 Imports Capa_Entidad
+Imports Vista.Base
 Public Class frmComprobantes
     Dim compBL As New ComprobanteBL
     Dim entCom As New Comprobante
@@ -20,17 +21,18 @@ Public Class frmComprobantes
         cbomoneda.DisplayMember = "Descripcion"
         cbomoneda.ValueMember = "Codigo"
         cargarComprobante()
-
+        bloquear_filas()
         dat = compBL.comprobante_mostrar_auxiliar()
         For i As Integer = 0 To dat.Rows.Count - 1
             coll.Add(dat.Rows(i)("ruc").ToString)
         Next
         txtRuc.AutoCompleteCustomSource = coll
 
-        llenarCeldasDGV()
 
         cboAdq.SelectedIndex = 0
         CboPeriodo.DataSource = datetimeFormat.MonthNames()
+        CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
+        dtpFechae.MaxDate = Date.Today
     End Sub
 
     Sub cargarComprobante()
@@ -38,19 +40,22 @@ Public Class frmComprobantes
         numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
         entCom.nrodiario = numerodiario
         txtnumcompro.Text = numerocompro
+        llenarCeldasDGV()
     End Sub
     Sub llenarCeldasDGV()
         If gvComprobante.Rows.Count < 3 Then
             For I As Integer = 0 To 5
                 gvComprobante.Rows.Add()
             Next
-            For I As Integer = 1 To gvComprobante.Rows.Count - 1
-                gvComprobante.Rows(I).ReadOnly = True
-                gvComprobante.Rows(I).DefaultCellStyle.BackColor = Color.WhiteSmoke
-            Next
-
         End If
     End Sub
+    Sub bloquear_filas()
+        For I As Integer = 1 To gvComprobante.Rows.Count - 1
+            gvComprobante.Rows(I).ReadOnly = True
+            gvComprobante.Rows(I).DefaultCellStyle.BackColor = Color.WhiteSmoke
+        Next
+    End Sub
+
 
     Sub limpiarComprobante()
         cbomoneda.SelectedIndex = 0
@@ -60,18 +65,12 @@ Public Class frmComprobantes
         txtRuc.Clear()
         txtDserie.Clear()
         txtDnumero.Clear()
-        MfechaDE.Clear()
-        MfechaDV.Clear()
         CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
+        dtpFechae.ResetText()
+        dtpFechav.ResetText()
     End Sub
 
     Private Sub gvComprobante_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles gvComprobante.EditingControlShowing
-        'Dim fila As Integer = gvComprobante.Rows.Count() - 1
-        'For i As Integer = 0 To gvComprobante.Columns.Count() - 1
-        '    gvComprobante.Item(i, fila).ReadOnly = True
-        '    gvComprobante.Rows(fila).DefaultCellStyle.BackColor = Color.Beige
-        'Next
-        '05
         Dim col As New AutoCompleteStringCollection
         Dim autoText As TextBox = TryCast(e.Control, TextBox)
 
@@ -91,19 +90,19 @@ Public Class frmComprobantes
 
             End If
         ElseIf gvComprobante.CurrentCell.ColumnIndex = 2 Then
-            'If autoText IsNot Nothing Then
-            '    Try
-            '        datacol = compBL.comprobante_Cuenta_n()
-            '        For i As Integer = 0 To datacol.Rows.Count - 1
-            '            col.Add(datacol.Rows(i)("nombre").ToString)
-            '        Next
-            '        autoText.AutoCompleteSource = AutoCompleteSource.CustomSource
-            '        autoText.AutoCompleteCustomSource = col
-            '        autoText.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            '    Catch ex As Exception
-            '        MsgBox(ex.Message)
-            '    End Try
-            'End If
+            If autoText IsNot Nothing Then
+                Try
+                    datacol = compBL.comprobante_Cuenta_n()
+                    For i As Integer = 0 To datacol.Rows.Count - 1
+                        col.Add(datacol.Rows(i)("alias").ToString)
+                    Next
+                    autoText.AutoCompleteSource = AutoCompleteSource.CustomSource
+                    autoText.AutoCompleteCustomSource = col
+                    autoText.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
         Else
             autoText.AutoCompleteCustomSource = Nothing
         End If
@@ -111,30 +110,39 @@ Public Class frmComprobantes
 
     Private Sub gvComprobante_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles gvComprobante.CellEndEdit
         Dim cuenta As String = gvComprobante.CurrentRow.Cells(1).Value
+        Dim cuentaalias As String = gvComprobante.CurrentRow.Cells(2).Value
+        Dim cuentan As String
+        Dim nombrec As String
         If gvComprobante.CurrentCell.ColumnIndex = 1 Then
             Try
-                If cuenta.Length > 6 Then
-                    cuenta = Trim(Mid(cuenta, 1, InStr(cuenta, " ")))
+                cuentan = Trim(Mid(cuenta, 1, InStr(cuenta, " ")))
+                nombrec = Trim(Mid(cuenta, InStr(cuenta, " "), cuenta.Length))
+                If cuentan.Length >= 6 Then
+                    gvComprobante.CurrentRow.Cells(1).Value = cuentan
+                    gvComprobante.CurrentRow.Cells(2).Value = nombrec
+                Else
+                    MessageBox.Show("Ingrese Cuenta de 6 a mas digitos")
                 End If
-                gvComprobante.CurrentRow.Cells(1).Value = cuenta
-                entCom.cuenta = cuenta
-
-                datacol = compBL.comprobante_cuenta_filtrar_nombre(entCom)
-                If datacol.Rows.Count > 0 Then
-                    For Each row As DataRow In datacol.Rows
-                        gvComprobante.CurrentRow.Cells(2).Value = row(1).ToString
-                    Next
-                End If
-                entCom.cuenta = ""
                 If gvComprobante.CurrentRow.Index = 0 Then
                     gvComprobante.CurrentRow.Cells(4).Value = "0.00"
                     gvComprobante.CurrentRow.Cells(5).Value = "0.00"
                 End If
-
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
+        ElseIf gvComprobante.CurrentCell.ColumnIndex = 2 Then
+
+            cuentan = Trim(Mid(cuentaalias, InStrRev(cuentaalias, " ") + 1, 6))
+            nombrec = Trim(Mid(cuentaalias, 1, InStrRev(cuentaalias, " ")))
+
+            gvComprobante.CurrentRow.Cells(1).Value = cuentan
+            gvComprobante.CurrentRow.Cells(2).Value = nombrec
+            If gvComprobante.CurrentRow.Index = 0 Then
+                gvComprobante.CurrentRow.Cells(4).Value = "0.00"
+                gvComprobante.CurrentRow.Cells(5).Value = "0.00"
+            End If
         End If
+
 
         If gvComprobante.CurrentCell.ColumnIndex = 3 Then
             entCom.glosa = gvComprobante.CurrentRow.Cells(3).Value
@@ -210,12 +218,8 @@ Public Class frmComprobantes
     End Sub
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
-            If Me.ValidateChildren And txtnumcompro.Text <> String.Empty And txtDserie.Text <> String.Empty And txtDnumero.Text <> String.Empty And txtRuc.Text <> String.Empty And MfechaDE.ValidateText IsNot Nothing Then
+            If Me.ValidateChildren And txtnumcompro.Text <> String.Empty And txtDserie.Text <> String.Empty And txtDnumero.Text <> String.Empty And txtRuc.Text <> String.Empty And dtpFechae.Checked Then
 
-                Dim fechaDE As Date
-                Dim fechaDV As Date
-                fechaDE = CDate(MfechaDE.ValidateText)
-                fechaDV = CDate(MfechaDV.ValidateText)
                 With entCom
                     .nrodiario = compBL.comprobante_diario_autogenerado()
                     .periodo = CboPeriodo.Text
@@ -225,11 +229,11 @@ Public Class frmComprobantes
                     .tipo_doc = cbotipodoc.SelectedValue
                     .serie = txtDserie.Text
                     .nrodocu = txtDnumero.Text
-                    .fechae = Format(fechaDE, "yyyy/MM/dd")
-                    If MfechaDV.ValidateText IsNot Nothing Then
-                        .fechav = Format(fechaDV, "yyyy/MM/dd")
-                    Else
+                    .fechae = Format(dtpFechae.Value.Date, "yyy/MM/dd")
+                    If dtpFechav.Checked = False Then
                         .fechav = ""
+                    ElseIf dtpFechav.Checked = True Then
+                        .fechav = Format(dtpFechav.Value.Date, "yyy/MM/dd")
                     End If
                     .estado = 1
                 End With
@@ -260,7 +264,8 @@ Public Class frmComprobantes
                                  "Nº Comprobante  [" + entCom.nrocompro + "]")
 
                 ElseIf btnguardar.Text = "Actualizar" Then
-                    With entCom  
+
+                    With entCom
                         .nrocompro = "08" + txtnumcompro.Text
                     End With
                     compBL.comprobante_cabecera_actualizar(entCom)
@@ -283,13 +288,11 @@ Public Class frmComprobantes
                         gvtb.Rows.Add()
                     Next
                     gvComprobante.DataSource = gvtb
-
-
                     MessageBox.Show("SE ACTUALIZO CORRECTAMENTE" + vbCr + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
                                  "Nº Comprobante  [" + entCom.nrocompro + "]")
-
                 End If
                 cargarComprobante()
+                bloquear_filas()
             Else
                 MessageBox.Show("Ingrese los datos Remarcados ", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -331,12 +334,13 @@ Public Class frmComprobantes
                         cbomoneda.SelectedValue = datacol.Rows(0)("cod_mon")
                         cbotipodoc.SelectedValue = datacol.Rows(0)("tip_doc")
                         cboAdq.SelectedIndex = datacol.Rows(0)("tipo_adq")
-                        MfechaDE.Text = datacol.Rows(0)("fee_doc")
-                        If datacol.Rows(0)("fev_doc") = "12:00:00 am" Then
-                            MfechaDV.Text = ""
-                        Else
-                            MfechaDV.Text = datacol.Rows(0)("fev_doc")
+                        dtpFechae.ResetText()
+                        dtpFechav.ResetText()
+                        dtpFechae.Value = datacol.Rows(0)("fee_doc")
+                        If datacol.Rows(0)("fev_doc") <> "12:00:00 am" Then
+                            dtpFechav.Value = datacol.Rows(0)("fev_doc")
                         End If
+
                         entCom.ruc = txtRuc.Text
                         lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
                         entCom.glosa = ""
@@ -353,73 +357,30 @@ Public Class frmComprobantes
             e.Handled = True
         End If
     End Sub
-    Private Sub txtDserie_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDserie.KeyPress
-        If Char.IsNumber(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
+    Private Sub dtpFechae_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechae.ValueChanged
+        If dtpFechae.Checked = True Then
+            dtpFechae.Format = DateTimePickerFormat.Custom
+            dtpFechae.CustomFormat = "dd/MM/yyyy"
         Else
-            e.Handled = True
+            dtpFechae.Format = DateTimePickerFormat.Custom
+            dtpFechae.CustomFormat = " "
         End If
     End Sub
-    Private Sub txtDnumero_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDnumero.KeyPress
-        If Char.IsNumber(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
+    Private Sub dtpFechav_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechav.ValueChanged
+        If dtpFechav.Checked = True Then
+            dtpFechav.Format = DateTimePickerFormat.Custom
+            dtpFechav.CustomFormat = "dd/MM/yyyy"
         Else
-            e.Handled = True
+            dtpFechav.Format = DateTimePickerFormat.Custom
+            dtpFechav.CustomFormat = " "
         End If
     End Sub
-
-    Private Sub cbomoneda_KeyPress(sender As Object, e As KeyPressEventArgs)
-        e.Handled = True
-    End Sub
-
-    Private Sub cboAdq_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboAdq.KeyPress
-        e.Handled = True
-    End Sub
-
-    Private Sub cbotipodoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbotipodoc.KeyPress
-        e.Handled = True
-    End Sub
-
-    Private Sub MfechaDE_TypeValidationCompleted(sender As Object, e As TypeValidationEventArgs) Handles MfechaDE.TypeValidationCompleted
-        If (Not e.IsValidInput) Then
-            Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Correctamente")
-        Else
-            Dim UserDate As DateTime = CDate(e.ReturnValue)
-            If (UserDate > DateTime.Now) Then
-                Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Menor que hoy")
-                e.Cancel = True
-            End If
+    Private Sub dtpFechae_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles dtpFechae.Validating
+        If dtpFechae.Text <> String.Empty And dtpFechae.Checked Then
             Me.ErrorIcon.SetError(sender, "")
-        End If
-    End Sub
-
-    Private Sub MfechaDV_TypeValidationCompleted(sender As Object, e As TypeValidationEventArgs) Handles MfechaDV.TypeValidationCompleted
-        If (Not e.IsValidInput) Then
         Else
-            Dim UserDate As DateTime = CDate(e.ReturnValue)
-            If (UserDate > DateTime.Now) Then
-                Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Menor que hoy")
-                e.Cancel = True
-            End If
+            Me.ErrorIcon.SetError(sender, "Ingrese fecha")
         End If
-    End Sub
-    Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRuc.KeyPress
-        If Char.IsNumber(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
-
-    End Sub
-
-    Private Sub txtRuc_Leave(sender As Object, e As EventArgs) Handles txtRuc.Leave
-        
     End Sub
 
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
@@ -430,6 +391,7 @@ Public Class frmComprobantes
         Next
         gvComprobante.DataSource = gvtb
         cargarComprobante()
+        bloquear_filas()
         btnguardar.Text = "Guardar"
     End Sub
 
@@ -438,10 +400,7 @@ Public Class frmComprobantes
         gvComprobante.DataSource = Nothing
         gvComprobante.Rows.Clear()
         llenarCeldasDGV()
-    End Sub
-
-    Private Sub CboPeriodo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CboPeriodo.KeyPress
-        e.Handled = True
+        bloquear_filas()
     End Sub
 
     Private Sub txtDserie_Leave(sender As Object, e As EventArgs) Handles txtDserie.Leave
@@ -488,9 +447,19 @@ Public Class frmComprobantes
         End If
     End Sub
 
-
     Private Sub txtRuc_TextChanged(sender As Object, e As EventArgs) Handles txtRuc.TextChanged
         entCom.ruc = txtRuc.Text
         lblRazonSocial.Text = compBL.comprobante_razon_social(entCom)
+    End Sub
+
+    Private Sub cbomoneda_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbotipodoc.KeyPress, cbomoneda.KeyPress, cboAdq.KeyPress, CboPeriodo.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRuc.KeyPress, txtDserie.KeyPress, txtDnumero.KeyPress
+        Solo_numeros(e)
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
     End Sub
 End Class

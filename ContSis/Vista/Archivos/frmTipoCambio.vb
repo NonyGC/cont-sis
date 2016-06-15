@@ -1,5 +1,11 @@
 ﻿Imports Controladores
 Imports Capa_Entidad
+
+Imports System
+Imports System.IO
+Imports System.Net
+Imports Newtonsoft.Json.Linq
+Imports System.Linq
 Public Class frmTipoCambio
     Dim entTC As New TipoCambio
     Dim fecha As String
@@ -26,11 +32,11 @@ Public Class frmTipoCambio
         txtaño.Text = año
         If mes < 10 Then
             txtmes.Text = "0" + mes
-        Else txtmes.Text = mes
+        Else : txtmes.Text = mes
         End If
         If dia < 10 Then
             txtdia.Text = "0" + dia
-        Else txtdia.Text = dia
+        Else : txtdia.Text = dia
         End If
         txtcompra.Clear()
         txtventa.Clear()
@@ -192,4 +198,80 @@ Public Class frmTipoCambio
         f.Tag = Nothing
         f.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim dresult = MessageBox.Show("Desea Obtener el Ultimo Tipo de Cambio de la Sunat", "Tipo de Cambio Sunat", MessageBoxButtons.YesNo)
+        If dresult = vbYes Then
+            Dim request As HttpWebRequest
+            Dim response As HttpWebResponse = Nothing
+            Dim reader As StreamReader
+            Dim mes As String = Now.Month
+            Dim año As String = Now.Year
+            mes = Now.Month
+            año = Now.Year
+            Dim url As String = "http://code.staffsystems.us/webservices/tipo-de-cambio/serverside.php?work=get_sunat&mes=" & mes & "&anho=" & Now.Year
+            request = DirectCast(WebRequest.Create(url), HttpWebRequest)
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            reader = New StreamReader(response.GetResponseStream())
+            Dim rawresp As String
+            rawresp = reader.ReadToEnd()
+
+
+            'Dim jResults As JObject = JObject.Parse(rawresp)
+            'Label1.Text = jResults("año").ToString()
+            'Label2.Text = jResults("mes").ToString()
+
+            Dim dt As DataTable = JsonToDataTable(rawresp, "data")
+
+            Dim q = From t In dt.AsEnumerable
+                    Where t.Field(Of String)("fecha") = txtaño.Text + "-" + txtmes.Text + "-" + txtdia.Text
+                    Select t
+
+            For Each product In q
+                'Label4.Text = product.Field(Of String)("fecha") & vbLf &
+                'product.Field(Of String)("compra") & vbLf &
+                'product.Field(Of String)("venta")
+                txtcompra.Text = product.Field(Of String)("compra")
+                txtventa.Text = product.Field(Of String)("venta")
+            Next
+
+        End If
+    End Sub
+
+    Public Shared Function JsonToDataTable(json As String, tableName As String) As DataTable
+        Dim columnsCreated As Boolean = False
+        Dim dt As New DataTable(tableName)
+        Dim root As JObject = JObject.Parse(json)
+        Dim items As JArray = DirectCast(root(tableName), JArray)
+        Dim item As JObject
+        Dim jtoken As JToken
+
+        For i As Integer = 0 To items.Count - 1
+            If columnsCreated = False Then
+                item = DirectCast(items(i), JObject)
+                jtoken = item.First
+                While jtoken IsNot Nothing
+                    dt.Columns.Add(New DataColumn(DirectCast(jtoken, JProperty).Name.ToString()))
+                    jtoken = jtoken.[Next]
+                End While
+                columnsCreated = True
+            End If
+
+            item = DirectCast(items(i), JObject)
+            jtoken = item.First
+
+            Dim dr As DataRow = dt.NewRow
+            While jtoken IsNot Nothing
+                dr(DirectCast(jtoken, JProperty).Name.ToString()) = DirectCast(jtoken, JProperty).Value.ToString()
+                jtoken = jtoken.[Next]
+            End While
+            dt.Rows.Add(dr)
+        Next
+        Return dt
+    End Function
+End Class
+Public Class ta
+    Public fecha As String
+    Public compra As String
+    Public venta As String
 End Class

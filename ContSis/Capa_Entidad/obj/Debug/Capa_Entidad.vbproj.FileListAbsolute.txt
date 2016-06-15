@@ -135,3 +135,11 @@ C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entida
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\ADMIN\VISO\NUEVOGIT\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\miguel\Source\Repos\cont-sis\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

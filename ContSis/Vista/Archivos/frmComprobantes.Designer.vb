@@ -23,60 +23,151 @@ Partial Class frmComprobantes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmComprobantes))
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmComprobantes))
+        Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Haber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnlimpiar = New System.Windows.Forms.Button()
+        Me.cbotipodoc = New System.Windows.Forms.ComboBox()
+        Me.btncancelar = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.dtpFechae = New System.Windows.Forms.DateTimePicker()
+        Me.CboPeriodo = New System.Windows.Forms.ComboBox()
+        Me.dtpFechav = New System.Windows.Forms.DateTimePicker()
         Me.cbomoneda = New System.Windows.Forms.ComboBox()
         Me.cboAdq = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblRazonSocial = New System.Windows.Forms.Label()
         Me.txtnumcompro = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Glosa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.det = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Debe = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cbotipodoc = New System.Windows.Forms.ComboBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.gvComprobante = New System.Windows.Forms.DataGridView()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cabecera = New System.Windows.Forms.GroupBox()
         Me.txtDserie = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.txtDnumero = New System.Windows.Forms.TextBox()
         Me.txtRuc = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.MfechaDV = New System.Windows.Forms.MaskedTextBox()
-        Me.btncerrar = New System.Windows.Forms.Button()
-        Me.btnlimpiar = New System.Windows.Forms.Button()
-        Me.btncancelar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
-        Me.MfechaDE = New System.Windows.Forms.MaskedTextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.CboPeriodo = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.cabecera = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gvComprobante = New System.Windows.Forms.DataGridView()
+        Me.det = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Glosa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Debe = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btncerrar = New System.Windows.Forms.Button()
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cabecera.SuspendLayout()
+        CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ErrorIcon
+        '
+        Me.ErrorIcon.ContainerControl = Me
+        Me.ErrorIcon.Icon = CType(resources.GetObject("ErrorIcon.Icon"), System.Drawing.Icon)
         '
         'Haber
         '
         Me.Haber.DataPropertyName = "haber"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Haber.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Haber.DefaultCellStyle = DataGridViewCellStyle4
         Me.Haber.FillWeight = 48.3732!
         Me.Haber.HeaderText = "Haber"
         Me.Haber.Name = "Haber"
+        '
+        'btnlimpiar
+        '
+        Me.btnlimpiar.Location = New System.Drawing.Point(93, 12)
+        Me.btnlimpiar.Name = "btnlimpiar"
+        Me.btnlimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnlimpiar.TabIndex = 63
+        Me.btnlimpiar.Text = "Limpiar"
+        Me.btnlimpiar.UseVisualStyleBackColor = True
+        '
+        'cbotipodoc
+        '
+        Me.cbotipodoc.DropDownWidth = 250
+        Me.cbotipodoc.FormattingEnabled = True
+        Me.cbotipodoc.Location = New System.Drawing.Point(407, 23)
+        Me.cbotipodoc.Name = "cbotipodoc"
+        Me.cbotipodoc.Size = New System.Drawing.Size(152, 21)
+        Me.cbotipodoc.TabIndex = 2
+        '
+        'btncancelar
+        '
+        Me.btncancelar.Location = New System.Drawing.Point(174, 12)
+        Me.btncancelar.Name = "btncancelar"
+        Me.btncancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btncancelar.TabIndex = 60
+        Me.btncancelar.Text = "Cancelar"
+        Me.btncancelar.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(10, 52)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(46, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Moneda"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(320, 27)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(86, 13)
+        Me.Label25.TabIndex = 50
+        Me.Label25.Text = "Tipo Documento"
+        '
+        'btnguardar
+        '
+        Me.btnguardar.Location = New System.Drawing.Point(12, 12)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnguardar.TabIndex = 61
+        Me.btnguardar.Text = "Guardar"
+        Me.btnguardar.UseVisualStyleBackColor = False
+        '
+        'dtpFechae
+        '
+        Me.dtpFechae.Checked = False
+        Me.dtpFechae.CustomFormat = "  "
+        Me.dtpFechae.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpFechae.Location = New System.Drawing.Point(735, 20)
+        Me.dtpFechae.Name = "dtpFechae"
+        Me.dtpFechae.ShowCheckBox = True
+        Me.dtpFechae.Size = New System.Drawing.Size(100, 20)
+        Me.dtpFechae.TabIndex = 5
+        Me.dtpFechae.Value = New Date(2016, 6, 12, 0, 0, 0, 0)
+        '
+        'CboPeriodo
+        '
+        Me.CboPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboPeriodo.FormattingEnabled = True
+        Me.CboPeriodo.Location = New System.Drawing.Point(745, 14)
+        Me.CboPeriodo.Name = "CboPeriodo"
+        Me.CboPeriodo.Size = New System.Drawing.Size(100, 23)
+        Me.CboPeriodo.TabIndex = 58
+        '
+        'dtpFechav
+        '
+        Me.dtpFechav.Checked = False
+        Me.dtpFechav.CustomFormat = "  "
+        Me.dtpFechav.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpFechav.Location = New System.Drawing.Point(735, 42)
+        Me.dtpFechav.Name = "dtpFechav"
+        Me.dtpFechav.ShowCheckBox = True
+        Me.dtpFechav.Size = New System.Drawing.Size(100, 20)
+        Me.dtpFechav.TabIndex = 6
         '
         'cbomoneda
         '
@@ -133,98 +224,42 @@ Partial Class frmComprobantes
         Me.Label20.TabIndex = 53
         Me.Label20.Text = "Nº  Comprobante"
         '
-        'Glosa
+        'Label10
         '
-        Me.Glosa.DataPropertyName = "glosa"
-        Me.Glosa.FillWeight = 198.3302!
-        Me.Glosa.HeaderText = "Glosa"
-        Me.Glosa.Name = "Glosa"
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(660, 19)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(43, 13)
+        Me.Label10.TabIndex = 64
+        Me.Label10.Text = "Periodo"
         '
-        'Nombre
+        'cabecera
         '
-        Me.Nombre.DataPropertyName = "nombre"
-        Me.Nombre.FillWeight = 99.42868!
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Cuenta
-        '
-        Me.Cuenta.DataPropertyName = "cuenta"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Cuenta.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Cuenta.FillWeight = 70.98851!
-        Me.Cuenta.HeaderText = "Cuenta"
-        Me.Cuenta.Name = "Cuenta"
-        '
-        'det
-        '
-        Me.det.DataPropertyName = "nro_det"
-        Me.det.FillWeight = 24.92823!
-        Me.det.HeaderText = "det"
-        Me.det.Name = "det"
-        Me.det.Visible = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(10, 52)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Moneda"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(320, 27)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(86, 13)
-        Me.Label25.TabIndex = 50
-        Me.Label25.Text = "Tipo Documento"
-        '
-        'Debe
-        '
-        Me.Debe.DataPropertyName = "debe"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Debe.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Debe.FillWeight = 49.0373!
-        Me.Debe.HeaderText = "Debe"
-        Me.Debe.Name = "Debe"
-        '
-        'cbotipodoc
-        '
-        Me.cbotipodoc.DropDownWidth = 250
-        Me.cbotipodoc.FormattingEnabled = True
-        Me.cbotipodoc.Location = New System.Drawing.Point(407, 23)
-        Me.cbotipodoc.Name = "cbotipodoc"
-        Me.cbotipodoc.Size = New System.Drawing.Size(152, 21)
-        Me.cbotipodoc.TabIndex = 2
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.gvComprobante)
-        Me.GroupBox2.Location = New System.Drawing.Point(2, 177)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(786, 203)
-        Me.GroupBox2.TabIndex = 57
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detalle"
-        '
-        'gvComprobante
-        '
-        Me.gvComprobante.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.gvComprobante.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.gvComprobante.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.gvComprobante.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.gvComprobante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gvComprobante.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.det, Me.Cuenta, Me.Nombre, Me.Glosa, Me.Debe, Me.Haber})
-        Me.gvComprobante.Location = New System.Drawing.Point(3, 16)
-        Me.gvComprobante.Name = "gvComprobante"
-        Me.gvComprobante.RowHeadersVisible = False
-        Me.gvComprobante.Size = New System.Drawing.Size(777, 179)
-        Me.gvComprobante.TabIndex = 10
+        Me.cabecera.Controls.Add(Me.dtpFechav)
+        Me.cabecera.Controls.Add(Me.dtpFechae)
+        Me.cabecera.Controls.Add(Me.cbomoneda)
+        Me.cabecera.Controls.Add(Me.cboAdq)
+        Me.cabecera.Controls.Add(Me.Label3)
+        Me.cabecera.Controls.Add(Me.lblRazonSocial)
+        Me.cabecera.Controls.Add(Me.txtnumcompro)
+        Me.cabecera.Controls.Add(Me.Label20)
+        Me.cabecera.Controls.Add(Me.Label4)
+        Me.cabecera.Controls.Add(Me.Label25)
+        Me.cabecera.Controls.Add(Me.cbotipodoc)
+        Me.cabecera.Controls.Add(Me.txtDserie)
+        Me.cabecera.Controls.Add(Me.Button3)
+        Me.cabecera.Controls.Add(Me.Label28)
+        Me.cabecera.Controls.Add(Me.txtDnumero)
+        Me.cabecera.Controls.Add(Me.txtRuc)
+        Me.cabecera.Controls.Add(Me.Label24)
+        Me.cabecera.Controls.Add(Me.Label23)
+        Me.cabecera.Controls.Add(Me.Label22)
+        Me.cabecera.Location = New System.Drawing.Point(10, 41)
+        Me.cabecera.Name = "cabecera"
+        Me.cabecera.Size = New System.Drawing.Size(860, 137)
+        Me.cabecera.TabIndex = 59
+        Me.cabecera.TabStop = False
+        Me.cabecera.Text = "Cabecera"
         '
         'txtDserie
         '
@@ -279,69 +314,10 @@ Partial Class frmComprobantes
         Me.Label24.TabIndex = 54
         Me.Label24.Text = "Nº Documento"
         '
-        'ErrorIcon
-        '
-        Me.ErrorIcon.ContainerControl = Me
-        Me.ErrorIcon.Icon = CType(resources.GetObject("ErrorIcon.Icon"), System.Drawing.Icon)
-        '
-        'MfechaDV
-        '
-        Me.MfechaDV.Location = New System.Drawing.Point(670, 43)
-        Me.MfechaDV.Mask = "00/00/0000"
-        Me.MfechaDV.Name = "MfechaDV"
-        Me.MfechaDV.Size = New System.Drawing.Size(86, 20)
-        Me.MfechaDV.TabIndex = 6
-        Me.MfechaDV.ValidatingType = GetType(Date)
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Location = New System.Drawing.Point(247, 10)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Size = New System.Drawing.Size(75, 23)
-        Me.btncerrar.TabIndex = 54
-        Me.btncerrar.Text = "Cerrar"
-        Me.btncerrar.UseVisualStyleBackColor = True
-        '
-        'btnlimpiar
-        '
-        Me.btnlimpiar.Location = New System.Drawing.Point(85, 10)
-        Me.btnlimpiar.Name = "btnlimpiar"
-        Me.btnlimpiar.Size = New System.Drawing.Size(75, 23)
-        Me.btnlimpiar.TabIndex = 55
-        Me.btnlimpiar.Text = "Limpiar"
-        Me.btnlimpiar.UseVisualStyleBackColor = True
-        '
-        'btncancelar
-        '
-        Me.btncancelar.Location = New System.Drawing.Point(166, 10)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btncancelar.TabIndex = 52
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
-        '
-        'btnguardar
-        '
-        Me.btnguardar.Location = New System.Drawing.Point(4, 10)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnguardar.TabIndex = 53
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = False
-        '
-        'MfechaDE
-        '
-        Me.MfechaDE.Location = New System.Drawing.Point(670, 20)
-        Me.MfechaDE.Mask = "00/00/0000"
-        Me.MfechaDE.Name = "MfechaDE"
-        Me.MfechaDE.Size = New System.Drawing.Size(86, 20)
-        Me.MfechaDE.TabIndex = 5
-        Me.MfechaDE.ValidatingType = GetType(Date)
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(584, 24)
+        Me.Label23.Location = New System.Drawing.Point(650, 23)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(76, 13)
         Me.Label23.TabIndex = 55
@@ -350,114 +326,144 @@ Partial Class frmComprobantes
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(584, 49)
+        Me.Label22.Location = New System.Drawing.Point(650, 48)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(77, 13)
         Me.Label22.TabIndex = 56
         Me.Label22.Text = "Fecha Vencimi"
         '
-        'CboPeriodo
+        'gvComprobante
         '
-        Me.CboPeriodo.FormattingEnabled = True
-        Me.CboPeriodo.Location = New System.Drawing.Point(699, 12)
-        Me.CboPeriodo.Name = "CboPeriodo"
-        Me.CboPeriodo.Size = New System.Drawing.Size(89, 21)
-        Me.CboPeriodo.TabIndex = 50
+        Me.gvComprobante.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.gvComprobante.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.gvComprobante.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvComprobante.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.gvComprobante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.gvComprobante.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.det, Me.Cuenta, Me.Nombre, Me.Glosa, Me.Debe, Me.Haber})
+        Me.gvComprobante.Location = New System.Drawing.Point(3, 16)
+        Me.gvComprobante.Name = "gvComprobante"
+        Me.gvComprobante.RowHeadersVisible = False
+        Me.gvComprobante.Size = New System.Drawing.Size(851, 179)
+        Me.gvComprobante.TabIndex = 10
         '
-        'Label10
+        'det
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(650, 16)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(43, 13)
-        Me.Label10.TabIndex = 56
-        Me.Label10.Text = "Periodo"
+        Me.det.DataPropertyName = "nro_det"
+        Me.det.FillWeight = 24.92823!
+        Me.det.HeaderText = "det"
+        Me.det.Name = "det"
+        Me.det.Visible = False
         '
-        'cabecera
+        'Cuenta
         '
-        Me.cabecera.Controls.Add(Me.cbomoneda)
-        Me.cabecera.Controls.Add(Me.cboAdq)
-        Me.cabecera.Controls.Add(Me.Label3)
-        Me.cabecera.Controls.Add(Me.lblRazonSocial)
-        Me.cabecera.Controls.Add(Me.txtnumcompro)
-        Me.cabecera.Controls.Add(Me.Label20)
-        Me.cabecera.Controls.Add(Me.Label4)
-        Me.cabecera.Controls.Add(Me.Label25)
-        Me.cabecera.Controls.Add(Me.cbotipodoc)
-        Me.cabecera.Controls.Add(Me.txtDserie)
-        Me.cabecera.Controls.Add(Me.Button3)
-        Me.cabecera.Controls.Add(Me.Label28)
-        Me.cabecera.Controls.Add(Me.txtDnumero)
-        Me.cabecera.Controls.Add(Me.txtRuc)
-        Me.cabecera.Controls.Add(Me.Label24)
-        Me.cabecera.Controls.Add(Me.MfechaDV)
-        Me.cabecera.Controls.Add(Me.MfechaDE)
-        Me.cabecera.Controls.Add(Me.Label23)
-        Me.cabecera.Controls.Add(Me.Label22)
-        Me.cabecera.Location = New System.Drawing.Point(2, 39)
-        Me.cabecera.Name = "cabecera"
-        Me.cabecera.Size = New System.Drawing.Size(786, 137)
-        Me.cabecera.TabIndex = 51
-        Me.cabecera.TabStop = False
-        Me.cabecera.Text = "Cabecera"
+        Me.Cuenta.DataPropertyName = "cuenta"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Cuenta.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Cuenta.FillWeight = 70.98851!
+        Me.Cuenta.HeaderText = "Cuenta"
+        Me.Cuenta.Name = "Cuenta"
+        '
+        'Nombre
+        '
+        Me.Nombre.DataPropertyName = "nombre"
+        Me.Nombre.FillWeight = 99.42868!
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        '
+        'Glosa
+        '
+        Me.Glosa.DataPropertyName = "glosa"
+        Me.Glosa.FillWeight = 198.3302!
+        Me.Glosa.HeaderText = "Glosa"
+        Me.Glosa.Name = "Glosa"
+        '
+        'Debe
+        '
+        Me.Debe.DataPropertyName = "debe"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.Debe.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Debe.FillWeight = 49.0373!
+        Me.Debe.HeaderText = "Debe"
+        Me.Debe.Name = "Debe"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.gvComprobante)
+        Me.GroupBox2.Location = New System.Drawing.Point(10, 179)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(860, 203)
+        Me.GroupBox2.TabIndex = 65
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Detalle"
+        '
+        'btncerrar
+        '
+        Me.btncerrar.Location = New System.Drawing.Point(255, 12)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Size = New System.Drawing.Size(75, 23)
+        Me.btncerrar.TabIndex = 62
+        Me.btncerrar.Text = "Cerrar"
+        Me.btncerrar.UseVisualStyleBackColor = True
         '
         'frmComprobantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 386)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.btncerrar)
+        Me.ClientSize = New System.Drawing.Size(873, 386)
         Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.btnguardar)
         Me.Controls.Add(Me.CboPeriodo)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cabecera)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btncerrar)
         Me.Name = "frmComprobantes"
         Me.Text = "frmComprobantes"
-        Me.GroupBox2.ResumeLayout(False)
-        CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cabecera.ResumeLayout(False)
         Me.cabecera.PerformLayout()
+        CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Haber As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cbomoneda As System.Windows.Forms.ComboBox
-    Friend WithEvents cboAdq As System.Windows.Forms.ComboBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents lblRazonSocial As System.Windows.Forms.Label
-    Friend WithEvents txtnumcompro As System.Windows.Forms.TextBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Glosa As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Cuenta As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents det As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Debe As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cbotipodoc As System.Windows.Forms.ComboBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents gvComprobante As System.Windows.Forms.DataGridView
-    Friend WithEvents txtDserie As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents txtDnumero As System.Windows.Forms.TextBox
-    Friend WithEvents txtRuc As System.Windows.Forms.TextBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ErrorIcon As System.Windows.Forms.ErrorProvider
-    Friend WithEvents btncerrar As System.Windows.Forms.Button
     Friend WithEvents btnlimpiar As System.Windows.Forms.Button
     Friend WithEvents btncancelar As System.Windows.Forms.Button
     Friend WithEvents btnguardar As System.Windows.Forms.Button
     Friend WithEvents CboPeriodo As System.Windows.Forms.ComboBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents cabecera As System.Windows.Forms.GroupBox
-    Friend WithEvents MfechaDV As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents MfechaDE As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents dtpFechav As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpFechae As System.Windows.Forms.DateTimePicker
+    Friend WithEvents cbomoneda As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAdq As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblRazonSocial As System.Windows.Forms.Label
+    Friend WithEvents txtnumcompro As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents cbotipodoc As System.Windows.Forms.ComboBox
+    Friend WithEvents txtDserie As System.Windows.Forms.TextBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents txtDnumero As System.Windows.Forms.TextBox
+    Friend WithEvents txtRuc As System.Windows.Forms.TextBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents gvComprobante As System.Windows.Forms.DataGridView
+    Friend WithEvents det As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cuenta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Glosa As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Debe As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Haber As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btncerrar As System.Windows.Forms.Button
 End Class

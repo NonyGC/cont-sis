@@ -71,6 +71,10 @@ Vista
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Vista.My.Resources.Resources.icon175x175">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Vista.My.Resources.Resources.imprimir">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

@@ -40,6 +40,7 @@ Partial Class frmTipoCambio
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,11 +218,23 @@ Partial Class frmTipoCambio
         Me.DataGridView1.Size = New System.Drawing.Size(335, 241)
         Me.DataGridView1.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.Image = Global.Vista.My.Resources.Resources.icon175x175
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(450, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 27)
+        Me.Button1.TabIndex = 36
+        Me.Button1.Text = "Sunat"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmTipoCambio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(569, 299)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmTipoCambio"
@@ -252,4 +265,5 @@ Partial Class frmTipoCambio
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

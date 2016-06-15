@@ -80,6 +80,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\Modelos\Microsoft excel\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -128,6 +129,7 @@
     <Compile Include="Archivos\WaterMark.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base.vb" />
     <Compile Include="Sesion\frmPeriodo.Designer.vb">
       <DependentUpon>frmPeriodo.vb</DependentUpon>
     </Compile>
@@ -424,6 +426,7 @@
     <Content Include="Resources\editar1.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\guardar.png" />
+    <None Include="Resources\icon175x175.png" />
     <Content Include="Resources\imprimir.png" />
     <Content Include="Resources\log_logout_door_1563.png" />
     <Content Include="Resources\lupa.png" />
