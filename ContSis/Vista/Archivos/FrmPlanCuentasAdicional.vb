@@ -4,7 +4,7 @@ Imports System.Data.OleDb
 Imports Microsoft.Office.Interop
 Imports Controladores
 Imports Capa_Entidad
-Public Class Frm_PlanCuentas_Adicional
+Public Class FrmPlanCuentasAdicional
     Dim validar As New CuentaBL
     Dim tabla As String = "16000"
     Dim str As String
@@ -131,7 +131,7 @@ Public Class Frm_PlanCuentas_Adicional
         Loop
         Dim result = MessageBox.Show("Se corrigieron los siguientes errores", "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         If result = DialogResult.OK Then
-            Frm_PlanCuentas_Errores.Show()
+            FrmPlanCuentasErrores.Show()
         End If
     End Sub
 

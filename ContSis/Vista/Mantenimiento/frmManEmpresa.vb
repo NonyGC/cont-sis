@@ -1,7 +1,8 @@
-﻿Imports Controladores
+﻿
+Imports Controladores
 Imports Capa_Entidad
 Imports System.IO
-Public Class frmManEmpresa
+Public Class FrmManEmpresa
     Dim validar As New EmpresaBL
     Dim Entvalidar As New Empresa
     Dim EntEmp As New Empresa
@@ -13,27 +14,11 @@ Public Class frmManEmpresa
     Dim FilePath As String
     Sub limpiar()
         txtruc.Clear()
-        lblrsocial.Text = ""
-        lblalias.Text = ""
+        txtrz.Text = ""
+        txtalias.Text = ""
         PictureBox1.Image = My.Resources.No_Image_Available
         btnguardar.Enabled = False
         txtruc.Enabled = True
-    End Sub
-    Sub mostrarimagen()
-        Try
-            If (File.Exists(appPath + txtruc.Text + ".jpg")) Then
-                Dim temppath As String = appPath + txtruc.Text + ".jpg"
-                Dim fs As FileStream
-                fs = New FileStream(temppath, FileMode.Open, FileAccess.Read)
-                PictureBox1.Image = Image.FromStream(fs)
-                fs.Close()
-            Else
-                PictureBox1.Image = My.Resources.No_Image_Available
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
     End Sub
     Sub autocompletado()
         Try
@@ -61,6 +46,7 @@ Public Class frmManEmpresa
         End If
     End Sub
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles txtruc.KeyDown
+
         If e.KeyCode = Keys.Enter Then
             If txtruc.Text.Trim().Length > 0 Then
                 With EntEmp
@@ -70,11 +56,17 @@ Public Class frmManEmpresa
                     datos = validar.Empresa_DatosLB(EntEmp)
                     If datos.Rows.Count > 0 Then
                         For Each row As DataRow In datos.Rows
+                            Dim pic As Byte() = row(3)
+                            Dim lstr As New System.IO.MemoryStream(pic)
+                            PictureBox1.Image = Image.FromStream(lstr)
+                            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+                            lstr.Close()
                             txtruc.Text = row(0).ToString
-                            lblrsocial.Text = row(1).ToString
-                            lblalias.Text = row(2).ToString
+                            txtrz.Text = row(1).ToString
+                            txtalias.Text = row(2).ToString
+                            txtcodigo.Text = row(4).ToString
+                            ComboBox1.Text = row(5).ToString
                         Next
-                        mostrarimagen()
                         btnguardar.Enabled = False
                     Else
                         MsgBox("La Empresa no Existe")
@@ -89,39 +81,41 @@ Public Class frmManEmpresa
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         If txtruc.Text.Trim().Length > 0 Then
             EntEmp.RUC = txtruc.Text
-            Try
-                datos = validar.Empresa_DatosLB(EntEmp)
-                If datos.Rows.Count > 0 Then
-                    If File.Exists(appPath + txtruc.Text + ".jpg") Then
-                        File.Delete(appPath + txtruc.Text + ".jpg")
-                        File.Copy(FilePath, appPath + imgname)
-                    Else
-                        File.Copy(FilePath, appPath + imgname)
-
-                    End If
-                    MsgBox("Logo actualizada")
-                    txtruc.Enabled = True
-                    btnguardar.Enabled = False
-                    limpiar()
-                Else
-                    MsgBox("la Empresa no existe")
-                End If
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
         Else
             MsgBox("Ingrese el RUC")
+            Exit Sub
         End If
-        'If txtrs.Text.Trim().Length > 0 Then
-        '    EntEmp.Nombre = txtrs.Text
-        'Else
-        '    MsgBox("Ingrese Razon Social")
-        'End If
-        'If txtalias.Text.Trim().Length > 0 Then
-        '    EntEmp.Aliass = txtalias.Text
-        'Else
-        '    MsgBox("Ingrese Alias")
-        'End If
+        If txtrz.Text.Trim().Length > 0 Then
+            EntEmp.Nombre = txtrz.Text
+        Else
+            MsgBox("Ingrese Razon Social")
+            Exit Sub
+        End If
+        If txtalias.Text.Trim().Length > 0 Then
+            EntEmp.Aliass = txtalias.Text
+        Else
+            MsgBox("Ingrese Alias")
+            Exit Sub
+        End If
+        If Not PictureBox1.Image Is Nothing Then
+            Dim mstream As New System.IO.MemoryStream()
+            PictureBox1.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Dim arrImage() As Byte = mstream.GetBuffer()
+            EntEmp.imagen = arrImage
+        Else
+            MsgBox("Ingrese un logo")
+            Exit Sub
+        End If
+        datos = validar.Empresa_DatosLB(EntEmp)
+        If datos.Rows.Count > 0 Then
+            validar.Empresa_ActualizarLB(EntEmp)
+            MsgBox("Empresa actualizada ")
+            limpiar()
+        Else
+            validar.Empresa_RegisterLB(EntEmp)
+            MsgBox("Empresa registrada")
+            limpiar()
+        End If
 
         'If validar.Empresa_RegisterLB(EntEmp) > 0 Then
         '    MsgBox("Empresa registrada")
@@ -130,7 +124,6 @@ Public Class frmManEmpresa
         '    datos = validar.Empresa_DatosLB(EntEmp)
         '    If datos.Rows.Count > 0 Then
         '        If validar.Empresa_ActualizarLB(EntEmp) > 0 Then
-        '            File.Copy(FilePath, appPath + imgname)
         '            MsgBox("Empresa actualizada ")
         '            limpiar()
         '        End If
@@ -146,6 +139,11 @@ Public Class frmManEmpresa
         autocompletado()
         PictureBox1.Image = My.Resources.No_Image_Available
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        txtrz.Enabled = False
+        txtalias.Enabled = False
+        txtcodigo.Enabled = False
+        txtruc.WaterMarkText = "RUC de la Empresa"
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -168,7 +166,6 @@ Public Class frmManEmpresa
                     FilePath = opFile.FileName
                     PictureBox1.Image = New Bitmap(opFile.OpenFile)
                 End If
-
             Catch ex As Exception
                 MessageBox.Show("No se puede abrir la imagen" + ex.Message)
             End Try

@@ -5,7 +5,7 @@ Imports System.Data
 Imports System.Data.OleDb
 Imports Microsoft.Office.Interop
 
-Public Class Frm_PlanCuentas
+Public Class FrmPlanCuentas
     Dim totaldebe As Decimal
     Dim totalhaber As Decimal
     Dim validar As New CuentaBL
@@ -342,7 +342,7 @@ Public Class Frm_PlanCuentas
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Frm_PlanCuentas_Adicional.Show()
+        FrmPlanCuentasAdicional.Show()
     End Sub
 
     Private Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles ListView1.ColumnWidthChanging
