@@ -2,6 +2,7 @@
     Private _nroUsuario As Integer
     Private _nroEmpresa As Integer
     Private _existeDatos As Boolean
+    Private _activoAdmin As Integer
 
     Public Sub New()
 
@@ -28,6 +29,14 @@
             _nroEmpresa = value
         End Set
     End Property
+    Public Property ActivoAdmin As Integer
+        Get
+            Return _activoAdmin
+        End Get
+        Set(value As Integer)
+            _activoAdmin = value
+        End Set
+    End Property
     Public Property ExisteDatos As Boolean
         Get
             Return _existeDatos
@@ -47,6 +56,10 @@
             Return False
         End If
 
+    End Function
+    Public Function Array() As String()
+
+        Return New String() {_nroUsuario, _nroEmpresa, _activoAdmin}
     End Function
 
 End Class

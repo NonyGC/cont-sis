@@ -69,24 +69,10 @@ Public Class UsuarioDao
         Return rowsaffected
     End Function
 
-    Public Sub UpdateSession(envio() As String)
-
-        'Declaracion 
-        Dim prm As New MySqlParameter
-        Dim c As Integer = 0
-
-
+    Public Sub UpdateSession(usuario As Usuario)
         Try
-            Dim cmd As MySqlCommand = New MySqlCommand("sp_Update_Usuario", Me.conexion)
-            cmd.CommandType = CommandType.StoredProcedure
-            MySqlCommandBuilder.DeriveParameters(cmd)
-
-            For Each prm In cmd.Parameters
-                If prm.ParameterName <> "@RETURN_VALUE" Then
-                    prm.Value = envio(c)
-                    c = c + 1
-                End If
-            Next
+            Dim cmd As MySqlCommand = CommandProcedure("sp_Update_Usuario")
+            cmd = Parameters(cmd, New String() {usuario.Id})
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -179,7 +165,42 @@ Public Class UsuarioDao
             Return Nothing
 
         End If
+    End Function
+    Public Function RegistroAdmin(usuario As Usuario) As Boolean
+        Try
+            Dim cmd As MySqlCommand = CommandProcedure("sp_registro_usuario_admin")
+            cmd = Parameters(cmd, usuario.Array)
+            Dim registro As Integer = cmd.ExecuteNonQuery
+            If registro > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        Finally
+            CloseDB()
+        End Try
+    End Function
+    Public Function GetAdmin() As UsuarioAdmin
+        Try
+            Dim usuario As New UsuarioAdmin
+            Dim cmd As MySqlCommand = CommandProcedure("sp_get_usuario_admin")
+            Dim dr As MySqlDataReader = cmd.ExecuteReader
+            If dr.Read Then
+                usuario.Id = dr.GetInt32("id")
+                usuario.Usuario = dr.GetString("usu")
+                usuario.Password=dr.GetString("pass")
+            Else
+                usuario = Nothing
+            End If
+            Return usuario
 
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            CloseDB()
+        End Try
     End Function
 
 End Class

@@ -133,3 +133,14 @@ Public Class UsuarioBL
 #End Region
 
 End Class
+Public Class SistemaBL
+    Public Function Registrar(sistema As Sistema) As Boolean
+        Dim dao As New SistemaDao
+        Return dao.Mantenimiento(sistema)
+    End Function
+
+    Public Function GetSistema() As Sistema
+        Dim dao As New SistemaDao
+        Return dao.GetSistema
+    End Function
+End Class

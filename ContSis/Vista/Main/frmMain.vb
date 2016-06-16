@@ -12,6 +12,7 @@ Public Class frmMain
     Private Shared _UsuarioMain As Usuario
     Public Shared _EjercicioMain As String
     Public Shared _PeriodoMain As String
+
     Private _focoSize As Boolean = False
     Private Shared _action As listUsuario
     Private _oBL As New MainBL

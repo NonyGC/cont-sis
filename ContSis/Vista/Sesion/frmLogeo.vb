@@ -65,9 +65,9 @@ Public Class frmLogeo
     End Sub
     Private Sub CargarActionUsuario()
         Select Case frmMain.UsuarioMain.Tipo
-            Case "usuario"
-                frmMain.Action = listUsuario.Normal
             Case "normal"
+                frmMain.Action = listUsuario.Normal
+            Case "admin"
                 frmMain.Action = listUsuario.Admin
             Case "master"
                 frmMain.Action = listUsuario.Master

@@ -254,3 +254,16 @@ D:\sis-con\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.C
 D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.dll
 D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.xml
 D:\sis-con\ContSis\Modelos\obj\Debug\Modelos.pdb
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Modelos.dll
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Modelos.pdb
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Modelos.xml
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Capa_Entidad.dll
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\MySql.Data.dll
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Capa_Entidad.pdb
+D:\Contabilidad\15-06-2016\ContSis\Modelos\bin\Debug\Capa_Entidad.xml
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbprojResolveAssemblyReference.cache
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Modelos.Resources.resources
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Capa_Acceso_Datos.vbproj.GenerateResource.Cache
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Modelos.dll
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Modelos.xml
+D:\Contabilidad\15-06-2016\ContSis\Modelos\obj\Debug\Modelos.pdb

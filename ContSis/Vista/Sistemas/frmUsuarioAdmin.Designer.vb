@@ -24,11 +24,11 @@ Partial Class frmUsuarioAdmin
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtRPassword = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,46 +48,50 @@ Partial Class frmUsuarioAdmin
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Repetir Contraseña"
         '
-        'Button1
+        'btnGuardar
         '
-        Me.Button1.Location = New System.Drawing.Point(67, 72)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(67, 72)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 2
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtRPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(109, 41)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtRPassword.Location = New System.Drawing.Point(109, 41)
+        Me.txtRPassword.MaxLength = 15
+        Me.txtRPassword.Name = "txtRPassword"
+        Me.txtRPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtRPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtRPassword.TabIndex = 3
         '
-        'TextBox2
+        'txtPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(109, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtPassword.Location = New System.Drawing.Point(109, 13)
+        Me.txtPassword.MaxLength = 15
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtPassword.TabIndex = 4
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.Location = New System.Drawing.Point(148, 72)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancelar.Location = New System.Drawing.Point(148, 72)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 5
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnSalir
         '
-        Me.Button3.Location = New System.Drawing.Point(229, 72)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Salir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnSalir.Location = New System.Drawing.Point(229, 72)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'frmUsuarioAdmin
         '
@@ -95,11 +99,11 @@ Partial Class frmUsuarioAdmin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(322, 107)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtRPassword)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
@@ -114,9 +118,9 @@ Partial Class frmUsuarioAdmin
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtRPassword As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnSalir As Button
 End Class

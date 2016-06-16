@@ -239,10 +239,10 @@
     <Compile Include="Sesion\frmLogeo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistemas\frmConfiguración.Designer.vb">
-      <DependentUpon>frmConfiguración.vb</DependentUpon>
+    <Compile Include="Sistemas\frmConfiguracion.Designer.vb">
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sistemas\frmConfiguración.vb">
+    <Compile Include="Sistemas\frmConfiguracion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sistemas\frmUsuario.Designer.vb">
@@ -290,6 +290,7 @@
     <Compile Include="Sistemas\frmUsuariosConectados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sistemas\SistemaBL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Archivos\frmComprobanteN.resx">
@@ -359,8 +360,8 @@
     <EmbeddedResource Include="Sesion\frmLogeo.resx">
       <DependentUpon>frmLogeo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistemas\frmConfiguración.resx">
-      <DependentUpon>frmConfiguración.vb</DependentUpon>
+    <EmbeddedResource Include="Sistemas\frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>

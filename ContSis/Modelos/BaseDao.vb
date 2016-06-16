@@ -2,9 +2,9 @@
 
 Public Class BaseDao
     'Variables
-    Private server As String = "192.168.0.10"
-    Private user As String = "user"
-    Private password As String = "S0p0rt3"
+    Private server As String = "192.168.1.17"
+    Private user As String = "root"
+    Private password As String = "delgado"
     Private port As String = "3306"
     Private database As String = "bdsist"
     Private conexionValue As MySqlConnection

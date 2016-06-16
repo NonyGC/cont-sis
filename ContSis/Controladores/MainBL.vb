@@ -5,12 +5,10 @@ Public Class MainBL
 
     Public Sub UpdateUsuario(usuario As Usuario)
         Try
-            Dim envio(4) As String
-            envio = usuario.ArrayUsuario(5)
-            ReDim Preserve envio(5)
-            envio(5) = 4
-            Dim objUsuarioDato As New UsuarioDao
-            objUsuarioDato.UpdateSession(envio)
+            If usuario.Tipo <> "master" Then
+                Dim objUsuarioDato As New UsuarioDao
+                objUsuarioDato.UpdateSession(usuario)
+            End If
         Catch ex As Exception
             Debug.WriteLine("Error UpdateUsuario: " & usuario.Usuario & " - " & ex.ToString)
         End Try

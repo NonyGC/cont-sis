@@ -64,10 +64,9 @@
     End Property
 
     Public MustOverride ReadOnly Property Tipo As String
-
-
 #End Region
     Public MustOverride Function Impresion() As String
+    Public MustOverride Function Array() As String()
 
     Public Function ArrayUsuario() As String()
         Dim array() As String = {_usuario, _password}
@@ -107,6 +106,10 @@ Public Class UsuarioNormal
     Public Overrides Function Impresion() As String
         Return Me._usuario & vbLf & Tipo
     End Function
+
+    Public Overrides Function Array() As String()
+        Throw New NotImplementedException()
+    End Function
 End Class
 
 Public Class UsuarioAdmin
@@ -125,6 +128,10 @@ Public Class UsuarioAdmin
     Public Overrides Function Impresion() As String
         Return Usuario & vbLf & Tipo
     End Function
+
+    Public Overrides Function Array() As String()
+        Return New String() {Me._id,Me._password}
+    End Function
 End Class
 
 Public Class UsuarioMaster
@@ -142,6 +149,10 @@ Public Class UsuarioMaster
     End Property
     Public Overrides Function Impresion() As String
         Return Usuario & vbLf & Tipo
+    End Function
+
+    Public Overrides Function Array() As String()
+        Throw New NotImplementedException()
     End Function
 End Class
 

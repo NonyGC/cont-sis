@@ -65,7 +65,14 @@ Partial Class FrmComprobanteN
         Me.txtDnumero = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dtpFechae
@@ -73,7 +80,7 @@ Partial Class FrmComprobanteN
         Me.dtpFechae.Checked = False
         Me.dtpFechae.CustomFormat = "  "
         Me.dtpFechae.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFechae.Location = New System.Drawing.Point(525, 80)
+        Me.dtpFechae.Location = New System.Drawing.Point(540, 80)
         Me.dtpFechae.Name = "dtpFechae"
         Me.dtpFechae.ShowCheckBox = True
         Me.dtpFechae.Size = New System.Drawing.Size(100, 20)
@@ -90,7 +97,7 @@ Partial Class FrmComprobanteN
         Me.dtpFechav.Checked = False
         Me.dtpFechav.CustomFormat = "  "
         Me.dtpFechav.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFechav.Location = New System.Drawing.Point(525, 110)
+        Me.dtpFechav.Location = New System.Drawing.Point(540, 110)
         Me.dtpFechav.Name = "dtpFechav"
         Me.dtpFechav.ShowCheckBox = True
         Me.dtpFechav.Size = New System.Drawing.Size(100, 20)
@@ -134,7 +141,7 @@ Partial Class FrmComprobanteN
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label7.Location = New System.Drawing.Point(388, 255)
+        Me.Label7.Location = New System.Drawing.Point(466, 323)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 13)
         Me.Label7.TabIndex = 221
@@ -145,7 +152,7 @@ Partial Class FrmComprobanteN
         '
         Me.CboPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboPeriodo.FormattingEnabled = True
-        Me.CboPeriodo.Location = New System.Drawing.Point(525, 14)
+        Me.CboPeriodo.Location = New System.Drawing.Point(540, 14)
         Me.CboPeriodo.Name = "CboPeriodo"
         Me.CboPeriodo.Size = New System.Drawing.Size(100, 23)
         Me.CboPeriodo.TabIndex = 185
@@ -153,7 +160,7 @@ Partial Class FrmComprobanteN
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(451, 17)
+        Me.Label10.Location = New System.Drawing.Point(466, 17)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 13)
         Me.Label10.TabIndex = 220
@@ -161,7 +168,7 @@ Partial Class FrmComprobanteN
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(539, 355)
+        Me.txtTotal.Location = New System.Drawing.Point(318, 498)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(85, 20)
         Me.txtTotal.TabIndex = 203
@@ -169,7 +176,7 @@ Partial Class FrmComprobanteN
         '
         'txtIsc
         '
-        Me.txtIsc.Location = New System.Drawing.Point(539, 327)
+        Me.txtIsc.Location = New System.Drawing.Point(320, 459)
         Me.txtIsc.Name = "txtIsc"
         Me.txtIsc.Size = New System.Drawing.Size(85, 20)
         Me.txtIsc.TabIndex = 201
@@ -177,7 +184,7 @@ Partial Class FrmComprobanteN
         '
         'txtIgv
         '
-        Me.txtIgv.Location = New System.Drawing.Point(539, 301)
+        Me.txtIgv.Location = New System.Drawing.Point(318, 390)
         Me.txtIgv.Name = "txtIgv"
         Me.txtIgv.Size = New System.Drawing.Size(85, 20)
         Me.txtIgv.TabIndex = 199
@@ -185,7 +192,7 @@ Partial Class FrmComprobanteN
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(539, 275)
+        Me.txtMonto.Location = New System.Drawing.Point(318, 355)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(85, 20)
         Me.txtMonto.TabIndex = 197
@@ -247,7 +254,7 @@ Partial Class FrmComprobanteN
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(451, 116)
+        Me.Label22.Location = New System.Drawing.Point(466, 116)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(68, 13)
         Me.Label22.TabIndex = 218
@@ -262,7 +269,7 @@ Partial Class FrmComprobanteN
         Me.lblRazonSocial.Name = "lblRazonSocial"
         Me.lblRazonSocial.Size = New System.Drawing.Size(226, 15)
         Me.lblRazonSocial.TabIndex = 217
-        Me.lblRazonSocial.Text = "Nombre Auxiliar"
+        Me.lblRazonSocial.Text = "Razón Social"
         '
         'Button3
         '
@@ -315,24 +322,24 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaTotal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaTotal.Location = New System.Drawing.Point(388, 355)
+        Me.txtCuentaTotal.Location = New System.Drawing.Point(446, 498)
         Me.txtCuentaTotal.Name = "txtCuentaTotal"
-        Me.txtCuentaTotal.Size = New System.Drawing.Size(86, 20)
+        Me.txtCuentaTotal.Size = New System.Drawing.Size(121, 20)
         Me.txtCuentaTotal.TabIndex = 202
         '
         'txtCuentaIgv
         '
         Me.txtCuentaIgv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaIgv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaIgv.Location = New System.Drawing.Point(388, 301)
+        Me.txtCuentaIgv.Location = New System.Drawing.Point(446, 390)
         Me.txtCuentaIgv.Name = "txtCuentaIgv"
-        Me.txtCuentaIgv.Size = New System.Drawing.Size(86, 20)
+        Me.txtCuentaIgv.Size = New System.Drawing.Size(121, 20)
         Me.txtCuentaIgv.TabIndex = 198
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(500, 359)
+        Me.Label5.Location = New System.Drawing.Point(254, 501)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 13)
         Me.Label5.TabIndex = 214
@@ -341,7 +348,7 @@ Partial Class FrmComprobanteN
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(500, 305)
+        Me.Label4.Location = New System.Drawing.Point(254, 397)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 213
@@ -350,7 +357,7 @@ Partial Class FrmComprobanteN
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(500, 331)
+        Me.Label3.Location = New System.Drawing.Point(254, 466)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 212
@@ -360,15 +367,15 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaIsc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaIsc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaIsc.Location = New System.Drawing.Point(388, 327)
+        Me.txtCuentaIsc.Location = New System.Drawing.Point(448, 459)
         Me.txtCuentaIsc.Name = "txtCuentaIsc"
-        Me.txtCuentaIsc.Size = New System.Drawing.Size(86, 20)
+        Me.txtCuentaIsc.Size = New System.Drawing.Size(121, 20)
         Me.txtCuentaIsc.TabIndex = 200
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(500, 279)
+        Me.Label1.Location = New System.Drawing.Point(254, 362)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 211
@@ -378,15 +385,15 @@ Partial Class FrmComprobanteN
         '
         Me.txtCuentaMonto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCuentaMonto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCuentaMonto.Location = New System.Drawing.Point(388, 275)
+        Me.txtCuentaMonto.Location = New System.Drawing.Point(446, 355)
         Me.txtCuentaMonto.Name = "txtCuentaMonto"
-        Me.txtCuentaMonto.Size = New System.Drawing.Size(86, 20)
+        Me.txtCuentaMonto.Size = New System.Drawing.Size(121, 20)
         Me.txtCuentaMonto.TabIndex = 196
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(451, 87)
+        Me.Label23.Location = New System.Drawing.Point(466, 87)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(65, 13)
         Me.Label23.TabIndex = 210
@@ -435,11 +442,74 @@ Partial Class FrmComprobanteN
         Me.Label25.TabIndex = 208
         Me.Label25.Text = "Tipo Documento"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(318, 425)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(85, 20)
+        Me.TextBox1.TabIndex = 226
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox2
+        '
+        Me.TextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TextBox2.Location = New System.Drawing.Point(446, 425)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox2.TabIndex = 225
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label9.Location = New System.Drawing.Point(240, 432)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(56, 13)
+        Me.Label9.TabIndex = 227
+        Me.Label9.Text = "Inafecto"
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(11, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(64, 17)
+        Me.RadioButton1.TabIndex = 228
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Efectivo"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(102, 19)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(56, 17)
+        Me.RadioButton2.TabIndex = 229
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Banco"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Location = New System.Drawing.Point(261, 548)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 49)
+        Me.GroupBox1.TabIndex = 230
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "forma depago"
+        '
         'FrmComprobanteN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 383)
+        Me.ClientSize = New System.Drawing.Size(666, 609)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.dtpFechae)
         Me.Controls.Add(Me.dtpFechav)
         Me.Controls.Add(Me.txtnumcompro)
@@ -483,6 +553,8 @@ Partial Class FrmComprobanteN
         Me.Name = "FrmComprobanteN"
         Me.Text = "Comprobante"
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -528,4 +600,10 @@ Partial Class FrmComprobanteN
     Friend WithEvents txtDnumero As System.Windows.Forms.TextBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents GroupBox1 As GroupBox
 End Class
