@@ -12,12 +12,13 @@ Public Class frmMain
     Private Shared _UsuarioMain As Usuario
     Public Shared _EjercicioMain As String
     Public Shared _PeriodoMain As String
-
+    Private Shared _empresas As Empresa() = {New Empresa(), New Empresa(), New Empresa()}
     Private _focoSize As Boolean = False
     Private Shared _action As listUsuario
     Private _oBL As New MainBL
     Private _state As listForm
     Shared _isMaster As Boolean = False
+
 #End Region
 #Region "Propiedades"
 #Region "Shared"
@@ -32,6 +33,14 @@ Public Class frmMain
             _EmpresaMain = value
         End Set
     End Property
+    Public Shared ReadOnly Property Empresas As Empresa()
+        Get
+            Return _empresas
+        End Get
+    End Property
+
+
+
     Public Shared Property UsuarioMain() As Usuario
         Get
             Return _UsuarioMain
@@ -95,6 +104,10 @@ Public Class frmMain
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         'Para permisos
         Permiso()
+        SSUsuario(UsuarioMain.Usuario)
+        SSEmpresa(EmpresaMain.Nombre)
+        SSActionForm()
+        SSForm()
         Debug.WriteLine("New : ...")
 
     End Sub
@@ -109,7 +122,7 @@ Public Class frmMain
         Next
         If Not _isMaster Then
             Dim bl As New MainBL
-            'bl.UpdateUsuario(Usuario)
+            bl.UpdateUsuario(UsuarioMain)
             notMain.Dispose()
         End If
     End Sub
@@ -197,12 +210,16 @@ Public Class frmMain
                 lblEmpresa.Text = ""
                 lblPeriodo.Text = ""
                 lblUsuario.Text = ""
+                Dim bl As New MainBL
+                bl.UpdateUsuario(UsuarioMain)
 
                 _UsuarioMain = Nothing
                 _EmpresaMain = Nothing
                 _EjercicioMain = Nothing
                 _PeriodoMain = Nothing
                 _state = listForm.Dependiente
+
+
 
 
                 OpenForm("frmLogeo", Nothing)
@@ -309,54 +326,46 @@ Public Class frmMain
     End Sub
 
     Private Sub ActionAdmin()
-        ActionAdminAndMaster()
 
 
+        For Each tool As ToolStripMenuItem In MnuMain.Items
+            tool.Enabled = True
+            For Each chilTool As ToolStripMenuItem In tool.DropDownItems
+                chilTool.Enabled = True
+            Next
+        Next
         ActionAdminAndNormal()
-
-
         ActionAll()
+
     End Sub
     Private Sub ActionNormal()
+        MenuVisible("Sistemas", False)
+        OptionOrFormVisible("Sistemas", "frmUsuario", False)
+        OptionOrFormVisible("Sistemas", "frmUsuariosConectados", False)
+        OptionOrFormVisible("Sistemas", "frmUsuarioAdmin", False)
 
-
-
-        MenuVisible("Sistema", False)
-        OptionOrFormVisible("Sistema", "frmRol", False)
-        OptionOrFormVisible("Sistema", "frmUsuario", False)
-        OptionOrFormVisible("Sistema", "frmUsuariosConectados", False)
-        OptionOrFormVisible("Sistema", "frmUsuarioAdmin", False)
+        OptionOrFormEnabled("Sesión", "frmSelectEmpresa", False)
+        OptionOrFormEnabled("Sesión", "frmUsuarioConectados", False)
+        OptionOrFormVisible("Sesión", "frmUsuarioConectados", True)
 
         ActionAdminAndNormal()
         ActionAll()
     End Sub
     Private Sub ActionMaster()
 
-        MenuEnabled("Sistema", True)
-        OptionOrFormEnabled("Sistema", "frmConfiguración", True)
+        MenuEnabled("Sistemas", True)
+        OptionOrFormVisible("sistemas", "frmConfiguracion", True)
+        OptionOrFormEnabled("Sistemas", "frmConfiguracion", True)
         ActionAll()
 
     End Sub
     Private Sub ActionAll()
         MenuEnabled("Sesión", True)
         OptionOrFormEnabled("Sesión", "opc_2", True)
-        'OptionOrFormEnabled("Sesión", "frmLogeo", False)
+        OptionOrFormEnabled("Sesión", "frmLogeo", False)
     End Sub
     Private Sub ActionAdminAndNormal()
-        OptionOrFormVisible("Mantenimiento", "frmManEmpresa", False)
-        OptionOrFormEnabled("Sesión", "frmSelectEmpresa", False)
-        OptionOrFormVisible("Sistema", "frmConfiguración", False)
-
-    End Sub
-    Private Sub ActionAdminAndMaster()
-        For Each tool As ToolStripMenuItem In MnuMain.Items
-            MenuEnabled(tool.Name, True)
-            MenuVisible(tool.Name, True)
-            For Each t As ToolStripMenuItem In tool.DropDownItems
-                OptionOrFormEnabled(tool.Name, t.Name, True)
-                OptionOrFormVisible(tool.Name, t.Name, True)
-            Next
-        Next
+        OptionOrFormVisible("Sistemas", "frmConfiguracion", False)
     End Sub
 #End Region
 #Region "Acción Secuencia Usuario"

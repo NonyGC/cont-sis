@@ -39,20 +39,34 @@ Public Class SistemaDao
         Try
             Dim sistema As New Sistema
             Dim cmd As MySqlCommand = CommandProcedure("sp_get_sistema")
-            Dim dr As MySqlDataReader = cmd.ExecuteReader
-            If dr.Read() Then
-                sistema.NroUsuario = dr.GetInt32("usu")
-                sistema.NroEmpresa = dr.GetInt32("emp")
-                sistema.ActivoAdmin = dr.GetInt32("adm")
-            Else
-                sistema = Nothing
-            End If
+            Using dr As MySqlDataReader = cmd.ExecuteReader
+                If dr.Read() Then
+                    sistema.NroUsuario = dr.GetInt32("usu")
+                    sistema.NroEmpresa = dr.GetInt32("emp")
+                    sistema.ActivoAdmin = dr.GetInt32("adm")
+                Else
+                    sistema = Nothing
+                End If
+            End Using
             Return sistema
         Catch ex As Exception
             Return Nothing
         Finally
             CloseDB()
         End Try
+    End Function
+    Public Function BuildShema(cod As String) As Boolean
+        Try
+            Dim cmd As MySqlCommand = CommandProcedure("sp_CreaTablasxEmp")
+            cmd = Parameters(cmd, New String() {cod})
+            cmd.ExecuteNonQuery()
+            Return True
+        Catch ex As Exception
+            Return False
+        Finally
+            CloseDB()
+        End Try
+
     End Function
 
 End Class

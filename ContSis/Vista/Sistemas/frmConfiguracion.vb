@@ -36,4 +36,8 @@ Public Class frmConfiguracion
             chkAdmin.Checked = False
         End If
     End Sub
+
+    Private Sub BtnCrear_Click(sender As Object, e As EventArgs) Handles BtnCrear.Click
+
+    End Sub
 End Class

@@ -161,3 +161,12 @@ D:\Contabilidad\15-06-2016\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.Ge
 D:\Contabilidad\15-06-2016\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 D:\Contabilidad\15-06-2016\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 D:\Contabilidad\15-06-2016\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+D:\Clone\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+D:\Clone\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+D:\Clone\ContSis\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbprojResolveAssemblyReference.cache
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+D:\Clone\ContSis\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
