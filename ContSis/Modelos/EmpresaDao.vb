@@ -86,6 +86,24 @@ Public Class EmpresaDao
         End Try
         Return rowsaffected
     End Function
+    Public Function Registrar(empresa As Empresa) As Boolean
+        Try
+            Dim i As Integer
+            Dim cmd As MySqlCommand = CommandProcedure("sp_registrar_empresa")
+            cmd = Parameters(cmd, empresa.Array)
+            i = cmd.ExecuteNonQuery
+            If i > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        Finally
+            CloseDB()
+        End Try
+
+    End Function
     Public Function Empresa_Actualizar(ByVal entemp As Empresa)
         conexionValue = Me.conexion
         Dim rowsaffected As Integer
@@ -109,6 +127,32 @@ Public Class EmpresaDao
         End Try
         Return rowsaffected
     End Function
+    Public Function GetById(ruc As String) As Empresa
+        Try
+            Dim empresa As Empresa
+            Dim cmd As MySqlCommand = CommandProcedure("sp_get_by_id_empresa")
+            cmd = Parameters(cmd, New String() {ruc})
+            Using dr As MySqlDataReader = cmd.ExecuteReader
+                If dr.Read Then
+                    empresa = New Empresa
+                    empresa.RUC = dr.GetString("ruc")
+                    empresa.Nombre = dr.GetString("rz")
+                    empresa.Aliass = dr.GetString("rz_com")
+                    empresa.Codigo = dr.GetString("cod")
+                    empresa.Digito = dr.GetInt32("dig")
+                Else
+                    empresa = Nothing
+                End If
+            End Using
+            Return empresa
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            CloseDB()
+        End Try
+
+    End Function
+
     Shared Function CrearSchema() As DataTable
         'Declaracion
         'Variables DataColumn

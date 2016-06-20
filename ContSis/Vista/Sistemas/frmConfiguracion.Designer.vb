@@ -22,6 +22,7 @@ Partial Class frmConfiguracion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.numUsuarios = New System.Windows.Forms.NumericUpDown()
         Me.numEmpresas = New System.Windows.Forms.NumericUpDown()
@@ -31,15 +32,17 @@ Partial Class frmConfiguracion
         Me.chkAdmin = New System.Windows.Forms.CheckBox()
         Me.pbConfiguracion = New System.Windows.Forms.ProgressBar()
         Me.lblCant = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEmpresa = New System.Windows.Forms.DataGridView()
+        Me.ColRzn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.BtnCrear = New System.Windows.Forms.Button()
-        Me.ColRzn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.bwConfiguracion = New System.ComponentModel.BackgroundWorker()
+        Me.tmrConfiguracion = New System.Windows.Forms.Timer(Me.components)
         CType(Me.numUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numEmpresas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -57,7 +60,7 @@ Partial Class frmConfiguracion
         'numUsuarios
         '
         Me.numUsuarios.Location = New System.Drawing.Point(374, 38)
-        Me.numUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.numUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.numUsuarios.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numUsuarios.Name = "numUsuarios"
         Me.numUsuarios.Size = New System.Drawing.Size(172, 24)
@@ -68,7 +71,7 @@ Partial Class frmConfiguracion
         'numEmpresas
         '
         Me.numEmpresas.Location = New System.Drawing.Point(374, 74)
-        Me.numEmpresas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.numEmpresas.Margin = New System.Windows.Forms.Padding(4)
         Me.numEmpresas.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numEmpresas.Name = "numEmpresas"
         Me.numEmpresas.Size = New System.Drawing.Size(172, 24)
@@ -89,7 +92,7 @@ Partial Class frmConfiguracion
         'btnGuardar
         '
         Me.btnGuardar.Location = New System.Drawing.Point(434, 153)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(112, 32)
         Me.btnGuardar.TabIndex = 4
@@ -99,7 +102,7 @@ Partial Class frmConfiguracion
         'btnCerrar
         '
         Me.btnCerrar.Location = New System.Drawing.Point(434, 203)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(112, 32)
         Me.btnCerrar.TabIndex = 6
@@ -109,7 +112,7 @@ Partial Class frmConfiguracion
         'chkAdmin
         '
         Me.chkAdmin.Location = New System.Drawing.Point(374, 114)
-        Me.chkAdmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkAdmin.Margin = New System.Windows.Forms.Padding(4)
         Me.chkAdmin.Name = "chkAdmin"
         Me.chkAdmin.Size = New System.Drawing.Size(170, 33)
         Me.chkAdmin.TabIndex = 7
@@ -123,6 +126,7 @@ Partial Class frmConfiguracion
         Me.pbConfiguracion.Name = "pbConfiguracion"
         Me.pbConfiguracion.Size = New System.Drawing.Size(413, 23)
         Me.pbConfiguracion.TabIndex = 9
+        Me.pbConfiguracion.Visible = False
         '
         'lblCant
         '
@@ -132,18 +136,38 @@ Partial Class frmConfiguracion
         Me.lblCant.Size = New System.Drawing.Size(113, 23)
         Me.lblCant.TabIndex = 10
         Me.lblCant.Text = "Estado"
+        Me.lblCant.Visible = False
         '
-        'DataGridView1
+        'dgvEmpresa
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColRzn, Me.ColEstado})
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 23)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(540, 134)
-        Me.DataGridView1.TabIndex = 11
+        Me.dgvEmpresa.AllowUserToAddRows = False
+        Me.dgvEmpresa.AllowUserToDeleteRows = False
+        Me.dgvEmpresa.AllowUserToResizeRows = False
+        Me.dgvEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvEmpresa.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmpresa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColRzn, Me.ColEstado})
+        Me.dgvEmpresa.Location = New System.Drawing.Point(6, 23)
+        Me.dgvEmpresa.Name = "dgvEmpresa"
+        Me.dgvEmpresa.RowHeadersVisible = False
+        Me.dgvEmpresa.Size = New System.Drawing.Size(540, 135)
+        Me.dgvEmpresa.TabIndex = 11
+        '
+        'ColRzn
+        '
+        Me.ColRzn.DataPropertyName = "rz"
+        Me.ColRzn.FillWeight = 149.2386!
+        Me.ColRzn.HeaderText = "Razón Social"
+        Me.ColRzn.Name = "ColRzn"
+        Me.ColRzn.ReadOnly = True
+        '
+        'ColEstado
+        '
+        Me.ColEstado.DataPropertyName = "estado"
+        Me.ColEstado.FillWeight = 50.76142!
+        Me.ColEstado.HeaderText = "Estado"
+        Me.ColEstado.Name = "ColEstado"
+        Me.ColEstado.ReadOnly = True
         '
         'GroupBox1
         '
@@ -163,7 +187,7 @@ Partial Class frmConfiguracion
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.BtnCrear)
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Controls.Add(Me.dgvEmpresa)
         Me.GroupBox2.Controls.Add(Me.pbConfiguracion)
         Me.GroupBox2.Controls.Add(Me.lblCant)
         Me.GroupBox2.Controls.Add(Me.btnCerrar)
@@ -184,19 +208,13 @@ Partial Class frmConfiguracion
         Me.BtnCrear.Text = "Crear"
         Me.BtnCrear.UseVisualStyleBackColor = True
         '
-        'ColRzn
+        'bwConfiguracion
         '
-        Me.ColRzn.FillWeight = 149.2386!
-        Me.ColRzn.HeaderText = "Razón Social"
-        Me.ColRzn.Name = "ColRzn"
-        Me.ColRzn.ReadOnly = True
+        Me.bwConfiguracion.WorkerReportsProgress = True
+        Me.bwConfiguracion.WorkerSupportsCancellation = True
         '
-        'ColEstado
+        'tmrConfiguracion
         '
-        Me.ColEstado.FillWeight = 50.76142!
-        Me.ColEstado.HeaderText = "Estado"
-        Me.ColEstado.Name = "ColEstado"
-        Me.ColEstado.ReadOnly = True
         '
         'frmConfiguracion
         '
@@ -207,7 +225,7 @@ Partial Class frmConfiguracion
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmConfiguracion"
@@ -215,7 +233,7 @@ Partial Class frmConfiguracion
         Me.Text = "Configuración"
         CType(Me.numUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numEmpresas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -232,10 +250,12 @@ Partial Class frmConfiguracion
     Friend WithEvents chkAdmin As CheckBox
     Friend WithEvents pbConfiguracion As ProgressBar
     Friend WithEvents lblCant As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvEmpresa As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents BtnCrear As Button
     Friend WithEvents ColRzn As DataGridViewTextBoxColumn
     Friend WithEvents ColEstado As DataGridViewTextBoxColumn
+    Friend WithEvents bwConfiguracion As System.ComponentModel.BackgroundWorker
+    Friend WithEvents tmrConfiguracion As Timer
 End Class

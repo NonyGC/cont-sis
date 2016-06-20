@@ -12,7 +12,11 @@ Public Class frmMain
     Private Shared _UsuarioMain As Usuario
     Public Shared _EjercicioMain As String
     Public Shared _PeriodoMain As String
-    Private Shared _empresas As Empresa() = {New Empresa(), New Empresa(), New Empresa()}
+    Private Shared _empresas As Empresa() = {
+        New Empresa("20491950103", "NUTRITIENDAPERU.COM S.A.C.", ""),
+        New Empresa("20524769418", "COMERCIO DE IMPLEMENTOS & PROTECCION S.A.C.", " COIMPRO S.A.C."),
+        New Empresa("20546711138", "DR COMERCIO S.A.C.", "")
+    }
     Private _focoSize As Boolean = False
     Private Shared _action As listUsuario
     Private _oBL As New MainBL
@@ -38,9 +42,6 @@ Public Class frmMain
             Return _empresas
         End Get
     End Property
-
-
-
     Public Shared Property UsuarioMain() As Usuario
         Get
             Return _UsuarioMain
@@ -73,6 +74,7 @@ Public Class frmMain
             End Select
         End Set
     End Property
+
     Public Shared Property EjercicioMain As String
         Get
             Return _EjercicioMain
