@@ -18,6 +18,16 @@
     Private _glosa As String
     Private _debe As Double
     Private _haber As Double
+
+    Private _nrocaba As String
+    Public Property nrocaba As String
+        Get
+            Return _nrocaba
+        End Get
+        Set(value As String)
+            _nrocaba = value
+        End Set
+    End Property
     Public Property estado As Integer
         Get
             Return _estado

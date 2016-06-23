@@ -68,7 +68,12 @@
 #End Region
 #Region "Metodos"
     Public Function Impresion() As String
-        Return _Nombre & vbLf & _RUC
+        If IsNothing(_Alias) Or _Alias.Length = 0 Then
+            Return _Nombre & vbLf & _RUC
+        Else
+            Return _Alias & vbLf & _RUC
+        End If
+
     End Function
     Public Function Array() As String()
         Return New String() {_RUC, _Nombre, _Alias}

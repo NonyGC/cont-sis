@@ -24,10 +24,14 @@ Partial Class frmComprobantes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmComprobantes))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Haber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnlimpiar = New System.Windows.Forms.Button()
@@ -63,10 +67,20 @@ Partial Class frmComprobantes
         Me.Debe = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btncerrar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gvcajabanco = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cabecera.SuspendLayout()
         CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.gvcajabanco, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ErrorIcon
@@ -77,8 +91,8 @@ Partial Class frmComprobantes
         'Haber
         '
         Me.Haber.DataPropertyName = "haber"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Haber.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Haber.DefaultCellStyle = DataGridViewCellStyle8
         Me.Haber.FillWeight = 48.3732!
         Me.Haber.HeaderText = "Haber"
         Me.Haber.Name = "Haber"
@@ -335,8 +349,8 @@ Partial Class frmComprobantes
         'gvComprobante
         '
         Me.gvComprobante.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.gvComprobante.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        Me.gvComprobante.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.gvComprobante.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.gvComprobante.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.gvComprobante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
@@ -358,8 +372,8 @@ Partial Class frmComprobantes
         'Cuenta
         '
         Me.Cuenta.DataPropertyName = "cuenta"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Cuenta.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.Cuenta.DefaultCellStyle = DataGridViewCellStyle6
         Me.Cuenta.FillWeight = 70.98851!
         Me.Cuenta.HeaderText = "Cuenta"
         Me.Cuenta.Name = "Cuenta"
@@ -381,9 +395,9 @@ Partial Class frmComprobantes
         'Debe
         '
         Me.Debe.DataPropertyName = "debe"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Debe.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.Debe.DefaultCellStyle = DataGridViewCellStyle7
         Me.Debe.FillWeight = 49.0373!
         Me.Debe.HeaderText = "Debe"
         Me.Debe.Name = "Debe"
@@ -407,11 +421,88 @@ Partial Class frmComprobantes
         Me.btncerrar.Text = "Cerrar"
         Me.btncerrar.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.gvcajabanco)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 388)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(860, 116)
+        Me.GroupBox1.TabIndex = 66
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Caja Banco"
+        '
+        'gvcajabanco
+        '
+        Me.gvcajabanco.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.gvcajabanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.gvcajabanco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvcajabanco.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.gvcajabanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.gvcajabanco.ColumnHeadersVisible = False
+        Me.gvcajabanco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.gvcajabanco.Location = New System.Drawing.Point(3, 16)
+        Me.gvcajabanco.Name = "gvcajabanco"
+        Me.gvcajabanco.RowHeadersVisible = False
+        Me.gvcajabanco.Size = New System.Drawing.Size(851, 92)
+        Me.gvcajabanco.TabIndex = 10
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nro_det"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 24.92823!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "det"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "cuenta"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.98851!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Cuenta"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn3.FillWeight = 99.42868!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "glosa"
+        Me.DataGridViewTextBoxColumn4.FillWeight = 198.3302!
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Glosa"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "debe"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn5.FillWeight = 49.0373!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Debe"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "haber"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridViewTextBoxColumn6.FillWeight = 48.3732!
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Haber"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
         'frmComprobantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(873, 386)
+        Me.ClientSize = New System.Drawing.Size(873, 379)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.btnguardar)
@@ -421,12 +512,15 @@ Partial Class frmComprobantes
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btncerrar)
         Me.Name = "frmComprobantes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmComprobantes"
         CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cabecera.ResumeLayout(False)
         Me.cabecera.PerformLayout()
         CType(Me.gvComprobante, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.gvcajabanco, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -466,4 +560,12 @@ Partial Class frmComprobantes
     Friend WithEvents Debe As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Haber As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btncerrar As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents gvcajabanco As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

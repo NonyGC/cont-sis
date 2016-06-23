@@ -46,6 +46,7 @@ Partial Class FrmPlanCuentasAdicional
         Me.tabcuentas.Controls.Add(Me.tcuentaimport)
         Me.tabcuentas.Controls.Add(Me.tcuentaexport)
         Me.tabcuentas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabcuentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabcuentas.Location = New System.Drawing.Point(0, 0)
         Me.tabcuentas.Name = "tabcuentas"
         Me.tabcuentas.SelectedIndex = 0
@@ -64,10 +65,10 @@ Partial Class FrmPlanCuentasAdicional
         Me.tcuentaimport.Controls.Add(Me.DTImport)
         Me.tcuentaimport.Controls.Add(Me.btnpath)
         Me.tcuentaimport.Controls.Add(Me.Label1)
-        Me.tcuentaimport.Location = New System.Drawing.Point(4, 22)
+        Me.tcuentaimport.Location = New System.Drawing.Point(4, 27)
         Me.tcuentaimport.Name = "tcuentaimport"
         Me.tcuentaimport.Padding = New System.Windows.Forms.Padding(3)
-        Me.tcuentaimport.Size = New System.Drawing.Size(709, 378)
+        Me.tcuentaimport.Size = New System.Drawing.Size(709, 373)
         Me.tcuentaimport.TabIndex = 0
         Me.tcuentaimport.Text = "Importar"
         '
@@ -81,36 +82,40 @@ Partial Class FrmPlanCuentasAdicional
         '
         'txthoja
         '
+        Me.txthoja.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txthoja.Location = New System.Drawing.Point(104, 41)
         Me.txthoja.Name = "txthoja"
-        Me.txthoja.Size = New System.Drawing.Size(168, 20)
+        Me.txthoja.Size = New System.Drawing.Size(168, 24)
         Me.txthoja.TabIndex = 161
         Me.txthoja.WaterMarkColor = System.Drawing.Color.Gray
         Me.txthoja.WaterMarkText = "Text"
         '
         'txtpath
         '
+        Me.txtpath.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpath.Location = New System.Drawing.Point(104, 15)
         Me.txtpath.Name = "txtpath"
-        Me.txtpath.Size = New System.Drawing.Size(295, 20)
+        Me.txtpath.Size = New System.Drawing.Size(295, 24)
         Me.txtpath.TabIndex = 160
         Me.txtpath.WaterMarkColor = System.Drawing.Color.Gray
         Me.txtpath.WaterMarkText = "Text"
         '
         'btnconfirmar
         '
-        Me.btnconfirmar.Location = New System.Drawing.Point(310, 251)
+        Me.btnconfirmar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconfirmar.Location = New System.Drawing.Point(312, 267)
         Me.btnconfirmar.Name = "btnconfirmar"
-        Me.btnconfirmar.Size = New System.Drawing.Size(75, 40)
+        Me.btnconfirmar.Size = New System.Drawing.Size(111, 31)
         Me.btnconfirmar.TabIndex = 159
         Me.btnconfirmar.Text = "Confirmar Importación"
         Me.btnconfirmar.UseVisualStyleBackColor = True
         '
         'btnprevista
         '
+        Me.btnprevista.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnprevista.Location = New System.Drawing.Point(278, 66)
         Me.btnprevista.Name = "btnprevista"
-        Me.btnprevista.Size = New System.Drawing.Size(143, 23)
+        Me.btnprevista.Size = New System.Drawing.Size(191, 29)
         Me.btnprevista.TabIndex = 158
         Me.btnprevista.Text = "Previsualizar y verificar"
         Me.btnprevista.UseVisualStyleBackColor = True
@@ -118,9 +123,10 @@ Partial Class FrmPlanCuentasAdicional
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(8, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.Size = New System.Drawing.Size(79, 18)
         Me.Label2.TabIndex = 156
         Me.Label2.Text = "Hoja Excel"
         '
@@ -128,7 +134,7 @@ Partial Class FrmPlanCuentasAdicional
         '
         Me.DTImport.AllowUserToAddRows = False
         Me.DTImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DTImport.Location = New System.Drawing.Point(11, 95)
+        Me.DTImport.Location = New System.Drawing.Point(11, 101)
         Me.DTImport.Name = "DTImport"
         Me.DTImport.RowHeadersVisible = False
         Me.DTImport.Size = New System.Drawing.Size(680, 150)
@@ -136,9 +142,10 @@ Partial Class FrmPlanCuentasAdicional
         '
         'btnpath
         '
-        Me.btnpath.Location = New System.Drawing.Point(405, 13)
+        Me.btnpath.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpath.Location = New System.Drawing.Point(536, 18)
         Me.btnpath.Name = "btnpath"
-        Me.btnpath.Size = New System.Drawing.Size(75, 23)
+        Me.btnpath.Size = New System.Drawing.Size(75, 26)
         Me.btnpath.TabIndex = 54
         Me.btnpath.Text = "Buscar"
         Me.btnpath.UseVisualStyleBackColor = True
@@ -146,19 +153,20 @@ Partial Class FrmPlanCuentasAdicional
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(8, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 13)
+        Me.Label1.Size = New System.Drawing.Size(97, 18)
         Me.Label1.TabIndex = 153
         Me.Label1.Text = "Archivo Excel"
         '
         'tcuentaexport
         '
         Me.tcuentaexport.BackColor = System.Drawing.SystemColors.Control
-        Me.tcuentaexport.Location = New System.Drawing.Point(4, 22)
+        Me.tcuentaexport.Location = New System.Drawing.Point(4, 27)
         Me.tcuentaexport.Name = "tcuentaexport"
         Me.tcuentaexport.Padding = New System.Windows.Forms.Padding(3)
-        Me.tcuentaexport.Size = New System.Drawing.Size(709, 378)
+        Me.tcuentaexport.Size = New System.Drawing.Size(709, 373)
         Me.tcuentaexport.TabIndex = 1
         Me.tcuentaexport.Text = "Exportar"
         '
@@ -166,13 +174,13 @@ Partial Class FrmPlanCuentasAdicional
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Frm_PlanCuentas_Adicional
+        'FrmPlanCuentasAdicional
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(717, 404)
         Me.Controls.Add(Me.tabcuentas)
-        Me.Name = "Frm_PlanCuentas_Adicional"
+        Me.Name = "FrmPlanCuentasAdicional"
         Me.Text = "Frm_PlanCuentas_Adicional"
         Me.tabcuentas.ResumeLayout(False)
         Me.tcuentaimport.ResumeLayout(False)

@@ -38,6 +38,13 @@ Public Class ComprobanteDAO
         Dim Razon As String = da.SelectCommand.ExecuteScalar
         Return Razon
     End Function
+    Public Function comprobante_cajabanco_autogenerado() As String
+        conn = Me.conexion
+        da = New MySqlDataAdapter("sp_cajabanco_codigo_auto", conn)
+        da.SelectCommand.CommandType = CommandType.StoredProcedure
+        Dim Razon As String = da.SelectCommand.ExecuteScalar
+        Return Razon
+    End Function
     Public Function comprobante_registocompra_autogenerado() As String
         conn = Me.conexion
         da = New MySqlDataAdapter("sp_comprobante_registroc_autogenerado", conn)
@@ -68,6 +75,29 @@ Public Class ComprobanteDAO
             .Parameters.AddWithValue("fee_d", entCom.fechae)
             .Parameters.AddWithValue("fev_d", entCom.fechav)
             .Parameters.AddWithValue("r_a", entCom.ruc)
+            .Parameters.AddWithValue("est", entCom.estado)
+
+        End With
+        Try
+            rowsaffected = consultaSQL.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            conexionValue.Close()
+        End Try
+        Return rowsaffected
+    End Function
+    Public Function comprobante_cabecera_register_cb(ByVal entCom As Comprobante)
+        conexionValue = Me.conexion
+        Dim rowsaffected As Integer
+        Dim sql As String = "sp_comprobante_registrar_cb"
+        Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
+
+        With consultaSQL
+            .Connection = conexionValue
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("n_d", entCom.nrodiario)
+            .Parameters.AddWithValue("p", entCom.periodo)
+            .Parameters.AddWithValue("n_r", entCom.nrocaba)
             .Parameters.AddWithValue("est", entCom.estado)
 
         End With
@@ -121,6 +151,30 @@ Public Class ComprobanteDAO
             .CommandType = CommandType.StoredProcedure
             .Parameters.AddWithValue("nrd", entCom.nrodetalle)
             .Parameters.AddWithValue("nrr", entCom.nrocompro)
+            .Parameters.AddWithValue("cue", entCom.cuenta)
+            .Parameters.AddWithValue("glo", entCom.glosa)
+            .Parameters.AddWithValue("deb", entCom.debe)
+            .Parameters.AddWithValue("hab", entCom.haber)
+        End With
+        Try
+            rowsaffected = consultaSQL.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            conexionValue.Close()
+        End Try
+        Return rowsaffected
+    End Function
+    Public Function comprobante_detalle_register_cb(ByVal entCom As Comprobante)
+        conexionValue = Me.conexion
+        Dim rowsaffected As Integer
+        Dim sql As String = "sp_comprobante_registrar_cbdetalle"
+        Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
+
+        With consultaSQL
+            .Connection = conexionValue
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("nrd", entCom.nrodetalle)
+            .Parameters.AddWithValue("nrr", entCom.nrocaba)
             .Parameters.AddWithValue("cue", entCom.cuenta)
             .Parameters.AddWithValue("glo", entCom.glosa)
             .Parameters.AddWithValue("deb", entCom.debe)

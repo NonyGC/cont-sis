@@ -31,40 +31,44 @@ Partial Class frmCheck
         'lblCheck
         '
         Me.lblCheck.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblCheck.Location = New System.Drawing.Point(54, 199)
+        Me.lblCheck.Location = New System.Drawing.Point(37, 239)
+        Me.lblCheck.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCheck.Name = "lblCheck"
         Me.lblCheck.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblCheck.Size = New System.Drawing.Size(253, 23)
+        Me.lblCheck.Size = New System.Drawing.Size(380, 32)
         Me.lblCheck.TabIndex = 0
         Me.lblCheck.Text = "Comprobando ..."
         '
-        'tmrCheck
+        'tmrChecking
         '
         Me.tmrChecking.Enabled = True
         '
         'lblProceso
         '
         Me.lblProceso.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblProceso.Location = New System.Drawing.Point(329, 199)
+        Me.lblProceso.Location = New System.Drawing.Point(450, 239)
+        Me.lblProceso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblProceso.Name = "lblProceso"
         Me.lblProceso.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblProceso.Size = New System.Drawing.Size(53, 23)
+        Me.lblProceso.Size = New System.Drawing.Size(80, 32)
         Me.lblProceso.TabIndex = 1
         Me.lblProceso.Text = "%"
         '
         'frmCheck
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BackgroundImage = Global.Vista.My.Resources.Resources.ALSee
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(430, 261)
+        Me.ClientSize = New System.Drawing.Size(530, 307)
         Me.Controls.Add(Me.lblProceso)
         Me.Controls.Add(Me.lblCheck)
         Me.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.DoubleBuffered = True
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCheck"

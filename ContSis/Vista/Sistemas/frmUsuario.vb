@@ -45,7 +45,7 @@ Public Class frmUsuario
         AddHandler back.tvModulo.Enter, AddressOf tvModulo_Enter
 
         AddHandler back.cboEmpresas.SelectedIndexChanged, AddressOf cboEmpresas_SelectedIndexChanged
-
+        AddHandler back.lbEmpresaSelect.DoubleClick, AddressOf lbEmpresaSelect_DoubleClick
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
@@ -64,12 +64,19 @@ Public Class frmUsuario
 
         lblNroModulo.Text = String.Concat("N° Modulo: ", lbModulo.Items.Count)
     End Sub
-    Private Sub CargarModuloBack()
+    Private Sub CargarModuloBackAll()
+        CargarTreeViewAll(back.tvModulo)
+    End Sub
+    Private Sub CargarModuloSelectAll()
+        CargarTreeViewAll(back.tvModuloSelect)
+    End Sub
+
+    Private Sub CargarTreeViewAll(treeView As TreeView)
         Dim dt As DataTable = ds.Tables("modulo")
         For Each row As DataRow In dt.Rows
             Dim tn = New TreeNode(row.Item("name"))
             tn.Name = row.Item("id")
-            back.tvModulo.Nodes.Add(tn)
+            treeView.Nodes.Add(tn)
             Dim childnode As New TreeNode()
             For Each childrow As DataRow In row.GetChildRows("Mod")
                 childnode = tn.Nodes.Add(childrow("name"))
@@ -77,35 +84,57 @@ Public Class frmUsuario
             Next
         Next
     End Sub
-    Private Sub CargarModuloBack(names As String())
+    Private Sub CargarModuloSelectBackByName(name As String)
         Dim dt As DataTable = ds.Tables("modulo")
-        For Each row As DataRow In dt.Rows
-
-
-            Dim tn = New TreeNode(row.Item("name"))
-            tn.Name = row.Item("id")
-            back.tvModulo.Nodes.Add(tn)
-            Dim childnode As New TreeNode()
-            For Each childrow As DataRow In row.GetChildRows("Mod")
-                childnode = tn.Nodes.Add(childrow("name"))
-                childnode.Name = childrow("id")
-            Next
-
+        Dim dr As DataRow = dt.Rows.Find(name)
+        Dim tn As New TreeNode(dr.Item("name"))
+        tn.Name = dr.Item("id")
+        back.tvModuloSelect.Nodes.Add(tn)
+        Dim childnode As New TreeNode()
+        For Each childrow As DataRow In dr.GetChildRows("Mod")
+            childnode = tn.Nodes.Add(childrow("name"))
+            childnode.Name = childrow("id")
         Next
     End Sub
+    Private Sub CargarModuloBackByListString(list As String)
+        Dim dt As DataTable = ds.Tables("modulo")
+        For Each row As DataRow In dt.Rows
+            If Not list.Contains(row.Item("id")) Then
+                Dim tn = New TreeNode(row.Item("name"))
+                tn.Name = row.Item("id")
+                back.tvModulo.Nodes.Add(tn)
+                Dim childnode As New TreeNode()
+                For Each childrow As DataRow In row.GetChildRows("Mod")
+                    childnode = tn.Nodes.Add(childrow("name"))
+                    childnode.Name = childrow("id")
+                Next
+            End If
+        Next
+
+    End Sub
+
+
+
+    Private Sub LimpiarModuloBackAll()
+        back.tvModulo.Nodes.Clear()
+    End Sub
+    Private Sub LimpiarModuloSelectBackAll()
+        back.tvModuloSelect.Nodes.Clear()
+    End Sub
+
 #End Region
 #Region "Manejo Empresa"
     Public Sub CantEmpresa()
-        lblNroEmpresa.Text = String.Concat("N° Empresa: ", lbEmpresa.Items.Count)
+        lblEmpresaCantActivas.Text = String.Concat("N° Empresa: ", lbEmpresaActivos.Items.Count)
     End Sub
     Private Sub CargarEmpresa()
-        lbEmpresa.DataSource = ds.Tables("empresa")
-        lbEmpresa.DisplayMember = "name"
-        lbEmpresa.ValueMember = "id"
+        lbEmpresaActivos.DataSource = ds.Tables("empresa")
+        lbEmpresaActivos.DisplayMember = "rz_elegido"
+        lbEmpresaActivos.ValueMember = "id"
     End Sub
     Private Sub CargarEmpresaBack()
         back.lbEmpresa.DataSource = dtEmpresa
-        back.lbEmpresa.DisplayMember = "name"
+        back.lbEmpresa.DisplayMember = "rz_elegido"
         back.lbEmpresa.ValueMember = "id"
     End Sub
     Private Sub CargarStateEmpresa()
@@ -129,7 +158,7 @@ Public Class frmUsuario
     Private Sub Frm_RegUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarModulo()
         CantModulo()
-        CargarModuloBack()
+        CargarModuloBackAll()
         CargarEmpresaBack()
         CargarEmpresaSelect()
         CargarEmpresa()
@@ -330,7 +359,13 @@ Public Class frmUsuario
         dr("name") = dv.Row("name")
 
         dtEmpresa.Rows.Add(dr)
+        Dim drPermiso As DataRow = ds.Tables("permiso").Rows.Find(back.lbEmpresaSelect.SelectedValue)
+        If Not IsNothing(drPermiso) Then
+            ds.Tables("permiso").Rows.Remove(drPermiso)
+        End If
         dtEmpresaSelect.Rows.Remove(dv.Row)
+        LimpiarModuloBackAll()
+        LimpiarModuloSelectBackAll()
         EnabledEmpresa()
     End Sub
     Private Sub btnQuitarTodoEmpresa(sender As Object, e As EventArgs)
@@ -341,6 +376,9 @@ Public Class frmUsuario
             dtEmpresa.Rows.Add(nr)
         Next
         dtEmpresaSelect.Rows.Clear()
+        ds.Tables("permiso").Rows.Clear()
+        LimpiarModuloBackAll()
+        LimpiarModuloSelectBackAll()
         EnabledEmpresa()
     End Sub
     Private Sub btnAgregarEmpresa(sender As Object, e As EventArgs)
@@ -351,7 +389,14 @@ Public Class frmUsuario
         dr("id") = dv.Row("id")
         dr("name") = dv.Row("name")
         dr("state") = False
-        dr("NameState") = dr("name") & ": Falta"
+
+        If dr("name").ToString.Length >= 20 Then
+            dr("NameState") = dr("name").ToString.Substring(0, 20) & ": Falta"
+        Else
+            dr("NameState") = dr("name").ToString & ": Falta"
+        End If
+
+
         dtEmpresaSelect.Rows.Add(dr)
         dtEmpresa.Rows.Remove(dv.Row)
         EnabledEmpresa()
@@ -500,7 +545,10 @@ Public Class frmUsuario
     Private Sub QuitarPermiso(permiso As Permiso)
         Dim dr As DataRow
         dr = ds.Tables("permiso").Rows.Find(permiso.Empresa)
-        dr("mod") = permiso.QuitarModulo(dr("mod").ToString)
+        If Not IsNothing(dr) Then
+            dr("mod") = permiso.QuitarModulo(dr("mod").ToString)
+        End If
+
     End Sub
     Private Sub QuitarPermisoTodo(permiso As Permiso)
         Dim dr As DataRow
@@ -537,44 +585,46 @@ Public Class frmUsuario
 #End Region
 #Region "CboEmpresa"
     Private Sub cboEmpresas_SelectedIndexChanged(sender As Object, e As EventArgs)
-        If Not IsNothing(back.cboEmpresas.SelectedValue) Then
+        CargarPermisosByEmpresa(back.cboEmpresas.SelectedValue)
+    End Sub
+
+
+
+    Private Sub lbEmpresaSelect_DoubleClick(sender As Object, e As EventArgs)
+        back.tabRoles.SelectedIndex = 1
+        back.cboEmpresas.SelectedIndex = back.lbEmpresaSelect.SelectedIndex
+        CargarPermisosByEmpresa(back.lbEmpresaSelect.SelectedValue)
+    End Sub
+    Private Sub CargarPermisosByEmpresa(EmpresaRuc As String)
+        If Not IsNothing(EmpresaRuc) Then
             Dim dr As DataRow = ds.Tables("permiso").Rows.Find(back.cboEmpresas.SelectedValue.ToString)
             If Not IsNothing(dr) Then
-                Dim modulos() As String = ModulosArray(dr("mod"))
-            End If
+                Dim modulos() As String = CadenaToArray(dr("mod").ToString)
+                LimpiarModuloSelectBackAll()
+                If CBool(dr("compt")) Then
 
-        End If
-    End Sub
-    Private Function ModulosArray(value As String) As String()
-        Dim continua As Boolean = True
-        Dim c As Integer = 0
-        Dim array(0) As String
+                    LimpiarModuloBackAll()
+                    CargarModuloSelectAll()
+                Else
 
-        While continua
-            Dim startcadena As Integer = value.IndexOf("[", c)
-            Dim endcadena As Integer
-            Dim val As String
-
-            If startcadena < 0 Then
-                continua = False
-
-            Else
-                endcadena = value.IndexOf("]", startcadena)
-                val = value.Substring(startcadena + 1, endcadena - (startcadena + 1))
-                array(c) = val
-
-                If c = array.Length - 1 Then
-                    ReDim Preserve array(c + 1)
+                    For i = 0 To modulos.Length - 1
+                        CargarModuloSelectBackByName(modulos(i))
+                    Next
+                    LimpiarModuloBackAll()
+                    CargarModuloBackByListString(dr("mod").ToString)
                 End If
 
-                c = c + 1
+            Else
+                LimpiarModuloBackAll()
+                CargarModuloBackAll()
+                LimpiarModuloSelectBackAll()
             End If
-        End While
-        Return array
-    End Function
+        End If
+    End Sub
+
+    Private Sub lblEmpresaCantInactivas_Click(sender As Object, e As EventArgs) Handles lblEmpresaCantInactivas.Click
+
+    End Sub
 #End Region
 #End Region
-
-
-
 End Class

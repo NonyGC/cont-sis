@@ -2,10 +2,10 @@
 
 Public Class BaseDao
     'Variables
-    Private server As String = "localhost"
+    Private server As String = "192.168.0.14"
     Private user As String = "user"
-    Private password As String = "S0p0rt3user"
-    Private port As String = "3307"
+    Private password As String = "S0p0rt3"
+    Private port As String = "3306"
     Private database As String = "bdsist"
     Private conexionValue As MySqlConnection
     'Contructor

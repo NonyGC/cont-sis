@@ -83,13 +83,17 @@ Public Class frmConfiguracion
         'numEmpresas.Value = sistema.NroEmpresa
         numEmpresas.Value = empresas.Length
         numEmpresas.Enabled = False
-        numUsuarios.Value = sistema.NroUsuario
+
+        numUsuarios.Value = frmMain.NroUsuario
+        numUsuarios.Enabled = False
+
 
         If sistema.ActivoAdmin > 0 Then
             chkAdmin.Checked = True
         Else
             chkAdmin.Checked = False
         End If
+
     End Sub
 
     Private Sub BtnCrear_Click(sender As Object, e As EventArgs) Handles BtnCrear.Click

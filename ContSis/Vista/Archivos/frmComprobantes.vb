@@ -48,6 +48,9 @@ Public Class frmComprobantes
                 gvComprobante.Rows.Add()
             Next
         End If
+        For i As Integer = 0 To 2
+            gvcajabanco.Rows.Add()
+        Next
     End Sub
     Sub bloquear_filas()
         For I As Integer = 1 To gvComprobante.Rows.Count - 1
@@ -211,6 +214,7 @@ Public Class frmComprobantes
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        gvComprobante.Rows(e.RowIndex).ErrorText = String.Empty
     End Sub
     Sub ActivarFila(I As Integer)
         gvComprobante.Rows(I).ReadOnly = False
@@ -241,6 +245,7 @@ Public Class frmComprobantes
                     With entCom
                         .nrodiario = compBL.comprobante_diario_autogenerado()
                         .nrocompro = compBL.comprobante_registro_autogenerado()
+
                     End With
                     compBL.comprobante_cabecera_register(entCom)
                     For Each row As DataGridViewRow In gvComprobante.Rows
@@ -459,11 +464,22 @@ Public Class frmComprobantes
     Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRuc.KeyPress, txtDserie.KeyPress, txtDnumero.KeyPress
         Solo_numeros(e)
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-    End Sub
+    Private Sub gvComprobante_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles gvComprobante.CellValidating
+        Dim header As String = gvComprobante.Columns(e.ColumnIndex).HeaderText
+        'Dim row As DataGridViewRow = gvComprobante.CurrentRow
+        'Dim cell As DataGridViewCell = gvComprobante.CurrentCell
+        'Dim glosa As Object = cell(e)
+        'If ((Convert.ToString(glosa) = String.Empty)) Then
+        '    gvComprobante.Rows(e.RowIndex).ErrorText = "Ingresar Glosa"
+        '    e.Cancel = True
+        'End If
 
-    Private Sub cabecera_Enter(sender As Object, e As EventArgs) Handles cabecera.Enter
+
+        'If String.IsNullOrEmpty(e.FormattedValue.ToString) Then
+        '    gvComprobante.Rows(e.RowIndex).ErrorText = "hola"
+        '    e.Cancel = True
+        'End If
 
     End Sub
 End Class

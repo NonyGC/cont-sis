@@ -119,7 +119,7 @@ Public Class PermisoDao
         End Try
 
     End Function
-    Public Function CrearSchema() As DataTable
+    Public Function CreaSchemaDataTable() As DataTable
         Dim dt As New DataTable("Permiso")
         dt.Columns.Add("emp")
         dt.Columns.Add("usu")

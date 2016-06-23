@@ -15,8 +15,11 @@ Public Class frmMain
     Private Shared _empresas As Empresa() = {
         New Empresa("20491950103", "NUTRITIENDAPERU.COM S.A.C.", ""),
         New Empresa("20524769418", "COMERCIO DE IMPLEMENTOS & PROTECCION S.A.C.", " COIMPRO S.A.C."),
-        New Empresa("20546711138", "DR COMERCIO S.A.C.", "")
+        New Empresa("20546711138", "DR COMERCIO S.A.C.", ""),
+        New Empresa("20546711130", "DR COMER S.A.C.", "")
     }
+    Private Shared _nroUsuario As Integer = 5
+
     Private _focoSize As Boolean = False
     Private Shared _action As listUsuario
     Private _oBL As New MainBL
@@ -37,6 +40,13 @@ Public Class frmMain
             _EmpresaMain = value
         End Set
     End Property
+    Public Shared ReadOnly Property NroUsuario() As Integer
+        Get
+            Return _nroUsuario
+        End Get
+    End Property
+
+
     Public Shared ReadOnly Property Empresas As Empresa()
         Get
             Return _empresas
@@ -221,9 +231,6 @@ Public Class frmMain
                 _PeriodoMain = Nothing
                 _state = listForm.Dependiente
 
-
-
-
                 OpenForm("frmLogeo", Nothing)
                 SSUsuario(Nothing)
                 SSEmpresa(Nothing)
@@ -387,7 +394,15 @@ Public Class frmMain
         OpenForm("frmUsuariosConectados", Nothing)
         ActionSecAdminAndNormal()
         ActionSecAll()
+        SSEmpresa(Nothing)
+        SSForm(Nothing)
+        PnlUsuario(_UsuarioMain.Impresion)
+        PnlEmpresa(Nothing)
+        PnlEjercicio("Sin Asignar")
+        PnlPeriodo("Sin Asignar")
+        pnlInfo.Visible = True
 
+        ActionSecAll()
     End Sub
     Private Sub ActionSecNormal()
 
@@ -405,12 +420,11 @@ Public Class frmMain
     Private Sub ActionSecMaster()
 
         lblUsuario.Text = _UsuarioMain.Impresion
-        _EmpresaMain = New Empresa("00000000000", "Sin Asignar", "Sin Asignar")
 
         SSEmpresa(Nothing)
         SSForm(Nothing)
         PnlUsuario(_UsuarioMain.Impresion)
-        PnlEmpresa(_EmpresaMain.Impresion)
+        PnlEmpresa(Nothing)
         PnlEjercicio("Sin Asignar")
         PnlPeriodo("Sin Asignar")
         pnlInfo.Visible = True
@@ -471,18 +485,25 @@ Public Class frmMain
 
 #End Region
 #Region "Manejo de Panel"
-    Private Sub PnlUsuario(Impresion As String)
+    Public Sub PnlUsuario(Impresion As String)
         lblUsuario.Text = Impresion
     End Sub
-    Private Sub PnlEmpresa(Impresion As String)
-        lblEmpresa.Text = Impresion
+    Public Sub PnlEmpresa(Impresion As String)
+        If Not IsNothing(Impresion) Then
+            lblEmpresa.Text = Impresion
+        Else
+            lblEmpresa.Text = "Empresa" & vbLf & "Sin Asignar"
+        End If
+
     End Sub
-    Private Sub PnlEjercicio(Impresion As String)
-        lblEjercicio.Text = String.Concat("Ejercicio: ", Impresion).ToUpper
+    Public Sub PnlEjercicio(Impresion As String)
+        lblEjercicio.Text = String.Concat("Ejercicio: ", vbLf, Impresion).ToUpper
     End Sub
-    Private Sub PnlPeriodo(Impresion As String)
-        lblPeriodo.Text = String.Concat("Periodo: ", Impresion).ToUpper
+    Public Sub PnlPeriodo(Impresion As String)
+        lblPeriodo.Text = String.Concat("Periodo: ", vbLf, Impresion).ToUpper
     End Sub
+
+
 #End Region
 
 #End Region

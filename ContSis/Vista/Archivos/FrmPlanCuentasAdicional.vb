@@ -4,9 +4,10 @@ Imports System.Data.OleDb
 Imports Microsoft.Office.Interop
 Imports Controladores
 Imports Capa_Entidad
+Imports System.Text
 Public Class FrmPlanCuentasAdicional
     Dim validar As New CuentaBL
-    Dim tabla As String = "16000"
+    Dim tabla As String = "16002"
     Dim str As String
     Public dterror As New DataTable
     Dim EntCont As New Cuenta
@@ -61,7 +62,7 @@ Public Class FrmPlanCuentasAdicional
                         con.Close()
                         DTImport.DataSource = Nothing
                         DTImport.DataSource = dt
-                        DTImport.Columns(0).Width = 50
+                        DTImport.Columns(0).Width = 80
                         DTImport.Columns(1).Width = 350
                         DTImport.Columns(2).Width = 260
                         DTImport.AllowUserToResizeColumns = False
@@ -70,6 +71,17 @@ Public Class FrmPlanCuentasAdicional
                 End Using
             End Using
             Detectdupl()
+            Detectexistenter()
+            ' Detectexistpadre()
+
+            If dterror.Rows.Count > 0 Then
+                Dim result = MessageBox.Show("Se corrigieron los siguientes errores", "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                If result = DialogResult.OK Then
+                    FrmPlanCuentasErrores.Show()
+                End If
+            Else
+                MessageBox.Show("No se encontro ningún problema", "Sin problemas")
+            End If
             btnconfirmar.Enabled = True
             Dim pbcont As Integer
             For i = 0 To DTImport.Rows.Count - 1
@@ -93,20 +105,65 @@ Public Class FrmPlanCuentasAdicional
     Private Sub btnconfirmar_Click(sender As Object, e As EventArgs) Handles btnconfirmar.Click
         ProgressBar1.Value = 0
         Dim cont As Integer
+        Dim PCsql As StringBuilder = New StringBuilder("insert into pc" & tabla & " (codigo,nombre,alias) values")
+        Dim PCsql2 As StringBuilder = New StringBuilder("insert into pc" & tabla & "m (codigo) values")
+        Dim PCsql3 As StringBuilder = New StringBuilder("insert into pc" & tabla & "m2 (codigo,cuenta_padre) values")
+        Dim rows As New List(Of String)
+        Dim rows2 As New List(Of String)
+        Dim rows3 As New List(Of String)
+        Dim c, n, a, cp As String
         Try
             For i = 0 To DTImport.Rows.Count - 1
-                EntCont.codigo = DTImport.Rows(i).Cells(0).Value.ToString
-                EntCont.nombre = DTImport.Rows(i).Cells(1).Value.ToString.ToUpper()
-                If DTImport.Rows(i).Cells(2).Value.ToString.Length > 0 Then
-                    EntCont.aliass = DTImport.Rows(i).Cells(2).Value.ToString
+                c = DTImport.Rows(i).Cells(0).Value.ToString
+                'Ver si la cuenta es de 2 Digitos
+                If c.Length < 3 Then
+                    n = DTImport.Rows(i).Cells(1).Value.ToString.ToUpper()
                 Else
-                    Dim blanco As String = Space(25)
-                    EntCont.aliass = (EntCont.nombre & Space(25)).Substring(0, 25)
+                    n = DTImport.Rows(i).Cells(1).Value.ToString
                 End If
-                validar.Cuenta_RegisterLB(tabla, EntCont)
+                'si la cuenta es de 6 digitos
+                If c.Length > 5 Then
+                    cp = c.Substring(0, 5)
+                Else
+                    cp = c
+                End If
+                'Si el doc. tiene las cuents con un nombre de referencia
+                If DTImport.Rows(i).Cells(2).Value.ToString.Length > 0 Then
+                    a = DTImport.Rows(i).Cells(2).Value.ToString.Substring(0, 25)
+                Else
+                    Dim blanco = Space(25)
+                    a = (n & blanco).Substring(0, n.Length)
+                End If
+
+                'Añadiendo a una lista los datos del DGV
+                rows.Add(String.Format("('{0}','{1}','{2}')", Convert.ToString(c), Convert.ToString(n), Convert.ToString(a)))
+                'si la cuenta es de 6 digitos a más se añadira la tabla designada
+                If DTImport.Rows(i).Cells(0).Value.ToString.Length > 5 Then
+                    rows3.Add(String.Format("('{0}','{1}')", Convert.ToString(c), Convert.ToString(cp)))
+                Else
+                    rows2.Add(String.Format("('{0}')", Convert.ToString(c)))
+                End If
                 cont = cont + 1
                 ProgressBar1.Increment(1)
             Next
+            'Construyendo los Strings
+            PCsql.Append(String.Join(",", rows))
+            PCsql.Append(";")
+            PCsql2.Append(String.Join(",", rows2))
+            PCsql2.Append(";")
+            PCsql3.Append(String.Join(",", rows3))
+            PCsql3.Append(";")
+            Dim cmd As String
+            If rows2.Count = 0 Then
+                PCsql2 = New StringBuilder("")
+            End If
+            If rows3.Count = 0 Then
+                PCsql3 = New StringBuilder("")
+            End If
+            'Formando sql Statement
+            cmd = PCsql.ToString + PCsql2.ToString + PCsql3.ToString
+            'Guardando Datos
+            validar.ImportXtoMysqlLB(tabla, cmd.ToString)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -129,12 +186,67 @@ Public Class FrmPlanCuentasAdicional
             Next
             i = i + 1
         Loop
-        Dim result = MessageBox.Show("Se corrigieron los siguientes errores", "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        If result = DialogResult.OK Then
-            FrmPlanCuentasErrores.Show()
-        End If
-    End Sub
 
+    End Sub
+    Sub Detectexistenter()
+        Dim msgde As String = "Esta cuenta ya esta registrada en la base de datos"
+        Dim i As Integer = 0
+        Dim DTexiste As New DataTable
+        DTexiste = validar.Cuenta_Export(tabla)
+        Do While i < DTexiste.Rows.Count
+            Dim filacompare = DTexiste.Rows(i)
+            For Each row As DataGridViewRow In DTImport.Rows
+                If filacompare.Equals(row) Then Continue For
+                Dim duplicadofila As Boolean = True
+                If Not filacompare(0).Equals(row.Cells(0).Value) Then
+                    duplicadofila = False
+                End If
+                If (duplicadofila) Then
+                    dterror.Rows.Add(msgde, row.Cells(0).Value.ToString)
+                    DTImport.Rows.RemoveAt(row.Index)
+                End If
+            Next
+            i = i + 1
+        Loop
+        'Dim a = dterror.Rows.Count
+        'Dim result = MessageBox.Show("Se corrigieron los siguientes errores" & i & " " & a, "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'If result = DialogResult.OK Then
+        'FrmPlanCuentasErrores.Show()
+        'End If
+    End Sub
+    Sub Detectexistpadre()
+        Dim msgde As String = "Se creara la siguiente cuenta"
+        Dim i As Integer = 0
+        Dim DTexiste As New DataTable
+        Dim noexiste As Boolean = True
+        DTexiste = validar.Cuenta_Export(tabla)
+        Do While i < DTexiste.Rows.Count
+            Dim filacompare = DTexiste.Rows(i)
+            For Each row As DataGridViewRow In DTImport.Rows
+                Dim c As String = row.Cells(0).Value
+                Dim c_length As Integer = row.Cells(0).Value.ToString.Length
+                Dim padre As String = c.Substring(0, c_length - 1)
+                Dim fijo As String = filacompare(0)
+                'Aca empieza comprobacion
+                If filacompare.Equals(padre) Then
+
+                Else
+                    dterror.Rows.Add(msgde, padre)
+                    DTImport.Rows.RemoveAt(row.Index)
+                End If
+
+                If Not fijo.Equals(padre) Then
+                    noexiste = False
+                End If
+            Next
+            i = i + 1
+        Loop
+        'Dim a = dterror.Rows.Count
+        'Dim result = MessageBox.Show("Se corrigieron los siguientes errores" & i & " " & a, "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'If result = DialogResult.OK Then
+        'FrmPlanCuentasErrores.Show()
+        'End If
+    End Sub
     Private Sub btnCnfExport_Click(sender As Object, e As EventArgs)
         'Change "C:\Users\Jimmy\Documents\Merchandise.accdb" to your database location
         Dim ODsave As New SaveFileDialog
@@ -148,7 +260,6 @@ Public Class FrmPlanCuentasAdicional
         Dim misValue As Object = System.Reflection.Missing.Value
         Try
             DTExport = validar.Cuenta_Export(tabla)
-
             ODsave.FileName = "Plan_contable"
             ODsave.Filter = ("Excel files |*.xls")
             ODsave.Title = "Guardar Plan Contable"

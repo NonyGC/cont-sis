@@ -4,9 +4,10 @@ Imports Capa_Entidad
 Imports Vista.BaseForm
 Public Class frmSelectEmpresa
 #Region "Variables"
-    Dim bl As New ActivacionEmpresasBL
+    Dim reglas As New ActivacionEmpresasBL
     Dim men As String
-    Dim dataTabla As New DataTable
+    Dim dtSelectEmpresa As DataTable
+    Dim empresas As Empresa()
     Dim f As frmMain = My.Application.OpenForms.Item("frmMain")
     Dim c As Integer = 0
 #End Region
@@ -16,7 +17,17 @@ Public Class frmSelectEmpresa
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Try
+            empresas = frmMain.Empresas
+            dtSelectEmpresa = reglas.getEmpresas(frmMain.UsuarioMain.Id)
+            dgvEmpresa.DataSource = dtSelectEmpresa
+            dgvEmpresa.Columns("id").Visible = False
+            dgvEmpresa.Columns("compt").Visible = False
+            dgvEmpresa.Columns("modu").Visible = False
+            dgvEmpresa.Columns("ColEstado").Visible = False
+        Catch ex As Exception
+
+        End Try
 
 
     End Sub
@@ -25,33 +36,20 @@ Public Class frmSelectEmpresa
 
     Private Sub dgvempresa_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpresa.CellDoubleClick
         Try
-            ActivarMenu()
+            If dgvEmpresa.RowCount >= 0 Then
+                ActivarMenu()
+            End If
         Catch ex As Exception
 
         End Try
 
     End Sub
-
-    Private Sub dgvempresa_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvEmpresa.DataBindingComplete
-        'Select Case _rol.TipoUsuario
-        '    Case listUsuario.Normal
-        '        For Each row As DataGridViewRow In dgvEmpresa.Rows
-        '            If TypeOf row.Cells("ColEstado").Value Is DBNull Then
-        '                row.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlDark
-        '            End If
-        '        Next
-        '    Case listUsuario.Admin
-
-        '    Case listUsuario.Master
-
-        'End Select
-
-
-    End Sub
-
     Private Sub dgvempresa_KeyDown(sender As Object, e As KeyEventArgs) Handles dgvEmpresa.KeyDown
         If e.KeyCode = Keys.Enter Then
-            ActivarMenu()
+            If dgvEmpresa.RowCount >= 0 Then
+                ActivarMenu()
+            End If
+
         End If
     End Sub
     'Metodos
@@ -59,9 +57,13 @@ Public Class frmSelectEmpresa
 
         BtnOn.Enabled = False
         Dim mnu As MenuStrip = f.MnuMain
-        frmMain.EmpresaMain = New Empresa(dgvEmpresa.Item("ColRuC", dgvEmpresa.CurrentRow.Index).Value().ToString,
-                                                    dgvEmpresa.Item("ColRznScl", dgvEmpresa.CurrentRow.Index).Value().ToString,
-                                                    dgvEmpresa.Item("ColAlias", dgvEmpresa.CurrentRow.Index).Value().ToString)
+        Dim empresa As New Empresa
+        empresa.RUC = dgvEmpresa.Item("ColRuC", dgvEmpresa.CurrentRow.Index).Value().ToString
+        empresa.Nombre = dgvEmpresa.Item("ColRznScl", dgvEmpresa.CurrentRow.Index).Value().ToString()
+        empresa.Aliass = dgvEmpresa.Item("ColAlias", dgvEmpresa.CurrentRow.Index).Value().ToString
+        empresa.Digito = dgvEmpresa.Item("ColDigito", dgvEmpresa.CurrentRow.Index).Value()
+        empresa.Codigo = dgvEmpresa.Item("ColCod", dgvEmpresa.CurrentRow.Index).Value()
+        frmMain.EmpresaMain = empresa
         'Select Case _rol.TipoUsuario
         '    Case listUsuario.Normal
         '        'Variables
@@ -83,15 +85,13 @@ Public Class frmSelectEmpresa
         '        'Next
         ''    Case listUsuario.Admin, listUsuario.Master
 
-
-
         'End Select
 
 
-        Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
-        f.lblEmpresa.Text = frmMain.EmpresaMain.Impresion
 
-        Dim frm As New frmEjercicio
+        Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
+        f.PnlEmpresa(frmMain.EmpresaMain.Impresion)
+        Dim frm As New Ejercicio
         frm.MdiParent = Me.ParentForm
         frm.Show()
         CloseForm("frmSelectEmpresa")
@@ -218,7 +218,10 @@ Public Class frmSelectEmpresa
     End Sub
 
     Private Sub BtnOn_Click(sender As Object, e As EventArgs) Handles BtnOn.Click
-        ActivarMenu()
+        If dgvEmpresa.RowCount >= 0 Then
+            ActivarMenu()
+        End If
+
     End Sub
 
 
@@ -232,13 +235,15 @@ Public Class frmSelectEmpresa
     End Sub
 
     Private Sub FrmActEmpresas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        With dgvEmpresa
-            '.DataSource = bl.getEmpresas(frmMain.UsuarioMain.Rol.Id)
-        End With
+
     End Sub
 
     Private Sub frmSelectEmpresa_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim mnu As MenuStrip = f.MnuMain
         Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
+    End Sub
+
+    Private Sub dgvEmpresa_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvEmpresa.DataError
+        MsgBox(e.RowIndex)
     End Sub
 End Class

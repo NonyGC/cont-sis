@@ -50,4 +50,9 @@ Public Class CuentaBL
     Public Function Cuenta_Amarre_ShowLB(ByVal tabla As String, ByVal entcont As Cuenta) As DataTable
         Return Datos.Cuenta_Amarre_Show(tabla, entcont)
     End Function
+    Public Function ImportXtoMysqlLB(ByVal tabla As String, ByVal cmd As String)
+        'Dim verificar As Integer
+        Datos.importXtomysql(tabla, cmd)
+        Return Nothing
+    End Function
 End Class

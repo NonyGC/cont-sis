@@ -27,6 +27,9 @@ Public Class ComprobanteBL
     Public Function comprobante_diario_autogenerado() As String
         Return Datos.comprobante_diario_autogenerado()
     End Function
+    Public Function comprobante_cajabanco_autogenerado() As String
+        Return Datos.comprobante_cajabanco_autogenerado()
+    End Function
     Public Function comprobante_registro_autogenerado() As String
         Return Datos.comprobante_registocompra_autogenerado()
     End Function
@@ -35,9 +38,19 @@ Public Class ComprobanteBL
         verificar = Datos.comprobante_cabecera_register(entCom)
         Return verificar
     End Function
+    Public Function comprobante_cabecera_register_cb(ByVal entCom As Comprobante) As Integer
+        Dim verificar As Integer
+        verificar = Datos.comprobante_cabecera_register_cb(entCom)
+        Return verificar
+    End Function
     Public Function comprobante_detalle_register(ByVal entCom As Comprobante)
         Dim verificar As Integer
         verificar = Datos.comprobante_detalle_register(entCom)
+        Return verificar
+    End Function
+    Public Function comprobante_detalle_register_cb(ByVal entCom As Comprobante)
+        Dim verificar As Integer
+        verificar = Datos.comprobante_detalle_register_cb(entCom)
         Return verificar
     End Function
 

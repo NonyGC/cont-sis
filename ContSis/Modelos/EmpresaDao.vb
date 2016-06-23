@@ -31,7 +31,7 @@ Public Class EmpresaDao
         End Try
     End Function
     Public Function GetEmpresasxRol(id As String) As DataTable
-        Dim cmd As New MySqlCommand("sp_get_empresas_status_rol", Me.conexion)
+        Dim cmd As New MySqlCommand("sp_get_empresa_select", Me.conexion)
         cmd.CommandType = CommandType.StoredProcedure
         Dim dt As New DataTable
         Try

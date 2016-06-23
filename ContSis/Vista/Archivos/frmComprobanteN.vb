@@ -9,8 +9,15 @@ Public Class FrmComprobanteN
 
     Dim monto As Decimal = 0
     Dim igv As Decimal = 0
+    Dim inafec As Decimal = 0
     Dim isc As Decimal = 0
-    Dim total As Decimal = 0
+    Dim total As Decimal
+
+    Dim table As DataTable = New DataTable()
+    Dim tablecb As DataTable = New DataTable()
+    Dim row As DataRow
+    Dim rowcb As DataRow
+
     Private Sub FrmComprobanteN_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Dim dat As New DataTable
@@ -44,16 +51,63 @@ Public Class FrmComprobanteN
         txtCuentaIgv.AutoCompleteCustomSource = colcuenta
         txtCuentaIsc.AutoCompleteCustomSource = colcuenta
         txtCuentaTotal.AutoCompleteCustomSource = colcuenta
+        txtCuentaInafecto.AutoCompleteCustomSource = colcuenta
         dtpFechae.MaxDate = Date.Today
     End Sub
+    Sub DetalleComprobantecb()
+        'table = Nothing
+        If tablecb.Columns.Count = 0 Then
+            tablecb.Columns.Add("Numero", Type.GetType("System.String"))
+            tablecb.Columns.Add("Cuenta", Type.GetType("System.String"))
+            tablecb.Columns.Add("Glosa", Type.GetType("System.String"))
+            tablecb.Columns.Add("Debe", Type.GetType("System.Decimal"))
+            tablecb.Columns.Add("Haber", Type.GetType("System.Decimal"))
+        End If
+
+        Dim det As Integer = 0
+        If txtTotal.Text <> "" Then
+            det = 10
+            rowcb = tablecb.NewRow()
+            rowcb("Numero") = det.ToString("D3")
+            rowcb("Cuenta") = txtCuentaTotal.Text
+            rowcb("Glosa") = txtGlosa.Text
+            rowcb("Debe") = Convert.ToDecimal(txtTotal.Text)
+            rowcb("Haber") = "0.00"
+            tablecb.Rows.Add(rowcb)
+        End If
+        If txtTotal.Text <> "" Then
+            rowcb = tablecb.NewRow()
+            det += 10
+            rowcb("Numero") = det.ToString("D3")
+            rowcb("Cuenta") = "10"
+            rowcb("Glosa") = txtGlosa.Text
+            rowcb("Debe") = "0.00"
+            rowcb("Haber") = Convert.ToDecimal(txtTotal.Text)
+            tablecb.Rows.Add(rowcb)
+        End If
+
+        For Each r As DataRow In tablecb.Rows
+            With entCom
+                .nrodetalle = r("Numero")
+                .cuenta = r("Cuenta")
+                .glosa = r("Glosa")
+                .debe = Convert.ToDecimal(r("Debe"))
+                .haber = Convert.ToDecimal(r("Haber"))
+            End With
+            compBL.comprobante_detalle_register_cb(entCom)
+        Next
+    End Sub
+
+
     Sub DetalleComprobante()
-        Dim table As DataTable = New DataTable()
-        Dim row As DataRow
-        table.Columns.Add("Numero", Type.GetType("System.String"))
-        table.Columns.Add("Cuenta", Type.GetType("System.String"))
-        table.Columns.Add("Glosa", Type.GetType("System.String"))
-        table.Columns.Add("Debe", Type.GetType("System.Decimal"))
-        table.Columns.Add("Haber", Type.GetType("System.Decimal"))
+        If table.Columns.Count = 0 Then
+            table.Columns.Add("Numero", Type.GetType("System.String"))
+            table.Columns.Add("Cuenta", Type.GetType("System.String"))
+            table.Columns.Add("Glosa", Type.GetType("System.String"))
+            table.Columns.Add("Debe", Type.GetType("System.Decimal"))
+            table.Columns.Add("Haber", Type.GetType("System.Decimal"))
+        End If
+
         Dim det As Integer = 0
         If txtTotal.Text <> "" Then
             det = 10
@@ -85,6 +139,16 @@ Public Class FrmComprobanteN
             row("Haber") = "0.00"
             table.Rows.Add(row)
         End If
+        If txtInafecto.Text <> "" Then
+            row = table.NewRow()
+            det += 10
+            row("Numero") = det.ToString("D3")
+            row("Cuenta") = txtCuentaIgv.Text
+            row("Glosa") = txtGlosa.Text
+            row("Debe") = txtInafecto.Text
+            row("Haber") = "0.00"
+            table.Rows.Add(row)
+        End If
         If txtIsc.Text <> "" Then
             row = table.NewRow()
             det += 10
@@ -95,7 +159,6 @@ Public Class FrmComprobanteN
             row("Haber") = "0.00"
             table.Rows.Add(row)
         End If
-        Dim n As Integer = 0
         For Each r As DataRow In table.Rows
             With entCom
                 .nrodetalle = r("Numero")
@@ -151,8 +214,10 @@ Public Class FrmComprobanteN
         e.Handled = Fg_SoloNumeros(e.KeyChar, txtTotal.Text & CChar(e.KeyChar))
     End Sub
 
+
     Sub SumaTotal()
-        total = monto + igv + isc
+        total = 0
+        total = monto + igv + isc + inafec
         txtTotal.Text = total.ToString("N")
     End Sub
 
@@ -160,10 +225,15 @@ Public Class FrmComprobanteN
         If txtMonto.Text <> "" Then
             monto = Convert.ToDecimal(txtMonto.Text)
             txtMonto.Text = monto.ToString("N")
+            txtIgv.Text = (monto * 0.18).ToString("N")
+            igv = Convert.ToDecimal(txtIgv.Text)
+            txtIgv.Text = igv.ToString("N")
         End If
-        SumaTotal()
-    End Sub
 
+        
+        SumaTotal()
+
+    End Sub
     Private Sub txtIgv_Leave(sender As Object, e As EventArgs) Handles txtIgv.Leave
         If txtIgv.Text <> "" Then
             igv = Convert.ToDecimal(txtIgv.Text)
@@ -180,12 +250,12 @@ Public Class FrmComprobanteN
         SumaTotal()
     End Sub
 
-    Private Sub txtTotal_Leave(sender As Object, e As EventArgs) Handles txtTotal.Leave
-        If txtTotal.Text <> "" Then
-            Dim total As Decimal = Convert.ToDecimal(txtTotal.Text)
-            txtTotal.Text = total.ToString("N")
-        End If
-    End Sub
+    'Private Sub txtTotal_Leave(sender As Object, e As EventArgs) Handles txtTotal.Leave
+    '    If txtTotal.Text <> "" Then
+    '        Dim total As Decimal = Convert.ToDecimal(txtTotal.Text)
+    '        txtTotal.Text = total.ToString("N")
+    '    End If
+    'End Sub
 
     Private Sub txtDserie_Leave(sender As Object, e As EventArgs) Handles txtDserie.Leave
         If txtDserie.Text <> "" Then
@@ -199,25 +269,14 @@ Public Class FrmComprobanteN
         End If
     End Sub
 
-    'Private Sub MfechaDE_TypeValidationCompleted(sender As Object, e As TypeValidationEventArgs) Handles MfechaDE.TypeValidationCompleted
-    '    Dim UserDate As DateTime = CDate(e.ReturnValue)
-    '    Dim mes As String = datetimeFormat.GetMonthName(UserDate.Month)
-    '    Dim año As String = UserDate.Year
+    Private Sub txtInafecto_Leave(sender As Object, e As EventArgs) Handles txtInafecto.Leave
+        If txtInafecto.Text <> "" Then
+            inafec = Convert.ToDecimal(txtInafecto.Text)
+            txtInafecto.Text = inafec.ToString("N")
+        End If
+        SumaTotal()
+    End Sub
 
-    '    If (Not e.IsValidInput) Then
-    '        Me.ErrorIcon.SetError(sender, "Ingrese la Fecha Correctamente")
-    '    Else
-
-    '        If UserDate < DateTime.Now And mes = CboPeriodo.SelectedValue And año = Date.Today.Year Then
-    '            Me.ErrorIcon.SetError(sender, "")
-    '        Else
-    '            Me.ErrorIcon.SetError(sender, "Ingrese la Fecha de Este Periodo y menor que hoy")
-    '            e.Cancel = True
-    '        End If
-
-    '    End If
-
-    'End Sub
 
 
     Private Sub txtDserie_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtDserie.Validating
@@ -233,19 +292,29 @@ Public Class FrmComprobanteN
     End Sub
 
     Private Sub txtCuentaMonto_Leave(sender As Object, e As EventArgs) Handles txtCuentaMonto.Leave
-        txtCuentaMonto.Text = Trim(Mid(txtCuentaMonto.Text, 1, InStr(txtCuentaMonto.Text, " ")))
+        If Len(txtCuentaMonto.Text) > 6 Then
+            txtCuentaMonto.Text = Trim(Mid(txtCuentaMonto.Text, 1, InStr(txtCuentaMonto.Text, " ")))
+        End If
+
     End Sub
 
     Private Sub txtCuentaIgv_Leave(sender As Object, e As EventArgs) Handles txtCuentaIgv.Leave
-        txtCuentaIgv.Text = Trim(Mid(txtCuentaIgv.Text, 1, InStr(txtCuentaIgv.Text, " ")))
+        If Len(txtCuentaIgv.Text) > 6 Then
+            txtCuentaIgv.Text = Trim(Mid(txtCuentaIgv.Text, 1, InStr(txtCuentaIgv.Text, " ")))
+        End If
     End Sub
 
     Private Sub txtCuentaIsc_Leave(sender As Object, e As EventArgs) Handles txtCuentaIsc.Leave
-        txtCuentaIsc.Text = Trim(Mid(txtCuentaIsc.Text, 1, InStr(txtCuentaIsc.Text, " ")))
+        If Len(txtCuentaIsc.Text) > 6 Then
+            txtCuentaIsc.Text = Trim(Mid(txtCuentaIsc.Text, 1, InStr(txtCuentaIsc.Text, " ")))
+        End If
     End Sub
+
+
     Sub cargarComprobante()
         numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
         txtnumcompro.Text = numerocompro
+        rbtEfectivo.Checked = True
     End Sub
     Sub limpiarComprobante()
         cbomoneda.SelectedIndex = 0
@@ -269,47 +338,53 @@ Public Class FrmComprobanteN
         dtpFechav.ResetText()
     End Sub
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-        Try
-            If Me.ValidateChildren And dtpFechae.Checked And txtDserie.Text <> "" And txtDnumero.Text <> "" And txtRuc.Text <> "" And txtGlosa.Text <> "" And txtMonto.Text <> "" And txtCuentaMonto.Text <> "" And txtTotal.Text <> "" And txtCuentaTotal.Text <> "" Then
-                With entCom
-                    .nrodiario = compBL.comprobante_diario_autogenerado()
-                    .periodo = CboPeriodo.Text
-                    .nrocompro = compBL.comprobante_registro_autogenerado()
-                    .moneda = cbomoneda.SelectedValue
-                    .tipo_adq = cboAdq.SelectedIndex
-                    .tipo_doc = cbotipodoc.SelectedValue
-                    .serie = txtDserie.Text
-                    .nrodocu = txtDnumero.Text
-                    .fechae = Format(dtpFechae.Value.Date, "yyy/MM/dd")
-                    .fechav = Format(dtpFechav.Value.Date, "yyy/MM/dd")
-                    .estado = 1
-                End With
+        'Try
+        If Me.ValidateChildren And dtpFechae.Checked And txtDserie.Text <> "" And txtDnumero.Text <> "" And txtRuc.Text <> "" And txtGlosa.Text <> "" And txtMonto.Text <> "" And txtCuentaMonto.Text <> "" And txtTotal.Text <> "" And txtCuentaTotal.Text <> "" Then
+            With entCom
+                .nrodiario = compBL.comprobante_diario_autogenerado()
+                .periodo = CboPeriodo.Text
+                .nrocompro = compBL.comprobante_registro_autogenerado()
+                .moneda = cbomoneda.SelectedValue
+                .tipo_adq = cboAdq.SelectedIndex
+                .tipo_doc = cbotipodoc.SelectedValue
+                .serie = txtDserie.Text
+                .nrodocu = txtDnumero.Text
+                .fechae = Format(dtpFechae.Value.Date, "yyy/MM/dd")
+                .fechav = Format(dtpFechav.Value.Date, "yyy/MM/dd")
+                .estado = 1
+                .nrocaba = compBL.comprobante_cajabanco_autogenerado()
+            End With
+            compBL.comprobante_cabecera_register(entCom)
+            DetalleComprobante()
 
-                With entCom
-                    .nrodiario = compBL.comprobante_diario_autogenerado()
-                    .nrocompro = compBL.comprobante_registro_autogenerado()
-                End With
-                compBL.comprobante_cabecera_register(entCom)
+            With entCom
+                .nrodiario = compBL.comprobante_diario_autogenerado()
+                .nrocaba = compBL.comprobante_cajabanco_autogenerado()
 
-                DetalleComprobante()
+            End With
+            compBL.comprobante_cabecera_register_cb(entCom)
+            DetalleComprobantecb()
 
-                MessageBox.Show("SE REGISTRO CORRECTAMENTE" + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
-                             "Nº Comprobante  [" + entCom.nrocompro + "]")
-                cargarComprobante()
-                limpiarComprobante()
-            Else
-                MessageBox.Show("Ingrese los datos Remarcados ", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+            MessageBox.Show("SE REGISTRO CORRECTAMENTE" + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
+                         "Nº Comprobante  [" + entCom.nrocompro + "]")
+            cargarComprobante()
+            limpiarComprobante()
+        Else
+            MessageBox.Show("Ingrese los datos Remarcados ", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
 
 
     End Sub
 
     Private Sub txtCuentaTotal_Leave(sender As Object, e As EventArgs) Handles txtCuentaTotal.Leave
-        txtCuentaTotal.Text = Trim(Mid(txtCuentaTotal.Text, 1, InStr(txtCuentaTotal.Text, " ")))
+        If Len(txtCuentaTotal.Text) > 6 Then
+            txtCuentaTotal.Text = Trim(Mid(txtCuentaTotal.Text, 1, InStr(txtCuentaTotal.Text, " ")))
+        End If
     End Sub
 
     Private Sub txtMonto_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtMonto.Validating
@@ -351,7 +426,7 @@ Public Class FrmComprobanteN
         e.Handled = True
     End Sub
 
-    Private Sub txtCuentaIsc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCuentaTotal.KeyPress, txtCuentaMonto.KeyPress, txtCuentaIsc.KeyPress, txtCuentaIgv.KeyPress, MyBase.KeyPress
+    Private Sub txtCuentaIsc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCuentaTotal.KeyPress, txtCuentaMonto.KeyPress, txtCuentaIsc.KeyPress, txtCuentaInafecto.KeyPress, txtCuentaIgv.KeyPress, MyBase.KeyPress
         Solo_numeros(e)
     End Sub
 
@@ -389,5 +464,23 @@ Public Class FrmComprobanteN
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+
+
+    Private Sub txtInafecto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtInafecto.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtInafecto.Text & CChar(e.KeyChar))
+    End Sub
+
+
+
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+        
+    End Sub
+
+    Private Sub txtCuentaInafecto_Leave(sender As Object, e As EventArgs) Handles txtCuentaInafecto.Leave
+        If Len(txtCuentaInafecto.Text) > 6 Then
+            txtCuentaInafecto.Text = Trim(Mid(txtCuentaInafecto.Text, 1, InStr(txtCuentaInafecto.Text, " ")))
+        End If
     End Sub
 End Class

@@ -67,7 +67,7 @@ Partial Class frmPeriodo
         Me.MinimizeBox = False
         Me.Name = "frmPeriodo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmPeriodo"
+        Me.Text = "Periodo"
         Me.ResumeLayout(False)
 
     End Sub

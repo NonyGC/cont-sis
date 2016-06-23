@@ -7,19 +7,18 @@ Public Class frmLogeo
 #Region "Atributos"
     Private _estado As listForm
     Private _f As frmMain
+
 #End Region
 #Region "Propiedades"
 
 #End Region
 #Region "Contructor"
     Public Sub New()
-
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-
     End Sub
+
 #End Region
 #Region "Metodos"
     Private Sub accionLogeo()
@@ -106,6 +105,7 @@ Public Class frmLogeo
         ControlAcceso()
     End Sub
     Private Sub Frm_Logeo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If IsNothing(Me.MdiParent) Then
             _estado = listForm.Independiente
             CloseForm("frmCheck")
@@ -115,7 +115,6 @@ Public Class frmLogeo
             _f.SSForm("Logear")
             _f.SSActionForm("Enter O Click para Ingresar")
         End If
-
     End Sub
 
     Private Sub frmLogeo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

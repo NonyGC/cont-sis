@@ -37,11 +37,11 @@ Partial Class frmUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.lbEmpresa = New System.Windows.Forms.ListBox()
+        Me.lbEmpresaActivos = New System.Windows.Forms.ListBox()
         Me.lbModulo = New System.Windows.Forms.ListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblNroModulo = New System.Windows.Forms.Label()
-        Me.lblNroEmpresa = New System.Windows.Forms.Label()
+        Me.lblEmpresaCantActivas = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Mantenimiento = New System.Windows.Forms.GroupBox()
@@ -62,6 +62,8 @@ Partial Class frmUsuario
         Me.ttUsuario = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnlUsuario = New System.Windows.Forms.Panel()
         Me.pnlFront = New System.Windows.Forms.Panel()
+        Me.lbEmpresaInactivos = New System.Windows.Forms.ListBox()
+        Me.lblEmpresaCantInactivas = New System.Windows.Forms.Label()
         CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Mantenimiento.SuspendLayout()
@@ -204,16 +206,17 @@ Partial Class frmUsuario
         Me.btnBack.Text = "Activar "
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'lbEmpresa
+        'lbEmpresaActivos
         '
-        Me.lbEmpresa.BackColor = System.Drawing.SystemColors.Control
-        Me.lbEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbEmpresa.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbEmpresa.FormattingEnabled = True
-        Me.lbEmpresa.Location = New System.Drawing.Point(6, 217)
-        Me.lbEmpresa.Name = "lbEmpresa"
-        Me.lbEmpresa.Size = New System.Drawing.Size(180, 106)
-        Me.lbEmpresa.TabIndex = 26
+        Me.lbEmpresaActivos.BackColor = System.Drawing.SystemColors.Control
+        Me.lbEmpresaActivos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbEmpresaActivos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbEmpresaActivos.FormattingEnabled = True
+        Me.lbEmpresaActivos.Location = New System.Drawing.Point(6, 217)
+        Me.lbEmpresaActivos.Name = "lbEmpresaActivos"
+        Me.lbEmpresaActivos.Size = New System.Drawing.Size(186, 106)
+        Me.lbEmpresaActivos.TabIndex = 26
+        Me.ttUsuario.SetToolTip(Me.lbEmpresaActivos, "Lista de Empresas activas")
         '
         'lbModulo
         '
@@ -228,11 +231,13 @@ Partial Class frmUsuario
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblEmpresaCantInactivas)
+        Me.GroupBox1.Controls.Add(Me.lbEmpresaInactivos)
         Me.GroupBox1.Controls.Add(Me.lblNroModulo)
-        Me.GroupBox1.Controls.Add(Me.lblNroEmpresa)
+        Me.GroupBox1.Controls.Add(Me.lblEmpresaCantActivas)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.lbEmpresa)
+        Me.GroupBox1.Controls.Add(Me.lbEmpresaActivos)
         Me.GroupBox1.Controls.Add(Me.lbModulo)
         Me.GroupBox1.Controls.Add(Me.dgvUsuarios)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
@@ -245,20 +250,20 @@ Partial Class frmUsuario
         'lblNroModulo
         '
         Me.lblNroModulo.AutoSize = True
-        Me.lblNroModulo.Location = New System.Drawing.Point(207, 338)
+        Me.lblNroModulo.Location = New System.Drawing.Point(207, 326)
         Me.lblNroModulo.Name = "lblNroModulo"
         Me.lblNroModulo.Size = New System.Drawing.Size(63, 13)
         Me.lblNroModulo.TabIndex = 31
         Me.lblNroModulo.Text = "N° Modulo: "
         '
-        'lblNroEmpresa
+        'lblEmpresaCantActivas
         '
-        Me.lblNroEmpresa.AutoSize = True
-        Me.lblNroEmpresa.Location = New System.Drawing.Point(3, 338)
-        Me.lblNroEmpresa.Name = "lblNroEmpresa"
-        Me.lblNroEmpresa.Size = New System.Drawing.Size(66, 13)
-        Me.lblNroEmpresa.TabIndex = 30
-        Me.lblNroEmpresa.Text = "N° Empresa:"
+        Me.lblEmpresaCantActivas.AutoSize = True
+        Me.lblEmpresaCantActivas.Location = New System.Drawing.Point(3, 326)
+        Me.lblEmpresaCantActivas.Name = "lblEmpresaCantActivas"
+        Me.lblEmpresaCantActivas.Size = New System.Drawing.Size(66, 13)
+        Me.lblEmpresaCantActivas.TabIndex = 30
+        Me.lblEmpresaCantActivas.Text = "N° Empresa:"
         '
         'Label7
         '
@@ -478,6 +483,27 @@ Partial Class frmUsuario
         Me.pnlFront.Size = New System.Drawing.Size(774, 445)
         Me.pnlFront.TabIndex = 32
         '
+        'lbEmpresaInactivos
+        '
+        Me.lbEmpresaInactivos.BackColor = System.Drawing.SystemColors.Control
+        Me.lbEmpresaInactivos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbEmpresaInactivos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbEmpresaInactivos.FormattingEnabled = True
+        Me.lbEmpresaInactivos.Location = New System.Drawing.Point(6, 342)
+        Me.lbEmpresaInactivos.Name = "lbEmpresaInactivos"
+        Me.lbEmpresaInactivos.Size = New System.Drawing.Size(186, 67)
+        Me.lbEmpresaInactivos.TabIndex = 32
+        Me.ttUsuario.SetToolTip(Me.lbEmpresaInactivos, "Lista de Empresas inactivos.")
+        '
+        'lblEmpresaCantInactivas
+        '
+        Me.lblEmpresaCantInactivas.AutoSize = True
+        Me.lblEmpresaCantInactivas.Location = New System.Drawing.Point(6, 417)
+        Me.lblEmpresaCantInactivas.Name = "lblEmpresaCantInactivas"
+        Me.lblEmpresaCantInactivas.Size = New System.Drawing.Size(66, 13)
+        Me.lblEmpresaCantInactivas.TabIndex = 33
+        Me.lblEmpresaCantInactivas.Text = "N° Empresa:"
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -514,7 +540,7 @@ Partial Class frmUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents lblUsuario As Label
     Friend WithEvents btnBack As Button
-    Friend WithEvents lbEmpresa As ListBox
+    Friend WithEvents lbEmpresaActivos As ListBox
     Friend WithEvents lbModulo As ListBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Mantenimiento As GroupBox
@@ -524,7 +550,7 @@ Partial Class frmUsuario
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents lblNroModulo As System.Windows.Forms.Label
-    Friend WithEvents lblNroEmpresa As System.Windows.Forms.Label
+    Friend WithEvents lblEmpresaCantActivas As System.Windows.Forms.Label
     Friend WithEvents txtCodigo As System.Windows.Forms.TextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents Label1 As Label
@@ -543,4 +569,6 @@ Partial Class frmUsuario
     Friend WithEvents btnGuardar As Button
     Friend WithEvents pnlUsuario As Panel
     Friend WithEvents pnlFront As Panel
+    Friend WithEvents lbEmpresaInactivos As ListBox
+    Friend WithEvents lblEmpresaCantInactivas As Label
 End Class

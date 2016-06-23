@@ -34,6 +34,7 @@ Partial Class frmUsuarioBack
         Me.lbEmpresaSelect = New System.Windows.Forms.ListBox()
         Me.lbEmpresa = New System.Windows.Forms.ListBox()
         Me.tabPageFormulario = New System.Windows.Forms.TabPage()
+        Me.lbStateEmpresa = New System.Windows.Forms.ListBox()
         Me.lblMsg = New System.Windows.Forms.Label()
         Me.btnQuitarModT = New System.Windows.Forms.Button()
         Me.btnAgregarMod = New System.Windows.Forms.Button()
@@ -43,7 +44,6 @@ Partial Class frmUsuarioBack
         Me.cboEmpresas = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.toolTip_Form = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lbStateEmpresa = New System.Windows.Forms.ListBox()
         Me.tabRoles.SuspendLayout()
         Me.tabpageEmpresas.SuspendLayout()
         Me.tabPageFormulario.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class frmUsuarioBack
         '
         Me.tvModulo.BackColor = System.Drawing.SystemColors.Control
         Me.tvModulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tvModulo.Location = New System.Drawing.Point(41, 35)
+        Me.tvModulo.Location = New System.Drawing.Point(6, 33)
         Me.tvModulo.Name = "tvModulo"
         Me.tvModulo.Size = New System.Drawing.Size(264, 366)
         Me.tvModulo.TabIndex = 5
@@ -135,7 +135,7 @@ Partial Class frmUsuarioBack
         Me.lbEmpresaSelect.BackColor = System.Drawing.SystemColors.Control
         Me.lbEmpresaSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbEmpresaSelect.FormattingEnabled = True
-        Me.lbEmpresaSelect.Location = New System.Drawing.Point(462, 35)
+        Me.lbEmpresaSelect.Location = New System.Drawing.Point(496, 34)
         Me.lbEmpresaSelect.Name = "lbEmpresaSelect"
         Me.lbEmpresaSelect.Size = New System.Drawing.Size(264, 327)
         Me.lbEmpresaSelect.TabIndex = 3
@@ -145,7 +145,7 @@ Partial Class frmUsuarioBack
         Me.lbEmpresa.BackColor = System.Drawing.SystemColors.Control
         Me.lbEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbEmpresa.FormattingEnabled = True
-        Me.lbEmpresa.Location = New System.Drawing.Point(41, 35)
+        Me.lbEmpresa.Location = New System.Drawing.Point(6, 35)
         Me.lbEmpresa.Name = "lbEmpresa"
         Me.lbEmpresa.Size = New System.Drawing.Size(264, 366)
         Me.lbEmpresa.TabIndex = 0
@@ -169,6 +169,18 @@ Partial Class frmUsuarioBack
         Me.tabPageFormulario.Size = New System.Drawing.Size(766, 414)
         Me.tabPageFormulario.TabIndex = 1
         Me.tabPageFormulario.Text = "Modulo"
+        '
+        'lbStateEmpresa
+        '
+        Me.lbStateEmpresa.BackColor = System.Drawing.SystemColors.Control
+        Me.lbStateEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbStateEmpresa.Enabled = False
+        Me.lbStateEmpresa.FormattingEnabled = True
+        Me.lbStateEmpresa.Location = New System.Drawing.Point(276, 245)
+        Me.lbStateEmpresa.Name = "lbStateEmpresa"
+        Me.lbStateEmpresa.SelectionMode = System.Windows.Forms.SelectionMode.None
+        Me.lbStateEmpresa.Size = New System.Drawing.Size(214, 156)
+        Me.lbStateEmpresa.TabIndex = 14
         '
         'lblMsg
         '
@@ -221,7 +233,7 @@ Partial Class frmUsuarioBack
         '
         Me.tvModuloSelect.BackColor = System.Drawing.SystemColors.Control
         Me.tvModuloSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tvModuloSelect.Location = New System.Drawing.Point(462, 69)
+        Me.tvModuloSelect.Location = New System.Drawing.Point(496, 67)
         Me.tvModuloSelect.Name = "tvModuloSelect"
         Me.tvModuloSelect.Size = New System.Drawing.Size(264, 332)
         Me.tvModuloSelect.TabIndex = 8
@@ -230,7 +242,7 @@ Partial Class frmUsuarioBack
         '
         Me.cboEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEmpresas.FormattingEnabled = True
-        Me.cboEmpresas.Location = New System.Drawing.Point(462, 35)
+        Me.cboEmpresas.Location = New System.Drawing.Point(496, 35)
         Me.cboEmpresas.Name = "cboEmpresas"
         Me.cboEmpresas.Size = New System.Drawing.Size(264, 21)
         Me.cboEmpresas.TabIndex = 7
@@ -243,18 +255,6 @@ Partial Class frmUsuarioBack
         Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Empresa"
-        '
-        'lbStateEmpresa
-        '
-        Me.lbStateEmpresa.BackColor = System.Drawing.SystemColors.Control
-        Me.lbStateEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbStateEmpresa.Enabled = False
-        Me.lbStateEmpresa.FormattingEnabled = True
-        Me.lbStateEmpresa.Location = New System.Drawing.Point(311, 245)
-        Me.lbStateEmpresa.Name = "lbStateEmpresa"
-        Me.lbStateEmpresa.SelectionMode = System.Windows.Forms.SelectionMode.None
-        Me.lbStateEmpresa.Size = New System.Drawing.Size(145, 156)
-        Me.lbStateEmpresa.TabIndex = 14
         '
         'frmUsuarioBack
         '

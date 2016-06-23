@@ -15,7 +15,6 @@ Public Class UsuarioBL
         _newPermiso = dao.NewId
 
     End Sub
-
 #End Region
 #Region "Propiedades"
     Public ReadOnly Property NewUsuario As Integer
@@ -28,7 +27,6 @@ Public Class UsuarioBL
             Return _newPermiso
         End Get
     End Property
-
     Public ReadOnly Property Log As String
         Get
             Dim msg As String = _log
@@ -43,9 +41,6 @@ Public Class UsuarioBL
     End Property
 
 #End Region
-
-
-
     Public Function Registrar(ByVal usuario As Usuario, rPassword As String) As Boolean
 
         If usuario.Password <> rPassword Then
@@ -76,21 +71,26 @@ Public Class UsuarioBL
         Dim maindao As New EmpresaDao
         Dim dt As DataTable = maindao.Empresas
         dt.TableName = "empresa"
+        dt.Columns.Add("rz_elegido")
         For Each dr As DataRow In dt.Rows
-            dr("name") = "Emp. " & dr("name")
+
+            If (dr("rz_com").ToString.Length = 0) Or (IsNothing(dr("rz_com"))) Then
+
+                Dim DiferencialengthEmpresaName As Integer = 30 - dr("name").ToString.Length
+
+                If DiferencialengthEmpresaName <= 0 Then
+                    dr("rz_elegido") = "Emp. " & dr("name").ToString.Substring(0, 29)
+                Else
+                    dr("rz_elegido") = "Emp. " & dr("name").ToString
+                End If
+
+
+            Else
+                dr("rz_elegido") = "Emp. " & dr("rz_com")
+            End If
         Next
         Return dt
     End Function
-
-    'Public Function getRoles() As DataTable
-    '    Dim dao As New RolDao
-    '    Dim dt As DataTable = dao.GetRolAll(0)
-    '    Dim dr As DataRow = dt.NewRow
-    '    dr("id") = 0
-    '    dr("name") = "Seleccione"
-    '    dt.Rows.InsertAt(dr, 0)
-    '    Return dt
-    'End Function
 
 #Region "Modulo"
     Public Function Modulo() As DataSet
@@ -101,24 +101,16 @@ Public Class UsuarioBL
         '--------------------------
         Dim ds As New DataSet
         '--------------------------------
-        Dim dtMod As DataTable
-        Dim dtModDet As DataTable
-        Dim dtPermi As DataTable
+        Dim dtMod As DataTable = daoMod.GetContenedorAll(1)
+        Dim dtModDet As DataTable = daoModDet.getModuloDetAll()
+        Dim dtPermi As DataTable = daoPer.CreaSchemaDataTable
+        Dim dtEmpresa As DataTable = CreaDataTableEmpresaSelect()
 
-
-        Dim dtEmpresa As New DataTable("empresa_select")
-        dtEmpresa.Columns.Add("Id")
-        dtEmpresa.Columns.Add("Name")
-        dtEmpresa.Columns.Add("State")
-        dtEmpresa.Columns.Add("NameState")
-
-        'Logica
-        dtMod = daoMod.GetContenedorAll(1) : dtMod.TableName = "modulo"
-        _nroModulo = dtMod.Rows.Count
-        dtModDet = daoModDet.getModuloDetAll() : dtModDet.TableName = "modulo_det"
+        dtMod.TableName = "modulo"
         dtMod.PrimaryKey = New DataColumn() {dtMod.Columns("id")}
+        dtModDet.TableName = "modulo_det"
         dtModDet.PrimaryKey = New DataColumn() {dtModDet.Columns("id")}
-        dtPermi = daoPer.CrearSchema
+        _nroModulo = dtMod.Rows.Count
 
         ds.Tables.Add(dtMod)
         ds.Tables.Add(dtModDet)
@@ -129,6 +121,16 @@ Public Class UsuarioBL
         ds.Relations.Add("mod", ds.Tables("modulo").Columns("id"),
                               ds.Tables("modulo_Det").Columns("modcab"))
         Return ds
+    End Function
+    Private Function CreaDataTableEmpresaSelect() As DataTable
+        Dim dt As New DataTable("empresa_select")
+        dt.Columns.Add("Id")
+        dt.Columns.Add("Name")
+        dt.Columns.Add("Alias")
+        dt.Columns.Add("rz_elegido")
+        dt.Columns.Add("State")
+        dt.Columns.Add("NameState")
+        Return dt
     End Function
 #End Region
 

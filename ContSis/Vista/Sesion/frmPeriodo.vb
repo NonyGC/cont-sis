@@ -11,9 +11,7 @@ Public Class frmPeriodo
         Dim s As String = ListBox1.SelectedItem
         _PeriodoMain = ListBox1.SelectedItem
         Dim f As frmMain = Application.OpenForms.Item("frmMain")
-        f.lblUsuario.Text = UsuarioMain.Impresion
-        f.lblEmpresa.Text = EmpresaMain.Impresion
-        f.lblPeriodo.Text += ": " & _PeriodoMain
+        f.PnlPeriodo(_PeriodoMain)
         f.pnlInfo.Visible = True
         Me.Dispose()
 

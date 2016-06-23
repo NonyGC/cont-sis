@@ -135,23 +135,23 @@ Partial Class frmMain
         Me.pnlInfo.Enabled = False
         Me.pnlInfo.Location = New System.Drawing.Point(0, 33)
         Me.pnlInfo.Name = "pnlInfo"
-        Me.pnlInfo.Size = New System.Drawing.Size(172, 209)
+        Me.pnlInfo.Size = New System.Drawing.Size(44, 46)
         Me.pnlInfo.TabIndex = 5
         Me.pnlInfo.Visible = False
         '
         'lblPeriodo
         '
         Me.lblPeriodo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblPeriodo.Location = New System.Drawing.Point(12, 161)
+        Me.lblPeriodo.Location = New System.Drawing.Point(12, 192)
         Me.lblPeriodo.Name = "lblPeriodo"
-        Me.lblPeriodo.Size = New System.Drawing.Size(142, 23)
+        Me.lblPeriodo.Size = New System.Drawing.Size(142, 45)
         Me.lblPeriodo.TabIndex = 4
         Me.lblPeriodo.Text = "Periodo"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.ALSee
-        Me.PictureBox1.Location = New System.Drawing.Point(119, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(252, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(36, 34)
         Me.PictureBox1.TabIndex = 3
@@ -162,7 +162,7 @@ Partial Class frmMain
         Me.lblEjercicio.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lblEjercicio.Location = New System.Drawing.Point(13, 137)
         Me.lblEjercicio.Name = "lblEjercicio"
-        Me.lblEjercicio.Size = New System.Drawing.Size(142, 23)
+        Me.lblEjercicio.Size = New System.Drawing.Size(142, 55)
         Me.lblEjercicio.TabIndex = 2
         Me.lblEjercicio.Text = "Ejercicio"
         '
@@ -181,7 +181,7 @@ Partial Class frmMain
         Me.lblEmpresa.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lblEmpresa.Location = New System.Drawing.Point(13, 19)
         Me.lblEmpresa.Name = "lblEmpresa"
-        Me.lblEmpresa.Size = New System.Drawing.Size(100, 51)
+        Me.lblEmpresa.Size = New System.Drawing.Size(233, 51)
         Me.lblEmpresa.TabIndex = 0
         Me.lblEmpresa.Text = "Empresa"
         '
@@ -196,6 +196,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.staMain)
         Me.Controls.Add(Me.MnuMain)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MnuMain
         Me.Name = "frmMain"

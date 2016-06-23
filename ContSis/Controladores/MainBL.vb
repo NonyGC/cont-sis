@@ -10,7 +10,7 @@ Public Class MainBL
                 objUsuarioDato.UpdateSession(usuario)
             End If
         Catch ex As Exception
-            Debug.WriteLine("Error UpdateUsuario: " & usuario.Usuario & " - " & ex.ToString)
+            Debug.WriteLine("Error UpdateUsuario: " & ex.ToString)
         End Try
 
     End Sub

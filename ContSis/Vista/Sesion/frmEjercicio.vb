@@ -1,6 +1,6 @@
 ﻿Imports Controladores
 Imports Vista.frmMain
-Public Class frmEjercicio
+Public Class Ejercicio
     Dim ejeLB As New EjercicioBL
 #Region "Metodos"
     Shared Function PermitirNumero(ByVal c As Char) As Boolean
@@ -114,8 +114,7 @@ Public Class frmEjercicio
             _EjercicioMain = TextBox1.Text
 
             Dim f As frmMain = Application.OpenForms.Item("frmMain")
-            f.lblEjercicio.Text += ": " & _EjercicioMain
-
+            f.PnlEjercicio(_EjercicioMain)
             Dim frm As New frmPeriodo
             frm.MdiParent = Me.ParentForm
             frm.Show()

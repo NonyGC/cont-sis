@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmEjercicio
+Partial Class Ejercicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -73,7 +73,7 @@ Partial Class frmEjercicio
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'frmEjercicio
+        'Ejercicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -84,7 +84,7 @@ Partial Class frmEjercicio
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmEjercicio"
+        Me.Name = "Ejercicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Frm_Ejercicio"
         Me.ResumeLayout(False)

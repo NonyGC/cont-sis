@@ -31,7 +31,5 @@ Public Class frmUsuarioBack
         End If
     End Sub
 
-    Private Sub cboEmpresas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboEmpresas.SelectedIndexChanged
 
-    End Sub
 End Class

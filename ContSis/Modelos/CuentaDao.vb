@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
+Imports System.Text
 Public Class CuentaDAO
     Inherits BaseDao
 
@@ -54,5 +55,19 @@ Public Class CuentaDAO
         Catch ex As Exception
             TComprobante_Showall = Nothing
         End Try
+    End Function
+    Public Function importXtomysql(ByVal tabla As String, ByVal cmd As String)
+        conexionValue = Me.conexion
+        Try
+            Using insertPCCmmd As MySqlCommand = New MySqlCommand(cmd.ToString, conexionValue)
+                insertPCCmmd.CommandType = CommandType.Text
+                insertPCCmmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            'MysqlTrans.Rollback()
+        Finally
+            conexionValue.Close()
+        End Try
+        Return Nothing
     End Function
 End Class
