@@ -410,7 +410,8 @@ Public Class frmMain
         ActionSecAdminAndNormal()
         ActionSecAll()
 
-        Dim rsp As Boolean = _oBL.CheckTipoCambio(Now)
+        'Dim rsp As Boolean = _oBL.CheckTipoCambio(Now)
+        Dim rsp As Boolean = False
         If rsp Then
             OpenForm("frmTipoCambio", Nothing)
         Else

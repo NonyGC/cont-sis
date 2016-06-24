@@ -30,14 +30,43 @@ Public Class EmpresaDao
             Me.CloseDB()
         End Try
     End Function
-    Public Function GetEmpresasxRol(id As String) As DataTable
-        Dim cmd As New MySqlCommand("sp_get_empresa_select", Me.conexion)
-        cmd.CommandType = CommandType.StoredProcedure
-        Dim dt As New DataTable
+    Public Function GetEmpresasxRol(id As Integer, ruc As String) As EmpresaPermiso
+        Dim cmd As MySqlCommand = CommandProcedure("sp_get_empresa_select")
+
+        Dim ep As New EmpresaPermiso
         Try
-            cmd = Me.Parameters(cmd, New String() {id})
-            dt = Me.GetDataTable(cmd)
-            Return dt
+            cmd = Me.Parameters(cmd, New String() {id, ruc})
+
+            Using dr As MySqlDataReader = cmd.ExecuteReader
+                If dr.Read Then
+                    Dim empresa As New Empresa
+                    Dim permiso As New Permiso
+
+                    empresa.RUC = dr.GetString("ruc")
+                    empresa.Nombre = dr.GetString("rzn_scl")
+                    empresa.Aliass = dr.GetString("rzn_scl_ls")
+                    empresa.Codigo = dr.GetString("cod")
+                    empresa.Digito = dr.GetInt32("digito")
+
+                    permiso.Id = dr.GetInt32("per_id")
+                    Dim respCompt As Integer = dr.GetInt32("compt")
+                    If respCompt = 0 Then
+                        permiso.Completo = False
+                    Else
+                        permiso.Completo = True
+                    End If
+                    permiso.Modulo = dr.GetString("modulos")
+
+                    ep.empresa = empresa
+                    ep.permiso = permiso
+
+                Else
+                    ep = Nothing
+                End If
+
+
+            End Using
+            Return ep
         Catch ex As Exception
             Me.CloseDB()
             Return Nothing
@@ -172,4 +201,8 @@ Public Class EmpresaDao
         Return dtEmpresa
 
     End Function
+End Class
+Public Class EmpresaPermiso
+    Public empresa As Empresa
+    Public permiso As Permiso
 End Class

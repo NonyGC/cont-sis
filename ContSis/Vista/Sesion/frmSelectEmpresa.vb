@@ -19,12 +19,16 @@ Public Class frmSelectEmpresa
 
         Try
             empresas = frmMain.Empresas
-            dtSelectEmpresa = reglas.getEmpresas(frmMain.UsuarioMain.Id)
+            dtSelectEmpresa = reglas.getEmpresas(frmMain.UsuarioMain.Id, frmMain.Empresas)
             dgvEmpresa.DataSource = dtSelectEmpresa
             dgvEmpresa.Columns("id").Visible = False
             dgvEmpresa.Columns("compt").Visible = False
             dgvEmpresa.Columns("modu").Visible = False
             dgvEmpresa.Columns("ColEstado").Visible = False
+
+            For Each dgr As DataGridViewRow In dgvEmpresa.Rows
+
+            Next
         Catch ex As Exception
 
         End Try
@@ -56,45 +60,76 @@ Public Class frmSelectEmpresa
     Private Sub ActivarMenu()
 
         BtnOn.Enabled = False
+
         Dim mnu As MenuStrip = f.MnuMain
-        Dim empresa As New Empresa
-        empresa.RUC = dgvEmpresa.Item("ColRuC", dgvEmpresa.CurrentRow.Index).Value().ToString
-        empresa.Nombre = dgvEmpresa.Item("ColRznScl", dgvEmpresa.CurrentRow.Index).Value().ToString()
-        empresa.Aliass = dgvEmpresa.Item("ColAlias", dgvEmpresa.CurrentRow.Index).Value().ToString
-        empresa.Digito = dgvEmpresa.Item("ColDigito", dgvEmpresa.CurrentRow.Index).Value()
-        empresa.Codigo = dgvEmpresa.Item("ColCod", dgvEmpresa.CurrentRow.Index).Value()
-        frmMain.EmpresaMain = empresa
-        'Select Case _rol.TipoUsuario
-        '    Case listUsuario.Normal
-        '        'Variables
-        '        Dim priv As New CabPrivilegio
-        '        priv.Id = dgvEmpresa.Item("ColPrivilegio", dgvEmpresa.CurrentRow.Index).Value().ToString
-        '        priv.Status = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value().ToString
-        '        'Dim dt As DataTable = bl.getDetPrivilegios(priv.Id)
-        '        Me.Hide()
 
-        '        ''Logica 
-        '        'For Each rw As DataRow In dt.Rows
-        '        '    Dim iMnu As ToolStripMenuItem = mnu.Items.Item(rw("menu").ToString.Replace(" ", Nothing))
-        '        '    iMnu.Enabled = True
-        '        '    If rw("form").ToString.Contains("*") And rw("submenu") = 0 Then
-        '        '        PermisoAll(iMnu)
-        '        '    Else
-        '        '        PermisoSelect(iMnu, FormsArray(rw("form").ToString, CInt(rw("cantidad"))))
-        '        '    End If
-        '        'Next
-        ''    Case listUsuario.Admin, listUsuario.Master
+        Select Case frmMain.UsuarioMain.Tipo
+            Case "normal"
+                'Variables
+                Dim compt As Boolean = dgvEmpresa.Item("compt", dgvEmpresa.CurrentRow.Index).Value()
+                Dim modulo As String = dgvEmpresa.Item("modu", dgvEmpresa.CurrentRow.Index).Value().ToString
+                Dim estado As Boolean = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value()
+                If estado Then
+                    If compt Then
+                        For Each tool As ToolStripMenuItem In mnu.Items
+                            tool.Enabled = True
+                            For Each chilTool As ToolStripMenuItem In tool.DropDownItems
+                                chilTool.Enabled = True
+                            Next
+                        Next
 
-        'End Select
+                    Else
+                        For Each tool As ToolStripMenuItem In mnu.Items
+                            If modulo.Contains(tool.Tag) Then
+                                tool.Enabled = True
+                                For Each chilTool As ToolStripMenuItem In tool.DropDownItems
+                                    chilTool.Enabled = True
+                                Next
+                            End If
+                        Next
+                    End If
+
+                    Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
+                    f.PnlEmpresa(frmMain.EmpresaMain.Impresion)
+                    Dim frm As New Ejercicio
+                    frm.MdiParent = Me.ParentForm
+                    frm.Show()
+                    CloseForm("frmSelectEmpresa")
+                End If
+            Case "admin"
+
+                Dim empresa As New Empresa
+                empresa.RUC = dgvEmpresa.Item("ColRuC", dgvEmpresa.CurrentRow.Index).Value().ToString
+                empresa.Nombre = dgvEmpresa.Item("ColRznScl", dgvEmpresa.CurrentRow.Index).Value().ToString()
+                empresa.Aliass = dgvEmpresa.Item("ColAlias", dgvEmpresa.CurrentRow.Index).Value().ToString
+                empresa.Digito = dgvEmpresa.Item("ColDigito", dgvEmpresa.CurrentRow.Index).Value()
+                empresa.Codigo = dgvEmpresa.Item("ColCod", dgvEmpresa.CurrentRow.Index).Value()
+                frmMain.EmpresaMain = empresa
+
+                Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
+                f.PnlEmpresa(frmMain.EmpresaMain.Impresion)
+                Dim frm As New Ejercicio
+                frm.MdiParent = Me.ParentForm
+                frm.Show()
+                CloseForm("frmSelectEmpresa")
+
+                ''Logica 
+                'For Each rw As DataRow In dt.Rows
+                '    Dim iMnu As ToolStripMenuItem = mnu.Items.Item(rw("menu").ToString.Replace(" ", Nothing))
+                '    iMnu.Enabled = True
+                '    If rw("form").ToString.Contains("*") And rw("submenu") = 0 Then
+                '        PermisoAll(iMnu)
+                '    Else
+                '        PermisoSelect(iMnu, FormsArray(rw("form").ToString, CInt(rw("cantidad"))))
+                '    End If
+                'Next
+                '    Case listUsuario.Admin, listUsuario.Master
+
+        End Select
 
 
 
-        Dim actM As ToolStripMenuItem = mnu.Items.Item("Sesión") : actM.DropDownItems.Item("frmSelectEmpresa").Enabled = True
-        f.PnlEmpresa(frmMain.EmpresaMain.Impresion)
-        Dim frm As New Ejercicio
-        frm.MdiParent = Me.ParentForm
-        frm.Show()
-        CloseForm("frmSelectEmpresa")
+
 
     End Sub
     Private Sub PermisoSelect(iMnu As ToolStripMenuItem, forms() As String)
@@ -158,7 +193,7 @@ Public Class frmSelectEmpresa
             Next
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            ' MsgBox(ex.Message)
         End Try
     End Sub
     Private Function FormsArray(ByRef forms As String, count As Integer) As String()
@@ -244,6 +279,6 @@ Public Class frmSelectEmpresa
     End Sub
 
     Private Sub dgvEmpresa_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvEmpresa.DataError
-        MsgBox(e.RowIndex)
+        ' MsgBox(e.RowIndex)
     End Sub
 End Class

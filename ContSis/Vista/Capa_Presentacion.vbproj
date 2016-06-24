@@ -148,6 +148,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Base.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Samples\frmUsuarioBack.Designer.vb">
       <DependentUpon>frmUsuarioBack.vb</DependentUpon>
     </Compile>
@@ -268,11 +273,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -373,9 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\frmUsuarioAdmin.resx">
       <DependentUpon>frmUsuarioAdmin.vb</DependentUpon>
@@ -449,9 +449,13 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="File\Xml\formato8_1.xml" />
+    <None Include="Resources\guardar-false.png" />
+    <None Include="Resources\eleminar-false.png" />
     <Content Include="Resources\cancelar.png" />
-    <Content Include="Resources\editar1.png" />
-    <Content Include="Resources\eliminar.png" />
+    <None Include="Resources\contabilidad.jpg" />
+    <None Include="Resources\eleminar_true.png" />
+    <Content Include="Resources\guardar-true.png" />
+    <Content Include="Resources\eleminar-true.png" />
     <Content Include="Resources\guardar.png" />
     <None Include="Resources\icon175x175.png" />
     <Content Include="Resources\imprimir.png" />

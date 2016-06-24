@@ -59,7 +59,7 @@ Partial Class frmCheck
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BackgroundImage = Global.Vista.My.Resources.Resources.ALSee
+        Me.BackgroundImage = Nothing
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(530, 307)
         Me.Controls.Add(Me.lblProceso)

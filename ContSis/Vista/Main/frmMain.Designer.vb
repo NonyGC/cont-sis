@@ -150,7 +150,7 @@ Partial Class frmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.ALSee
+        Me.PictureBox1.Image = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(252, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(36, 34)
@@ -190,8 +190,8 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BackgroundImage = Global.Vista.My.Resources.Resources.es_918
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BackgroundImage = Nothing
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(568, 369)
         Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.staMain)

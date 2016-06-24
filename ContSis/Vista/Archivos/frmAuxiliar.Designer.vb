@@ -68,7 +68,7 @@ Partial Class frmAuxiliar
         '
         'btnCerrar
         '
-        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.cerrar_true
+        Me.btnCerrar.BackgroundImage = Nothing
         Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCerrar.Location = New System.Drawing.Point(82, 3)
         Me.btnCerrar.Name = "btnCerrar"
@@ -78,7 +78,7 @@ Partial Class frmAuxiliar
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackgroundImage = Global.Vista.My.Resources.Resources.cancelar_false
+        Me.btnCancelar.BackgroundImage = Nothing
         Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnCancelar.Location = New System.Drawing.Point(52, 3)
         Me.btnCancelar.Name = "btnCancelar"
@@ -88,7 +88,7 @@ Partial Class frmAuxiliar
         '
         'BtnLimpiar
         '
-        Me.BtnLimpiar.BackgroundImage = Global.Vista.My.Resources.Resources.cancelar_false
+        Me.BtnLimpiar.BackgroundImage = Nothing
         Me.BtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnLimpiar.Location = New System.Drawing.Point(30, 3)
         Me.BtnLimpiar.Name = "BtnLimpiar"
@@ -99,7 +99,7 @@ Partial Class frmAuxiliar
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.SystemColors.Control
-        Me.btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+        Me.btnGuardar.BackgroundImage = Nothing
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.btnGuardar.Location = New System.Drawing.Point(2, 3)

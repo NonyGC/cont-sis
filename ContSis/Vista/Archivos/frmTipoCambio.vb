@@ -56,25 +56,25 @@ Public Class frmTipoCambio
 #End Region
 
     Private Sub Frm_TipoCambio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim state As Integer = validar.TCambio_Verificar(Now)
-        If state <> 0 Then
-            Dim msg, title As String
-            Dim style As MsgBoxStyle
-            Dim response As MsgBoxResult
-            msg = "El tipo de cambio ya fue ingresado." & vbLf &
-                "Desea verificar."
-            title = "Info Tipo de Cambio "
-            style = MsgBoxStyle.YesNo
-            response = MsgBox(msg, style, title)
+        'Dim state As Integer = validar.TCambio_Verificar(Now)
+        'If state <> 0 Then
+        '    Dim msg, title As String
+        '    Dim style As MsgBoxStyle
+        '    Dim response As MsgBoxResult
+        '    msg = "El tipo de cambio ya fue ingresado." & vbLf &
+        '        "Desea verificar."
+        '    title = "Info Tipo de Cambio "
+        '    style = MsgBoxStyle.YesNo
+        '    response = MsgBox(msg, style, title)
 
-            If response = MsgBoxResult.No Then
-                Me.Hide()
-                'Me.Dispose()
-            End If
-        End If
+        '    If response = MsgBoxResult.No Then
+        '        Me.Hide()
+        '        'Me.Dispose()
+        '    End If
+        'End If
 
-        limpiar()
-        deshabilitar()
+        'limpiar()
+        'deshabilitar()
     End Sub
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click

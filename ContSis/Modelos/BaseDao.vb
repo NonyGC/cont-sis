@@ -2,10 +2,10 @@
 
 Public Class BaseDao
     'Variables
-    Private server As String = "192.168.0.14"
+    Private server As String = "localhost"
     Private user As String = "user"
-    Private password As String = "S0p0rt3"
-    Private port As String = "3306"
+    Private password As String = "S0p0rt3user"
+    Private port As String = "3307"
     Private database As String = "bdsist"
     Private conexionValue As MySqlConnection
     'Contructor
@@ -66,15 +66,23 @@ Public Class BaseDao
         End If
     End Sub
     Public Function Parameters(cmd As MySqlCommand, env() As String) As MySqlCommand
-        MySqlCommandBuilder.DeriveParameters(cmd)
-        Dim c As Integer = 0
-        For Each prm As MySqlParameter In cmd.Parameters
-            If prm.ParameterName <> "@RETURN_VALUE" Then
-                prm.Value = env(c)
-                c += 1
-            End If
-        Next
-        Return cmd
+        Dim procedure As String = cmd.CommandText
+        Try
+            MySqlCommandBuilder.DeriveParameters(cmd)
+            Dim c As Integer = 0
+
+            For Each prm As MySqlParameter In cmd.Parameters
+                If prm.ParameterName <> "@RETURN_VALUE" Then
+                    prm.Value = env(c)
+                    c += 1
+                End If
+            Next
+            Return cmd
+        Catch ex As Exception
+            Return Nothing
+            Debug.WriteLine(procedure & "- " & ex.ToString)
+        End Try
+
     End Function
     Public Function CommandProcedure(name As String) As MySqlCommand
         Dim cmd As New MySqlCommand(name, Me.conexion)

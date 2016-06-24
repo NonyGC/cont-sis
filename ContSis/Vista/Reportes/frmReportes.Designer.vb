@@ -325,7 +325,7 @@ Partial Class frmReportes
         'btnConfiguracion
         '
         Me.btnConfiguracion.BackColor = System.Drawing.SystemColors.Control
-        Me.btnConfiguracion.BackgroundImage = Global.Vista.My.Resources.Resources.configuration_13194
+        Me.btnConfiguracion.BackgroundImage = Nothing
         Me.btnConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnConfiguracion.Location = New System.Drawing.Point(249, 250)

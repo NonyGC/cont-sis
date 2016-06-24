@@ -90,14 +90,14 @@ Partial Class frmSelectEmpresa
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.HeaderText = "Logo"
-        Me.DataGridViewImageColumn1.Image = Global.Vista.My.Resources.Resources._2280379084x16
+        Me.DataGridViewImageColumn1.Image = Nothing
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'btnCerrar
         '
-        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.cerrar_true
+        Me.btnCerrar.BackgroundImage = Nothing
         Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCerrar.Location = New System.Drawing.Point(68, 17)
@@ -138,7 +138,7 @@ Partial Class frmSelectEmpresa
         '
         Me.ColImagen.FillWeight = 5.871868!
         Me.ColImagen.HeaderText = "Logo"
-        Me.ColImagen.Image = Global.Vista.My.Resources.Resources._2280379084x16
+        Me.ColImagen.Image = Nothing
         Me.ColImagen.Name = "ColImagen"
         Me.ColImagen.ReadOnly = True
         Me.ColImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[True]

@@ -134,7 +134,7 @@ Partial Class FrmManEmpresa
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackgroundImage = Global.Vista.My.Resources.Resources.mainmessage_image1_transparent
+        Me.PictureBox2.BackgroundImage = Nothing
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"

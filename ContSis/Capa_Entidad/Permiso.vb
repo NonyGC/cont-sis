@@ -28,20 +28,29 @@
     Public Sub New()
 
     End Sub
-    Public ReadOnly Property Id As Integer
+    Public Property Id As Integer
         Get
             Return _id
         End Get
+        Set(value As Integer)
+            _id = value
+        End Set
     End Property
-    Public ReadOnly Property Usuario As Integer
+    Public Property Usuario As Integer
         Get
             Return _usuario
         End Get
+        Set(value As Integer)
+            _usuario = value
+        End Set
     End Property
-    Public ReadOnly Property Empresa As String
+    Public Property Empresa As String
         Get
             Return _empresa
         End Get
+        Set(value As String)
+            _empresa = value
+        End Set
     End Property
     Public Property Completo As Boolean
         Get
@@ -51,6 +60,23 @@
             _completo = value
         End Set
     End Property
+
+    Public Property Modulo As String
+        Get
+            Return _modulo
+        End Get
+        Set(value As String)
+            _modulo = value
+        End Set
+    End Property
+    Public Function ConvertIntToCompleto() As Integer
+        If _completo Then
+            Return 1
+        Else
+            Return 0
+        End If
+    End Function
+
     Public Function Modulos(modulo As String) As String
         If modulo = String.Empty Then
             Return "[" & _modulo & "]"

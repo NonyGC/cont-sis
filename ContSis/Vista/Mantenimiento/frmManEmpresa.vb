@@ -16,7 +16,7 @@ Public Class FrmManEmpresa
         txtruc.Clear()
         txtrz.Text = ""
         txtalias.Text = ""
-        PictureBox1.Image = My.Resources.No_Image_Available
+        PictureBox1.Image = Nothing
         btnguardar.Enabled = False
         txtruc.Enabled = True
     End Sub
@@ -137,7 +137,7 @@ Public Class FrmManEmpresa
     Private Sub frm_Man_Empresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnguardar.Enabled = False
         autocompletado()
-        PictureBox1.Image = My.Resources.No_Image_Available
+        PictureBox1.Image = Nothing
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         txtrz.Enabled = False
         txtalias.Enabled = False

@@ -114,6 +114,7 @@ Public Class Ejercicio
             _EjercicioMain = TextBox1.Text
 
             Dim f As frmMain = Application.OpenForms.Item("frmMain")
+
             f.PnlEjercicio(_EjercicioMain)
             Dim frm As New frmPeriodo
             frm.MdiParent = Me.ParentForm

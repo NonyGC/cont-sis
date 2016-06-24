@@ -5,6 +5,7 @@ Public Class UsuarioDao
 
     Private conexionValue As MySqlConnection
     Private _respuesta As String
+    Private log As String
     Public ReadOnly Property Respuesta As String
         Get
             Return _respuesta
@@ -26,26 +27,28 @@ Public Class UsuarioDao
             Usuarios_Showall = Nothing
         End Try
     End Function
-    Public Function Usuarios_Register(ByVal entusu As Usuario)
-        conexionValue = Me.conexion
-        Dim rowsaffected As Integer
-        Dim sql As String = "insert into usuarios(nombre,clave,rol_id) values(@usu,@pass,@rol);"
-        Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
-        Dim dataTable As New DataTable
-        Dim DataAdapter As MySqlDataAdapter = New MySqlDataAdapter
-        With consultaSQL
-            .Connection = conexionValue
-            .CommandType = CommandType.Text
-            .Parameters.AddWithValue("@usu", entusu.Usuario)
-            .Parameters.AddWithValue("@pass", entusu.Password)
-        End With
+    Public Function Registrar(ByVal usuario As Usuario) As Boolean
+
+
         Try
-            rowsaffected = consultaSQL.ExecuteNonQuery()
+            Dim respuesta As Integer
+            Dim cmd As MySqlCommand = CommandProcedure("sp_jc_registrar_usuario")
+            cmd = Parameters(cmd, New String() {usuario.Usuario, usuario.Password, usuario.State, usuario.Tipo})
+            respuesta = cmd.ExecuteNonQuery()
+            If respuesta <= 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        Catch ex As MySqlException
+            Return False
+            log = ex.Message
         Catch ex As Exception
+            Return False
         Finally
-            conexionValue.Close()
+            CloseDB()
         End Try
-        Return rowsaffected
+
     End Function
     Public Function Usuarios_Actualizar(ByVal entusu As Usuario)
         conexionValue = Me.conexion

@@ -23,6 +23,7 @@ Partial Class frmUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuario))
         Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.ColId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColUsuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,6 +41,8 @@ Partial Class frmUsuario
         Me.lbEmpresaActivos = New System.Windows.Forms.ListBox()
         Me.lbModulo = New System.Windows.Forms.ListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblEmpresaCantInactivas = New System.Windows.Forms.Label()
+        Me.lbEmpresaInactivos = New System.Windows.Forms.ListBox()
         Me.lblNroModulo = New System.Windows.Forms.Label()
         Me.lblEmpresaCantActivas = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -55,6 +58,7 @@ Partial Class frmUsuario
         Me.rbActivo = New System.Windows.Forms.RadioButton()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.cmsUsuario = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.tsmiEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiActualizar = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,8 +66,7 @@ Partial Class frmUsuario
         Me.ttUsuario = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnlUsuario = New System.Windows.Forms.Panel()
         Me.pnlFront = New System.Windows.Forms.Panel()
-        Me.lbEmpresaInactivos = New System.Windows.Forms.ListBox()
-        Me.lblEmpresaCantInactivas = New System.Windows.Forms.Label()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Mantenimiento.SuspendLayout()
@@ -71,6 +74,7 @@ Partial Class frmUsuario
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUsuario.SuspendLayout()
         Me.pnlFront.SuspendLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvUsuarios
@@ -247,6 +251,27 @@ Partial Class frmUsuario
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalle"
         '
+        'lblEmpresaCantInactivas
+        '
+        Me.lblEmpresaCantInactivas.AutoSize = True
+        Me.lblEmpresaCantInactivas.Location = New System.Drawing.Point(6, 417)
+        Me.lblEmpresaCantInactivas.Name = "lblEmpresaCantInactivas"
+        Me.lblEmpresaCantInactivas.Size = New System.Drawing.Size(66, 13)
+        Me.lblEmpresaCantInactivas.TabIndex = 33
+        Me.lblEmpresaCantInactivas.Text = "N° Empresa:"
+        '
+        'lbEmpresaInactivos
+        '
+        Me.lbEmpresaInactivos.BackColor = System.Drawing.SystemColors.Control
+        Me.lbEmpresaInactivos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbEmpresaInactivos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbEmpresaInactivos.FormattingEnabled = True
+        Me.lbEmpresaInactivos.Location = New System.Drawing.Point(6, 342)
+        Me.lbEmpresaInactivos.Name = "lbEmpresaInactivos"
+        Me.lbEmpresaInactivos.Size = New System.Drawing.Size(186, 67)
+        Me.lbEmpresaInactivos.TabIndex = 32
+        Me.ttUsuario.SetToolTip(Me.lbEmpresaInactivos, "Lista de Empresas inactivos.")
+        '
         'lblNroModulo
         '
         Me.lblNroModulo.AutoSize = True
@@ -341,7 +366,7 @@ Partial Class frmUsuario
         Me.rtxtMsg.BackColor = System.Drawing.SystemColors.Control
         Me.rtxtMsg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.rtxtMsg.Enabled = False
-        Me.rtxtMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtxtMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtxtMsg.ForeColor = System.Drawing.Color.DarkRed
         Me.rtxtMsg.Location = New System.Drawing.Point(10, 228)
         Me.rtxtMsg.Name = "rtxtMsg"
@@ -377,11 +402,14 @@ Partial Class frmUsuario
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.Transparent
-        Me.btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eliminar
+        Me.btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eleminar_false
         Me.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ErrorProvider1.SetIconAlignment(Me.btnEliminar, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.ImageKey = "btneliminar.png"
         Me.btnEliminar.Location = New System.Drawing.Point(202, 376)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(43, 40)
@@ -425,18 +453,26 @@ Partial Class frmUsuario
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.editar1
-        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnGuardar.Enabled = False
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.btnGuardar.ImageList = Me.ImageList1
         Me.btnGuardar.Location = New System.Drawing.Point(152, 376)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(43, 40)
         Me.btnGuardar.TabIndex = 75
         Me.ttUsuario.SetToolTip(Me.btnGuardar, "Guardar")
         Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "btneditar1.png")
+        Me.ImageList1.Images.SetKeyName(1, "btneliminar.png")
         '
         'cmsUsuario
         '
@@ -483,27 +519,6 @@ Partial Class frmUsuario
         Me.pnlFront.Size = New System.Drawing.Size(774, 445)
         Me.pnlFront.TabIndex = 32
         '
-        'lbEmpresaInactivos
-        '
-        Me.lbEmpresaInactivos.BackColor = System.Drawing.SystemColors.Control
-        Me.lbEmpresaInactivos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbEmpresaInactivos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbEmpresaInactivos.FormattingEnabled = True
-        Me.lbEmpresaInactivos.Location = New System.Drawing.Point(6, 342)
-        Me.lbEmpresaInactivos.Name = "lbEmpresaInactivos"
-        Me.lbEmpresaInactivos.Size = New System.Drawing.Size(186, 67)
-        Me.lbEmpresaInactivos.TabIndex = 32
-        Me.ttUsuario.SetToolTip(Me.lbEmpresaInactivos, "Lista de Empresas inactivos.")
-        '
-        'lblEmpresaCantInactivas
-        '
-        Me.lblEmpresaCantInactivas.AutoSize = True
-        Me.lblEmpresaCantInactivas.Location = New System.Drawing.Point(6, 417)
-        Me.lblEmpresaCantInactivas.Name = "lblEmpresaCantInactivas"
-        Me.lblEmpresaCantInactivas.Size = New System.Drawing.Size(66, 13)
-        Me.lblEmpresaCantInactivas.TabIndex = 33
-        Me.lblEmpresaCantInactivas.Text = "N° Empresa:"
-        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,6 +541,7 @@ Partial Class frmUsuario
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUsuario.ResumeLayout(False)
         Me.pnlFront.ResumeLayout(False)
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -571,4 +587,6 @@ Partial Class frmUsuario
     Friend WithEvents pnlFront As Panel
     Friend WithEvents lbEmpresaInactivos As ListBox
     Friend WithEvents lblEmpresaCantInactivas As Label
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents ImageList1 As ImageList
 End Class

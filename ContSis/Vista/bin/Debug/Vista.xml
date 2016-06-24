@@ -22,32 +22,12 @@ Vista
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
-<member name="P:Vista.My.Resources.Resources._2280379084x16">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:Vista.My.Resources.Resources.ALSee">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.cancelar">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.cancelar_false">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.cancelar_true">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.cerrar_true">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -62,17 +42,22 @@ Vista
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Vista.My.Resources.Resources.editar1">
+<member name="P:Vista.My.Resources.Resources.contabilidad">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Vista.My.Resources.Resources.eliminar">
+<member name="P:Vista.My.Resources.Resources.eleminar_false">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Vista.My.Resources.Resources.es_918">
+<member name="P:Vista.My.Resources.Resources.eleminar_true">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.eliminar_false">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -88,6 +73,11 @@ Vista
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.guardar_true">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icon_empresa">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -123,16 +113,6 @@ Vista
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.nuevo">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.opcion_false">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.opcion_true">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

@@ -7,6 +7,7 @@ Public Class UsuarioBL
     Private _newUsuario As Integer
     Private _newPermiso As Integer
     Private _nroModulo As Integer
+    Public dtDataPermiso As DataTable
 #Region "Constructor"
     Public Sub New()
         _newUsuario = Datos.NewUsuario
@@ -42,12 +43,33 @@ Public Class UsuarioBL
 
 #End Region
     Public Function Registrar(ByVal usuario As Usuario, rPassword As String) As Boolean
-
+        Dim respuesta As Boolean = False
         If usuario.Password <> rPassword Then
             _log += "La contraseña no coinciden " & usuario.Password & " con " & rPassword & vbLf
 
+            respuesta = False
+        Else
+            Dim daousuario As New UsuarioDao
+            Dim respuestaRegistro As Boolean = daousuario.Registrar(usuario)
+            If respuestaRegistro Then
+                respuesta = True
+                For Each dr As DataRow In dtDataPermiso.Rows
+                    Dim permiso As New Permiso
+                    permiso.Usuario = dr("usu")
+                    permiso.Empresa = dr("Id")
+                    permiso.Completo = dr("compt")
+                    permiso.Modulo = dr("mod")
+
+                    Dim daoPermiso As New PermisoDao
+                    daoPermiso.Registrar(permiso)
+                Next
+
+            Else
+
+                respuesta = False
+            End If
         End If
-        Return False
+        Return respuesta
 
     End Function
     Public Function Usuario_ActualizarLB(ByVal entusu As Usuario)
@@ -55,9 +77,6 @@ Public Class UsuarioBL
         verificar = Datos.Usuarios_Actualizar(entusu)
         Return verificar
     End Function
-    'Public Function Roles_datos() As DataTable
-    '    'Return rolDao.Rol_all()
-    'End Function
     Public Function getModulos() As DataTable
         Dim maindao As New ContenedorDAO
         Dim dt As DataTable = maindao.GetContenedorAll(1)
@@ -97,14 +116,12 @@ Public Class UsuarioBL
         'Variables 
         Dim daoMod As New ContenedorDAO
         Dim daoModDet As New FormularioDAO
-        Dim daoPer As New PermisoDao
         '--------------------------
         Dim ds As New DataSet
         '--------------------------------
         Dim dtMod As DataTable = daoMod.GetContenedorAll(1)
         Dim dtModDet As DataTable = daoModDet.getModuloDetAll()
-        Dim dtPermi As DataTable = daoPer.CreaSchemaDataTable
-        Dim dtEmpresa As DataTable = CreaDataTableEmpresaSelect()
+        Dim dtEmpresaPermiso As DataTable = CreaDataTableEmpresaPermisoSelect()
 
         dtMod.TableName = "modulo"
         dtMod.PrimaryKey = New DataColumn() {dtMod.Columns("id")}
@@ -114,24 +131,27 @@ Public Class UsuarioBL
 
         ds.Tables.Add(dtMod)
         ds.Tables.Add(dtModDet)
-        ds.Tables.Add(dtEmpresa)
+        ds.Tables.Add(dtEmpresaPermiso)
         ds.Tables.Add(getEmpresas)
-        ds.Tables.Add(dtPermi)
 
         ds.Relations.Add("mod", ds.Tables("modulo").Columns("id"),
                               ds.Tables("modulo_Det").Columns("modcab"))
         Return ds
     End Function
-    Private Function CreaDataTableEmpresaSelect() As DataTable
-        Dim dt As New DataTable("empresa_select")
-        dt.Columns.Add("Id")
-        dt.Columns.Add("Name")
-        dt.Columns.Add("Alias")
-        dt.Columns.Add("rz_elegido")
-        dt.Columns.Add("State")
-        dt.Columns.Add("NameState")
+    Private Function CreaDataTableEmpresaPermisoSelect() As DataTable
+        Dim dt As New DataTable("empresa_permiso_select")
+        dt.Columns.Add("Id", Type.GetType("System.String"))
+        dt.Columns.Add("Name", Type.GetType("System.String"))
+        dt.Columns.Add("State", Type.GetType("System.Boolean"))
+        dt.Columns.Add("NameState", Type.GetType("System.String"))
+        dt.Columns.Add("usu", Type.GetType("System.Int32"))
+        dt.Columns.Add("compt", Type.GetType("System.Boolean"))
+        dt.Columns.Add("mod", Type.GetType("System.String"))
+        dt.PrimaryKey = New DataColumn() {dt.Columns("Id")}
+
         Return dt
     End Function
+
 #End Region
 
 End Class

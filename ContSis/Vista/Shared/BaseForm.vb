@@ -36,4 +36,28 @@
         End While
         Return array
     End Function
+    Shared Function CantidadOfCadenaArray(value As String) As Integer
+        Dim continua As Boolean = True
+        Dim buscaDesde As Integer = 0
+        Dim array(0) As String
+        Dim contador As Integer = 0
+
+        While continua
+            Dim indiceInicial As Integer = value.IndexOf("[", buscaDesde)
+            Dim indiceFinal As Integer
+            Dim val As String
+
+            If indiceInicial < 0 Then
+                continua = False
+
+            Else
+                indiceFinal = value.IndexOf("]", indiceInicial)
+                val = value.Substring(indiceInicial + 1, indiceFinal - (indiceInicial + 1))
+                contador += 1
+                buscaDesde = indiceFinal
+            End If
+        End While
+        Return contador
+    End Function
+
 End Class
