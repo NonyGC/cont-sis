@@ -1601,3 +1601,7 @@ C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Capa_Presenta
 C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.exe
 C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.xml
 C:\Users\MiguelAngel\Source\Repos\cont-sis\ContSis\Vista\obj\Debug\Vista.pdb
+D:\Repo\ContSis\Vista\bin\Debug\Vista.exe.config
+D:\Repo\ContSis\Vista\obj\Debug\Vista.exe
+D:\Repo\ContSis\Vista\obj\Debug\Vista.xml
+D:\Repo\ContSis\Vista\obj\Debug\Vista.pdb

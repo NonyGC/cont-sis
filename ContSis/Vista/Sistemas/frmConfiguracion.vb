@@ -26,25 +26,9 @@ Public Class frmConfiguracion
     End Sub
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles tsbsalir.Click
         Me.Close()
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim sistema As New Sistema
-        With sistema
-            .NroUsuario = CInt(numUsuarios.Value)
-            .NroEmpresa = CInt(numUsuarios.Value)
-            If chkAdmin.Checked Then
-                .ActivoAdmin = 1
-            Else
-                .ActivoAdmin = 0
-            End If
-        End With
-        Dim registro As Boolean = reglas.Registrar(sistema)
-        If registro Then
-            MsgBox("Completado", MsgBoxStyle.OkOnly, "Configuración")
-        Else
-            MsgBox("Ocurrio un Error", MsgBoxStyle.OkOnly, "Configuración")
-        End If
+        Dim f As frmMain = Application.OpenForms("frmMain")
+        If f Is Nothing Then Exit Sub
+        f.CerrarSesion()
     End Sub
 
     Private Sub frmConfiguracion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -90,11 +74,7 @@ Public Class frmConfiguracion
         numUsuarios.Enabled = False
 
 
-        If sistema.ActivoAdmin > 0 Then
-            chkAdmin.Checked = True
-        Else
-            chkAdmin.Checked = False
-        End If
+
 
     End Sub
 
@@ -158,6 +138,19 @@ Public Class frmConfiguracion
         pbConfiguracion.Visible = False
         tsbcrear.Enabled = True
         proceso = False
+
+        Dim sistema As New Sistema
+        With sistema
+            .NroUsuario = CInt(numUsuarios.Value)
+            .NroEmpresa = CInt(numUsuarios.Value)
+            .ActivoAdmin = 1
+        End With
+        Dim registro As Boolean = reglas.Registrar(sistema)
+        If registro Then
+            MsgBox("Completado", MsgBoxStyle.OkOnly, "Configuración")
+        Else
+            MsgBox("Ocurrio un Error", MsgBoxStyle.OkOnly, "Configuración")
+        End If
     End Sub
 
     Private Sub tmrConfiguracion_Tick(sender As Object, e As EventArgs) Handles tmrConfiguracion.Tick

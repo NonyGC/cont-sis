@@ -27,8 +27,6 @@ Partial Class frmConfiguracion
         Me.numUsuarios = New System.Windows.Forms.NumericUpDown()
         Me.numEmpresas = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.chkAdmin = New System.Windows.Forms.CheckBox()
         Me.pbConfiguracion = New System.Windows.Forms.ProgressBar()
         Me.lblCant = New System.Windows.Forms.Label()
         Me.dgvEmpresa = New System.Windows.Forms.DataGridView()
@@ -91,27 +89,6 @@ Partial Class frmConfiguracion
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "N° de Empresas"
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.Location = New System.Drawing.Point(434, 153)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(112, 32)
-        Me.btnGuardar.TabIndex = 4
-        Me.btnGuardar.Text = "Activar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'chkAdmin
-        '
-        Me.chkAdmin.Location = New System.Drawing.Point(374, 114)
-        Me.chkAdmin.Margin = New System.Windows.Forms.Padding(4)
-        Me.chkAdmin.Name = "chkAdmin"
-        Me.chkAdmin.Size = New System.Drawing.Size(170, 33)
-        Me.chkAdmin.TabIndex = 7
-        Me.chkAdmin.Text = "Activar Admin"
-        Me.chkAdmin.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.chkAdmin.UseVisualStyleBackColor = True
-        '
         'pbConfiguracion
         '
         Me.pbConfiguracion.Location = New System.Drawing.Point(13, 173)
@@ -167,8 +144,6 @@ Partial Class frmConfiguracion
         Me.GroupBox1.Controls.Add(Me.numUsuarios)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.numEmpresas)
-        Me.GroupBox1.Controls.Add(Me.chkAdmin)
-        Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(553, 192)
@@ -256,8 +231,6 @@ Partial Class frmConfiguracion
     Friend WithEvents numUsuarios As NumericUpDown
     Friend WithEvents numEmpresas As NumericUpDown
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnGuardar As Button
-    Friend WithEvents chkAdmin As CheckBox
     Friend WithEvents pbConfiguracion As ProgressBar
     Friend WithEvents lblCant As Label
     Friend WithEvents dgvEmpresa As DataGridView

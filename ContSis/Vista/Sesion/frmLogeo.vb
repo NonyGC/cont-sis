@@ -83,7 +83,13 @@ Public Class frmLogeo
         End If
     End Sub
     Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
-        Me.Close()
+        _f = Application.OpenForms.Item("frmMain")
+        If _f IsNot Nothing Then
+            Close()
+            _f.Close()
+        Else
+            Close()
+        End If
     End Sub
     Private Sub txtusu_KeyDown(sender As Object, e As KeyEventArgs) Handles txtusu.KeyDown
         If e.KeyCode = Keys.Enter Then

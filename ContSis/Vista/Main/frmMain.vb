@@ -212,30 +212,37 @@ Public Class frmMain
                 For Each ChildForm As Form In Me.MdiChildren
                     ChildForm.Close()
                 Next
-
-                ClearMenu()
-                MenuEnabled("Sesión", True)
-                OptionOrFormEnabled("Sesión", "frmLogeo", True)
-
-                pnlInfo.Visible = False
-                lblEjercicio.Text = ""
-                lblEmpresa.Text = ""
-                lblPeriodo.Text = ""
-                lblUsuario.Text = ""
-                Dim bl As New MainBL
-                bl.UpdateUsuario(UsuarioMain)
-
-                _UsuarioMain = Nothing
-                _EmpresaMain = Nothing
-                _EjercicioMain = Nothing
-                _PeriodoMain = Nothing
-                _state = listForm.Dependiente
-
-                OpenForm("frmLogeo", Nothing)
-                SSUsuario(Nothing)
-                SSEmpresa(Nothing)
+                CerrarSesion()
 
         End Select
+    End Sub
+
+    Public Sub CerrarSesion()
+        For Each ChildForm As Form In Me.MdiChildren
+            ChildForm.Close()
+        Next
+
+        ClearMenu()
+        MenuEnabled("Sesión", True)
+        OptionOrFormEnabled("Sesión", "frmLogeo", True)
+
+        pnlInfo.Visible = False
+        lblEjercicio.Text = ""
+        lblEmpresa.Text = ""
+        lblPeriodo.Text = ""
+        lblUsuario.Text = ""
+        Dim bl As New MainBL
+        bl.UpdateUsuario(UsuarioMain)
+
+        _UsuarioMain = Nothing
+        _EmpresaMain = Nothing
+        _EjercicioMain = Nothing
+        _PeriodoMain = Nothing
+        _state = listForm.Dependiente
+
+        OpenForm("frmLogeo", Nothing)
+        SSUsuario(Nothing)
+        SSEmpresa(Nothing)
     End Sub
     Private Function OpenForm(formName As String, tag As Object) As Boolean
         Dim frmAssembly As Assembly = Assembly.LoadFile(Application.ExecutablePath)

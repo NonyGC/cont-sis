@@ -94,6 +94,7 @@
     <Compile Include="TipoCambioBL.vb" />
     <Compile Include="UsuarioBL.vb" />
     <Compile Include="MainBL.vb" />
+    <Compile Include="VencimientoPagoBL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -55,8 +55,6 @@ Public Class ActivacionEmpresasBL
         End If
         Return dtEmpresa
     End Function
-
-
     Private Sub AddNewDataRow(emp As Empresa, per As Permiso, est As Integer)
         Dim dr As DataRow = dtEmpresa.NewRow
         dr("ruc") = emp.RUC
@@ -70,5 +68,14 @@ Public Class ActivacionEmpresasBL
         dr("estado") = est
         dtEmpresa.Rows.Add(dr)
     End Sub
+    Public Function VencimientoPago(ultimoDigito As Integer, periodo As Integer) As VencimientoPagos
+        Dim vp As New VencimientoPagos
+        vp.Ruc = ultimoDigito
+        vp.Periodo = periodo
+        Dim modelo As New VencimientoPagoDao(vp)
+        Return modelo.GetByPeridoAndRuc
+    End Function
+
+
 
 End Class

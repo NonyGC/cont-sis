@@ -90,6 +90,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Session\RolEmpresa.vb" />
+    <Compile Include="VencimientoPagos.vb" />
     <Compile Include="VisoEN.vb" />
   </ItemGroup>
   <ItemGroup>

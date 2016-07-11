@@ -74,6 +74,7 @@
     <Compile Include="EmpresaDao.vb" />
     <Compile Include="FormatoDao.vb" />
     <Compile Include="FormularioDao.vb" />
+    <Compile Include="ICrud.vb" />
     <Compile Include="MonedaDao.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -95,6 +96,7 @@
     <Compile Include="SistemaDao.vb" />
     <Compile Include="TipoCambioDao.vb" />
     <Compile Include="UsuarioDao.vb" />
+    <Compile Include="VencimientoPagoDao.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

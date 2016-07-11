@@ -25,9 +25,6 @@ Partial Class frmSelectEmpresa
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvEmpresa = New System.Windows.Forms.DataGridView()
-        Me.BtnOn = New System.Windows.Forms.Button()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ColRuc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColRznScl = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColAlias = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +32,8 @@ Partial Class frmSelectEmpresa
         Me.ColCod = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColDigito = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,36 +74,6 @@ Partial Class frmSelectEmpresa
         Me.dgvEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEmpresa.Size = New System.Drawing.Size(636, 415)
         Me.dgvEmpresa.TabIndex = 0
-        '
-        'BtnOn
-        '
-        Me.BtnOn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnOn.Location = New System.Drawing.Point(18, 19)
-        Me.BtnOn.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnOn.Name = "BtnOn"
-        Me.BtnOn.Size = New System.Drawing.Size(45, 36)
-        Me.BtnOn.TabIndex = 2
-        Me.BtnOn.Text = "On"
-        Me.BtnOn.UseVisualStyleBackColor = True
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.HeaderText = "Logo"
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.log_logout_door_1563
-        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.Location = New System.Drawing.Point(68, 17)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(39, 39)
-        Me.btnCerrar.TabIndex = 1
-        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'ColRuc
         '
@@ -172,12 +141,30 @@ Partial Class frmSelectEmpresa
         Me.ColEstado.Visible = False
         Me.ColEstado.Width = 5
         '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.HeaderText = "Logo"
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.log_logout_door_1563
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.Location = New System.Drawing.Point(68, 17)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(39, 39)
+        Me.btnCerrar.TabIndex = 1
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'frmSelectEmpresa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(672, 510)
-        Me.Controls.Add(Me.BtnOn)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.dgvEmpresa)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -196,7 +183,6 @@ Partial Class frmSelectEmpresa
 
     Friend WithEvents dgvEmpresa As DataGridView
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents BtnOn As Button
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents ColRuc As DataGridViewTextBoxColumn
     Friend WithEvents ColRznScl As DataGridViewTextBoxColumn

@@ -57,12 +57,10 @@ Public Class frmSelectEmpresa
     'Metodos
     Private Sub ActivarMenu()
 
-        BtnOn.Enabled = False
-
         Dim mnu As MenuStrip = f.MnuMain
 
         Dim modulo As String = dgvEmpresa.Item("modu", dgvEmpresa.CurrentRow.Index).Value().ToString
-                Dim estado As Integer = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value()
+        Dim estado As Integer = dgvEmpresa.Item("ColEstado", dgvEmpresa.CurrentRow.Index).Value()
         Select Case estado
             Case 0
                 If usuario.Tipo = "normal" Then
@@ -110,6 +108,19 @@ Public Class frmSelectEmpresa
                 empresa.Codigo = dgvEmpresa.Item("ColCod", dgvEmpresa.CurrentRow.Index).Value()
                 frmMain.EmpresaMain = empresa
                 f.PnlEmpresa(frmMain.EmpresaMain.Impresion)
+
+                Dim vp As VencimientoPagos = reglas.VencimientoPago(frmMain.EmpresaMain.RUC.ToString.Substring(10), Now.Month - 1)
+                If vp IsNot Nothing Then
+                    If Now.Day = vp.Fecha.Day - 2 Then
+                        MsgBox("En 2 dias sera vencimiento del Pago.", MsgBoxStyle.OkOnly, "Cronograma Pagos")
+                    ElseIf Now.Day = vp.Fecha.Day - 1 Then
+                        MsgBox("En 1 dia sera vencimiento del Pago.", MsgBoxStyle.OkOnly, "Cronograma Pagos")
+                    ElseIf Now.Day = vp.Fecha.Day Then
+                        MsgBox("Hoy dia termina el vencimiento de Pago.", MsgBoxStyle.OkOnly, "Cronograma Pagos")
+                    End If
+                End If
+
+
                 Dim frm As New Ejercicio
                 frm.MdiParent = Me.ParentForm
                 frm.Show()
@@ -126,7 +137,7 @@ Public Class frmSelectEmpresa
         Me.Close()
     End Sub
 
-    Private Sub BtnOn_Click(sender As Object, e As EventArgs) Handles BtnOn.Click
+    Private Sub BtnOn_Click(sender As Object, e As EventArgs)
         If dgvEmpresa.RowCount >= 0 Then
             ActivarMenu()
         End If

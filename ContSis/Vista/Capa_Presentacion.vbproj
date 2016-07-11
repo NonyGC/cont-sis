@@ -467,7 +467,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Utilidades\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="File\Xml\formato8_1.xml" />
     <None Include="Resources\guardar-false.png" />
