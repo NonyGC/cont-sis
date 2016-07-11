@@ -27,47 +27,49 @@ Public Class ComprobanteBL
     Public Function comprobante_diario_autogenerado() As String
         Return Datos.comprobante_diario_autogenerado()
     End Function
-    Public Function comprobante_cajabanco_autogenerado() As String
-        Return Datos.comprobante_cajabanco_autogenerado()
+    'Public Function comprobante_cajabanco_autogenerado() As String
+    '    Return Datos.comprobante_cajabanco_autogenerado()
+    'End Function
+    'Public Function comprobante_registro_autogenerado() As String
+    '    Return Datos.comprobante_registocompra_autogenerado()
+    'End Function
+    Public Function comprobante_autogenerado_registro(ByVal pre As Object) As String
+        Return Datos.comprobante_autogenerado_registro(pre)
     End Function
-    Public Function comprobante_registro_autogenerado() As String
-        Return Datos.comprobante_registocompra_autogenerado()
-    End Function
-    Public Function comprobante_cabecera_register(ByVal entCom As Comprobante) As Integer
+    Public Function comprobante_cabecera_CRU(ByVal entCom As Comprobante) As Integer
         Dim verificar As Integer
-        verificar = Datos.comprobante_cabecera_register(entCom)
+        verificar = Datos.comprobante_cabecera_CRU(entCom)
         Return verificar
     End Function
-    Public Function comprobante_cabecera_register_cb(ByVal entCom As Comprobante) As Integer
+    'Public Function comprobante_cabecera_register_cb(ByVal entCom As Comprobante) As Integer
+    '    Dim verificar As Integer
+    '    verificar = Datos.comprobante_cabecera_register_cb(entCom)
+    '    Return verificar
+    'End Function
+    Public Function comprobante_detalle_CRU(ByVal entCom As Comprobante)
         Dim verificar As Integer
-        verificar = Datos.comprobante_cabecera_register_cb(entCom)
+        verificar = Datos.comprobante_detalle_CRU(entCom)
         Return verificar
     End Function
-    Public Function comprobante_detalle_register(ByVal entCom As Comprobante)
-        Dim verificar As Integer
-        verificar = Datos.comprobante_detalle_register(entCom)
-        Return verificar
-    End Function
-    Public Function comprobante_detalle_register_cb(ByVal entCom As Comprobante)
-        Dim verificar As Integer
-        verificar = Datos.comprobante_detalle_register_cb(entCom)
-        Return verificar
-    End Function
+    'Public Function comprobante_detalle_register_cb(ByVal entCom As Comprobante)
+    '    Dim verificar As Integer
+    '    verificar = Datos.comprobante_detalle_register_cb(entCom)
+    '    Return verificar
+    'End Function
 
-    Public Function comprobante_cabecera_actualizar(ByVal entCom As Comprobante) As Integer
+    'Public Function comprobante_detalle_actualizar(ByVal entCom As Comprobante)
+    '    Dim verificar As Integer
+    '    verificar = Datos.comprobante_detalle_actualizar(entCom)
+    '    Return verificar
+    'End Function
+    'Public Function comprobante_detalle_autogenerado(ByVal entCom As Comprobante) As String
+    '    Return Datos.comprobante_detalle_autogenerado(entCom)
+    'End Function
+    Public Function registro_compra_CRU(ByVal entCom As Comprobante)
         Dim verificar As Integer
-        verificar = Datos.comprobante_cabecera_actualizar(entCom)
+        verificar = Datos.registro_compra_CRU(entCom)
         Return verificar
     End Function
-    Public Function comprobante_detalle_actualizar(ByVal entCom As Comprobante)
-        Dim verificar As Integer
-        verificar = Datos.comprobante_detalle_actualizar(entCom)
-        Return verificar
-    End Function
-    Public Function comprobante_detalle_autogenerado(ByVal entCom As Comprobante) As String
-        Return Datos.comprobante_detalle_autogenerado(entCom)
-    End Function
-
     Public Function Comprobante_cebecera_llenar(ByVal entCom As Comprobante) As DataTable
         Return Datos.Comprobante_cebecera_llenar(entCom)
     End Function

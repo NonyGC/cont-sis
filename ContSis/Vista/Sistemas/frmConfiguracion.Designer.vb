@@ -28,7 +28,6 @@ Partial Class frmConfiguracion
         Me.numEmpresas = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.chkAdmin = New System.Windows.Forms.CheckBox()
         Me.pbConfiguracion = New System.Windows.Forms.ProgressBar()
         Me.lblCant = New System.Windows.Forms.Label()
@@ -37,14 +36,17 @@ Partial Class frmConfiguracion
         Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.BtnCrear = New System.Windows.Forms.Button()
         Me.bwConfiguracion = New System.ComponentModel.BackgroundWorker()
         Me.tmrConfiguracion = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsbcrear = New System.Windows.Forms.ToolStripButton()
+        Me.tsbsalir = New System.Windows.Forms.ToolStripButton()
         CType(Me.numUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numEmpresas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -96,18 +98,8 @@ Partial Class frmConfiguracion
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(112, 32)
         Me.btnGuardar.TabIndex = 4
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Activar"
         Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Location = New System.Drawing.Point(434, 203)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(112, 32)
-        Me.btnCerrar.TabIndex = 6
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'chkAdmin
         '
@@ -177,7 +169,7 @@ Partial Class frmConfiguracion
         Me.GroupBox1.Controls.Add(Me.numEmpresas)
         Me.GroupBox1.Controls.Add(Me.chkAdmin)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(553, 192)
         Me.GroupBox1.TabIndex = 12
@@ -186,27 +178,15 @@ Partial Class frmConfiguracion
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.BtnCrear)
         Me.GroupBox2.Controls.Add(Me.dgvEmpresa)
         Me.GroupBox2.Controls.Add(Me.pbConfiguracion)
         Me.GroupBox2.Controls.Add(Me.lblCant)
-        Me.GroupBox2.Controls.Add(Me.btnCerrar)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 219)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 263)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(553, 244)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Empresa"
-        '
-        'BtnCrear
-        '
-        Me.BtnCrear.Location = New System.Drawing.Point(314, 203)
-        Me.BtnCrear.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnCrear.Name = "BtnCrear"
-        Me.BtnCrear.Size = New System.Drawing.Size(112, 32)
-        Me.BtnCrear.TabIndex = 8
-        Me.BtnCrear.Text = "Crear"
-        Me.BtnCrear.UseVisualStyleBackColor = True
         '
         'bwConfiguracion
         '
@@ -216,12 +196,40 @@ Partial Class frmConfiguracion
         'tmrConfiguracion
         '
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbcrear, Me.tsbsalir})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(581, 53)
+        Me.ToolStrip1.TabIndex = 213
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'tsbcrear
+        '
+        Me.tsbcrear.AutoSize = False
+        Me.tsbcrear.Image = Global.Vista.My.Resources.Resources.crear
+        Me.tsbcrear.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbcrear.Name = "tsbcrear"
+        Me.tsbcrear.Size = New System.Drawing.Size(100, 50)
+        Me.tsbcrear.Text = "Crear"
+        '
+        'tsbsalir
+        '
+        Me.tsbsalir.AutoSize = False
+        Me.tsbsalir.Image = Global.Vista.My.Resources.Resources.log_logout_door_1563
+        Me.tsbsalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbsalir.Name = "tsbsalir"
+        Me.tsbsalir.Size = New System.Drawing.Size(100, 47)
+        Me.tsbsalir.Text = "Salir"
+        '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(581, 475)
+        Me.ClientSize = New System.Drawing.Size(581, 470)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -237,7 +245,10 @@ Partial Class frmConfiguracion
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -246,16 +257,17 @@ Partial Class frmConfiguracion
     Friend WithEvents numEmpresas As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents btnCerrar As Button
     Friend WithEvents chkAdmin As CheckBox
     Friend WithEvents pbConfiguracion As ProgressBar
     Friend WithEvents lblCant As Label
     Friend WithEvents dgvEmpresa As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents BtnCrear As Button
     Friend WithEvents ColRzn As DataGridViewTextBoxColumn
     Friend WithEvents ColEstado As DataGridViewTextBoxColumn
     Friend WithEvents bwConfiguracion As System.ComponentModel.BackgroundWorker
     Friend WithEvents tmrConfiguracion As Timer
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents tsbcrear As ToolStripButton
+    Friend WithEvents tsbsalir As ToolStripButton
 End Class

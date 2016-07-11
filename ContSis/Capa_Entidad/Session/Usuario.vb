@@ -9,6 +9,8 @@
     Protected _state As Integer
     Protected _fSesion As Date
     Protected _fCierre As Date
+
+
 #End Region
 #Region "Constructores"
     'Contructor
@@ -90,6 +92,8 @@ Public Interface ITipoUsuario
 End Interface
 Public Class UsuarioNormal
     Inherits Usuario
+    Protected _permisos As List(Of PermisoModificado)
+
     Public Sub New(usuario As String, password As String)
         MyBase.New(usuario, password)
     End Sub
@@ -110,6 +114,19 @@ Public Class UsuarioNormal
     Public Overrides Function Array() As String()
         Throw New NotImplementedException()
     End Function
+    Public Property Permisos As List(Of PermisoModificado)
+        Get
+            Return _permisos
+        End Get
+        Set(value As List(Of PermisoModificado))
+            _permisos = value
+        End Set
+    End Property
+
+End Class
+Public Class PermisoModificado
+    Public Permiso As Permiso
+    Public EmpresaRazonSocial As String
 End Class
 
 Public Class UsuarioAdmin

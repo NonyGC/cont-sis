@@ -1,5 +1,6 @@
 ﻿Imports Capa_Entidad
 Imports Controladores
+Imports Vista.BaseForm
 Public Class frmConfiguracion
     Private reglas As New SistemaBL
     Private dtEmpresa As DataTable
@@ -23,7 +24,7 @@ Public Class frmConfiguracion
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles tsbsalir.Click
         Me.Close()
     End Sub
 
@@ -50,6 +51,7 @@ Public Class frmConfiguracion
         CargarSistema()
         CargarEmpresa()
         CompletarDataGridViewEmpresa()
+        stripbuttons(ToolStrip1)
     End Sub
     Private Sub CargarEmpresa()
         For i = 0 To empresas.Length - 1
@@ -96,14 +98,14 @@ Public Class frmConfiguracion
 
     End Sub
 
-    Private Sub BtnCrear_Click(sender As Object, e As EventArgs) Handles BtnCrear.Click
+    Private Sub BtnCrear_Click(sender As Object, e As EventArgs) Handles tsbcrear.Click
 
         Dim envioForm As New EnvioConfiguracion
         envioForm.empresas = New DataView(dtEmpresa, "Estado='Inactivo'", "rz", DataViewRowState.CurrentRows)
         If envioForm.empresas.Count <= 0 Then
             MsgBox("Empresas operativas")
         Else
-            BtnCrear.Enabled = False
+            tsbcrear.Enabled = False
             proceso = True
             pbConfiguracion.Visible = True
             totalproceso = CType(dtEmpresa.Compute("Count(ruc)", "Estado = 'Inactivo'"), Integer)
@@ -154,7 +156,7 @@ Public Class frmConfiguracion
         tmrConfiguracion.Stop()
         lblCant.Visible = False
         pbConfiguracion.Visible = False
-        BtnCrear.Enabled = True
+        tsbcrear.Enabled = True
         proceso = False
     End Sub
 

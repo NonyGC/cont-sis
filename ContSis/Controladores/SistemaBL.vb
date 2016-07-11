@@ -1,5 +1,6 @@
 ﻿Imports Capa_Entidad
 Imports Modelos
+Imports System.Text
 Public Class SistemaBL
     Public Function Registrar(sistema As Sistema) As Boolean
         Dim sisDao As New SistemaDao

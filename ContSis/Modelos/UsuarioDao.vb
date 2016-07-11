@@ -12,24 +12,23 @@ Public Class UsuarioDao
         End Get
     End Property
 
-    Public Function Usuarios_Showall() As DataTable
+    Public Function UsuariosAll() As DataTable
         conexionValue = Me.conexion
-        Dim sql As String = "select usu_id,nombre,rol_id from usuarios;"
+        Dim sql As String = "select usu_id,usu_name,usu_password,usu_state from usuario where usu_tipo='normal';"
         Dim consultaSQL As MySqlCommand = New MySqlCommand(sql, conexionValue)
         Dim dataTable As New DataTable
         Dim DataAdapter As MySqlDataAdapter = New MySqlDataAdapter
         Try
             DataAdapter.SelectCommand = consultaSQL
             DataAdapter.Fill(dataTable)
-            conexionValue.Close()
-            Usuarios_Showall = dataTable
+            Return dataTable
         Catch ex As Exception
-            Usuarios_Showall = Nothing
+            Return Nothing
+        Finally
+            CloseDB()
         End Try
     End Function
     Public Function Registrar(ByVal usuario As Usuario) As Boolean
-
-
         Try
             Dim respuesta As Integer
             Dim cmd As MySqlCommand = CommandProcedure("sp_jc_registrar_usuario")
@@ -152,6 +151,18 @@ Public Class UsuarioDao
         End Try
 
     End Function
+    Public Function IdbyName(Name As String) As Integer
+        Try
+            Dim respuesta As Integer
+            Dim cmd As MySqlCommand = CommandText("select * from  usuario where usu_name=@name;")
+            cmd.Parameters.AddWithValue("@name", Name)
+            respuesta = cmd.ExecuteScalar
+            Return respuesta
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+
     Public Function ResponseUsuarioMaster(master As UsuarioMaster) As UsuarioMaster
         If master.Password = "vertigo" Then
             _respuesta = "ok"
@@ -206,4 +217,18 @@ Public Class UsuarioDao
         End Try
     End Function
 
+    Public Function Eliminar(usuarioID As Integer) As Boolean
+        Try
+            Dim cmd As MySqlCommand = CommandText("delete from usuario where usu_id=@id;")
+            cmd.Parameters.AddWithValue("@id", usuarioID)
+            Dim respuesta As Integer = cmd.ExecuteNonQuery
+            If respuesta > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

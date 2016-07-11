@@ -34,6 +34,9 @@ Public Class frmLogeo
                         Me.Hide()
                         CargarActionUsuario()
                         frm = Application.OpenForms.Item("frmMain")
+                        If frmMain.UsuarioMain.Tipo = "admin" Then
+                            frm.ActionAdmin()
+                        End If
                         frm.State = listForm.Independiente
 
                     Case listForm.Independiente

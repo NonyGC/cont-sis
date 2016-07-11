@@ -60,7 +60,7 @@ Partial Class frmSelectEmpresa
         Me.dgvEmpresa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColRuc, Me.ColRznScl, Me.ColAlias, Me.ColImagen, Me.ColCod, Me.ColDigito, Me.ColEstado})
         Me.dgvEmpresa.GridColor = System.Drawing.SystemColors.Control
         Me.dgvEmpresa.Location = New System.Drawing.Point(18, 78)
-        Me.dgvEmpresa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvEmpresa.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvEmpresa.MultiSelect = False
         Me.dgvEmpresa.Name = "dgvEmpresa"
         Me.dgvEmpresa.ReadOnly = True
@@ -80,7 +80,7 @@ Partial Class frmSelectEmpresa
         '
         Me.BtnOn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnOn.Location = New System.Drawing.Point(18, 19)
-        Me.BtnOn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnOn.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnOn.Name = "BtnOn"
         Me.BtnOn.Size = New System.Drawing.Size(45, 36)
         Me.BtnOn.TabIndex = 2
@@ -90,18 +90,17 @@ Partial Class frmSelectEmpresa
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.HeaderText = "Logo"
-        Me.DataGridViewImageColumn1.Image = Nothing
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'btnCerrar
         '
-        Me.btnCerrar.BackgroundImage = Nothing
-        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.log_logout_door_1563
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCerrar.Location = New System.Drawing.Point(68, 17)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(39, 39)
         Me.btnCerrar.TabIndex = 1
@@ -114,6 +113,7 @@ Partial Class frmSelectEmpresa
         Me.ColRuc.HeaderText = "Ruc"
         Me.ColRuc.Name = "ColRuc"
         Me.ColRuc.ReadOnly = True
+        Me.ColRuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ColRuc.Width = 120
         '
         'ColRznScl
@@ -123,6 +123,7 @@ Partial Class frmSelectEmpresa
         Me.ColRznScl.HeaderText = "Razon Social"
         Me.ColRznScl.Name = "ColRznScl"
         Me.ColRznScl.ReadOnly = True
+        Me.ColRznScl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ColRznScl.Width = 280
         '
         'ColAlias
@@ -132,17 +133,16 @@ Partial Class frmSelectEmpresa
         Me.ColAlias.HeaderText = "R.S Comercial"
         Me.ColAlias.Name = "ColAlias"
         Me.ColAlias.ReadOnly = True
+        Me.ColAlias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ColAlias.Width = 180
         '
         'ColImagen
         '
         Me.ColImagen.FillWeight = 5.871868!
         Me.ColImagen.HeaderText = "Logo"
-        Me.ColImagen.Image = Nothing
         Me.ColImagen.Name = "ColImagen"
         Me.ColImagen.ReadOnly = True
         Me.ColImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColImagen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.ColImagen.Width = 54
         '
         'ColCod
@@ -156,7 +156,7 @@ Partial Class frmSelectEmpresa
         '
         'ColDigito
         '
-        Me.ColDigito.DataPropertyName = "digito"
+        Me.ColDigito.DataPropertyName = "dig"
         Me.ColDigito.HeaderText = "Digito"
         Me.ColDigito.Name = "ColDigito"
         Me.ColDigito.ReadOnly = True
@@ -181,7 +181,7 @@ Partial Class frmSelectEmpresa
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.dgvEmpresa)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(688, 549)
         Me.MinimizeBox = False

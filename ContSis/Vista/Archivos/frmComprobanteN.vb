@@ -1,6 +1,7 @@
 ﻿Imports Controladores
 Imports Capa_Entidad
 Imports Vista.Base
+Imports Vista.BaseForm
 Public Class FrmComprobanteN
     Dim compBL As New ComprobanteBL
     Dim entCom As New Comprobante
@@ -40,7 +41,7 @@ Public Class FrmComprobanteN
         CboPeriodo.DataSource = datetimeFormat.MonthNames()
         CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(Date.Today.Month)
 
-        numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
+        ''numerocompro = Mid(compBL.comprobante_autogenerado_(), 3, 4)
         txtnumcompro.Text = numerocompro
 
         datacol = compBL.comprobante_Cuenta()
@@ -52,7 +53,9 @@ Public Class FrmComprobanteN
         txtCuentaIsc.AutoCompleteCustomSource = colcuenta
         txtCuentaTotal.AutoCompleteCustomSource = colcuenta
         txtCuentaInafecto.AutoCompleteCustomSource = colcuenta
-        dtpFechae.MaxDate = Date.Today
+        txtFormapago.AutoCompleteCustomSource = colcuenta
+        'stripbuttons
+        stripbuttons(ToolStrip1)
     End Sub
     Sub DetalleComprobantecb()
         'table = Nothing
@@ -79,7 +82,7 @@ Public Class FrmComprobanteN
             rowcb = tablecb.NewRow()
             det += 10
             rowcb("Numero") = det.ToString("D3")
-            rowcb("Cuenta") = "10"
+            rowcb("Cuenta") = "101111"
             rowcb("Glosa") = txtGlosa.Text
             rowcb("Debe") = "0.00"
             rowcb("Haber") = Convert.ToDecimal(txtTotal.Text)
@@ -94,7 +97,7 @@ Public Class FrmComprobanteN
                 .debe = Convert.ToDecimal(r("Debe"))
                 .haber = Convert.ToDecimal(r("Haber"))
             End With
-            compBL.comprobante_detalle_register_cb(entCom)
+            'compBL.comprobante_detalle_register_cb(entCom)
         Next
     End Sub
 
@@ -167,7 +170,7 @@ Public Class FrmComprobanteN
                 .debe = Convert.ToDecimal(r("Debe"))
                 .haber = Convert.ToDecimal(r("Haber"))
             End With
-            compBL.comprobante_detalle_register(entCom)
+            ''compBL.comprobante_detalle_register(entCom)
         Next
 
     End Sub
@@ -312,7 +315,7 @@ Public Class FrmComprobanteN
 
 
     Sub cargarComprobante()
-        numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
+        'numerocompro = Mid(compBL.comprobante_registro_autogenerado(), 3, 4)
         txtnumcompro.Text = numerocompro
         rbtEfectivo.Checked = True
     End Sub
@@ -334,49 +337,47 @@ Public Class FrmComprobanteN
         txtCuentaIsc.Clear()
         txtTotal.Clear()
         txtCuentaTotal.Clear()
-        dtpFechae.ResetText()
-        dtpFechav.ResetText()
     End Sub
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-        'Try
-        If Me.ValidateChildren And dtpFechae.Checked And txtDserie.Text <> "" And txtDnumero.Text <> "" And txtRuc.Text <> "" And txtGlosa.Text <> "" And txtMonto.Text <> "" And txtCuentaMonto.Text <> "" And txtTotal.Text <> "" And txtCuentaTotal.Text <> "" Then
-            With entCom
-                .nrodiario = compBL.comprobante_diario_autogenerado()
-                .periodo = CboPeriodo.Text
-                .nrocompro = compBL.comprobante_registro_autogenerado()
-                .moneda = cbomoneda.SelectedValue
-                .tipo_adq = cboAdq.SelectedIndex
-                .tipo_doc = cbotipodoc.SelectedValue
-                .serie = txtDserie.Text
-                .nrodocu = txtDnumero.Text
-                .fechae = Format(dtpFechae.Value.Date, "yyy/MM/dd")
-                .fechav = Format(dtpFechav.Value.Date, "yyy/MM/dd")
-                .estado = 1
-                .nrocaba = compBL.comprobante_cajabanco_autogenerado()
-            End With
-            compBL.comprobante_cabecera_register(entCom)
-            DetalleComprobante()
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles tsbguardar.Click
+        Try
+            If Me.ValidateChildren And txtDserie.Text <> "" And txtDnumero.Text <> "" And txtRuc.Text <> "" And txtGlosa.Text <> "" And txtMonto.Text <> "" And txtCuentaMonto.Text <> "" And txtTotal.Text <> "" And txtCuentaTotal.Text <> "" Then
+                'With entCom
+                '    .nrodiario = compBL.comprobante_diario_autogenerado()
+                '    .periodo = CboPeriodo.Text
+                '    .nrocompro = compBL.comprobante_registro_autogenerado()
+                '    .moneda = cbomoneda.SelectedValue
+                '    .tipo_adq = cboAdq.SelectedIndex
+                '    .tipo_doc = cbotipodoc.SelectedValue
+                '    .serie = txtDserie.Text
+                '    .nrodocu = txtDnumero.Text
+                '    '.fechae = Format(dtpFechae.Value.Date, "yyy/MM/dd")
+                '    '.fechav = Format(dtpFechav.Value.Date, "yyy/MM/dd")
+                '    .estado = 1
+                '    .nrocaba = compBL.comprobante_cajabanco_autogenerado()
+                'End With
+                'compBL.comprobante_cabecera_register(entCom)
+                'DetalleComprobante()
 
-            With entCom
-                .nrodiario = compBL.comprobante_diario_autogenerado()
-                .nrocaba = compBL.comprobante_cajabanco_autogenerado()
+                'With entCom
+                '    .nrodiario = compBL.comprobante_diario_autogenerado()
+                '    .nrocaba = compBL.comprobante_cajabanco_autogenerado()
 
-            End With
-            compBL.comprobante_cabecera_register_cb(entCom)
-            DetalleComprobantecb()
+                'End With
+                'compBL.comprobante_cabecera_register_cb(entCom)
+                'DetalleComprobantecb()
 
 
-            MessageBox.Show("SE REGISTRO CORRECTAMENTE" + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
-                         "Nº Comprobante  [" + entCom.nrocompro + "]")
-            cargarComprobante()
-            limpiarComprobante()
-        Else
-            MessageBox.Show("Ingrese los datos Remarcados ", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
+                MessageBox.Show("SE REGISTRO CORRECTAMENTE" + vbCr + "Nº Diario  [" + entCom.nrodiario + "]" + vbCr +
+                             "Nº Comprobante  [" + entCom.nrocompro + "]")
+                cargarComprobante()
+                limpiarComprobante()
+            Else
+                MessageBox.Show("Ingrese los datos Remarcados ", "Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
 
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message)
-        'End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
 
     End Sub
@@ -430,33 +431,6 @@ Public Class FrmComprobanteN
         Solo_numeros(e)
     End Sub
 
-    Private Sub dtpFechae_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechae.ValueChanged
-        If dtpFechae.Checked = True Then
-            dtpFechae.Format = DateTimePickerFormat.Custom
-            dtpFechae.CustomFormat = "dd/MM/yyyy"
-        Else
-            dtpFechae.Format = DateTimePickerFormat.Custom
-            dtpFechae.CustomFormat = " "
-        End If
-    End Sub
-
-    Private Sub dtpFechav_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechav.ValueChanged
-        If dtpFechav.Checked = True Then
-            dtpFechav.Format = DateTimePickerFormat.Custom
-            dtpFechav.CustomFormat = "dd/MM/yyyy"
-        Else
-            dtpFechav.Format = DateTimePickerFormat.Custom
-            dtpFechav.CustomFormat = " "
-        End If
-    End Sub
-
-    Private Sub dtpFechae_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles dtpFechae.Validating
-        If dtpFechae.Text <> String.Empty And dtpFechae.Checked Then
-            Me.ErrorIcon.SetError(sender, "")
-        Else
-            Me.ErrorIcon.SetError(sender, "Ingrese fecha")
-        End If
-    End Sub
 
     Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRuc.KeyPress, txtDserie.KeyPress, txtDnumero.KeyPress
         Solo_numeros(e)
@@ -474,8 +448,8 @@ Public Class FrmComprobanteN
 
 
 
-    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
-        
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles tsbsalir.Click
+        Me.Close()
     End Sub
 
     Private Sub txtCuentaInafecto_Leave(sender As Object, e As EventArgs) Handles txtCuentaInafecto.Leave
@@ -483,4 +457,180 @@ Public Class FrmComprobanteN
             txtCuentaInafecto.Text = Trim(Mid(txtCuentaInafecto.Text, 1, InStr(txtCuentaInafecto.Text, " ")))
         End If
     End Sub
+
+
+    Private Sub txtdia_TextChanged(sender As Object, e As EventArgs) Handles txtdia.TextChanged
+        If txtdia.TextLength = 2 Then
+            txtmes.Focus()
+        End If
+    End Sub
+    Private Sub txtmes_TextChanged(sender As Object, e As EventArgs) Handles txtmes.TextChanged
+        If txtmes.TextLength = 2 Then
+            txtaño.Focus()
+        End If
+    End Sub
+    Private Sub txtdiav_TextChanged(sender As Object, e As EventArgs) Handles txtdiav.TextChanged
+        If txtdiav.TextLength = 2 Then
+            txtmesv.Focus()
+        End If
+    End Sub
+    Private Sub txtmesv_TextChanged(sender As Object, e As EventArgs) Handles txtmesv.TextChanged
+        If txtmesv.TextLength = 2 Then
+            txtañov.Focus()
+        End If
+    End Sub
+    Private Sub txtdia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtdia.KeyPress, txtdiav.KeyPress
+        Solo_numeros(e)
+    End Sub
+    Private Sub txtmes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtmes.KeyPress
+        Solo_numeros(e)
+        If Asc(e.KeyChar) = 8 And txtmes.TextLength = 0 Then
+            txtdia.Focus()
+        End If
+    End Sub
+    Private Sub txtaño_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtaño.KeyPress
+        Solo_numeros(e)
+        If Asc(e.KeyChar) = 8 And txtaño.TextLength = 0 Then
+            txtmes.Focus()
+        End If
+    End Sub
+    Private Sub txtmesv_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtmesv.KeyPress
+        Solo_numeros(e)
+        If Asc(e.KeyChar) = 8 And txtmesv.TextLength = 0 Then
+            txtdiav.Focus()
+        End If
+    End Sub
+    Private Sub txtañov_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtañov.KeyPress
+        Solo_numeros(e)
+        If Asc(e.KeyChar) = 8 And txtañov.TextLength = 0 Then
+            txtmesv.Focus()
+        End If
+    End Sub
+    Private Sub txtmes_Leave(sender As Object, e As EventArgs) Handles txtmes.Leave, txtmesv.Leave, txtdia.Leave, txtdiav.Leave
+        If DirectCast(sender, TextBox).Text <> "" Then
+            DirectCast(sender, TextBox).Text = Completar_D2(sender)
+        End If
+    End Sub
+    Function Completar_D2(sender As Object) As String
+        Dim valor As String = Convert.ToInt64(DirectCast(sender, TextBox).Text).ToString("D2")
+        Return valor
+    End Function
+
+    Private Sub txtdia_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtdia.Validating
+        If txtdia.Text <> String.Empty Then
+            validar_fecha(sender, 31, e)
+            Me.ErrorIcon.SetError(Me.txtaño, "")
+        Else
+            Me.ErrorIcon.SetError(Me.txtaño, "Completate la Fecha de Emision")
+        End If
+    End Sub
+    Private Sub txtmes_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtmes.Validating
+        If txtmes.Text <> String.Empty Then
+            validar_fecha(sender, 12, e)
+            Me.ErrorIcon.SetError(Me.txtaño, "")
+        Else
+            Me.ErrorIcon.SetError(Me.txtaño, "Completate la Fecha de Emision")
+        End If
+    End Sub
+    Sub validar_fecha(sen As Object, max As Integer, e As System.ComponentModel.CancelEventArgs)
+        If Val(DirectCast(sen, TextBox).Text) > max Then
+            e.Cancel = True
+        End If
+    End Sub
+    Private Sub txtaño_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtaño.Validating
+        Try
+            If Val(DirectCast(sender, TextBox).Text) > 2050 And Val(DirectCast(sender, TextBox).Text) < 2000 Then
+                e.Cancel = True
+            Else
+                Dim fecha As Date = CDate(txtaño.Text + "/" + txtmes.Text + "/" + txtdia.Text)
+                If fecha < Date.Now Then
+                    If CboPeriodo.SelectedItem = datetimeFormat.GetMonthName(fecha.Month) Then
+                        Me.ErrorIcon.SetError(Me.txtaño, "")
+                    Else
+                        Me.ErrorIcon.SetError(Me.txtaño, "La Fecha ingresada no esta dentro del Periodo")
+                    End If
+
+                Else
+                    Me.ErrorIcon.SetError(Me.txtaño, "Ingrese Fecha de Hoy hacia Atras")
+                End If
+            End If
+        Catch ex As Exception
+            Me.ErrorIcon.SetError(Me.txtaño, "Fecha Ingresada no valida")
+        End Try
+    End Sub
+
+    Private Sub txtaño_Leave(sender As Object, e As EventArgs) Handles txtaño.Leave, txtañov.Leave
+        If DirectCast(sender, TextBox).Text <> "" And DirectCast(sender, TextBox).TextLength < 3 And DirectCast(sender, TextBox).TextLength > 0 Then
+            Dim año As Integer = DirectCast(sender, TextBox).Text
+            año = año + 2000
+            DirectCast(sender, TextBox).Text = año
+        End If
+    End Sub
+
+    Private Sub txtdiav_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtdiav.Validating
+        If chbfechav.Checked = True Then
+            If txtdiav.Text <> String.Empty Then
+                validar_fecha(sender, 31, e)
+                Me.ErrorIcon.SetError(Me.txtañov, "")
+            Else
+                Me.ErrorIcon.SetError(Me.txtañov, "Completate la Fecha de Vencimiento")
+            End If
+        Else
+            Me.ErrorIcon.SetError(Me.txtañov, "")
+        End If
+    End Sub
+
+    Private Sub txtmesv_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtmesv.Validating
+        If chbfechav.Checked = True Then
+            If txtmesv.Text = "" Then
+                validar_fecha(sender, 12, e)
+                Me.ErrorIcon.SetError(Me.txtañov, "")
+            Else
+                Me.ErrorIcon.SetError(Me.txtañov, "Completate la Fecha de Vencimiento")
+            End If
+        Else
+            Me.ErrorIcon.SetError(Me.txtañov, "")
+        End If
+    End Sub
+
+    Private Sub txtañov_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtañov.Validating
+        If chbfechav.Checked = True Then
+            Try
+                If Val(DirectCast(sender, TextBox).Text) > 2050 And Val(DirectCast(sender, TextBox).Text) < 2000 Then
+                    e.Cancel = True
+                End If
+                Dim fecha As Date = CDate(txtañov.Text + "/" + txtmesv.Text + "/" + txtdiav.Text)
+                Me.ErrorIcon.SetError(Me.txtañov, "")
+            Catch ex As Exception
+                Me.ErrorIcon.SetError(Me.txtañov, "Fecha Ingresada no valida")
+            End Try
+        Else
+            Me.ErrorIcon.SetError(Me.txtañov, "")
+        End If
+    End Sub
+
+    Private Sub chbfechav_CheckedChanged(sender As Object, e As EventArgs) Handles chbfechav.CheckedChanged
+        If chbfechav.Checked Then
+            txtdiav.Enabled = True
+            txtmesv.Enabled = True
+            txtañov.Enabled = True
+        Else
+            txtdiav.Enabled = False
+            txtmesv.Enabled = False
+            txtañov.Enabled = False
+        End If
+    End Sub
+
+    Private Sub txtFormapago_Leave(sender As Object, e As EventArgs) Handles txtFormapago.Leave
+        Dim cuenta As String = txtFormapago.Text
+        Dim cuentan As Object = Trim(Mid(cuenta, 1, InStr(cuenta, " ")))
+        Dim nombrec As Object = Trim(Mid(cuenta, InStr(cuenta, " "), cuenta.Length))
+        If cuentan.Length >= 6 Then
+            txtFormapago.Text = cuentan
+            lblnomFP.Text = nombrec
+        Else
+            MessageBox.Show("Ingrese Cuenta de 6 a mas digitos")
+        End If
+    End Sub
+
 End Class

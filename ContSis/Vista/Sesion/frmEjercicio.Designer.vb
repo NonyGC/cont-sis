@@ -86,7 +86,7 @@ Partial Class Ejercicio
         Me.Controls.Add(Me.Label1)
         Me.Name = "Ejercicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Frm_Ejercicio"
+        Me.Text = "Seleccione Año "
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

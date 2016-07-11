@@ -1,11 +1,8 @@
 ﻿Imports Controladores
 Imports Capa_Entidad
-Imports System.IO
-Imports System.Data
-Imports System.Data.OleDb
-Imports Microsoft.Office.Interop
-
+Imports Vista.BaseForm
 Public Class FrmPlanCuentas
+    Dim cond As Integer
     Dim totaldebe As Decimal
     Dim totalhaber As Decimal
     Dim validar As New CuentaBL
@@ -18,30 +15,35 @@ Public Class FrmPlanCuentas
     Dim Amarretables As New DataTable
     Dim largocbo As String
     Dim valuecuenta As String
-    Dim tabla As String = "16000"
     Dim listdet As String() = {"Inicio", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "Cierre", "Total"}
-    Sub verificarTBs()
-        If txtcuenta.Text.Trim().Length > 0 Then
-            EntCont.codigo = txtcuenta.Text
-        Else
-            EntCont.codigo = Nothing
-            MsgBox("Ingrese el numero de Cuenta")
-        End If
-        If txtnombre.Text.Trim().Length > 0 Then
-            'mayuscula
-            EntCont.nombre = txtnombre.Text.ToUpper()
-        Else
-            EntCont.nombre = Nothing
-            MsgBox("Ingrese el nombre de la Cuenta")
-        End If
+    Sub tbox_disable()
+        For Each c As Control In Me.Controls
+            If TypeOf c Is TextBox Then If ComboBox1.SelectedIndex = -1 Then c.Enabled = False Else c.Enabled = True
+        Next
+    End Sub
 
-        If txtalias.Text.Trim().Length > 0 Then
-            EntCont.aliass = txtalias.Text
-        Else
-            Dim blanco As String = Space(25)
-            EntCont.aliass = (EntCont.nombre & Space(25)).Substring(0, 25)
-            'MsgBox(EntCont.aliass.Length)
-        End If
+    Sub Buttons_able(ByVal f As Boolean)
+        For Each b As ToolStripItem In ToolStrip1.Items
+            If TypeOf b Is ToolStripButton Then b.Enabled = f
+        Next
+        tsbexportar.Enabled = True
+        tsbimportar.Enabled = True
+        tsbsalir.Enabled = True
+    End Sub
+
+    Sub Var_Cuenta()
+        Dim b As String = Space(25)
+        Dim acc As String = txtcuenta.Text
+        Dim nam As String = txtnombre.Text.Trim()
+        Dim ali As String = txtalias.Text.Trim()
+        Dim c_debe As String = cbodebe.Text
+        Dim c_haber As String = cbohaber.Text
+
+        EntCont.codigo = acc
+        EntCont.c_debe = c_debe
+        EntCont.c_haber = c_haber
+        If acc.Length > 2 Then EntCont.nombre = nam.ToUpper Else EntCont.nombre = nam
+        If ali.Trim().Length > 0 Then EntCont.aliass = ali Else EntCont.aliass = (EntCont.nombre & b).Substring(0, 25).Trim()
     End Sub
 #Region "ListView_Control"
     Sub listview_sin_nada()
@@ -68,36 +70,41 @@ Public Class FrmPlanCuentas
     End Sub
 #End Region
     Sub Amarres_registro()
-        EntCont.codigo = txtcuenta.Text
-        EntCont.c_debe = cbodebe.Text
-        EntCont.c_haber = cbohaber.Text
-        Amarretables = validar.Cuenta_Amarre_ShowLB(tabla, EntCont)
-        If Amarretables.Rows.Count > 0 Then
-            validar.Cuenta_Amarre_RegisterLB(tabla, 1, EntCont)
-        Else
-            validar.Cuenta_Amarre_RegisterLB(tabla, 0, EntCont)
-        End If
+        Try
+            Amarretables = validar.Cuenta_Amarre_ShowLB(EntCont)
+            If Amarretables.Rows.Count > 0 Then
+                validar.Cuenta_Amarre_RegisterLB(1, EntCont)
+            Else
+                validar.Cuenta_Amarre_RegisterLB(0, EntCont)
+            End If
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+
     End Sub
     Sub limpiar()
-        txtcuenta.Text = Nothing
-        txtnombre.Text = Nothing
-        txtalias.Text = Nothing
-        cbodebe.Enabled = False
-        cbohaber.Enabled = False
-        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        txtcuenta.Clear() : txtnombre.Clear() : txtalias.Clear()
+        cbodebe.Enabled = False : cbohaber.Enabled = False
+        'ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+
         listview_sin_nada()
         listview_ceros()
     End Sub
     Sub registrar()
-        If validar.Cuenta_RegisterLB(tabla, EntCont) > 0 Then
+        Dim accion As Integer
+        If txtcuenta.Text.Length > 5 Then
+            EntCont.Pcodigo = txtcuenta.Text.Substring(0, txtcuenta.TextLength - 1)
+            accion = 1
+        Else
+            accion = 0
+        End If
+        If validar.Cuenta_ManagementLB(accion, EntCont) > 0 Then
             MsgBox("Cuenta registrada ")
-            limpiar()
         End If
     End Sub
     Sub actualizar()
-        If validar.Cuenta_ActualizarLB(tabla, EntCont) > 0 Then
+        If validar.Cuenta_ManagementLB(2, EntCont) > 0 Then
             MsgBox("Cuenta Actualizada ")
-            limpiar()
         End If
     End Sub
 #Region "AutoComplete"
@@ -106,7 +113,7 @@ Public Class FrmPlanCuentas
         Try
             Dim col As New AutoCompleteStringCollection
             Dim datacol As New DataTable
-            datacol = validar.Cuenta_Autocompletado(tabla, largo)
+            datacol = validar.Cuenta_Autocompletado(largo)
             For i = 0 To datacol.Rows.Count - 1
                 col.Add(datacol.Rows(i)("codigo").ToString)
             Next
@@ -120,7 +127,7 @@ Public Class FrmPlanCuentas
     Sub autocompletado_debe(ByVal dest As String)
         Try
             Dim datacol As New DataTable
-            datacol = validar.Cuenta_Autocompletado_destino(tabla, dest)
+            datacol = validar.Cuenta_Autocompletado_amarres(dest)
             cbodebe.DataSource = datacol
             cbodebe.DisplayMember = "codigo"
             cbodebe.ValueMember = "codigo"
@@ -131,7 +138,7 @@ Public Class FrmPlanCuentas
     Sub autocompletado_haber(ByVal dest As String)
         Try
             Dim datacol As New DataTable
-            datacol = validar.Cuenta_Autocompletado_destino(tabla, dest)
+            datacol = validar.Cuenta_Autocompletado_amarres(dest)
             cbohaber.DataSource = datacol
             cbohaber.DisplayMember = "codigo"
             cbohaber.ValueMember = "codigo"
@@ -164,14 +171,15 @@ Public Class FrmPlanCuentas
         limpiar()
     End Sub
     Private Sub txtcuenta_KeyDown(sender As Object, e As KeyEventArgs) Handles txtcuenta.KeyDown
-
         If e.KeyCode = Keys.Enter Then
             If txtcuenta.Text.Trim().Length > 0 Then
                 With EntCont
-                    .codigo = txtcuenta.Text.Split("  ").First()
+                    .codigo = txtcuenta.Text
                 End With
                 Try
-                    datos = validar.Cuenta_DatosLB(tabla, EntCont)
+                    If txtcuenta.Text.Length > 5 Then cond = 1 Else cond = 0
+
+                    datos = validar.Cuenta_DatosLB(cond, EntCont)
                     If datos.Rows.Count > 0 Then
                         listview_sin_nada()
                         For Each row As DataRow In datos.Rows
@@ -189,14 +197,12 @@ Public Class FrmPlanCuentas
                                 + row(28) + row(30)
                             ListView1.Items(14).SubItems.Add(totaldebe.ToString)
                             ListView1.Items(14).SubItems.Add(totalhaber.ToString)
-
-
                             txtcuenta.Text = row(2).ToString
                             txtnombre.Text = row(0).ToString
                             txtalias.Text = row(1).ToString
                         Next
                         If txtcuenta.TextLength > 5 Then
-                            Amarretables = validar.Cuenta_Amarre_ShowLB(tabla, EntCont)
+                            Amarretables = validar.Cuenta_Amarre_ShowLB(EntCont)
                             If Amarretables.Rows.Count > 0 Then
                                 llenando_autos()
                                 For Each row As DataRow In Amarretables.Rows
@@ -208,7 +214,6 @@ Public Class FrmPlanCuentas
                                 llenando_autos()
                             End If
                         End If
-
                     Else
                         MsgBox("Sin Datos")
                         limpiar()
@@ -220,19 +225,19 @@ Public Class FrmPlanCuentas
             End If
         End If
     End Sub
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-        verificarTBs()
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles tsbguardar.Click
+        Var_Cuenta()
         Try
-            Dim updata As DataTable = validar.Cuenta_DatosLB(tabla, EntCont)
+            Dim updata As DataTable = validar.Cuenta_DatosLB(cond, EntCont)
             If updata.Rows.Count > 0 Then
-                If txtnombre.Text.Trim().Length > 0 Then
-                    actualizar()
-                End If
+                actualizar()
             Else
                 If txtcuenta.Text.Trim().Length > 2 Then
                     Dim codigo As String = txtcuenta.Text.Substring(0, txtcuenta.Text.Length - 1)
+                    Dim cond_menor As Integer
                     Entvalidar.codigo = codigo
-                    datos = validar.Cuenta_DatosLB(tabla, Entvalidar)
+                    If txtcuenta.TextLength > 5 Then cond_menor = 0 Else cond_menor = 1
+                    datos = validar.Cuenta_DatosLB(cond_menor, Entvalidar)
                     If datos.Rows.Count > 0 Then
                         registrar()
                     Else
@@ -242,11 +247,14 @@ Public Class FrmPlanCuentas
                     registrar()
                 End If
             End If
-            If CInt(txtcuenta.Text.Substring(0, 2)) >= 61 And CInt(txtcuenta.Text.Substring(0, 2)) <= 69 Then
-                Amarres_registro()
-            ElseIf CInt(txtcuenta.Text.Substring(0, 2)) = 60
-                Amarres_registro()
+            If ComboBox1.SelectedIndex = 4 Then
+                If CInt(txtcuenta.Text.Substring(0, 2)) >= 61 And CInt(txtcuenta.Text.Substring(0, 2)) <= 69 Then
+                    Amarres_registro()
+                ElseIf CInt(txtcuenta.Text.Substring(0, 2)) = 60
+                    Amarres_registro()
+                End If
             End If
+            limpiar()
         Catch ex As Exception
 
         End Try
@@ -260,38 +268,39 @@ Public Class FrmPlanCuentas
             e.Handled = True
         End If
     End Sub
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles tsbeliminar.Click
         Dim resp As Integer
         Try
             With EntCont
-                .codigo = txtcuenta.Text
-                .debe = CDec(totaldebe)
-                .haber = CDec(totalhaber)
+                .codigo = txtcuenta.Text : .debe = CDec(totaldebe) : .haber = CDec(totalhaber)
             End With
-            If EntCont.debe + EntCont.haber > 0 Then
-                MsgBox("No se puede borrar")
-                Exit Sub
-            End If
-            resp = MsgBox("¿Está seguro de Eliminar esta cuenta?", vbYesNo + vbQuestion,
-                          "Eliminar Cuenta")
+            If EntCont.debe + EntCont.haber <> 0 Then MsgBox("No se puede borrar")
+            resp = MsgBox("¿Está seguro de Eliminar esta cuenta?", vbYesNo + vbQuestion, "Eliminar Cuenta")
             If resp = vbYes Then
-                Dim afecta As Integer = validar.Cuenta_BorrarLB(tabla, EntCont)
+                Dim afecta As Integer = validar.Cuenta_ManagementLB(3, EntCont)
                 If afecta > 0 Then
                     MsgBox("completado")
                     limpiar()
                 End If
             End If
         Catch ex As Exception
-
         End Try
-
-
     End Sub
     Private Sub Frm_PlanCuentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        limpiar()
+        tbox_disable() : Buttons_able(False) : limpiar()
+        stripbuttons(ToolStrip1)
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        cbodebe.DropDownStyle = ComboBoxStyle.DropDownList
+        cbohaber.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectionChangeCommitted
         'Autocompleta segun el nivel deseado
+        Dim digi = frmMain.EmpresaMain.Digito
+        tbox_disable()
+        Buttons_able(True)
+        tsbguardar.Enabled = False
+        tsbeliminar.Enabled = False
         If ComboBox1.SelectedIndex = 0 Then
             cbo_cambio(0)
         ElseIf ComboBox1.SelectedIndex = 1 Then
@@ -301,20 +310,20 @@ Public Class FrmPlanCuentas
         ElseIf ComboBox1.SelectedIndex = 3 Then
             cbo_cambio(3)
         ElseIf ComboBox1.SelectedIndex = 4 Then
-            Me.Text = "Plan contable de (6 - 12) digitos"
-            largocbo = 6
-            autocompletado(largocbo)
-            txtcuenta.MaxLength = 12
+            'autocompletado(digi)
+            autocompletado(6)
+            If String.IsNullOrEmpty(digi) Or digi = 0 Then txtcuenta.MaxLength = 6 Else txtcuenta.MaxLength = digi
+            Me.Text = "Plan contable de " & digi & " digitos"
             limpiar()
         End If
     End Sub
-    Private Sub cbodebe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbodebe.SelectedIndexChanged
+    Private Sub cbodebe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbodebe.SelectionChangeCommitted
         If EntCont.codigo <> Nothing Then
             With EntCont
-                .codigo = cbodebe.SelectedValue.ToString
+                .codigo = cbodebe.Text
             End With
             Try
-                datos = validar.Cuenta_DatosLB(tabla, EntCont)
+                datos = validar.Cuenta_DatosLB(cond, EntCont)
                 For Each row As DataRow In datos.Rows
                     lblAmDebe.Text = row(1).ToString
                 Next
@@ -325,13 +334,13 @@ Public Class FrmPlanCuentas
 
     End Sub
 
-    Private Sub cbohaber_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbohaber.SelectedIndexChanged
+    Private Sub cbohaber_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbohaber.SelectionChangeCommitted
         If EntCont.codigo <> Nothing Then
             With EntCont
-                .codigo = cbohaber.SelectedValue.ToString
+                .codigo = cbohaber.Text
             End With
             Try
-                datos = validar.Cuenta_DatosLB(tabla, EntCont)
+                datos = validar.Cuenta_DatosLB(cond, EntCont)
                 For Each row As DataRow In datos.Rows
                     lblAmHaber.Text = row(1).ToString
                 Next
@@ -341,7 +350,7 @@ Public Class FrmPlanCuentas
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles tsbimportar.Click
         FrmPlanCuentasAdicional.Show()
     End Sub
 
@@ -351,12 +360,16 @@ Public Class FrmPlanCuentas
 
     Private Sub ListView1_ColumnWidthChanged(sender As Object, e As ColumnWidthChangedEventArgs) Handles ListView1.ColumnWidthChanged
         Static FireMe As Boolean = True
-        If FireMe = True Then
-            FireMe = False
-            ListView1.Columns(e.ColumnIndex).Width = 172
-            FireMe = True
-        End If
+        If FireMe = True Then FireMe = False : ListView1.Columns(e.ColumnIndex).Width = 120 : FireMe = True
     End Sub
-
+    Private Sub txtcuenta_TextChanged(sender As Object, e As EventArgs) Handles txtcuenta.TextChanged, txtnombre.TextChanged
+        If txtcuenta.TextLength = txtcuenta.MaxLength And Not String.IsNullOrEmpty(txtnombre.Text) Then tsbguardar.Enabled = True : tsbeliminar.Enabled = True Else tsbguardar.Enabled = False : tsbeliminar.Enabled = False
+    End Sub
+    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles tsbcancelar.Click
+        limpiar()
+    End Sub
+    Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles tsbsalir.Click
+        Me.Close()
+    End Sub
 
 End Class

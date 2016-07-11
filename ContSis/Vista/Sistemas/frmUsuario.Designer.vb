@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,16 @@ Partial Class frmUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuario))
         Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.ColId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColPassword = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColUsuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColRol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColState = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColStateString = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtRPassword = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,8 +39,8 @@ Partial Class frmUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.lbEmpresaActivos = New System.Windows.Forms.ListBox()
-        Me.lbModulo = New System.Windows.Forms.ListBox()
+        Me.lbEmpresaActivosUsuario = New System.Windows.Forms.ListBox()
+        Me.lbModuloUsuario = New System.Windows.Forms.ListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblEmpresaCantInactivas = New System.Windows.Forms.Label()
         Me.lbEmpresaInactivos = New System.Windows.Forms.ListBox()
@@ -48,33 +49,36 @@ Partial Class frmUsuario
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Mantenimiento = New System.Windows.Forms.GroupBox()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.chkPassword = New System.Windows.Forms.CheckBox()
         Me.rtxtMsg = New System.Windows.Forms.RichTextBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.rbInactivo = New System.Windows.Forms.RadioButton()
         Me.rbActivo = New System.Windows.Forms.RadioButton()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.cmsUsuario = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.tsmiEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiActualizar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.epUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ttUsuario = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnlUsuario = New System.Windows.Forms.Panel()
         Me.pnlFront = New System.Windows.Forms.Panel()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsbguardar = New System.Windows.Forms.ToolStripButton()
+        Me.tsbcancelar = New System.Windows.Forms.ToolStripButton()
+        Me.tsbeliminar = New System.Windows.Forms.ToolStripButton()
+        Me.tsbsalir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Mantenimiento.SuspendLayout()
         Me.cmsUsuario.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.epUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUsuario.SuspendLayout()
         Me.pnlFront.SuspendLayout()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvUsuarios
@@ -87,44 +91,57 @@ Partial Class frmUsuario
         Me.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColId, Me.ColUsuario, Me.ColRol, Me.ColState})
+        Me.dgvUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColId, Me.ColPassword, Me.ColUsuario, Me.ColState, Me.ColStateString})
         Me.dgvUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgvUsuarios.Location = New System.Drawing.Point(6, 19)
         Me.dgvUsuarios.MultiSelect = False
         Me.dgvUsuarios.Name = "dgvUsuarios"
+        Me.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvUsuarios.RowHeadersVisible = False
         Me.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvUsuarios.Size = New System.Drawing.Size(382, 175)
+        Me.dgvUsuarios.Size = New System.Drawing.Size(382, 177)
         Me.dgvUsuarios.TabIndex = 24
         '
         'ColId
         '
+        Me.ColId.DataPropertyName = "usu_id"
         Me.ColId.HeaderText = "Id"
         Me.ColId.Name = "ColId"
         Me.ColId.ReadOnly = True
         Me.ColId.Visible = False
         '
+        'ColPassword
+        '
+        Me.ColPassword.DataPropertyName = "usu_password"
+        Me.ColPassword.HeaderText = "Password"
+        Me.ColPassword.Name = "ColPassword"
+        Me.ColPassword.Visible = False
+        '
         'ColUsuario
         '
         Me.ColUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColUsuario.DataPropertyName = "usu_name"
         Me.ColUsuario.HeaderText = "Usuario"
         Me.ColUsuario.Name = "ColUsuario"
         Me.ColUsuario.ReadOnly = True
         Me.ColUsuario.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ColUsuario.Width = 183
-        '
-        'ColRol
-        '
-        Me.ColRol.HeaderText = "Rol"
-        Me.ColRol.Name = "ColRol"
-        Me.ColRol.ReadOnly = True
-        Me.ColRol.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColUsuario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ColUsuario.Width = 300
         '
         'ColState
         '
+        Me.ColState.DataPropertyName = "usu_state"
         Me.ColState.HeaderText = "Estado"
         Me.ColState.Name = "ColState"
         Me.ColState.ReadOnly = True
+        Me.ColState.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ColState.Visible = False
+        '
+        'ColStateString
+        '
+        Me.ColStateString.DataPropertyName = "usu_state_string"
+        Me.ColStateString.HeaderText = "Estado"
+        Me.ColStateString.Name = "ColStateString"
         '
         'Label5
         '
@@ -173,6 +190,8 @@ Partial Class frmUsuario
         '
         'txtUsuario
         '
+        Me.txtUsuario.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.epUsuario.SetIconAlignment(Me.txtUsuario, System.Windows.Forms.ErrorIconAlignment.BottomRight)
         Me.txtUsuario.Location = New System.Drawing.Point(125, 55)
         Me.txtUsuario.MaxLength = 15
         Me.txtUsuario.Name = "txtUsuario"
@@ -210,28 +229,28 @@ Partial Class frmUsuario
         Me.btnBack.Text = "Activar "
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'lbEmpresaActivos
+        'lbEmpresaActivosUsuario
         '
-        Me.lbEmpresaActivos.BackColor = System.Drawing.SystemColors.Control
-        Me.lbEmpresaActivos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbEmpresaActivos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbEmpresaActivos.FormattingEnabled = True
-        Me.lbEmpresaActivos.Location = New System.Drawing.Point(6, 217)
-        Me.lbEmpresaActivos.Name = "lbEmpresaActivos"
-        Me.lbEmpresaActivos.Size = New System.Drawing.Size(186, 106)
-        Me.lbEmpresaActivos.TabIndex = 26
-        Me.ttUsuario.SetToolTip(Me.lbEmpresaActivos, "Lista de Empresas activas")
+        Me.lbEmpresaActivosUsuario.BackColor = System.Drawing.SystemColors.Control
+        Me.lbEmpresaActivosUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbEmpresaActivosUsuario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbEmpresaActivosUsuario.FormattingEnabled = True
+        Me.lbEmpresaActivosUsuario.Location = New System.Drawing.Point(6, 217)
+        Me.lbEmpresaActivosUsuario.Name = "lbEmpresaActivosUsuario"
+        Me.lbEmpresaActivosUsuario.Size = New System.Drawing.Size(186, 106)
+        Me.lbEmpresaActivosUsuario.TabIndex = 26
+        Me.ttUsuario.SetToolTip(Me.lbEmpresaActivosUsuario, "Lista de Empresas activas")
         '
-        'lbModulo
+        'lbModuloUsuario
         '
-        Me.lbModulo.BackColor = System.Drawing.SystemColors.Control
-        Me.lbModulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbModulo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbModulo.FormattingEnabled = True
-        Me.lbModulo.Location = New System.Drawing.Point(207, 217)
-        Me.lbModulo.Name = "lbModulo"
-        Me.lbModulo.Size = New System.Drawing.Size(181, 106)
-        Me.lbModulo.TabIndex = 27
+        Me.lbModuloUsuario.BackColor = System.Drawing.SystemColors.Control
+        Me.lbModuloUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbModuloUsuario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbModuloUsuario.FormattingEnabled = True
+        Me.lbModuloUsuario.Location = New System.Drawing.Point(207, 217)
+        Me.lbModuloUsuario.Name = "lbModuloUsuario"
+        Me.lbModuloUsuario.Size = New System.Drawing.Size(181, 106)
+        Me.lbModuloUsuario.TabIndex = 27
         '
         'GroupBox1
         '
@@ -241,8 +260,8 @@ Partial Class frmUsuario
         Me.GroupBox1.Controls.Add(Me.lblEmpresaCantActivas)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.lbEmpresaActivos)
-        Me.GroupBox1.Controls.Add(Me.lbModulo)
+        Me.GroupBox1.Controls.Add(Me.lbEmpresaActivosUsuario)
+        Me.GroupBox1.Controls.Add(Me.lbModuloUsuario)
         Me.GroupBox1.Controls.Add(Me.dgvUsuarios)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
@@ -311,16 +330,12 @@ Partial Class frmUsuario
         'Mantenimiento
         '
         Me.Mantenimiento.BackColor = System.Drawing.SystemColors.Control
-        Me.Mantenimiento.Controls.Add(Me.btnCerrar)
         Me.Mantenimiento.Controls.Add(Me.chkPassword)
         Me.Mantenimiento.Controls.Add(Me.rtxtMsg)
-        Me.Mantenimiento.Controls.Add(Me.btnCancelar)
         Me.Mantenimiento.Controls.Add(Me.Label1)
-        Me.Mantenimiento.Controls.Add(Me.btnEliminar)
         Me.Mantenimiento.Controls.Add(Me.rbInactivo)
         Me.Mantenimiento.Controls.Add(Me.rbActivo)
         Me.Mantenimiento.Controls.Add(Me.txtCodigo)
-        Me.Mantenimiento.Controls.Add(Me.btnGuardar)
         Me.Mantenimiento.Controls.Add(Me.lblUsuario)
         Me.Mantenimiento.Controls.Add(Me.btnBack)
         Me.Mantenimiento.Controls.Add(Me.Label5)
@@ -336,20 +351,6 @@ Partial Class frmUsuario
         Me.Mantenimiento.TabIndex = 29
         Me.Mantenimiento.TabStop = False
         Me.Mantenimiento.Text = "Mantenimiento"
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.BackColor = System.Drawing.SystemColors.Control
-        Me.btnCerrar.BackgroundImage = Global.Vista.My.Resources.Resources.log_logout_door_1563
-        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCerrar.Location = New System.Drawing.Point(300, 376)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(43, 40)
-        Me.btnCerrar.TabIndex = 78
-        Me.ttUsuario.SetToolTip(Me.btnCerrar, "Salir")
-        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'chkPassword
         '
@@ -376,20 +377,6 @@ Partial Class frmUsuario
         Me.rtxtMsg.Text = ""
         Me.rtxtMsg.Visible = False
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancelar.BackgroundImage = Global.Vista.My.Resources.Resources.salir
-        Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCancelar.Location = New System.Drawing.Point(251, 376)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(43, 40)
-        Me.btnCancelar.TabIndex = 77
-        Me.ttUsuario.SetToolTip(Me.btnCancelar, "Cancelar")
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -399,27 +386,10 @@ Partial Class frmUsuario
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Estado"
         '
-        'btnEliminar
-        '
-        Me.btnEliminar.BackColor = System.Drawing.Color.Transparent
-        Me.btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eleminar_false
-        Me.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEliminar.Enabled = False
-        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ErrorProvider1.SetIconAlignment(Me.btnEliminar, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
-        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.ImageKey = "btneliminar.png"
-        Me.btnEliminar.Location = New System.Drawing.Point(202, 376)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(43, 40)
-        Me.btnEliminar.TabIndex = 76
-        Me.ttUsuario.SetToolTip(Me.btnEliminar, "Eliminar")
-        Me.btnEliminar.UseVisualStyleBackColor = False
-        '
         'rbInactivo
         '
         Me.rbInactivo.AutoSize = True
+        Me.rbInactivo.Enabled = False
         Me.rbInactivo.Location = New System.Drawing.Point(203, 159)
         Me.rbInactivo.Name = "rbInactivo"
         Me.rbInactivo.Size = New System.Drawing.Size(63, 17)
@@ -431,6 +401,7 @@ Partial Class frmUsuario
         '
         Me.rbActivo.AutoSize = True
         Me.rbActivo.Checked = True
+        Me.rbActivo.Enabled = False
         Me.rbActivo.Location = New System.Drawing.Point(125, 159)
         Me.rbActivo.Name = "rbActivo"
         Me.rbActivo.Size = New System.Drawing.Size(55, 17)
@@ -449,23 +420,6 @@ Partial Class frmUsuario
         Me.txtCodigo.TabIndex = 26
         Me.txtCodigo.Text = "0"
         Me.txtCodigo.Visible = False
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
-        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGuardar.Enabled = False
-        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnGuardar.ImageList = Me.ImageList1
-        Me.btnGuardar.Location = New System.Drawing.Point(152, 376)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(43, 40)
-        Me.btnGuardar.TabIndex = 75
-        Me.ttUsuario.SetToolTip(Me.btnGuardar, "Guardar")
-        Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'ImageList1
         '
@@ -493,9 +447,9 @@ Partial Class frmUsuario
         Me.tsmiActualizar.Size = New System.Drawing.Size(126, 22)
         Me.tsmiActualizar.Text = "Actualizar"
         '
-        'ErrorProvider1
+        'epUsuario
         '
-        Me.ErrorProvider1.ContainerControl = Me
+        Me.epUsuario.ContainerControl = Me
         '
         'ttUsuario
         '
@@ -504,28 +458,80 @@ Partial Class frmUsuario
         'pnlUsuario
         '
         Me.pnlUsuario.Controls.Add(Me.pnlFront)
-        Me.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlUsuario.Location = New System.Drawing.Point(0, 0)
+        Me.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlUsuario.Location = New System.Drawing.Point(0, 56)
         Me.pnlUsuario.Name = "pnlUsuario"
-        Me.pnlUsuario.Size = New System.Drawing.Size(798, 464)
+        Me.pnlUsuario.Size = New System.Drawing.Size(798, 453)
         Me.pnlUsuario.TabIndex = 30
         '
         'pnlFront
         '
         Me.pnlFront.Controls.Add(Me.GroupBox1)
         Me.pnlFront.Controls.Add(Me.Mantenimiento)
-        Me.pnlFront.Location = New System.Drawing.Point(12, 16)
+        Me.pnlFront.Location = New System.Drawing.Point(12, 8)
         Me.pnlFront.Name = "pnlFront"
         Me.pnlFront.Size = New System.Drawing.Size(774, 445)
         Me.pnlFront.TabIndex = 32
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbguardar, Me.tsbcancelar, Me.tsbeliminar, Me.tsbsalir, Me.ToolStripSeparator1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(798, 53)
+        Me.ToolStrip1.TabIndex = 214
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'tsbguardar
+        '
+        Me.tsbguardar.AutoSize = False
+        Me.tsbguardar.Image = Global.Vista.My.Resources.Resources.guardar
+        Me.tsbguardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbguardar.Name = "tsbguardar"
+        Me.tsbguardar.Size = New System.Drawing.Size(100, 50)
+        Me.tsbguardar.Text = "Guardar"
+        '
+        'tsbcancelar
+        '
+        Me.tsbcancelar.AutoSize = False
+        Me.tsbcancelar.Image = Global.Vista.My.Resources.Resources.salir
+        Me.tsbcancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbcancelar.Name = "tsbcancelar"
+        Me.tsbcancelar.Size = New System.Drawing.Size(100, 47)
+        Me.tsbcancelar.Text = "Cancelar"
+        '
+        'tsbeliminar
+        '
+        Me.tsbeliminar.AutoSize = False
+        Me.tsbeliminar.Image = Global.Vista.My.Resources.Resources.eleminar_true
+        Me.tsbeliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbeliminar.Name = "tsbeliminar"
+        Me.tsbeliminar.Size = New System.Drawing.Size(100, 47)
+        Me.tsbeliminar.Text = "Eliminar"
+        '
+        'tsbsalir
+        '
+        Me.tsbsalir.AutoSize = False
+        Me.tsbsalir.Image = Global.Vista.My.Resources.Resources.log_logout_door_1563
+        Me.tsbsalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbsalir.Name = "tsbsalir"
+        Me.tsbsalir.Size = New System.Drawing.Size(100, 47)
+        Me.tsbsalir.Text = "Salir"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 53)
         '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(798, 464)
+        Me.ClientSize = New System.Drawing.Size(798, 509)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.pnlUsuario)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -538,11 +544,14 @@ Partial Class frmUsuario
         Me.Mantenimiento.ResumeLayout(False)
         Me.Mantenimiento.PerformLayout()
         Me.cmsUsuario.ResumeLayout(False)
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.epUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUsuario.ResumeLayout(False)
         Me.pnlFront.ResumeLayout(False)
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -556,8 +565,8 @@ Partial Class frmUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents lblUsuario As Label
     Friend WithEvents btnBack As Button
-    Friend WithEvents lbEmpresaActivos As ListBox
-    Friend WithEvents lbModulo As ListBox
+    Friend WithEvents lbEmpresaActivosUsuario As ListBox
+    Friend WithEvents lbModuloUsuario As ListBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Mantenimiento As GroupBox
     Friend WithEvents cmsUsuario As System.Windows.Forms.ContextMenuStrip
@@ -568,25 +577,28 @@ Partial Class frmUsuario
     Friend WithEvents lblNroModulo As System.Windows.Forms.Label
     Friend WithEvents lblEmpresaCantActivas As System.Windows.Forms.Label
     Friend WithEvents txtCodigo As System.Windows.Forms.TextBox
-    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents epUsuario As System.Windows.Forms.ErrorProvider
     Friend WithEvents Label1 As Label
     Friend WithEvents rbInactivo As RadioButton
     Friend WithEvents rbActivo As RadioButton
-    Friend WithEvents ColId As DataGridViewTextBoxColumn
-    Friend WithEvents ColUsuario As DataGridViewTextBoxColumn
-    Friend WithEvents ColRol As DataGridViewTextBoxColumn
-    Friend WithEvents ColState As DataGridViewTextBoxColumn
     Friend WithEvents rtxtMsg As RichTextBox
     Friend WithEvents ttUsuario As ToolTip
     Friend WithEvents chkPassword As CheckBox
-    Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnCancelar As Button
-    Friend WithEvents btnEliminar As Button
-    Friend WithEvents btnGuardar As Button
     Friend WithEvents pnlUsuario As Panel
     Friend WithEvents pnlFront As Panel
     Friend WithEvents lbEmpresaInactivos As ListBox
     Friend WithEvents lblEmpresaCantInactivas As Label
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents ColId As DataGridViewTextBoxColumn
+    Friend WithEvents ColPassword As DataGridViewTextBoxColumn
+    Friend WithEvents ColUsuario As DataGridViewTextBoxColumn
+    Friend WithEvents ColState As DataGridViewTextBoxColumn
+    Friend WithEvents ColStateString As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents tsbguardar As ToolStripButton
+    Friend WithEvents tsbcancelar As ToolStripButton
+    Friend WithEvents tsbeliminar As ToolStripButton
+    Friend WithEvents tsbsalir As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
 End Class

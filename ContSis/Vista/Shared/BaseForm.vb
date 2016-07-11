@@ -1,7 +1,10 @@
 ﻿Public Class BaseForm
     Shared Sub CloseForm(nameForm As String)
         Try
-            Application.OpenForms.Item(nameForm).Close()
+            Dim f As Form = Application.OpenForms.Item(nameForm)
+            If f IsNot Nothing Then
+                f.Close()
+            End If
         Catch ex As Exception
             Debug.WriteLine("Error Cerrar Form: " & nameForm & " - " & ex.ToString)
         End Try
@@ -59,5 +62,20 @@
         End While
         Return contador
     End Function
-
+    Shared Sub stripbuttons(ByVal ts As ToolStrip)
+        For Each c As ToolStripItem In ts.Items
+            If TypeOf c Is ToolStripButton Then
+                Dim b As New Bitmap(50, 50)
+                Dim g As Graphics = Graphics.FromImage(DirectCast(b, Image))
+                c.AutoSize = False
+                c.Width = 100
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
+                g.DrawImage(c.Image, 0, 0, 50, 50)
+                g.Dispose()
+                Dim myResizedImg As Image = DirectCast(b, Image)
+                c.Image = myResizedImg
+            End If
+        Next
+        ts.ImageScalingSize = New Size(50, 50)
+    End Sub
 End Class

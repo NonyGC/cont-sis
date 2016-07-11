@@ -1,5 +1,6 @@
 ﻿Imports Controladores
 Imports Vista.frmMain
+Imports Vista.BaseForm
 Public Class Ejercicio
     Dim ejeLB As New EjercicioBL
 #Region "Metodos"
@@ -83,7 +84,7 @@ Public Class Ejercicio
     End Function
 #End Region
     Private Sub Frm_Ejercicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        CloseForm("frmSelectEmpresa")
         Label1.Text = "Fecha: " & Now.Date
         Label2.Text = "Hora: " & Now.Hour & ":" & Now.Minute
         TextBox1.Text = Now.Year
@@ -126,5 +127,9 @@ Public Class Ejercicio
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Validar()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
     End Sub
 End Class

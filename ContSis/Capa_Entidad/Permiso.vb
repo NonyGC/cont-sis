@@ -91,8 +91,7 @@
         Return modulo.Replace("[" & _modulo & "]", Nothing)
     End Function
 
-
-
-
-
+    Public Function ConvertBooleanToCompleto() As Boolean
+        Return If(_completo = 0, False, True)
+    End Function
 End Class

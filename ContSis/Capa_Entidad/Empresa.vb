@@ -3,8 +3,10 @@
     Private _Nombre As String = ""
     Private _Alias As String = ""
     Private _imagen As Byte()
+    Private _imagen_string As String
     Private _codigo As String
     Private _digito As Integer
+    Private _ubigeo As String
 #Region "Contructores"
     Public Sub New(ruc As String, rznScl As String, rznSclShort As String)
         _RUC = ruc
@@ -49,6 +51,14 @@
             _imagen = value
         End Set
     End Property
+    Public Property imagen_string As String
+        Get
+            Return _imagen_string
+        End Get
+        Set(ByVal value As String)
+            _imagen_string = value
+        End Set
+    End Property
     Public Property Codigo As String
         Get
             Return _codigo
@@ -63,6 +73,14 @@
         End Get
         Set(value As String)
             _digito = value
+        End Set
+    End Property
+    Public Property ubigeo As String
+        Get
+            Return _ubigeo
+        End Get
+        Set(value As String)
+            _ubigeo = value
         End Set
     End Property
 #End Region

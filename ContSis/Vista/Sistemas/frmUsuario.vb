@@ -5,13 +5,13 @@ Imports Vista.BaseForm
 Imports System.Threading
 Public Class frmUsuario
 #Region "Atributos"
-    Private rgls As New UsuarioBL
+    Private rgls As New UsuarioBL(frmMain.Empresas)
     Private usu As Usuario
     Private cnfg As Sistema
     Private back As New frmUsuarioBack
-    Private ds As DataSet
     Private dtEmpresa As DataTable
-
+    Private dtUsuario As DataTable
+    Private controlAgregarModulo As Boolean = False
     Dim verificar As Integer
 #End Region
 #Region "Constructores"
@@ -27,10 +27,10 @@ Public Class frmUsuario
         End With
         pnlUsuario.Controls.Add(back)
 
-        ds = rgls.Modulo
-        dtEmpresa = ds.Tables("empresa")
-        dtEmpresaSelect = ds.Tables("empresa_permiso_select")
-
+        dtEmpresa = rgls.DataSetUsuario.Tables("empresa_activa")
+        dtEmpresaSelect = rgls.DataSetUsuario.Tables("empresa_permiso_select")
+        dtUsuario = rgls.UsuariosAll
+#Region "Mapeando Eventos"
         AddHandler back.btnFront.Click, AddressOf Front
         AddHandler back.btnAgregar.Click, AddressOf btnAgregarEmpresa
         AddHandler back.btnAgregarT.Click, AddressOf btnAgregarTodoEmpresa
@@ -44,29 +44,45 @@ Public Class frmUsuario
         AddHandler back.tvModuloSelect.Enter, AddressOf tvModuloSelect_Enter
         AddHandler back.tvModulo.Enter, AddressOf tvModulo_Enter
 
-        AddHandler back.cboEmpresas.SelectedIndexChanged, AddressOf cboEmpresas_SelectedIndexChanged
+        AddHandler back.cboEmpresas.SelectedValueChanged, AddressOf cboEmpresas_SelectedValueChanged
         AddHandler back.lbEmpresaSelect.DoubleClick, AddressOf lbEmpresaSelect_DoubleClick
-
-
-
-
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-    End Sub
 #End Region
 
+    End Sub
+    Private Sub Frm_RegUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarModuloBackAll()
+        CargarEmpresaSelect()
+        CargarUsuario()
+        CargarCboEmpresa()
+        CargarDataSourceOfListBox()
+        stripbuttons(ToolStrip1)
+    End Sub
+    Private Sub frmUsuario_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        back.Close()
+    End Sub
+
+#End Region
 #Region "Front"
 #Region "Metodos"
 #Region "Manejo Modulo"
-    Public Sub CargarModulo()
-        lbModulo.DataSource = rgls.getModulos
-        lbModulo.DisplayMember = "name"
-        lbModulo.ValueMember = "id"
-    End Sub
-    Public Sub CantModulo()
+    Private Sub CargarDataSourceOfListBox()
+        AgregarDataSource(lbModuloUsuario, rgls.DataSetUsuario.Tables("modulo_usuario"), "name", "id")
+        AgregarDataSource(lbEmpresaActivosUsuario, rgls.DataSetUsuario.Tables("empresa_usuario"), "rz_elegido", "id")
+        AgregarDataSource(lbEmpresaInactivos, rgls.DataSetUsuario.Tables("empresa_inactiva"), "rz_elegido", "id")
+        AgregarDataSource(back.lbStateEmpresa, dtEmpresaSelect, "NameState", "id")
+        AgregarDataSource(back.lbEmpresa, dtEmpresa, "rz_elegido", "id")
+        AgregarDataSource(back.lbStateEmpresaFront, dtEmpresaSelect, "NameState", "id")
 
-        lblNroModulo.Text = String.Concat("N° Modulo: ", lbModulo.Items.Count)
+
+        lblEmpresaCantInactivas.Text = String.Concat("N° Empresa: ", lbEmpresaInactivos.Items.Count)
+        lblEmpresaCantActivas.Text = String.Concat("N° Empresa: ", lbEmpresaActivosUsuario.Items.Count)
+        lblNroModulo.Text = String.Concat("N° Modulo: ", lbModuloUsuario.Items.Count)
+
+    End Sub
+    Private Sub AgregarDataSource(listControl As ListControl, dataSource As Object, ParamArray ByVal displayAndValue() As String)
+        listControl.DataSource = dataSource
+        listControl.DisplayMember = displayAndValue(0)
+        listControl.ValueMember = displayAndValue(1)
     End Sub
     Private Sub CargarModuloBackAll()
         CargarTreeViewAll(back.tvModulo)
@@ -76,7 +92,7 @@ Public Class frmUsuario
     End Sub
 
     Private Sub CargarTreeViewAll(treeView As TreeView)
-        Dim dt As DataTable = ds.Tables("modulo")
+        Dim dt As DataTable = rgls.DataSetUsuario.Tables("modulo")
         For Each row As DataRow In dt.Rows
             Dim tn = New TreeNode(row.Item("name"))
             tn.Name = row.Item("id")
@@ -90,7 +106,7 @@ Public Class frmUsuario
     End Sub
     Private Sub CargarModuloSelectBackByName(name As String)
         If name IsNot Nothing Then
-            Dim dr As DataRow = ds.Tables("modulo").Rows.Find(name)
+            Dim dr As DataRow = rgls.DataSetUsuario.Tables("modulo").Rows.Find(name)
             Dim tn As New TreeNode(dr.Item("Name"))
             tn.Name = dr.Item("Id")
             back.tvModuloSelect.Nodes.Add(tn)
@@ -103,7 +119,7 @@ Public Class frmUsuario
 
     End Sub
     Private Sub CargarModuloBackByListString(list As String)
-        Dim dt As DataTable = ds.Tables("modulo")
+        Dim dt As DataTable = rgls.DataSetUsuario.Tables("modulo")
         For Each row As DataRow In dt.Rows
             If Not list.Contains(row.Item("id")) Then
                 Dim tn = New TreeNode(row.Item("name"))
@@ -129,54 +145,19 @@ Public Class frmUsuario
     End Sub
 
 #End Region
-#Region "Manejo Empresa"
-    Public Sub CantEmpresa()
-        lblEmpresaCantActivas.Text = String.Concat("N° Empresa: ", lbEmpresaActivos.Items.Count)
-    End Sub
-    Private Sub CargarEmpresa()
-        lbEmpresaActivos.DataSource = ds.Tables("empresa")
-        lbEmpresaActivos.DisplayMember = "rz_elegido"
-        lbEmpresaActivos.ValueMember = "id"
-    End Sub
-    Private Sub CargarEmpresaBack()
-        back.lbEmpresa.DataSource = dtEmpresa
-        back.lbEmpresa.DisplayMember = "rz_elegido"
-        back.lbEmpresa.ValueMember = "id"
-    End Sub
-    Private Sub CargarStateEmpresa()
-        back.lbStateEmpresa.DataSource = dtEmpresaSelect
-        back.lbStateEmpresa.DisplayMember = "NameState"
-        back.lbStateEmpresa.ValueMember = "id"
-    End Sub
-#End Region
+
 #Region "Manejo Usuario"
     Public Sub CargarUsuario()
-        dgvUsuarios.DataSource = Nothing
+        dgvUsuarios.DataSource = dtUsuario
+        If dtUsuario.Rows.Count < 10 Then
+            For i = 1 To 10 - dtUsuario.Rows.Count
+                dtUsuario.Rows.Add()
+            Next
+        End If
     End Sub
 
 #End Region
-#Region "Manejo Rol"
-#End Region
 
-
-#End Region
-#Region "Eventos Form"
-    Private Sub Frm_RegUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarModulo()
-        CantModulo()
-        CargarModuloBackAll()
-        CargarEmpresaBack()
-        CargarEmpresaSelect()
-        CargarEmpresa()
-        CantEmpresa()
-        EnabledEmpresa()
-        CargarCboEmpresa()
-        CargarStateEmpresa()
-        lblUsuario.Text = rgls.NewUsuario
-        For i = 0 To 6
-            dgvUsuarios.Rows.Add()
-        Next
-    End Sub
 #End Region
 
     Public Sub limpiar()
@@ -184,60 +165,39 @@ Public Class frmUsuario
         txtPassword.Text = ""
         txtRPassword.Text = ""
         rbActivo.Checked = True
-
-
-
     End Sub
 
     Private Sub dgvUsuarios_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvUsuarios.CellMouseDoubleClick
-        txtUsuario.Text = dgvUsuarios.CurrentRow.Cells(1).Value
-
-    End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs)
-        Nuevo()
-    End Sub
-    Private Sub Nuevo()
-        limpiar()
-        txtUsuario.Enabled = True
-        txtPassword.Enabled = True
-        txtRPassword.Enabled = True
+        Dim cap = dgvUsuarios.CurrentRow.Cells(0).Value
+        Dim id As Integer = If(cap IsNot DBNull.Value, cap, 0)
+        If id > 0 Then
+            rgls.UpdateDataTableDtEmpresaAndDtModulo(id)
+        End If
     End Sub
 
     Private Sub Front()
         pnlFront.Visible = True
         back.Hide()
     End Sub
-
-
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         pnlFront.Visible = False
         back.Show()
-
-
-    End Sub
-
-    Private Sub dgvUsuarios_RowEnter(sender As Object, e As DataGridViewCellEventArgs)
-
     End Sub
 
     Private Sub dgvUsuarios_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvUsuarios.CellMouseClick
-        If IsNothing(dgvUsuarios.CurrentRow.Cells("ColUsuario").Value) Then
+        If dgvUsuarios.CurrentRow.Cells("ColUsuario").Value Is DBNull.Value Then
             cmsUsuario.Items("tsmiEliminar").Enabled = False
             cmsUsuario.Items("tsmiActualizar").Enabled = False
             dgvUsuarios.Columns.Item(e.ColumnIndex).ContextMenuStrip = cmsUsuario
 
         Else
+            cmsUsuario.Items("tsmiEliminar").Enabled = True
+            cmsUsuario.Items("tsmiActualizar").Enabled = True
             dgvUsuarios.Columns.Item(e.ColumnIndex).ContextMenuStrip = cmsUsuario
         End If
-
-
-
     End Sub
 
-
-
-    Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
+    Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged, txtPassword.TextChanged, txtRPassword.TextChanged
         ActivarEnabled()
     End Sub
     Private Sub ActivarEnabled()
@@ -252,28 +212,17 @@ Public Class frmUsuario
             End If
         Next
         If c = txt.Length Then
-            'If cborol.SelectedIndex <> 0 Then
             btnBack.Enabled = True
-            'End If
         Else
             btnBack.Enabled = False
         End If
 
     End Sub
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        ActivarEnabled()
-    End Sub
-
-    Private Sub txtRPassword_TextChanged(sender As Object, e As EventArgs) Handles txtRPassword.TextChanged
-        ActivarEnabled()
-    End Sub
-
 
     Private Sub frmUsuario_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
 
         If e.Control Then
             If e.KeyCode = Keys.N Then
-                Nuevo()
             End If
         End If
     End Sub
@@ -295,15 +244,14 @@ Public Class frmUsuario
     Private Sub btnSalir_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
-
-    Private Sub Mantenimiento_Enter(sender As Object, e As EventArgs) Handles Mantenimiento.Enter
-
-    End Sub
-
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        btnGuardar.Enabled = False
-        btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles tsbguardar.Click
+        Dim nroUsuario As Integer = frmMain.NroUsuario
+        If nroUsuario = (dgvUsuarios.Rows.Count + 1) Then
+            MsgBox(String.Format("Solo puede usar {0} usuario.", If(nroUsuario = 1, nroUsuario, nroUsuario - 1)), MsgBoxStyle.OkOnly, "Registro de Usuarios")
+            Exit Sub
+        End If
+        tsbguardar.Enabled = False
+        ' btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
 
         Dim usu As Usuario
         usu = New UsuarioNormal
@@ -319,37 +267,37 @@ Public Class frmUsuario
         Else
             usu.State = 0
         End If
-
-        rgls.dtDataPermiso = dtEmpresaSelect
-        Dim respuestaRegistrar As Boolean = rgls.Registrar(usu, txtRPassword.Text)
-
+        Dim respuestaRegistrar As Boolean
+        If txtCodigo.Text = String.Empty Then
+            respuestaRegistrar = rgls.Registrar(usu, txtRPassword.Text)
+        Else
+            respuestaRegistrar = rgls.ActualizarUsuario(usu, txtRPassword.Text)
+        End If
         If respuestaRegistrar Then
             MsgBox("Registro completo")
-            txtCodigo.Text = String.Empty
-            txtUsuario.Text = String.Empty
-            txtPassword.Text = String.Empty
-            txtRPassword.Text = String.Empty
-            rbActivo.Checked = True
-            dtEmpresaSelect.Rows.Clear()
-            CargarEmpresaBack()
-
+            RegresarComoNuevaOperacion()
         Else
             rtxtMsg.Text = rgls.Log
             rtxtMsg.Visible = True
-            btnGuardar.Enabled = True
-            btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_true
+            tsbguardar.Enabled = True
+            'btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_true
         End If
-
-
+    End Sub
+    Private Sub RegresarComoNuevaOperacion()
+        txtCodigo.Text = String.Empty
+        txtUsuario.Text = String.Empty
+        txtPassword.Text = String.Empty
+        txtRPassword.Text = String.Empty
+        rbActivo.Checked = True
+        rbActivo.Enabled = False
+        rbInactivo.Enabled = False
+        dtEmpresaSelect.Rows.Clear()
+        dtUsuario = rgls.UsuariosAll
+        CargarUsuario()
+        rgls.UpdateDataDtEmpresa()
+        CargarModuloBackAll()
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-    Private Sub frmUsuario_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        back.Close()
-    End Sub
 
 #End Region
 #Region "Back"
@@ -372,9 +320,9 @@ Public Class frmUsuario
         End If
     End Sub
     Private Sub btnQuitarEmpresa(sender As Object, e As EventArgs)
+        Dim dv As DataRowView = back.lbEmpresaSelect.SelectedItem
+        If dv Is Nothing Then Exit Sub
         Dim dr As DataRow = dtEmpresa.NewRow
-        Dim dv As DataRowView
-        dv = back.lbEmpresaSelect.SelectedItem
         dr("id") = dv.Row("Id")
         dr("rz_elegido") = dv.Row("Name")
 
@@ -394,7 +342,6 @@ Public Class frmUsuario
         dtEmpresaSelect.Rows.Clear()
         EnabledEmpresa()
 
-
     End Sub
     Private Sub btnAgregarEmpresa(sender As Object, e As EventArgs)
 
@@ -405,7 +352,6 @@ Public Class frmUsuario
         dr("name") = dv.Row("rz_elegido")
         dr("state") = False
         dr("compt") = False
-        dr("NameState") = dr("name") & ": Falta"
         dtEmpresaSelect.Rows.Add(dr)
         dtEmpresa.Rows.Remove(dv.Row)
         EnabledEmpresa()
@@ -415,7 +361,7 @@ Public Class frmUsuario
         For Each dr As DataRow In dtEmpresa.Rows
             Dim ndr As DataRow = dtEmpresaSelect.NewRow
             ndr("id") = dr("id")
-            ndr("name") = dr("name")
+            ndr("name") = dr("rz_elegido")
             ndr("state") = False
             ndr("compt") = False
             ndr("NameState") = ndr("name") & ": Falta"
@@ -464,11 +410,11 @@ Public Class frmUsuario
             If tn.Nodes.Count = 0 Then
                 back.tvModuloSelect.Nodes.Remove(tn.Parent)
                 back.tvModulo.Nodes.Add(tn.Parent)
-                QuitarPermiso(back.lbEmpresaSelect.SelectedValue, New Permiso(rgls.NewPermiso, tn.Parent.Name))
+                QuitarPermiso(back.lbEmpresaSelect.SelectedValue, New Permiso(1, tn.Parent.Name))
             Else
                 back.tvModuloSelect.Nodes.Remove(tn)
                 back.tvModulo.Nodes.Add(tn)
-                QuitarPermiso(back.lbEmpresaSelect.SelectedValue, New Permiso(rgls.NewPermiso, tn.Name))
+                QuitarPermiso(back.lbEmpresaSelect.SelectedValue, New Permiso(1, tn.Name))
 
             End If
             EnabledModuloQuitar()
@@ -476,10 +422,8 @@ Public Class frmUsuario
     End Sub
     Private Sub btnQuitarTodoModulo(sender As Object, e As EventArgs)
         For Each tn As TreeNode In back.tvModuloSelect.Nodes
-            Dim tnt As TreeNode = tn.Clone
-
-            If Not IsNothing(tnt) Then
-                back.tvModulo.Nodes.Add(tnt)
+            If tn IsNot Nothing Then
+                back.tvModulo.Nodes.Add(tn.Clone)
             End If
         Next
         QuitarPermisoTodo(back.lbEmpresaSelect.SelectedValue)
@@ -501,12 +445,12 @@ Public Class frmUsuario
                 back.tvModulo.Nodes.Remove(tn.Parent)
                 back.tvModuloSelect.Nodes.Add(tn.Parent)
 
-                AgregarPermiso(New Permiso(rgls.NewPermiso, rgls.NewUsuario, back.cboEmpresas.SelectedValue, False, tn.Parent.Name))
+                AgregarPermiso(New Permiso(1, 1, back.cboEmpresas.SelectedValue, False, tn.Parent.Name))
             Else
                 back.tvModulo.Nodes.Remove(tn)
                 back.tvModuloSelect.Nodes.Add(tn)
 
-                AgregarPermiso(New Permiso(rgls.NewPermiso, rgls.NewUsuario, back.cboEmpresas.SelectedValue, False, tn.Name))
+                AgregarPermiso(New Permiso(1, 1, back.cboEmpresas.SelectedValue, False, tn.Name))
 
             End If
             EnabledModuloAgregar()
@@ -518,30 +462,31 @@ Public Class frmUsuario
         If drEmpresa IsNot Nothing Then
 
             drEmpresa("state") = True
-            drEmpresa("NameState") = drEmpresa("Name") + " - Ok"
             Dim cantidadModulos As Integer = CantidadOfCadenaArray(drEmpresa("mod").ToString)
-            If cantidadModulos = ds.Tables("modulo").Rows.Count Then
+            If cantidadModulos = rgls.DataSetUsuario.Tables("modulo").Rows.Count Then
                 drEmpresa("compt") = True
                 drEmpresa("mod") = String.Empty
             End If
         End If
 
 
+
+
     End Sub
 
-
     Private Sub btnAgregarTodoModulo(sender As Object, e As EventArgs)
-        If back.cboEmpresas.SelectedValue IsNot Nothing Then
-            For Each tn As TreeNode In back.tvModulo.Nodes
-                Dim tnt As TreeNode = tn.Clone
-                If Not IsNothing(tnt) Then
-                    back.tvModuloSelect.Nodes.Add(tnt)
-                End If
-            Next
-            back.tvModulo.Nodes.Clear()
-            AgregarPermisoTodo(New Permiso(rgls.NewPermiso, rgls.NewPermiso, back.cboEmpresas.SelectedValue, True, ""))
-            EnabledModuloAgregar()
-        End If
+        If back.cboEmpresas.SelectedValue Is Nothing Then Exit Sub
+        controlAgregarModulo = True
+        For Each tn As TreeNode In back.tvModulo.Nodes
+            If tn IsNot Nothing Then
+                back.tvModuloSelect.Nodes.Add(tn.Clone)
+            End If
+        Next
+
+        AgregarPermisoTodo(New Permiso(1, 1, back.cboEmpresas.SelectedValue, True, String.Empty))
+        back.tvModulo.Nodes.Clear()
+        EnabledModuloAgregar()
+        controlAgregarModulo = False
     End Sub
 #End Region
 #Region "AgregarPermisoData"
@@ -551,23 +496,26 @@ Public Class frmUsuario
         dr("usu") = permiso.Usuario
         dr("compt") = permiso.Completo
         dr("mod") = permiso.Modulos(dr("mod").ToString)
+        dr("state") = If(back.tvModuloSelect.Nodes.Count = 0, False, True)
     End Sub
     Private Sub AgregarPermisoTodo(permiso As Permiso)
         Dim dr As DataRow
         dr = dtEmpresaSelect.Rows.Find(permiso.Empresa)
+        dr("state") = True
         dr("usu") = permiso.Usuario
         dr("compt") = permiso.Completo
-        dr("mod") = permiso.Modulos()
+        dr("mod") = permiso.Modulos
     End Sub
 #End Region
 
 #Region "QuitarPermisoData"
     Private Sub QuitarPermiso(empresaRuc As String, permiso As Permiso)
-        Dim dr As DataRow
-        dr = dtEmpresaSelect.Rows.Find(empresaRuc)
+        Dim dr As DataRow = dtEmpresaSelect.Rows.Find(empresaRuc)
+
         If Not IsNothing(dr) Then
             dr("mod") = permiso.QuitarModulo(dr("mod").ToString)
             dr("compt") = False
+            dr("state") = If(back.tvModuloSelect.Nodes.Count = 0, False, True)
         End If
         Dim cantidad As Integer = CantidadOfCadenaArray(dr("mod").ToString)
         If cantidad = 0 Then
@@ -577,6 +525,7 @@ Public Class frmUsuario
     Private Sub QuitarPermisoTodo(empresaRuc As String)
         Dim dr As DataRow
         dr = dtEmpresaSelect.Rows.Find(empresaRuc)
+        dr("state") = False
         dr("mod") = String.Empty
         dr("compt") = False
         UpdateEmpresaFalse()
@@ -598,9 +547,9 @@ Public Class frmUsuario
             End If
         Next
         If c = dtEmpresaSelect.Rows.Count Then
-            btnGuardar.Enabled = True
+            tsbguardar.Enabled = True
         Else
-            btnGuardar.Enabled = False
+            tsbguardar.Enabled = False
         End If
     End Sub
     Private Sub btnEliminarEnabled()
@@ -633,13 +582,15 @@ Public Class frmUsuario
     End Sub
 #End Region
     Private Sub lbEmpresaSelect_DoubleClick(sender As Object, e As EventArgs)
+
         back.tabRoles.SelectedIndex = 1
         back.cboEmpresas.SelectedIndex = back.lbEmpresaSelect.SelectedIndex
-        CargarPermisosByEmpresa(back.lbEmpresaSelect.SelectedValue)
+        If controlAgregarModulo = False Then CargarPermisosByEmpresa(back.lbEmpresaSelect.SelectedValue)
+
     End Sub
 #Region "CboEmpresa"
-    Private Sub cboEmpresas_SelectedIndexChanged(sender As Object, e As EventArgs)
-        CargarPermisosByEmpresa(back.cboEmpresas.SelectedValue)
+    Private Sub cboEmpresas_SelectedValueChanged(sender As Object, e As EventArgs)
+        If controlAgregarModulo = False Then CargarPermisosByEmpresa(back.cboEmpresas.SelectedValue)
     End Sub
     Private Sub CargarPermisosByEmpresa(EmpresaRuc As String)
         If Not IsNothing(EmpresaRuc) Then
@@ -667,38 +618,127 @@ Public Class frmUsuario
     End Sub
 
 
-
+    Dim countTruePermiso As Integer = 0
     Friend WithEvents dtEmpresaSelect As DataTable
     Private Sub DataEmpresaSelect_ColumnChanged(sender As Object, e As DataColumnChangeEventArgs) Handles dtEmpresaSelect.ColumnChanged
-        Dim dt As DataTable = DirectCast(sender, DataTable)
-        Dim c As Integer = 0
-        For Each dr As DataRow In dt.Rows
-            If dr("state") = True Then
-                c += 1
-            End If
-        Next
-        If c = dt.Rows.Count Then
-            btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_true
-            btnGuardar.Enabled = True
-
+        Dim dt As DataColumn = e.Column
+        If (dt Is Nothing) Or (dt.ColumnName <> "State") Then Exit Sub
+        Dim dr As DataRow = e.Row
+        If dr("state") = True Then
+            dr("NameState") = dr("name") & ": Ok"
+            countTruePermiso += 1
         Else
-            btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
-            btnGuardar.Enabled = False
+            dr("NameState") = dr("name") & ": Falta"
+            countTruePermiso -= 1
         End If
+        Dim cantidadState = dtEmpresaSelect.AsEnumerable.Count(Function(x) x.Field(Of Boolean)("state") = True)
+        If dr("state") And (cantidadState = dtEmpresa.Rows.Count) Then
+            ' btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_true
+            tsbguardar.Enabled = True
+        Else
+            ' btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+            tsbguardar.Enabled = False
+        End If
+
     End Sub
 
     Private Sub DataDeleted(sender As Object, e As DataRowChangeEventArgs) Handles dtEmpresaSelect.RowDeleted
         Dim rowsCantidad As Integer = dtEmpresaSelect.Rows.Count
         If rowsCantidad = 0 Then
-            btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
-            btnGuardar.Enabled = False
+            'btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+            tsbguardar.Enabled = False
         End If
     End Sub
 
+    Private Sub lbEmpresaActivos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbEmpresaActivosUsuario.SelectedIndexChanged
+        Dim lb As ListBox = DirectCast(sender, ListBox)
+        If lb.SelectedValue Is Nothing Then
+            Exit Sub
+        End If
+        rgls.UpdateDtModulo(lb.SelectedValue.ToString)
+    End Sub
+
+    Private Sub txtUsuario_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtUsuario.Validating
+        If txtUsuario.Text.Trim.Count = 0 Then Exit Sub
+        Dim permitido As Boolean = rgls.DisponibleUsuarioName(txtUsuario.Text)
+        If permitido Then
+            Me.epUsuario.SetError(sender, "")
+        Else
+            epUsuario.SetError(sender, "Es un nombre de usuario  esta reservado.")
+            txtUsuario.Text = String.Empty
+            txtUsuario.Focus()
+        End If
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles tsbsalir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub tsmiEliminar_Click(sender As Object, e As EventArgs) Handles tsmiEliminar.Click
+        Dim dgvr As DataGridViewRow = dgvUsuarios.CurrentRow
+        EliminarUsuario(dgvr.Cells("ColId").Value)
+
+    End Sub
+    Private Sub EliminarUsuario(UsuarioId As Integer)
+        Dim respuesta As Boolean = rgls.EliminarUsuario(UsuarioId)
+        If respuesta Then
+            dtUsuario = rgls.UsuariosAll
+            CargarUsuario()
+            rgls.UpdateDataTableEmpresaAndModuloUsuario()
+            MsgBox("Terminado")
+        Else
+            MsgBox("Ocurrio un Error")
+        End If
+    End Sub
+
+    Private Sub tsmiActualizar_Click(sender As Object, e As EventArgs) Handles tsmiActualizar.Click
+        Dim dgvr As DataGridViewRow = dgvUsuarios.CurrentRow
+        txtCodigo.Text = dgvr.Cells("ColId").Value
+        txtUsuario.Text = dgvr.Cells("ColUsuario").Value
+        txtPassword.Text = dgvr.Cells("ColPassword").Value
+        txtRPassword.Text = dgvr.Cells("ColPassword").Value
+
+        rbActivo.Enabled = True
+        rbInactivo.Enabled = True
+        If dgvr.Cells("ColState").Value Then
+            rbActivo.Checked = True
+        Else
+            rbInactivo.Checked = True
+        End If
+        rgls.UpdateDataTableEmpresaPermisoSelect(txtCodigo.Text)
+        ' btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_true
+        tsbguardar.Enabled = True
+        'btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eleminar_true
+        tsbeliminar.Enabled = True
+    End Sub
+
+    Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs) Handles tsbcancelar.Click
+        RegresarComoNuevaOperacion()
+        ' btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+        tsbguardar.Enabled = False
+        '  btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eleminar_false
+        tsbeliminar.Enabled = False
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles tsbeliminar.Click
+        EliminarUsuario(txtCodigo.Text)
+        RegresarComoNuevaOperacion()
+        'btnGuardar.BackgroundImage = Global.Vista.My.Resources.Resources.guardar_false
+        tsbguardar.Enabled = False
+        ' btnEliminar.BackgroundImage = Global.Vista.My.Resources.Resources.eleminar_false
+        tsbeliminar.Enabled = False
+    End Sub
+
+    Private Sub tsbguardar_EnabledChanged(sender As Object, e As EventArgs) Handles tsbguardar.EnabledChanged
+        tsbguardar.Enabled = True
+    End Sub
+
+
+
+
+
+
 #End Region
 #End Region
 End Class
 
-Public Class ManejadorModulo
-
-End Class

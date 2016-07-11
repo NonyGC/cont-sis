@@ -11,10 +11,8 @@ Public Class EmpresaBL
     Public Function Empresa_DatosLB(ByVal entemp As Empresa) As DataTable
         Return empresaDao.Empresa_data(entemp)
     End Function
-    Public Function Empresa_RegisterLB(ByVal entemp As Empresa)
-        Dim verificar As Integer
-        verificar = empresaDao.Empresa_Register(entemp)
-        Return verificar
+    Public Function ubigeoLB(op As Integer, ByVal entemp As Empresa) As DataTable
+        Return empresaDao.ubigeo(op, entemp)
     End Function
     Public Function Empresa_ActualizarLB(ByVal entemp As Empresa)
         Dim verificar As Integer

@@ -135,7 +135,7 @@ Partial Class frmMain
         Me.pnlInfo.Enabled = False
         Me.pnlInfo.Location = New System.Drawing.Point(0, 33)
         Me.pnlInfo.Name = "pnlInfo"
-        Me.pnlInfo.Size = New System.Drawing.Size(44, 46)
+        Me.pnlInfo.Size = New System.Drawing.Size(86, 52)
         Me.pnlInfo.TabIndex = 5
         Me.pnlInfo.Visible = False
         '
@@ -150,8 +150,7 @@ Partial Class frmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(252, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(270, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(36, 34)
         Me.PictureBox1.TabIndex = 3
@@ -190,7 +189,6 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BackgroundImage = Nothing
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(568, 369)
         Me.Controls.Add(Me.pnlInfo)

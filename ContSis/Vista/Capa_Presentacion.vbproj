@@ -93,6 +93,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Transitions">
+      <HintPath>..\Modelos\Transitions\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -108,6 +111,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Archivos\frmComprobanteN.Designer.vb">
       <DependentUpon>frmComprobanteN.vb</DependentUpon>
     </Compile>
@@ -142,6 +151,12 @@
       <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
     </Compile>
     <Compile Include="Archivos\FrmPlanCuentasErrores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\frnCronogramaPagos.designer.vb">
+      <DependentUpon>frnCronogramaPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\frnCronogramaPagos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Archivos\WaterMark.vb">
@@ -262,10 +277,10 @@
     <Compile Include="Archivos\frmTipoCambio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento\frmManEmpresa.Designer.vb">
-      <DependentUpon>frmManEmpresa.vb</DependentUpon>
+    <Compile Include="Mantenimiento\FrmManEmpresa.Designer.vb">
+      <DependentUpon>FrmManEmpresa.vb</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\frmManEmpresa.vb">
+    <Compile Include="Mantenimiento\FrmManEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -292,6 +307,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Archivos\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Archivos\frmComprobanteN.resx">
       <DependentUpon>frmComprobanteN.vb</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Archivos\FrmPlanCuentasErrores.resx">
       <DependentUpon>FrmPlanCuentasErrores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\frnCronogramaPagos.resx">
+      <DependentUpon>frnCronogramaPagos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="File\Rpt\Formato141.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -368,8 +389,8 @@
     <EmbeddedResource Include="Archivos\frmTipoCambio.resx">
       <DependentUpon>frmTipoCambio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\frmManEmpresa.resx">
-      <DependentUpon>frmManEmpresa.vb</DependentUpon>
+    <EmbeddedResource Include="Mantenimiento\FrmManEmpresa.resx">
+      <DependentUpon>FrmManEmpresa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -454,10 +475,13 @@
     <Content Include="Resources\cancelar.png" />
     <None Include="Resources\contabilidad.jpg" />
     <None Include="Resources\eleminar_true.png" />
+    <None Include="Resources\export-icon.png" />
+    <None Include="Resources\crear.png" />
     <Content Include="Resources\guardar-true.png" />
     <Content Include="Resources\eleminar-true.png" />
     <Content Include="Resources\guardar.png" />
     <None Include="Resources\icon175x175.png" />
+    <None Include="Resources\import-icon.png" />
     <Content Include="Resources\imprimir.png" />
     <Content Include="Resources\log_logout_door_1563.png" />
     <Content Include="Resources\lupa.png" />

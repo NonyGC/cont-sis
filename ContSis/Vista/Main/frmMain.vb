@@ -260,18 +260,17 @@ Public Class frmMain
             End If
         Next
         Return cons
-
     End Function
 #End Region
 #Region "Manejo de Form or Option"
-    Private Sub OptionOrFormEnabled(parent As String, Name As String, status As Boolean)
+    Public Sub OptionOrFormEnabled(parent As String, Name As String, status As Boolean)
 
         Dim t As ToolStripMenuItem = FindOptionOrForm(parent, Name)
         If Not IsNothing(t) Then
             t.Enabled = status
         End If
     End Sub
-    Private Sub OptionOrFormVisible(parent As String, Name As String, status As Boolean)
+    Public Sub OptionOrFormVisible(parent As String, Name As String, status As Boolean)
         Dim t As ToolStripMenuItem = FindOptionOrForm(parent, Name)
         If Not IsNothing(t) Then
             t.Visible = status
@@ -290,14 +289,14 @@ Public Class frmMain
 
 #End Region
 #Region "Manejo de Menus"
-    Private Sub MenuEnabled(Name As String, status As Boolean)
+    Public Sub MenuEnabled(Name As String, status As Boolean)
 
         Dim t As ToolStripMenuItem = FindMenu(Name)
         If Not IsNothing(t) Then
             t.Enabled = status
         End If
     End Sub
-    Private Sub MenuVisible(Name As String, status As Boolean)
+    Public Sub MenuVisible(Name As String, status As Boolean)
         Dim t As ToolStripMenuItem = FindMenu(Name)
         If Not IsNothing(t) Then
             t.Visible = status
@@ -334,13 +333,15 @@ Public Class frmMain
         End Select
     End Sub
 
-    Private Sub ActionAdmin()
+    Public Sub ActionAdmin()
 
 
         For Each tool As ToolStripMenuItem In MnuMain.Items
             tool.Enabled = True
+            tool.Visible = True
             For Each chilTool As ToolStripMenuItem In tool.DropDownItems
                 chilTool.Enabled = True
+                chilTool.Visible = True
             Next
         Next
         ActionAdminAndNormal()
@@ -391,7 +392,7 @@ Public Class frmMain
     End Sub
     Private Sub ActionSecAdmin()
 
-        OpenForm("frmUsuariosConectados", Nothing)
+        'OpenForm("frmUsuariosConectados", Nothing)
         ActionSecAdminAndNormal()
         ActionSecAll()
         SSEmpresa(Nothing)
@@ -502,6 +503,18 @@ Public Class frmMain
     End Sub
     Public Sub PnlPeriodo(Impresion As String)
         lblPeriodo.Text = String.Concat("Periodo: ", vbLf, Impresion).ToUpper
+    End Sub
+
+    Private Sub pnlInfo_Paint(sender As Object, e As PaintEventArgs) Handles pnlInfo.Paint
+
+    End Sub
+
+    Private Sub pnlInfo_Click(sender As Object, e As EventArgs) Handles pnlInfo.Click
+        MsgBox("sdd")
+    End Sub
+
+    Private Sub lblEmpresa_DoubleClick(sender As Object, e As EventArgs) Handles lblEmpresa.DoubleClick
+        MsgBox("sdd")
     End Sub
 
 

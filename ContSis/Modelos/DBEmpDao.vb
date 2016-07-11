@@ -1,16 +1,19 @@
 ﻿Imports MySql.Data.MySqlClient
-
-Public Class BaseDao
+Public Class DBEmpDao
     'Variables
+    ' Private server As String = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName).AddressList(0).ToString
     Private server As String = "192.168.0.14"
     Private user As String = "user"
     Private password As String = "S0p0rt3"
     Private port As String = "3306"
-    Private database As String = "bdsist"
+    Private database As String = "bd16001"
     Private conexionValue As MySqlConnection
     'Contructor
     'Propiedades 
     'Metodos
+    Protected Function DB(DBcont As String) As String
+        DB = DBcont
+    End Function
     Protected Function conexion() As MySqlConnection
 
         conexionValue = New MySqlConnection()
@@ -22,85 +25,44 @@ Public Class BaseDao
             "user id=" & Me.user & ";" &
             "password=" & Me.password & ";" &
             "port=" & Me.port & ";" &
-            "database=" & Me.database & ";Convert Zero Datetime=True"
-        Try
-            conexionValue.Open()
-            conexion = conexionValue
-        Catch ex As Exception
-            conexion = Nothing
-            MsgBox("Sin conexion a la BD")
-        End Try
-        Return conexion
+            "database=" & Me.database & ";" &
+            "Convert Zero Datetime=True"
+
+        conexionValue.Open()
+        conexion = conexionValue
     End Function
     Public Function CheckConexion() As Boolean
-
         conexion()
-
         If conexionValue.State = ConnectionState.Open Then
             Return True
         Else
             Return False
         End If
-
     End Function
-    Protected Sub CrearColumna(ByVal nombre As String, ByVal tabla As DataTable)
-        Dim column As New DataColumn
-        column.ColumnName = nombre
-        tabla.Columns.Add(column)
-    End Sub
-    Protected Sub CrearColumna(ByVal nombre As String, ByVal tabla As DataTable, ByVal unique As String)
-        Dim column As New DataColumn
-        Dim key(1) As DataColumn
-        column.ColumnName = nombre
-        column.Unique = True
-        tabla.Columns.Add(column)
-        key(0) = column
-        tabla.PrimaryKey = key
-    End Sub
-    Protected Function GetDataTable(cmd As MySqlCommand) As DataTable
-        Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter
-        da.SelectCommand = cmd
-        da.Fill(dt)
-        CloseDB()
-        Return dt
-    End Function
-    Protected Sub CloseDB()
+    Public Sub CloseDB()
         If conexionValue.State = ConnectionState.Open Then
             conexionValue.Close()
         End If
     End Sub
-    Protected Function Parameters(cmd As MySqlCommand, env() As String) As MySqlCommand
-        Dim procedure As String = cmd.CommandText
-        Try
-            MySqlCommandBuilder.DeriveParameters(cmd)
-            Dim c As Integer = 0
-
-            For Each prm As MySqlParameter In cmd.Parameters
-                If prm.ParameterName <> "@RETURN_VALUE" Then
-                    prm.Value = env(c)
-                    c += 1
-                End If
-            Next
-            Return cmd
-        Catch ex As Exception
-            Return Nothing
-            Debug.WriteLine(procedure & "- " & ex.ToString)
-        End Try
-
+    Public Function Parameters(cmd As MySqlCommand, env() As String) As MySqlCommand
+        MySqlCommandBuilder.DeriveParameters(cmd)
+        Dim c As Integer = 0
+        For Each prm As MySqlParameter In cmd.Parameters
+            If prm.ParameterName <> "@RETURN_VALUE" Then
+                prm.Value = env(c)
+                c += 1
+            End If
+        Next
+        Return cmd
     End Function
-    Protected Function CommandProcedure(name As String) As MySqlCommand
+    Public Function CommandProcedure(name As String) As MySqlCommand
         Dim cmd As New MySqlCommand(name, Me.conexion)
         cmd.CommandType = CommandType.StoredProcedure
         Return cmd
     End Function
-    Protected Function CommandText(text As String) As MySqlCommand
-        Dim cmd As New MySqlCommand(text, Me.conexion)
-        cmd.CommandType = CommandType.Text
-        Return cmd
-    End Function
 
-    Protected Function Consultas_SQL(ByVal SQL As String, ByVal ParamArray argu() As Object) As DataTable
+
+    Function Consultas_SQL(ByVal SQL As String, ByVal ParamArray argu() As Object) As DataTable
         conexionValue = Me.conexion
         Dim cmd As New MySqlCommand(SQL, conexionValue)
         Dim prm As New MySqlParameter 'representa cualquier parametro
@@ -121,7 +83,7 @@ Public Class BaseDao
         Return dt 'retorna la tabla  correspondiente
         conexionValue.Close()
     End Function
-    Protected Function Mantenimiento_SQL(ByVal SQL As String, ByVal ParamArray argu() As Object) As Integer
+    Function Mantenimiento_SQL(ByVal SQL As String, ByVal ParamArray argu() As Object) As Integer
         conexionValue = Me.conexion
         Dim cmd As New MySqlCommand(SQL, conexionValue)
         Dim prm As New MySqlParameter 'representa cualkier parametro
@@ -145,7 +107,7 @@ Public Class BaseDao
         Return res  'retorna la tabla  correspondiente
 
     End Function
-    Protected Function Consultar_Tabla_MySQL(ByVal Consulta As String) As DataTable
+    Public Function Consultar_Tabla_MySQL(ByVal Consulta As String) As DataTable
         Dim tbl = New DataTable
         Try
             conexionValue = Me.conexion
@@ -160,22 +122,5 @@ Public Class BaseDao
         End Try
         Return tbl
     End Function
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 End Class
+

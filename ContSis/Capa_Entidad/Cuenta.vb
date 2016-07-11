@@ -6,6 +6,7 @@
     Private _haber As Decimal
     Private _C_haber As String
     Private _C_debe As String
+    Private _PCodigo As String
     Public Property c_debe As String
         Get
             Return _C_debe
@@ -28,6 +29,14 @@
         End Get
         Set(ByVal value As String)
             _Codigo = value
+        End Set
+    End Property
+    Public Property Pcodigo As String
+        Get
+            Return _PCodigo
+        End Get
+        Set(ByVal value As String)
+            _PCodigo = value
         End Set
     End Property
     Public Property nombre As String

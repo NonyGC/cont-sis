@@ -66,10 +66,8 @@
     <Compile Include="FormOption.vb" />
     <Compile Include="Permiso.vb" />
     <Compile Include="Reportes\ReporteEN.vb" />
-    <Compile Include="Session\CabPrivilegio.vb" />
     <Compile Include="Session\Contenedor.vb" />
     <Compile Include="Cuenta.vb" />
-    <Compile Include="Session\DetPrivilegio.vb" />
     <Compile Include="Empresa.vb" />
     <Compile Include="Session\Formulario.vb" />
     <Compile Include="Moneda.vb" />

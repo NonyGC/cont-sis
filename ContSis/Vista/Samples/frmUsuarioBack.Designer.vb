@@ -26,6 +26,7 @@ Partial Class frmUsuarioBack
         Me.tvModulo = New System.Windows.Forms.TreeView()
         Me.tabRoles = New System.Windows.Forms.TabControl()
         Me.tabpageEmpresas = New System.Windows.Forms.TabPage()
+        Me.lbStateEmpresaFront = New System.Windows.Forms.ListBox()
         Me.btnFront = New System.Windows.Forms.Button()
         Me.btnQuitarT = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
@@ -51,6 +52,7 @@ Partial Class frmUsuarioBack
         '
         'tvModulo
         '
+        Me.tvModulo.AllowDrop = True
         Me.tvModulo.BackColor = System.Drawing.SystemColors.Control
         Me.tvModulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tvModulo.Location = New System.Drawing.Point(6, 33)
@@ -71,6 +73,7 @@ Partial Class frmUsuarioBack
         'tabpageEmpresas
         '
         Me.tabpageEmpresas.BackColor = System.Drawing.SystemColors.Control
+        Me.tabpageEmpresas.Controls.Add(Me.lbStateEmpresaFront)
         Me.tabpageEmpresas.Controls.Add(Me.btnFront)
         Me.tabpageEmpresas.Controls.Add(Me.btnQuitarT)
         Me.tabpageEmpresas.Controls.Add(Me.btnAgregar)
@@ -85,9 +88,21 @@ Partial Class frmUsuarioBack
         Me.tabpageEmpresas.TabIndex = 0
         Me.tabpageEmpresas.Text = "Empresa"
         '
+        'lbStateEmpresaFront
+        '
+        Me.lbStateEmpresaFront.BackColor = System.Drawing.SystemColors.Control
+        Me.lbStateEmpresaFront.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbStateEmpresaFront.Enabled = False
+        Me.lbStateEmpresaFront.FormattingEnabled = True
+        Me.lbStateEmpresaFront.Location = New System.Drawing.Point(276, 245)
+        Me.lbStateEmpresaFront.Name = "lbStateEmpresaFront"
+        Me.lbStateEmpresaFront.SelectionMode = System.Windows.Forms.SelectionMode.None
+        Me.lbStateEmpresaFront.Size = New System.Drawing.Size(214, 156)
+        Me.lbStateEmpresaFront.TabIndex = 18
+        '
         'btnFront
         '
-        Me.btnFront.Location = New System.Drawing.Point(462, 367)
+        Me.btnFront.Location = New System.Drawing.Point(496, 367)
         Me.btnFront.Name = "btnFront"
         Me.btnFront.Size = New System.Drawing.Size(264, 34)
         Me.btnFront.TabIndex = 17
@@ -188,7 +203,7 @@ Partial Class frmUsuarioBack
         Me.lblMsg.ForeColor = System.Drawing.Color.DarkRed
         Me.lblMsg.Location = New System.Drawing.Point(190, 7)
         Me.lblMsg.Name = "lblMsg"
-        Me.lblMsg.Size = New System.Drawing.Size(486, 23)
+        Me.lblMsg.Size = New System.Drawing.Size(251, 23)
         Me.lblMsg.TabIndex = 13
         Me.lblMsg.Text = "Debe agregar minimo una empresa"
         Me.lblMsg.Visible = False
@@ -231,6 +246,7 @@ Partial Class frmUsuarioBack
         '
         'tvModuloSelect
         '
+        Me.tvModuloSelect.AllowDrop = True
         Me.tvModuloSelect.BackColor = System.Drawing.SystemColors.Control
         Me.tvModuloSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tvModuloSelect.Location = New System.Drawing.Point(496, 67)
@@ -250,7 +266,7 @@ Partial Class frmUsuarioBack
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(347, 43)
+        Me.Label3.Location = New System.Drawing.Point(493, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 6
@@ -293,4 +309,5 @@ Partial Class frmUsuarioBack
     Friend WithEvents lbEmpresa As ListBox
     Friend WithEvents lblMsg As Label
     Friend WithEvents lbStateEmpresa As ListBox
+    Friend WithEvents lbStateEmpresaFront As ListBox
 End Class

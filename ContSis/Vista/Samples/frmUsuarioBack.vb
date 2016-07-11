@@ -13,7 +13,7 @@ Public Class frmUsuarioBack
                 btn(i).Enabled = False
             Next
 
-            If lbEmpresaSelect.Items.Count <= 0 Then
+            If cboEmpresas.Items.Count <= 0 Then
                 For i = 0 To c.Length - 1
                     c(i).Enabled = False
                     c(i).Cursor = Cursors.No

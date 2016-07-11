@@ -2,57 +2,34 @@
 Imports Capa_Entidad
 Public Class CuentaBL
     Dim Datos As New CuentaDAO
-    Public Function Auxiliar_Autocompletado() As DataTable
-        Return Datos.Auxiliar_Autocompletado()
+    Public Function Cuenta_Autocompletado(ByVal largo As String) As DataTable
+        Return Datos.Cuenta_Mostrar(largo)
     End Function
-    Public Function Cuenta_Autocompletado_f() As DataTable
-        Return Datos.Cuenta_Autocompletado_f()
+    Public Function Cuenta_Autocompletado_amarres(ByVal como As String) As DataTable
+        Return Datos.Amarres_Mostrar(como)
     End Function
-    Public Function Cuenta_Autocompletado(ByVal tabla As String, ByVal largo As String) As DataTable
-        Return Datos.Cuenta_Showall(tabla, largo)
+    Public Function Cuenta_Export() As DataTable
+        Return Datos.Cuenta_Showall_Export()
     End Function
-    Public Function Cuenta_Autocompletado_destino(ByVal tabla As String, ByVal dest As String) As DataTable
-        Return Datos.Cuenta_Showall_destino(tabla, dest)
+    Public Function Cuenta_DatosLB(ByVal condicion As Integer, ByVal entcont As Cuenta) As DataTable
+        Return Datos.Cuenta_data(condicion, entcont)
     End Function
-    Public Function Cuenta_Export(ByVal tabla As String) As DataTable
-        Return Datos.Cuenta_Showall_Export(tabla)
-    End Function
-    Public Function Cuenta_DatosLB(ByVal tabla As String, ByVal entcont As Cuenta) As DataTable
-        Return Datos.Cuenta_data(tabla, entcont)
-    End Function
-    Public Function Cuenta_RegisterLB(ByVal tabla As String, ByVal entcont As Cuenta) As Integer
-
+    Public Function Cuenta_Amarre_RegisterLB(ByVal cond As Integer, ByVal entcont As Cuenta) As Integer
         Dim verificar As Integer
-        verificar = Datos.Cuenta_Register(tabla, entcont)
+        verificar = Datos.Cuenta_Amarre_Managemenet(cond, entcont)
         Return verificar
     End Function
-    Public Function Cuenta_Amarre_RegisterLB(ByVal tabla As String, ByVal cond As Integer, ByVal entcont As Cuenta) As Integer
+    Public Function Cuenta_ManagementLB(ByVal condicion As Integer, ByVal entcont As Cuenta) As Integer
         Dim verificar As Integer
-        verificar = Datos.Cuenta_Amarre_Register(tabla, cond, entcont)
+        verificar = Datos.Cuenta_Managment(condicion, entcont)
         Return verificar
     End Function
-    Public Function Cuenta_ActualizarLB(ByVal tabla As String, ByVal entcont As Cuenta) As Integer
-        Dim verificar As Integer
-        verificar = Datos.Cuenta_Actualizar(tabla, entcont)
-        Return verificar
-    End Function
-    Public Function Cuenta_BorrarLB(ByVal tabla As String, ByVal entcont As Cuenta)
-        Dim verificar As Integer
-        verificar = Datos.Cuenta_Borrar(tabla, entcont)
-        Return verificar
+    Public Function Cuenta_Amarre_ShowLB(ByVal entcont As Cuenta) As DataTable
+        Return Datos.Cuenta_Amarre_Show(entcont)
     End Function
 
-    Public Function Tcomprobante_DatosLB() As DataSet
-        Dim tablas As DataSet
-        tablas = Datos.TComprobante_Showall()
-        Tcomprobante_DatosLB = tablas
-    End Function
-    Public Function Cuenta_Amarre_ShowLB(ByVal tabla As String, ByVal entcont As Cuenta) As DataTable
-        Return Datos.Cuenta_Amarre_Show(tabla, entcont)
-    End Function
-    Public Function ImportXtoMysqlLB(ByVal tabla As String, ByVal cmd As String)
-        'Dim verificar As Integer
-        Datos.importXtomysql(tabla, cmd)
+    Public Function ImportXtoMysqlLB(ByVal cmd As String)
+        Datos.importXtomysql(cmd)
         Return Nothing
     End Function
 End Class
